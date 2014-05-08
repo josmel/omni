@@ -1,0 +1,67 @@
+{
+	"compile":{
+		"ext":".styl",
+		"cmd":"stylus -c",
+		"cmdr":"-o",
+		"route":"../css"
+	},
+	"layouts":{
+		"active":true,
+		"path":"./layouts",
+		"compile":{
+			"layout.styl":{
+				"helpers":{
+					"fonts":"fonts.styl",
+					"reset":"reset.styl",
+					"content":"content.styl",
+					"grids":"grids.styl",
+					"buttons":"buttons.styl",
+					"forms":"forms.styl",
+					"table":"table.styl",
+					"resources":"resources.styl",
+					"plugins":"plugins.styl",
+					"hacks":"[@ult]hacks.styl"
+				},
+				"includes":{
+					"render":["header.styl","footer.styl"]
+				}
+			}
+		}
+	},
+	"views":{
+		"path":"./views",
+		"pathCompile":"./views",
+		"compile":{
+			"landing.styl":{
+
+			}
+		}
+	},
+	"vars":{
+		"styfluxFonts":"[@url]fonts/",
+		"routImg":"[@url]../img/",
+		"family1":"'helveticaLight',Arial,sans-serif",
+		"family2":"'helvetica',Arial,sans-serif",
+		"family3":"'avenir',Arial,sans-serif",
+		"decorLogo":"0 0",
+		"logoFuxion":"-270px 0",
+		"twitter":"-270px -61px",
+		"facebook":"-308px -61px",
+		"youtube":"-346px -61px",
+		"blogger":"-270px -98px",
+		"btnPrev":"-308px -98px",
+		"btnNext":"-329px -98px",
+		"navAct":"-350px -98px",
+		"cat1":"0 -119px",
+		"cat2":"-54px -119px",
+		"cat3":"-108px -119px",
+		"cat4":"-162px -119px",
+		"cat5":"-216px -119px",
+		"cat6":"0 -174px",
+		"cat7":"-54px -174px",
+		"bgProduct":"-384px -61px"
+	},
+	"ignore":{
+		"layouts":["render"]
+	}
+}

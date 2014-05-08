@@ -1,0 +1,41 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		#main-slider
+			.slide-main
+				.ctn-cuenta
+					h2 ¡Bienvenido!
+					form
+						.control-group
+							input(type="text",class="inpt-medium",placeholder="Usuario")
+						.control-group
+							input(type="text",class="inpt-medium",placeholder="Contraseña")
+						ul.cuenta-opt
+							li
+								a(href="javascript:;",title="Crear Nueva Cuenta") Crear Nueva Cuenta
+							li
+								a(href="javascript:,",title="Olvidé mi Password") Olvidé mi Password
+						.control
+							button(type="submit",class="btn-lnk") Ingresar
+	nav.main-menu
+		ul
+			li
+				a(class="active",href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(href="contactame.html",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

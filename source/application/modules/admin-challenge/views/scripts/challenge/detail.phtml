@@ -1,0 +1,34 @@
+<div class="content-desafio fix">
+   <h3 class="admin-title">Participantes</h3>
+    <div class="frm-panel">
+        <div class="frm-head">
+            <h2><span class="icTable"></span>Listado de Participantes</h2>
+        </div>
+        Ciclo: <select id="cycle" name="cycle">
+            <?php foreach($this->cycles as $cycle) : ?>
+            <option value="<?php echo $cycle['idciclo'] ?>" <?php echo $this->selectedCycle == $cycle['idciclo'] ? 'selected' : ''; ?>><?php echo $cycle['idciclo'] ?></option>
+            <?php endforeach; ?>
+        </select>
+        Semana: <select id="week" name="week">
+            <?php foreach($this->weeks as $week) : ?>
+            <option value="<?php echo $week ?>" <?php echo $this->selectedWeek == $week ? 'selected' : ''; ?>><?php echo $week ?></option>
+            <?php endforeach; ?>
+        </select>
+        <table cellspacing="0" cellpadding="0" border="0" id="datatable" class="display">
+            <thead>
+                <tr>
+                    <th></th>	
+                    <th>Nombre</th>	
+                    <th>Kilos</th>
+                    <th>IMC</th>
+                    <th>Cintura</th>
+                    <th>Cadera</th>
+                    <th>Estado</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div> 
+</div>

@@ -1,0 +1,197 @@
+s
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]> <html lang="es"> <![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <title>Fuxion - Empresario Independiente</title>
+  <meta name="title" content="Fuxion - Empresario Independiente"/>
+  <meta name="description" content="Fuxion, Empresario Independiente"/>
+  <meta name="keywords" content="fuxion, empresario, independiente"/>
+  <meta name="author" content="onlinestudioproductions.com"/>
+  <meta name="viewport" content="width=device-width"/>
+  <meta name="language" content="es"/>
+  <meta name="robots" content="noindex"/>
+  <link href="images/fuxion.gif" rel="image_src" type="image/jpeg"/>
+  <link href="images/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+  <link type="text/css" rel="stylesheet" href="http://local.desafio/static/css/desafio.css?v=8"/>
+  <script src="jade/ie.js"></script><!--[if lt IE 9]>
+  <script src="http://local.landing/static/js/libs/html5shiv.js"></script><![endif]-->
+  <!--[if lt IE 8]>
+  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script><![endif]-->
+</head>
+<body>
+  <header class="header">
+    <div class="box-center">
+      <h1><a href="javascript:;" title="Desafío Fuxion" class="logo-lnk">Desafío Fuxion</a></h1><a href="javascript:;" title="Home" class="btn-home"><span></span>Home</a>
+    </div>
+  </header>
+  <div id="wrapper" class="row">
+    <ul class="menu-colors">
+      <li><a href="javascript:;" title="Como participar">Como<br>participar<span class="people"></span></a></li>
+      <li><a href="javascript:;" title="Como participar" class="skyblue"><span class="numbers"></span>Determina<br>tu estado<br>fisico actual</a></li>
+      <li><a href="javascript:;" title="Como participar" class="orange"><span class="numbers two"></span>registrate</a></li>
+      <li><a href="javascript:;" title="Como participar" class="green"><span class="numbers three"></span>define tu<br>alimentación</a></li>
+    </ul>
+    <div class="content-desafio">
+      <div class="img-step"><img src="http://local.desafio/static/img/desafio/elements/paso2.jpg" alt="Desafío Fuxion" width="750" height="240"/></div>
+      <div class="bg-green"><span></span>
+        <h2>TUS DATOS  iniciales</h2>
+      </div>
+      <form id="frmData" name="frmData" method="post" action="" class="frm-data">
+        <h3 class="title-headorange">DATOS</h3>
+        <div class="row">
+          <div class="left-cnt">
+            <div class="frm-group">
+              <label class="control-label">NOMBRE</label>
+              <div class="frm-control">
+                <input type="text" id="txtName" name="txtName" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">APELLIDO PATERNO</label>
+              <div class="frm-control">
+                <input type="text" id="txtLastname" name="txtLastname" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">CÓDIGO EF - CP </label>
+              <div class="frm-control">
+                <input type="text" id="txtCode" name="txtCode" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">TELF. - CEL</label>
+              <div class="frm-control">
+                <input type="text" id="txtPhones" name="txtPhones" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">EMAIL</label>
+              <div class="frm-control">
+                <input type="text" id="txtEmail" name="txtEmail" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+          </div>
+          <div class="left-cnt ml60">
+            <div class="frm-group">
+              <label class="control-label">SEUDÓNIMO</label>
+              <div class="frm-control">
+                <input type="text" id="txtAlias" name="txtAlias" class="input-xmedium"/>
+              </div><span class="help-required">*</span><a href="javascript:;" class="help-circle">?</a>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">APELLIDO MATERNO</label>
+              <div class="frm-control">
+                <input type="text" id="txtFirstname" name="txtFirstname" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">EDAD </label>
+              <div class="frm-control">
+                <select class="slc-small">
+                  <option>Edad</option>
+                  <option>Seleccione 1</option>
+                  <option>Seleccione 2</option>
+                </select>
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">RPM</label>
+              <div class="frm-control">
+                <input type="text" id="txtRpm" name="txtRpm" class="input-xmedium"/>
+              </div><span class="help-required">*</span>
+            </div>
+          </div>
+        </div>
+        <p class="color-orange mt20">(*) Campos obligatorios</p>
+        <div class="frm-group row">
+          <button type="submit" id="sbmSend" title="GUARDAR" class="btn">GUARDAR</button>
+        </div>
+        <div class="separator-line"></div>
+        <h3 class="title-headorange">
+           
+          COLOCA TUS FOTOS INICIALES<br><span class="color-red">El archivo debe tener una extensión (PNG, JPEG, GIF)</span>
+        </h3>
+        <div class="row lessmargin">
+          <div class="attach-data">
+            <p>Adjuntar SCAN wincha de<br>peso y medidas o foto balanza</p>
+            <div class="btn-attach"><span class="ico-attach"></span><span class="help-required">*</span><a href="javascript:;" class="help-circle">?</a><a href="javascript:;" id="fileAttach" name="fileAttach" title="Subir Imagen" class="btn-green">Subir Imagen</a></div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar foto de FRENTE</p>
+            <div class="btn-attach"><span class="ico-attach pic2"></span><span class="help-required">*</span><a href="javascript:;" id="fileAttach" name="fileAttach" title="Subir Imagen" class="btn-green">Subir Imagen</a></div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar foto de PERFIL</p>
+            <div class="btn-attach"><span class="ico-attach pic3"></span><span class="help-required">*</span><a href="javascript:;" id="fileAttach" name="fileAttach" title="Subir Imagen" class="btn-green">Subir Imagen</a></div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar otras fotos</p>
+            <div class="btn-attach"><span class="ico-attach pic4"></span><span class="help-required">*</span><a href="javascript:;" id="fileAttach" name="fileAttach" title="Subir Imagen" class="btn-green">Subir Imagen</a></div>
+          </div>
+        </div>
+        <div class="frm-group row">
+          <p class="help-left"><span class="color-orange">(*) Campos obligatorios<br></span>Empieza con estos datos y fotos iniciales. <a href="javascript:;" title="Ver video ejemplo" class="color-orange">Ver video ejemplo</a></p>
+          <button type="submit" id="sbmSend" title="ENVIAR" class="btn">ENVIAR</button>
+        </div>
+        <div class="separator-line"></div>
+        <h3 class="title-headorange">DESIGNA A TU MENTOR (La persona que te dará seguimiento)</h3>
+        <div class="frm-group">
+          <label class="control-label">INGRESA CÓDIGO</label>
+          <div class="frm-control">
+            <input type="text" id="txtCode2" name="txtCode2" class="input-xmedium"/>
+          </div>
+          <button type="submit" id="sbmSend" title="VERIFICAR DATOS" class="btn">VERIFICAR DATOS</button>
+        </div>
+        <h3 class="title-headorange mt20">EMPRESARIO<br><span class="color-red">Si su líder o mentor no cuenta con correo electrónico deberá solicitarlo.</span></h3>
+        <div class="row">
+          <div class="left-cnt">
+            <div class="frm-group">
+              <label class="control-label">NOMBRE</label>
+              <div class="frm-control">
+                <input type="text" id="txtName2" name="txtName2" class="input-xmedium"/>
+              </div>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">CELULAR</label>
+              <div class="frm-control">
+                <input type="text" id="txtCel" name="txtCel" class="input-xmedium"/>
+              </div>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">EMAIL</label>
+              <div class="frm-control">
+                <input type="text" id="txtEmail" name="txtEmail" placeholder="fuxion12345@gmail.com" class="input-xmedium"/>
+              </div>
+            </div>
+          </div>
+          <div class="left-cnt ml60">
+            <div class="frm-group">
+              <label class="control-label">APELLIDO PATERNO</label>
+              <div class="frm-control">
+                <input type="text" id="txtLastname2" name="txtLastname2" class="input-xmedium"/>
+              </div>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">APELLIDO MATERNO </label>
+              <div class="frm-control">
+                <input type="text" id="txtFirstname2" name="txtFirstname2" class="input-xmedium"/>
+              </div>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">TELÉFONO</label>
+              <div class="frm-control">
+                <input type="text" id="txtPhone" name="txtPhone" class="input-xmedium"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

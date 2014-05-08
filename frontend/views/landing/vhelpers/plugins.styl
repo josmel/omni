@@ -1,0 +1,43 @@
+/**
+* Plugins CSS
+* @class Plugins
+* @module helpers.css
+*/
+/* Slides */
+.slides
+	position relative
+	.viewport
+		overflow hidden
+		position relative
+	.overview
+		list-style none
+		position absolute
+		li
+			float left
+			margin-right 20px
+			&:last-child
+				margin 0
+	.buttons
+		background url(routImg+"icon-set.png") no-repeat
+		height 22px
+		position absolute
+		text-indent -9999px
+		width 21px
+		&.disable
+			cursor default
+		&.prev
+			background-position btnPrev
+			&.disable
+				background-position btnPrevDis
+		&.next
+			background-position btnNext
+			&.disable
+				background-position btnNextDis
+/* main Slider */
+.cont-slideNav
+	height 446px !important
+.slide-Nav
+	padding 16px 0
+/* Select Changue */
+.selChangue
+	display none

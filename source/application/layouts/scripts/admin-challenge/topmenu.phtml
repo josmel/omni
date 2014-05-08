@@ -1,0 +1,12 @@
+<?php
+$active = 'class="active"';
+?>
+  <nav class="main-menu">
+    <ul>
+      <li <?php echo ($this->action == 'condition')?$active:''; ?> ><a href="<?php echo SITE_URL ; ?>index/condition" title="Estado"> <span></span>estado</a></li>
+      <li <?php echo ($this->action == 'consume')?$active:''; ?>><a href="<?php echo SITE_URL ; ?>index/consume" title="Mis consumos"> <span class="mitem2"></span>mis consumos</a></li>
+      <li <?php echo ($this->action == 'progress')?$active:''; ?>><a href="<?php echo SITE_URL ; ?>index/progress" title="Avances"> <span class="mitem3"></span>avances</a></li>
+      <li <?php echo ($this->action == 'mentor')?$active:''; ?>><a href="<?php echo SITE_URL ; ?>index/mentor" title="Mentor"> <span class="mitem4"></span>mentor</a></li>
+      <li <?php echo ($this->action == 'contact')?$active:''; ?>><a href="<?php echo SITE_URL ; ?>index/contact" title="contáctenos"> <span class="mitem5"></span>contáctenos</a></li>
+    </ul>
+  </nav>

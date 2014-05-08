@@ -1,0 +1,19 @@
+<h3 class="admin-title">Color de Fondo</h3>
+<div class="frm-panel">
+    <div class="frm-head">
+        <h2><span class="icTable"></span>Color de Fondo</h2>
+    </div>
+    <form id="frm-login" method="POST" action="">
+        <div class="control-group">
+            <label for="color" class="control-label">Color:</label>
+            <div class="controls">
+                <input type="text" name="color" id="color" value="<?php echo $this->hexColor;?>" class="color {hash:true}" />
+            </div>
+        </div>
+        <div class="control-group last">
+            <div class="control">
+                <button class="btn-admin">Guardar</button>
+            </div>
+        </div>
+    </form>
+</div>

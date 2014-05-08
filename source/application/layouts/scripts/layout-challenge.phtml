@@ -1,0 +1,44 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]> <html lang="es"> <![endif]-->
+<?php echo $this->render("challenge/head.phtml"); ?>
+<body>
+    <?php echo $this->render("challenge/header.phtml"); ?>
+    <div id="wrapper" class="row">
+        <?php
+        $front = Zend_Controller_Front::getInstance();
+        $controller = $front->getRequest()->getControllerName();
+        $action = $front->getRequest()->getActionName();
+        if($controller == 'index'):
+            echo $this->partial("challenge/topmenu.phtml", array('controller' => $controller, 'action' => $action));
+        else:
+            echo $this->partial("challenge/leftbar.phtml", array('controller' => $controller, 'action' => $action));
+        endif;
+        ?>
+        <?php echo $this->layout()->content; ?>
+    </div>
+    <?php echo ($controller == 'index')?$this->render("challenge/footer.phtml"):''; ?>
+    <script type="text/javascript">
+        var yOSON ={
+            "modulo":"<?php echo $this->module?>",
+            "controller":"<?php echo $this->controller?>",
+            "action":"<?php echo $this->action?>",
+            "baseHost":"<?php echo SITE_URL?>",
+            "statHost":"<?php echo STATIC_URL?>",
+            "statVers":"?<?php echo SITE_VERSION; ?>",
+            <?php foreach ($this->yosonVars as $key => $value) : 
+                 echo '"'.$key.'":'.$value.', '; 
+                endforeach; 
+                echo '"min":"","AppCore":{},"AppSandbox":{},"AppSchema":{"modules":{},"requires":{}'
+                ?>  
+            }
+          };
+      </script>
+      <script type="text/javascript" src="<?php echo STATIC_URL?>js/libs/framework.js?v=<?php echo SITE_VERSION; ?>"></script>
+      <script type="text/javascript" src="<?php echo STATIC_URL?>js/application/yoson.js?v=<?php echo SITE_VERSION; ?>"></script>
+      <script type="text/javascript" src="<?php echo STATIC_URL?>js/modules/desafio.js?v=<?php echo SITE_VERSION; ?>"></script>
+      <script type="text/javascript" src="<?php echo STATIC_URL?>js/application/schemas/mDesafio.js?v=<?php echo SITE_VERSION; ?>"></script>
+      <script type="text/javascript" src="<?php echo STATIC_URL?>js/application/appLoad.js?v=<?php echo SITE_VERSION; ?>"></script>
+</body>

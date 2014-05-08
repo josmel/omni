@@ -1,0 +1,152 @@
+<div class="white-bg">
+    <div class="row ptb20">
+        <div class="desc-static">
+            <h2 class="titfx"><?php echo $this->businessman['nomempr'].' '.$this->businessman['appempr'].' '.$this->businessman['apmempr']; ?> Bienvenido a Fuxión</h2>
+            <p>Esta es tu nueva Oficina Virtual. Aquí encontrarás toda la información que necesitas para llevar tu negocio al siguiente nivel! En este año de la eXcelencia para Fuxion, queremos ofrecerte todas las herramientas para que alcancemos juntos la meta!</p>
+            <div class="video-static">
+                <?php foreach ($this->video as $value): ?>
+                    <iframe width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"
+                            src="<?php echo $value['url']; ?>"></iframe>
+                    </iframe>
+                <?php endforeach; ?>          
+            </div>
+        </div>
+        <aside class="side-static">
+            <h2 class="titfx">Calendarios de eventos</h2>
+            <div id="calendar"></div>
+        </aside>
+    </div>
+    <div class="mb20">
+        <h2 class="titfx">Documento por Categoría</h2>
+        <div id="cat-fuxion">
+            <div class="fx-ctnslide"> <?php /*style="left: -948px;"*/?>
+                <div id="fx-main" class="fx-slide">
+                    <div class="fx-lcat fxcat5">
+                        <a data-id="logotipo" href="javascript:;" class="cat-fx cfx1">
+                            <h3>Logotipo</h3>
+                            <p>Haz clic aquí</p><span class="catimg catLogo"></span><span class="catsignal"></span>
+                        </a>
+                        <a data-id="banners" href="javascript:;" class="cat-fx cfx2">
+                            <h3>Banners</h3>
+                            <p>Haz clic aquí</p><span class="catimg catBanner"></span><span class="catsignal"></span>
+                        </a>
+                        <a data-id="Manuales" href="javascript:;" class="cat-fx cfx3">
+                            <h3>Manuales</h3>
+                            <p>Haz clic aquí</p><span class="catimg catManual"></span><span class="catsignal"></span>
+                        </a>
+                        <a data-id="productos" href="javascript:;" class="cat-fx cfx4">
+                            <h3>Productos</h3>
+                            <p>Haz clic aquí</p><span class="catimg catProd"></span><span class="catsignal"></span>
+                        </a>
+                        <a data-id="afiliacion" href="javascript:;" class="cat-fx cfx5">
+                            <h3>Afiliación</h3>
+                            <p>Haz clic aquí</p><span class="catimg catAfi"></span><span class="catsignal"></span>
+                        </a>
+                    </div>
+                    <?php /*<ul class="fx-policies">
+                        <li><a href="javascript:;" title="Políticas de Seguridad">Políticas de Seguridad<span class="book"></span><span class="signal"></span></a></li>
+                        <li><a href="javascript:;" title="Nuevas Políticas Delivery">Nuevas Políticas Delivery<span class="book"></span><span class="signal"></span></a></li>
+                    </ul>*/?>
+                </div>
+                <div id="fx-desc" class="fx-slide">
+                    <div class="bx-catfx">
+                        <h3 class="tit-bxcat">Categoría: <span class="fx-ncat">Manuales</span><a class="fx-back" href="javascript:;" title="Regresar">Regresar<span></span></a></h3>
+                        <div class="row"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lowerfooter">
+        <div class="row">
+            <?php if($this->blogs!=='') { ?>
+            <div class="foot-blog">
+                <h3>Blog</h3>
+                <div id="ctn-blog">
+                    <?php foreach ($this->blogs as $value): ?>
+                        <div class="post">
+                            <h4 class="pst-title"><?php echo $value['titulo']; ?></h4>
+                            <p class="pst-descrip"><?php echo $value['descripcion']; ?></p>
+                            <a class="pst-lnk" href="<?php echo $value['url']; ?>" title="Leer más">Leer más</a>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+            <?php } ?>
+             <?php if($this->pregunta!=='') { ?>
+            <div class="foot-dinamic">
+                <h3>Encuesta</h3>
+                <div class="ctn-quiz">
+                    <div class="quiz-well">
+                        <h4><?php echo $this->pregunta; ?></h4>
+                        <?php if ($this->empresarioResultado == null) { ?> 
+                            <ul class="quiz-lst">
+                                <?php foreach ($this->encuesta as $value): ?>
+                                    <li>
+                                        <label class="ioption">
+                                            <input type="radio" name="radquiz" value="<?php echo $value['idtencuestaalr'] ?>" />
+                                            <?php echo $value['alternativa'] ?>
+                                        </label>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <button class="btn-quiz">Enviar</button>
+                        <?php  } else { ?>
+                          <ul class="quiz-lst">
+                                <?php foreach ($this->encuesta as $value): ?>
+                                    <li>
+                                        <label class="ioption rquiz">
+                                            <?php echo $value['alternativa'] ?> <span>( <?php if ($value['cantidad'] !== null) {  echo $value['cantidad']; } else {  echo '0'; }?> votos)</span>
+                                            <strong><?php echo $value['porcentaje'] ?></strong>
+                                        </label>
+                                    </li>
+                                <?php  endforeach; ?>
+                            </ul>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+             <?php } ?>
+            <div class="foot-social">
+                <h3>Redes Sociales</h3>
+                <ul>
+                   <li><a href="https://www.youtube.com/prolifebiotech" title="Youtube" 
+                   class="sprites-p youtube"></a></li>
+                    <li><a href="https://www.facebook.com/fuxion" title="Facebook"
+                           class="sprites-p facebook"></a></li>
+                    <li><a href="https://twitter.com/fuxionoficial" title="Twitter" class="sprites-p twitter"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="tplFuxion" type="text/template">
+    <div id="scrollFx">
+        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+        <div class="viewport">
+            <div class="overview">
+                <ul class="list-fxcat">
+                    {{ _.map(data,function(obj){ }}
+                    <li>
+                        <h4>{{= obj["titulo"] }}</h4>
+                        <p>{{ if(obj["descripcion"]!=null){ }} {{= obj["descripcion"] }} {{ }else{ }} &nbsp;{{ } }}  </p><a href="{{= obj["url"] }}" target="_blank" class="sprites-p ic-{{= obj["extfile"]}}"></a>
+                    </li>
+                    {{ }); }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</script>
+<script id="tplEvent" type="text/template">
+<div class="popupEvent">
+    <h2>{{= title}}</h2>
+    <dl>
+        <dt>Fecha:</dt>
+        <dd>{{= fullDate}}</dd>
+        <dt>Lugar:</dt>
+        <dd>{{ if(location!=""){ }} {{= location}} {{ }else{ }} - {{ } }}</dd>
+        <dt>Descripción:</dt>
+        <dd>{{ if(description!=""){ }} {{= _.unescape(description)}} {{ }else{ }} - {{ } }}</dd>
+    </dl>
+</div>
+</script>

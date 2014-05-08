@@ -1,0 +1,86 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+			a(href='javascript:;', class="btn-home", title="Home")
+				span
+				| Home
+	#wrapper.row
+		ul.menu-colors
+			li
+				a(href='javascript:;', class="", title="Como participar")
+					| Como<br>participar
+					span.people
+			li
+				a(href='javascript:;', class="skyblue", title="Como participar")
+					span.numbers
+					| Determina<br>tu estado<br>fisico actual
+			li
+				a(href='javascript:;', class="orange", title="Como participar")
+					span.numbers.two
+					| registrate
+			li
+				a(href='javascript:;', class="green", title="Como participar")
+					span.numbers.three
+					| define tu<br>alimentación
+		.content-desafio
+			.img-step.result-fat
+				img(src="http://local.desafio/static/img/desafio/elements/paso1-b.png", alt="Desafío Fuxion",width="750",height="240")
+			.bg-green
+				span
+				h2 RESULTADOS DIAGNOSTICO DE OBESIDAD
+			.row
+				.left-cnt.result-fat
+					.img-changeweight
+						img(src="http://local.desafio/static/img/desafio/elements/person-weight.png", alt="Obesidad",width="135",height="250")
+					.weight-detail.side-top
+						span 35.75
+						p masa<br>corporal
+					.weight-detail.side-right
+						span Gruesa
+						p.pl Contextura
+					.weight-detail.side-left
+						span 68 Kgms 
+						p Peso ideal<br>masa corporal
+					.weight-detail.side-bottom
+						span 68 - 76 Kgms
+						p Peso ideal<br>Contextura
+					.weight-case
+						h3 PESO ACTUAL
+						p.color-green 
+							span.fz 110 
+							<br>Kgms
+						p Obesidad<br>severa
+				.fat-box
+					p 
+						| Estas con 
+						span.color-orange OBESIDAD SEVERA
+						| , lo que te puede generar riesgo de diabetes<br>riesgo de obesidad mórbida que puede  requerir una intervención quirurujica.
+					h2 POR MASA CORPORAL
+					p
+						| Tu indice de masa corporal es  
+						span.color-blue 36.75
+					p
+						| Peso ideal es 
+						span.color-blue 68 Kgms
+					p
+						| Peso ideal es 
+						span.color-blue  42 Kgms
+					h2 POR CONTEXTURA
+					p
+						| Tu contextura es 
+						span.color-blue Gruesa
+					p
+						| Por lo que tu  
+						span.color-blue peso ideal 
+						| sería 
+						span.color-blue 68 - 76 Kgms
+					p
+						| Tendría que bajar entre 
+						span.color-blue  34 - 42 Kgms 
+						| para lograrlo
+			.row
+				a(href="javascript:;", class="btn right-cnt", title="Define tus objetivos") Define tus objetivos

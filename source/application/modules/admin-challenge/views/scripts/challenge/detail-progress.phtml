@@ -1,0 +1,137 @@
+<div id="wrapper" class="pb20">
+    <div class="row mb35">
+        <h2 class="tit-competitor"><?php echo $this->nameCompetitor .' '.$this->lastnameCompetitor?></h2>
+        <p class="lback-AdminDesaf"><a href="/challenge" title="Volver"><< Volver</a></p>
+    <section id="slider-prom" class="slides slide-pics" style ="width: 745px;margin:0 auto;float:none">
+        <a class="buttons prev" href="javascript:;">left</a>
+        <div class="viewport" style ="height: 170px; ">
+            <ul class="overview">
+            <?php foreach ($this->imgs as $item) : ?>
+            <li>
+            <ul style="width: 745px;">
+              <li>
+                <div class="slide-img"><img src="<?php echo $item['fotowincha']; ?>" alt="Desafío Fuxion" height="120"/></div>
+                <p>Wincha</p>
+              </li>
+              <li>
+                <div class="slide-img"><img src="<?php echo $item['fotofrente']; ?>" alt="Desafío Fuxion" height="120"/></div>
+                <p>Frontal</p>
+              </li>
+              <li>
+                <div class="slide-img"><img src="<?php echo $item['fotoperfil']; ?>" alt="Desafío Fuxion" height="120"/></div>
+                <p>Perfil</p>
+              </li>
+              <li>
+                <div class="slide-img"><img src="<?php echo $item['fotootros']; ?>" alt="Desafío Fuxion" height="120"/></div>
+                <p>Otros</p>
+              </li>
+            </ul>
+            </li>
+            <?php endforeach; ?>
+            </ul>
+        </div>
+        <a class="buttons next" href="javascript:;">right</a>
+    </section>
+    <?php if ($this->enableAdd && $this->stateBusinessman && $this->stateCompetitor) : ?>
+    <a href="javascript:;" data-href="#popAdvance" title="Actualizar tus datos" class="btn-blue btnPopup"> <span></span>ACTUALIZAR<br>TUS DATOS<br>(CLIC AQUÍ)</a>
+    <?php endif; ?>
+    </div>
+    <div class="avc-break"></div>
+    <div id="chartProgress"></div>
+</div>
+<script id="tplTip" type="text/template">
+<dl class='ttip-chart'>
+    <dt>PESO</dt>
+    <dd><span>:</span>{{= peso}} Kg</dd>
+    <dt>CINTURA</dt>
+    <dd><span>:</span>{{= cintura}} cm</dd>
+    <dt>ESPALDA</dt>
+    <dd><span>:</span>{{= espalda}} cm</dd>
+    <dt>CADERA</dt>
+    <dd><span>:</span>{{= cadera}} cm</dd>
+    <dt>PECHO</dt>
+    <dd><span>:</span>{{= pecho}} cm</dd>
+</dl>
+</script>
+<script id="tplProgress" type="text/template">
+<div id="popAdvance" class="modal-frmData">
+    <form id="frmProgress" name="frmProgress" method="post" action="" class="frm-data">
+      <h3 class="title-headorange">Actualizar tus datos 1 vez por semana<br><span class="color-orange">(*) Campos obligatorios</span></h3>
+      <div class="frm-group">
+        <label class="control-label" for="peso">MEDIDAS</label>
+        <div class="frm-control">
+          <input type="text" class="slc-small decimal" id="peso" name="peso">
+        </div><span class="help-desc">Kg</span><span class="help-required">*</span>
+      </div>
+      <div class="cgroup-inline">
+        <div class="frm-group">
+          <label class="control-label" for="cintura">CINTURA</label>
+          <div class="frm-control">
+            <input type="text" class="slc-small decimal" id="cintura" name="cintura">
+          </div><span class="help-desc">cm</span><span class="help-required">*</span>
+        </div>
+        <div class="frm-group">
+          <label class="control-label" for="cadera">CADERA</label>
+          <div class="frm-control">
+            <input type="text" class="slc-small decimal" id="cadera" name="cadera">
+          </div><span class="help-desc">cm</span><span class="help-required">*</span>
+        </div>
+      </div>
+      <div class="cgroup-inline">
+        <div class="frm-group">
+          <label class="control-label" for="espalda">ESPALDA</label>
+          <div class="frm-control">
+            <input type="text" class="slc-small decimal" id="espalda" name="espalda">
+          </div><span class="help-desc">cm</span><span class="help-required">*</span>
+        </div>
+        <div class="frm-group">
+          <label class="control-label" for="pecho">PECHO</label>
+          <div class="frm-control">
+            <input type="text" class="slc-small decimal" id="pecho" name="pecho">
+          </div><span class="help-desc">cm</span><span class="help-required">*</span>
+        </div>
+      </div>
+      <div class="separator-line"></div>
+      <h3 class="title-headorange">
+        Coloca tus fotos iniciales<br><span class="color-red">El archivo debe tener una extensión (PNG, JPEG, GIF)</span>
+      </h3>
+      <div class="row">
+        <div class="attach-data">
+          <p>Adjuntar SCAN wincha de<br>peso y medidas o foto balanza</p>
+          <div class="btn-attach">
+              <img src="{{= yOSON.statHost}}img/desafio/elements/default-wincha.gif" width="122" height="125" />
+              <span class="help-required">*</span>
+              <a href="javascript:;" class="help-circle">?</a>
+              <a href="javascript:;" id="btnWincha" data-file="wincha" data-valid="0" title="Subir Imagen" class="btn-green">Subir Imagen </a>
+          </div>
+        </div>
+        <div class="attach-data">
+          <p>Adjuntar foto de FRENTE</p>
+          <div class="btn-attach">
+              <img src="{{= yOSON.statHost}}img/desafio/elements/default-frente.gif" width="122" height="125" />
+              <span class="help-required">*</span>
+              <a href="javascript:;" id="btnFrente" data-file="frente" data-valid="0" title="Subir Imagen" class="btn-green">Subir Imagen </a>
+          </div>
+        </div>
+        <div class="attach-data">
+          <p>Adjuntar foto de PERFIL</p>
+          <div class="btn-attach">
+              <img src="{{= yOSON.statHost}}img/desafio/elements/default-perfil.gif" width="122" height="125" />
+              <span class="help-required">*</span>
+              <a href="javascript:;" id="btnPerfil" data-file="perfil" data-valid="0" title="Subir Imagen" class="btn-green">Subir Imagen </a>
+          </div>
+        </div>
+        <div class="attach-data">
+          <p>Adjuntar otras fotos</p>
+          <div class="btn-attach">
+              <img src="{{= yOSON.statHost}}img/desafio/elements/default-otros.gif" width="122" height="125" />
+              <a href="javascript:;" id="btnOtro" data-file="otro" data-valid="0" title="Subir Imagen" class="btn-green">Subir Imagen </a>
+          </div>
+        </div>
+      </div>
+      <div class="frm-group row">
+        <button type="submit" id="sbmSend" title="Enviar" class="btn">Enviar</button>
+      </div>
+    </form>
+</div>
+</script>

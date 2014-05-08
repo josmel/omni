@@ -1,0 +1,14 @@
+<nav class="main-menu">
+    <ul>
+        <?php foreach($this->menu as $index => $value): 
+             $class = ($index==$this->controller) ? ' active ':' ';
+             if (isset($value['additionalViews'])) {
+                 foreach ($value['additionalViews'] as $aditional) 
+                     if($aditional == $this->controller) 
+                         $class = ' active '; 
+             }
+        ?>
+        <li class="<?php echo $class; ?>"><a href="<?php echo $value['url']; ?>"><?php echo $value['title']; ?></a></li>
+        <?php endforeach; ?>
+    </ul>
+</nav>

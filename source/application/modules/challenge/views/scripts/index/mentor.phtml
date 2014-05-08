@@ -1,0 +1,28 @@
+  <div id="wrapper">
+    <div class="row info-mentor">
+      <div class="left-cnt">
+        <div class="pic">
+            <img src="<?php echo DINAMIC_URL.'businessman/208x208/'.$this->mentor['businessman']['picture']?>" 
+                 alt="<?php echo $this->mentor['nommentor']." ".$this->mentor['apepaterno']." ".$this->mentor['apematerno'] ?>" width="240" height="240"/>
+        </div>
+      </div>
+      <div class="right-cnt">
+        <dl class="user-dl">
+          <dt>CÓDIGO EF- CP</dt>
+          <dd> <span>: </span><?php echo $this->mentor['codemp'] ?></dd>
+          <dt>APELLIDO PATERNO</dt>
+          <dd> <span>: </span><?php echo $this->mentor['apepaterno'] ?></dd>
+          <dt>TELÉFONO</dt>
+          <dd> <span>: </span><?php echo $this->mentor['telefono'] ?></dd>
+          <dt>EMAIL</dt>
+          <dd> <span>: </span><a href="mailto:<?php echo $this->mentor['correo'] ?>"><?php echo $this->mentor['correo'] ?></a></dd>
+          <dt>NOMBRE</dt>
+          <dd> <span>: </span><?php echo $this->mentor['nommentor'] ?></dd>
+          <dt>APELLIDO MATERNO</dt>
+          <dd> <span>: </span><?php echo $this->mentor['apematerno'] ?></dd>
+          <dt>CELULAR</dt>
+          <dd> <span>: </span><?php echo $this->mentor['businessman']['celular'] ?></dd>
+        </dl>
+      </div>
+    </div>
+  </div>

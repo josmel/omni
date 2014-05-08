@@ -1,0 +1,10 @@
+hoverLighten(rgb,percent)
+	color rgb
+	transition color .3s ease
+	&:hover
+		color lighten(rgb,percent)
+backgroundLighten(rgb)
+	background-color rgb
+	transition background-color .3s ease
+	&:hover
+		background-color lighten(rgb,10%)

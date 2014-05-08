@@ -1,0 +1,164 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+			a(href='javascript:;', class="btn-home", title="Home")
+				span
+				| Home
+	#wrapper.row
+		ul.menu-colors
+			li
+				a(href='javascript:;', class="", title="Como participar")
+					| Como<br>participar
+					span.people
+			li
+				a(href='javascript:;', class="skyblue", title="Como participar")
+					span.numbers
+					| Determina<br>tu estado<br>fisico actual
+			li
+				a(href='javascript:;', class="orange", title="Como participar")
+					span.numbers.two
+					| registrate
+			li
+				a(href='javascript:;', class="green", title="Como participar")
+					span.numbers.three
+					| define tu<br>alimentación
+		.content-desafio
+			.img-step
+				img(src="http://local.desafio/static/img/desafio/elements/paso2.jpg", alt="Desafío Fuxion",width="750",height="240")
+			.bg-green
+				span
+				h2 TUS DATOS  iniciales
+			form(id="frmData", name="frmData", method="post", action="" , class="frm-data")
+				h3.title-headorange DATOS
+				.row
+					.left-cnt
+						.frm-group
+							label.control-label NOMBRE
+							.frm-control
+								input(type="text", id="txtName", name="txtName", class="input-xmedium")
+							span.help-required *
+						.frm-group
+							label.control-label APELLIDO PATERNO
+							.frm-control
+								input(type="text", id="txtLastname", name="txtLastname", class="input-xmedium")
+							span.help-required *
+						.frm-group
+							label.control-label CÓDIGO EF - CP 
+							.frm-control
+								input(type="text", id="txtCode", name="txtCode", class="input-xmedium")
+							span.help-required *
+						.frm-group
+							label.control-label TELF. - CEL
+							.frm-control
+								input(type="text", id="txtPhones", name="txtPhones", class="input-xmedium")
+							span.help-required *
+						.frm-group
+							label.control-label EMAIL
+							.frm-control
+								input(type="text", id="txtEmail", name="txtEmail", class="input-xmedium")
+							span.help-required *
+					.left-cnt.ml60
+						.frm-group
+							label.control-label SEUDÓNIMO
+							.frm-control
+								input(type="text", id="txtAlias", name="txtAlias", class="input-xmedium")
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+						.frm-group
+							label.control-label APELLIDO MATERNO
+							.frm-control
+								input(type="text", id="txtFirstname", name="txtFirstname", class="input-xmedium")
+							span.help-required *
+						.frm-group
+							label.control-label EDAD 
+							.frm-control
+								select.slc-small
+									option Edad
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+						.frm-group
+							label.control-label RPM
+							.frm-control
+								input(type="text", id="txtRpm", name="txtRpm", class="input-xmedium")
+							span.help-required *
+				p.color-orange.mt20 (*) Campos obligatorios
+				.frm-group.row
+					button(type="submit", id="sbmSend", class="btn", title="GUARDAR") GUARDAR
+				.separator-line
+				h3.title-headorange 
+					| COLOCA TUS FOTOS INICIALES<br>
+					span.color-red El archivo debe tener una extensión (PNG, JPEG, GIF)
+				.row.lessmargin
+					.attach-data
+						p Adjuntar SCAN wincha de<br>peso y medidas o foto balanza
+						.btn-attach
+							span.ico-attach
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen
+					.attach-data
+						p Adjuntar foto de FRENTE
+						.btn-attach
+							span.ico-attach.pic2
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen
+					.attach-data
+						p Adjuntar foto de PERFIL
+						.btn-attach
+							span.ico-attach.pic3
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen
+					.attach-data
+						p Adjuntar otras fotos
+						.btn-attach
+							span.ico-attach.pic4
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen
+				.frm-group.row
+					p.help-left
+						span.color-orange (*) Campos obligatorios<br>
+						| Empieza con estos datos y fotos iniciales. 
+						a(href="javascript:;", class="color-orange", title="Ver video ejemplo") Ver video ejemplo
+					button(type="submit", id="sbmSend", class="btn", title="ENVIAR") ENVIAR
+				.separator-line
+				h3.title-headorange DESIGNA A TU MENTOR (La persona que te dará seguimiento)
+				.frm-group
+					label.control-label INGRESA CÓDIGO
+					.frm-control
+						input(type="text", id="txtCode2", name="txtCode2", class="input-xmedium")
+					button(type="submit", id="sbmSend", class="btn", title="VERIFICAR DATOS") VERIFICAR DATOS
+				h3.title-headorange.mt20
+					| EMPRESARIO<br>
+					span.color-red Si su líder o mentor no cuenta con correo electrónico deberá solicitarlo.
+				.row
+					.left-cnt
+						.frm-group
+							label.control-label NOMBRE
+							.frm-control
+								input(type="text", id="txtName2", name="txtName2", class="input-xmedium")
+						.frm-group
+							label.control-label CELULAR
+							.frm-control
+								input(type="text", id="txtCel", name="txtCel", class="input-xmedium")
+						.frm-group
+							label.control-label EMAIL
+							.frm-control
+								input(type="text", id="txtEmail", name="txtEmail", class="input-xmedium", placeholder="fuxion12345@gmail.com")
+					.left-cnt.ml60
+						.frm-group
+							label.control-label APELLIDO PATERNO
+							.frm-control
+								input(type="text", id="txtLastname2", name="txtLastname2", class="input-xmedium")
+						.frm-group
+							label.control-label APELLIDO MATERNO 
+							.frm-control
+								input(type="text", id="txtFirstname2", name="txtFirstname2", class="input-xmedium")
+						.frm-group
+							label.control-label TELÉFONO
+							.frm-control
+								input(type="text", id="txtPhone", name="txtPhone", class="input-xmedium")

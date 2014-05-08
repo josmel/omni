@@ -1,0 +1,34 @@
+
+    <div class="ctn-address">
+        <div class="cgroup-inline">
+            <div class="control-group">
+                <?php echo $this->element->country->renderViewHelper(); ?>
+                <?php echo $this->element->tokenHash->renderViewHelper(); ?> 
+            </div>
+            <div class="control-group">
+                <?php echo $this->element->state->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="cgroup-inline">
+            <div class="control-group">
+                <?php echo $this->element->city->renderViewHelper(); ?>
+            </div>
+            <div class="control-group">
+                <?php echo $this->element->district->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="cgroup-inline">
+            <div class="control-group">
+                <?php echo $this->element->codtvia->renderViewHelper(); ?>
+            </div>
+
+            <div class="control-group">
+                <div class="control-group">
+                    <?php echo $this->element->ubidenv->renderViewHelper(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="control-group last">
+            <?php echo $this->element->refdenvio->renderViewHelper(); ?>
+        </div>
+    </div>

@@ -1,0 +1,24 @@
+include jade/vars.jade
+include jade/head.jade
+include jade/mixins.jade
+body
+	include jade/header.jade
+	#wrapper
+		.white-bg
+			section.content.profile
+				.bg.passwd
+				h1.passTitle Cambiar Contraseña
+
+				fieldset
+					label Contraseña Actual
+					input(type="text") 
+
+				fieldset
+					label Nueva Contraseña
+					input(type="text")
+
+				fieldset
+					label Repetir Nueva Contraseña
+					input(type="text")
+
+				button.orange.passwd Cambiar

@@ -1,0 +1,59 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		#main-slider
+			.slide-main
+				.fx-profile
+					.prof-img
+						img(src="img/element/perfil.jpg",width="208",height="208")
+					h2.prof-name VICTOR EDUARDO CRUZ MORAN<br>(empresario independiente)
+					p.prof-address 51-992787034<br>
+						a(href="mailto:alfredovi@gmail.com") alfredovi@gmail.com
+					ul.prof-social
+						li
+							a(href="javascript:;",title="Twitter",class="twt")
+							| TWITTER
+						li
+							a(href="javascript:;",title="Facebook",class="fb")
+							| FACEBOOK
+						li
+							a(href="javascript:;",title="Youtube",class="ytb")
+							| YOUTUBE
+						li
+							a(href="javascript:;",title="Blog",class="blg")
+							| BLOG
+				.fx-break
+				.fx-descrp
+					#slid-profile.slides
+						a(class="buttons prev",href="javascript:;") left
+						.viewport
+							ul.overview
+								li
+									img(src="img/element/banner.jpg",width="486",height="272")
+								li
+									img(src="img/element/banner.jpg",width="486",height="272")
+								li
+									img(src="img/element/banner.jpg",width="486",height="272")
+						a(class="buttons next",href="javascript:;") right
+	nav.main-menu
+		ul
+			li
+				a(class="active",href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(href="contactame.html",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

@@ -1,0 +1,32 @@
+2014-02-07T12:11:50-05:00 INFO (6): ------------ Send Data --------------
+2014-02-07T12:11:50-05:00 INFO (6): Array
+(
+    [module] => service
+    [controller] => login
+    [action] => post
+    [email] => marrselo@gmail.com
+    [pass] => 123456
+    [token] => isjdoijdsflksdfsdfsdfsdf
+)
+
+2014-02-07T12:11:50-05:00 INFO (6): ------------ Data received -------------
+2014-02-07T12:11:50-05:00 INFO (6): stdClass Object
+(
+    [idUser] => 2
+    [userName] => Marselo
+    [phoneNumber] => 123456789
+    [pass] => e10adc3949ba59abbe56e057f20f883e
+    [email] => marrselo@gmail.com
+    [imgUser] => 20130921054523.png
+    [thumbnail] => thum_20130921054523.png
+    [withApplication] => 1
+    [flagAct] => 1
+    [addressMac] => 
+    [name] => 
+    [lastName] => 
+    [countryCode] => 51
+    [lastUpdate] => 
+    [token] => isjdoijdsflksdfsdfsdfsdf
+)
+
+2014-02-07T12:11:50-05:00 INFO (6): --------------- Fin Cron ----------------

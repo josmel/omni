@@ -1,0 +1,70 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Productos" href="/product">« Volver al listado de Productos</a>
+</div>
+<div class="frm-panel">
+
+    <form id="frm-product" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+        
+        <div class="control-group">
+            <label class="control-label" for="desprod">Nombre:</label>
+            <div class="controls">
+                <?php echo $this->element->desprod; ?>
+                <?php echo $this->element->codprod; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="abrprod">Abreviatura:</label>
+            <div class="controls">
+                <?php echo $this->element->abrprod; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="shorttext">Descripción Corta:</label>
+            <div class="controls">
+                <?php echo $this->element->shorttext; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="text">Descripción:</label>
+            <div class="controls w540">
+                <?php echo $this->element->text; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="text">Foto Catálogo:</label>
+            <div class="controls">
+                <image src="<?php echo $this->element->getView()->urlImgCat?>" 
+                       width="200px">
+                <?php echo $this->element->catalog_image; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="text">Foto Referencial:</label>
+            <div class="controls">
+                <image src="<?php echo $this->element->getView()->urlImgDet?>" 
+                       width="200px">
+                <?php echo $this->element->detail_image; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="vchestado">SobreSaliente:</label>
+            <div class="controls">
+                <?php echo $this->element->issalient; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

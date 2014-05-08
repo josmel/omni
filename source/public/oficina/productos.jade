@@ -1,0 +1,137 @@
+include jade/vars.jade
+include jade/head.jade
+include jade/mixins.jade
+body
+	include jade/header.jade
+	#wrapper
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a Productos
+			aside
+				h2.sprites-p.tab-aside Tienda Fuxion
+				ul
+					li
+						a PRODUCTOS
+						ul
+							li 
+								a Productos clave
+							li 
+								a Por sistemas
+								ul
+									li
+										a  
+											i.purple 
+											| Antiedad
+									li 
+										a 
+											i.cyan 
+											| Bajar de peso
+									li 
+										a
+											i.yellow 
+											| Kids
+									li 
+										a
+											i.green 
+											| Para fortalecer el sistema inmunológico
+									li
+										a 
+											i.magenta 
+											| Para incrementar el vigor mental
+									li 
+										a
+											i.skin 
+											| Para la mujer
+									li 
+										a
+											i.gray 
+											| Rendimiento deportivo e incremento muscular
+					li 
+						a AUXILIARES DE VENTA
+					li 
+						a MERCHANDISING
+					li 
+						a EVENTOS
+					li 
+						a ESCUELA DE LÍDERES
+					li 
+						a CLUB X
+				h2.sprites-p.tab-aside: span Historia de Compras
+				ul
+					li 
+						a MIS COMPRAS FREC.
+						ul
+							li 
+								a Compra rápido
+							li 
+								a Favoritos
+							li 
+								a Últimas Compras
+							li 
+								a Historial de pagos
+							li 
+								a Pagos pendientes
+					li 
+						a SUGERENCIAS
+					li 
+						a AFILIACIÓN
+			section.content.tienda
+				header
+					h2 Productos
+						span Mostrando 1 - 34 de 34 Resultados
+					aside
+						.configs
+							a(onclick="$('.box').removeClass('lista');").active
+								i.sprites-p.icon-grid
+								| Imágenes Grandes
+							a(onclick="$('.box').addClass('lista');")
+								i.sprites-p.icon-details
+								| Detalles
+						fieldset
+							label Ordenar por:
+							select
+								option Nombre: A - Z	
+
+				.box-cnt
+					+productos(productos)
+						
+								
+				.pager
+					.wrapper
+						a(href="#").sprites-p.arrow-left
+						a(href="#").active 1
+						a(href="#") 2
+						a(href="#") 3
+						a(href="#") 4
+						a(href="#") 5
+						span de
+						a(href="#").active 150
+						a(href="#").sprites-p.arrow-right
+	include jade/scripts.jade
+
+	script.
+		var listaCarrito = $('.cart-popUp ul');
+
+		function mostrarCarrito(){
+			var btnCarrito = $( "header .wrapper aside .info-cart .cart-cont a" );
+			var carrito = $(".cart-popUp");
+
+			btnCarrito.click(function() {
+				if(carrito.css("opacity")==0){
+					carrito.css("transform","scale(1)");
+					carrito.css("opacity","1");
+					carrito.css('height','240px');
+				}else{
+					carrito.css("transform","scale(0)");
+					carrito.css("opacity","0");
+					carrito.css('height','0');
+				}
+			});	
+		}
+		$(window).load(function(){
+			//listaCarrito.mCustomScrollbar();
+		});
+		mostrarCarrito();
+
+

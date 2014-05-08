@@ -1,0 +1,26 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			a(href='#').sprites.logo-inv.top
+	.login-cnt
+		form
+			a(href='#').sprites.logo
+			h3 iniciar sesión para CONTINUAR
+			fieldset
+				label
+					i.sprites.icon-user
+				input(type='text', placeholder='Usuario')
+			fieldset
+				label
+					i.sprites.icon-key
+				input(type='pass', placeholder='Contraseña')
+			.buttons-cnt
+				button.btn-entrar
+					h4 entrar
+					h5 usando nuestro servidor seguro
+				button.btn-trash
+					i.sprites.icon-trash
+			.helpers-cnt
+				a(href='#') ¿Olvidaste tu contraseña?

@@ -1,0 +1,43 @@
+/**
+* Forms Section
+* @class Forms
+* @module base.css
+*/
+.control-group
+	border-bottom 1px solid #D5D5D5
+	padding 15px 0
+	&.last
+		border none
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.cgroup-inline
+	padding 15px 0
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.control-group
+		float left
+		margin 0 0 0 30px
+		&:first-child
+			margin 0
+.control-label
+	float left
+	font-size 12px
+	padding 7px 24px 0 10px
+.controls
+	float left
+	&.fix
+		padding-top 4px
+		width auto
+/* Tamaños */
+.select-large
+	width 186px

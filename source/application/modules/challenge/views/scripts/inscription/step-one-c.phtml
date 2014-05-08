@@ -1,0 +1,43 @@
+    <div class="content-desafio">
+      <div class="img-step"><img src="<?php echo STATIC_URL ; ?>img/desafio/elements/paso1-c.jpg" alt="Desafío Fuxion" width="750" height="240"/></div>
+      <div class="bg-green fix"><span></span>
+        <h2>DEFINE TU PESO OBJETIVO</h2>
+      </div>
+      <form id="frmStep1c" name="frmData" method="post" action="" class="frm-data pt66">
+        <div class="bg-blue"><span></span>
+          <p>Elija un peso basado en el Rango Ideal Recomendado <br>que le mostramos</p>
+        </div>
+        <div class="frm-group">
+          <label class="control-label" for="">
+          </label> 
+          <label class="control-label" for="">
+            
+          </label>
+            Elige tu peso objetivo 
+              de acuerdo a tu contextura
+        </div>
+        <div class="frm-group">
+          <label class="control-label lh14" for="kilobaja">¿QUE PESO<br>DESEAS LOGRAR?</label>
+          <div class="frm-control">
+            <?php echo $this->form->kilobaja; ?>
+          </div><span class="help-required">Peso en Kgs *</span>
+        </div>
+         
+        <div class="frm-group">
+          <label class="control-label dblock" for="motivo">MOTIVO PARA BAJAR DE PESO <span class="color-orange">(Esta es uso confidencial, sólo para ti) </span></label>
+          <div class="frm-control">
+            <?php echo $this->form->motivo; ?>
+          </div><span class="help-required">*</span>
+        </div>
+        <div class="frm-group">
+          <label class="control-label dblock" for="compromiso">COMPROMISO</label>
+          <div class="frm-control">
+            <?php echo $this->form->compromiso; ?>
+          </div><span class="help-required">*</span>
+        </div>
+        <p class="color-orange mt20">(*) Campos obligatorios</p>
+        <div class="frm-group row">
+          <button type="submit" id="sbmSend" title="Siguiente" class="btn">Siguiente</button>
+        </div>
+      </form>
+    </div>

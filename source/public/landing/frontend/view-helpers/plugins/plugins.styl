@@ -1,0 +1,28 @@
+/**
+* Plugins CSS
+* @class Plugins
+* @module helpers.css
+*/
+.slides
+	position relative
+	.viewport
+		overflow hidden
+		position relative
+	.overview
+		list-style none
+		position absolute
+		li
+			float left
+			margin-right 20px
+			&:last-child
+				margin 0
+	.buttons
+		background url(routImg+"icon-set.png") no-repeat
+		height 22px
+		position absolute
+		text-indent -9999px
+		width 21px
+		&.prev
+			background-position btnPrev
+		&.next
+			background-position btnNext

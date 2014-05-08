@@ -1,0 +1,92 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper	
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Carrito de Compra
+				a(href="#") Dirección de envío
+				a(href="#") Forma de envío
+				a(href="#") Tipo de comprobante
+			section.content
+				header
+					h2.title TIPO DE COMPROBANTES
+
+				section.comprobante
+					.column-three
+						.wrap
+							h3 Seleccione el tipo de comprobante
+
+							span ¿Desea boleta o factura?
+
+							fieldset
+								input(type="radio", name="comprobante").radio
+								label Boleta
+
+							fieldset
+								input(type="radio", name="comprobante").radio
+								label Factura
+
+							table
+								tr
+									td: label Razón Social:
+									td: input(type="text", value="Boutique Perez")
+								tr
+									td: label RUC: 
+									td: input(type="text", value="123456789")
+
+
+					.column-three
+						.wrap
+							h3 Calculo de la persepción
+
+							span La percepción será cobrada de acuerdo a lo siguiente
+
+							table.percepcion
+								tr
+									th Tipo de comprobante
+									th <= S/. 700.00
+									th > S/. 700.00
+								tr
+									td Boleta
+									td 0 %
+									td 2 %
+
+					.column-three
+						.wrap
+							h3 Resumen de compra
+
+							span El recibo de Pago es: Factura, el cual sera generado y enviado con su compra.
+
+							table.subtotal
+								tr
+									th Sub-Total:
+									th S/.
+									th 237.80
+									th.plus +
+								tr
+									td Costo de envio
+									td S/.
+									td 5.00
+									td.plus +
+								tr
+									td Persep (2%)
+									td S/.
+									td 4.76
+									td 
+								tr.subtotal
+									td: b Sub-total
+									td S/.
+									td(colspan=2) 422.56
+
+					.btn-cnt
+						button.orange.float-right
+							i.sprites-p.arrow-boxed
+							| Ir a consolidación de Pedido
+						span.btn-helper Podras revisar tu compra antes
+						
+
+
+

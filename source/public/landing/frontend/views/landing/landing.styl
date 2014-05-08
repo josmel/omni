@@ -1,0 +1,333 @@
+/**
+* Landing CSS
+* @class Landing
+* @module landing.css
+*/
+.decor-top, .decor-bottom
+	background url(routImg+"bg-body.gif") repeat-x
+	height 170px
+	left 0
+	position absolute
+	width 100%
+	z-index 1
+.decor-top
+	background-position 0 -16px
+	top 0
+.decor-bottom
+	bottom 0
+.ctn-bgfx
+	height 253px
+	left 0
+	position absolute
+	top 80px
+	width 100%
+	z-index 2
+	.bgfx1
+		background #f7f7f7
+		border-bottom 2px solid #008fd1
+		border-top 2px solid #008fd1
+		height 249px
+	.bgfx2
+		background url(routImg+"bg-fuxion.gif") center center repeat-x
+		height 192px
+		left 0
+		position absolute
+		top 30px
+		width 100%
+.row-well
+	background #FFF
+	box-shadow 0 0 16px rgba(142, 142, 142, 0.13)
+	height 378px
+	margin 0 auto
+	padding 18px 26px
+	position relative
+	width 818px
+	z-index 3
+	&.fix
+		padding 0 26px
+/**
+* Inicio, Testimonio, Contactame CSS
+*/
+.fx-profile
+	float left
+	padding 0 18px
+	text-align center
+	width 244px
+	.prof-img
+		height 208px
+		margin 0 auto 12px
+		width 208px
+		img
+			border-radius 208px
+			display block
+	.prof-name
+		color #4e8acc
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 14px
+	.prof-address
+		color #d79129
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 18px
+		a
+			color #d79129
+			&:hover
+				text-decoration underline
+	.prof-social
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+		li			
+			color #7c8389
+			float left
+			font-family family2
+			font-size 10px
+			margin-left 16px
+			&:first-child
+				margin 0
+		a
+			background url(routImg+"icon-set.png") no-repeat
+			display block
+			height 37px
+			margin 0 auto 5px
+			width 38px
+			&:hover
+				opacity 0.8
+		.twt
+			background-position twitter
+		.fb
+			background-position facebook
+		.ytb
+			background-position youtube
+		.blg
+			background-position blogger
+.fx-break
+	background #b0b5b8
+	float left
+	height 340px
+	margin 19px 25px 0
+	width 1px
+.fx-descrp
+	float left
+	width 486px
+	h2
+		color #db8f1b
+		font 400 14px family2
+		margin-bottom 14px
+		text-align center
+	p
+		line-height 20px
+		margin-bottom 18px
+		text-align justify
+#slid-profile
+	padding 53px 0
+	.viewport
+		height 272px
+		width 486px
+	.buttons
+		bottom 8px
+		&.prev
+			right 34px
+		&.next
+			right 0
+		&:hover
+			opacity 0.8
+#frm-contactenos
+	margin 0 auto
+	width 386px
+	input[type="text"],textarea
+		width 360px
+	textarea
+		height 76px
+/**
+* Oportunidad, compañia
+*/
+.cms-img
+	float left
+	text-align center
+	width 392px
+.cms-descrp
+	float left
+	padding 30px 24px 0
+	text-align center
+	width 378px
+	h2
+		font 700 12px family2
+		margin-bottom 14px
+		text-align center
+	p
+		line-height 18px
+		margin-bottom 24px
+		text-align justify
+#oportunity
+	.cms-img
+		padding-top 56px
+.oportunity1
+	h2
+		color #e6c31d
+.oportunity2
+	h2
+		color #db8f1b
+.oportunity3
+	h2
+		color #cdd522
+.company
+	h2
+		color #008fd1
+	p
+		margin 0
+/**
+* Productos
+*/
+.prod-lcateg
+	background url(routImg+"bg-shadow.png") right top repeat-y
+	float left
+	height 318px
+	padding 50px 17px 0 0
+	width 294px
+.prod-list
+	float left
+	padding 16px 12px 0 38px
+	width 457px
+.lcateg-list
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		float left
+		margin-left 12px
+		width 84px
+		&:nth-child(n+4)
+			margin-top 14px
+		&:nth-child(3n+1)
+			margin-left 0
+	h3
+		font-family family3
+		font-size 12px
+		height 28px
+		line-height 14px
+		margin-bottom 2px
+		text-align center
+	a
+		background url(routImg+"icon-set.png")
+		display block
+		height 55px
+		margin 0 auto
+		width 54px
+	.lcat1
+		h3
+			color #473875
+		a
+			background-position cat1
+	.lcat2
+		h3
+			color #bf0c17
+		a
+			background-position cat2
+	.lcat3
+		h3
+			color #229a7f
+		a
+			background-position cat3
+	.lcat4
+		h3
+			color #4e8acc
+		a
+			background-position cat4
+	.lcat5
+		h3
+			color #484848
+		a
+			background-position cat5
+	.lcat6
+		h3
+			color #c20b68
+		a
+			background-position cat6
+	.lcat7
+		h3
+			color #ecbd09
+		a
+			background-position cat7
+.slid-product
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.product
+		float left
+		margin-left 24px
+		width 136px
+		h2
+			color #58b7b2
+			font-family family3
+			font-size 14px
+			height 28px
+			line-height 14px
+			padding-bottom 3px
+			text-align center
+		a
+			display block
+			position relative
+		&:nth-child(3n+1)
+			margin 0
+		&:nth-child(n+4)
+			margin-top 18px
+	.prod-decor
+		background #4e8acc
+		bottom 10px
+		box-shadow -1px 2px 2px rgba(0, 0, 0, 0.43)
+		color #FFF
+		font-family family2
+		font-size 12px
+		height 22px
+		line-height 22px
+		position absolute
+		right -4px
+		text-align center
+		width 100px
+		span
+			background url(routImg+"icon-set.png") bgProduct
+			height 6px
+			position absolute
+			right 0
+			top -6px
+			width 4px
+.slid-nav
+	height 20px
+	padding-top 10px
+	position relative
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.btnav
+		background url(routImg+"icon-set.png")
+		bottom 0
+		height 22px
+		position absolute
+		text-indent -9999px
+		width 21px
+	.prev
+		background-position btnPrev
+		right 34px
+	.next
+		background-position btnNext
+		right 0

@@ -1,0 +1,67 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Banners" href="/banner">« Volver al listado de Banner</a>
+</div>
+<div class="frm-panel">
+
+    <form id="frm-article" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+
+        <div class="control-group">
+            <label class="control-label" for="codproy">Proyecto:</label>
+            <div class="controls">
+                <?php echo $this->element->codproy; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="titulo">Título:</label>
+            <div class="controls">
+                <?php echo $this->element->titulo; ?>
+                <?php echo $this->element->idbanner; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="titulo">Imagen:</label>
+            <div class="controls">
+                <?php echo $this->element->nombre; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="fechainicio">Primer día de publicación:</label>
+            <div class="controls">
+                <?php echo $this->element->fechainicio; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="fechafin">Último día de publicación:</label>
+            <div class="controls">
+                <?php echo $this->element->fechafin; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="descripcion">Descripción:</label>
+            <div class="controls">
+                <?php echo $this->element->descripcion; ?>
+            </div>
+        </div>
+        
+        
+        <div class="control-group">
+            <label class="control-label" for="vchestado">Activo:</label>
+            <div class="controls">
+                <?php echo $this->element->vchestado; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

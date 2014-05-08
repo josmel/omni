@@ -1,0 +1,86 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car">
+        <h2>DIRECCIÓN DE ENVÍO</h2>
+        <p class="descDir">Selecciona la dirección donde quieres recibir tu compra. Si no está, ingrese una nueva dirección<span></span></p>
+    </header>
+    <div class="row list-address">
+        <?php foreach($this->addresses as $address) : 
+            $ubiAddress = $address['ubigeoName']!="" ? $address['ubigeoName'] : ""; 
+            $desAddress = (!empty($address['destvia'])) ? 
+                                    $address['abbrtvia'].' '.$address['desdire'].' '.$address['numdire'].' Int. '.$address['intdire']
+                                    : $address['desdire']; 
+            $desAddress = !empty($ubiAddress) ? $ubiAddress.' - '.$desAddress : $desAddress;
+        ?>
+        <div class="address">
+            <label class="ioption"><input type="radio" name="radAddress" value="<?php echo $address['iddire']; ?>" <?php echo (!empty($this->selAddress) && $address['iddire'] == $this->selAddress['iddire']) ? 'checked' : ''; ?> />Usar esta dirección</label>
+            <div class="ctn-flipcar">
+                <div class="desc-address flipper flp-front">
+                    <div class="ctnAddress">
+                        <dl>
+                            <dt>Contacto:</dt>
+                            <dd><?php echo ($address['nomcont']!="")?$address['nomcont']:"&nbsp;"; ?></dd>
+                            <dt>Dirección:</dt>
+                            <dd><?php echo $desAddress; ?></dd>
+                            <dt><?php echo $this->lblReference; ?>:</dt>
+                            <dd><?php echo ($address['refdire']!="")?$address['refdire']:"&nbsp;"; ?></dd>
+                            <dt>Teléfono:</dt>
+                            <dd><?php echo ($address['telefono']!="")?$address['telefono']:"&nbsp;"; ?></dd>
+                        </dl>
+                    </div>
+                    <p class="alg-right">
+                        <a href="javascript:;" class="lnk-address">Editar Dirección</a>
+                    </p>
+                </div>
+                <div class="desc-address flipper flp-back">
+                    <p class="alg-right mb4"><a href="javascript:;" class="lnk-address">Cancelar</a></p>
+                    <div class="ctnChangeAddress"></div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+        <div class="address">
+            <label class="ioption"><input type="radio" name="radAddress" value="-1" />Entrega en Tienda</label>
+        </div>
+        <div class="address fix">
+            <label class="ioption"><input type="radio" name="radAddress" value="new" <?php echo empty($this->selAddress) ? 'checked' : ''; ?>/>Usar nueva dirección de envío</label>
+            <form method="POST" id="frmAddress">
+                <?php echo $this->formAddress; ?>
+                <input id="hidAddress" type="hidden" name="address" />
+                <div class="alg-right pt24">
+                    <button class="btn-orange" type="submit"><i class="sprites-p arrow-boxed"></i>Ir a forma de envío</button><?php /*<span class="btn-helper">Podrás revisar tu compra antes.</span> */?>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script id="tplAddressFront" type="text/template">
+    <dl>
+        <dt>Contacto:</dt>
+        <dd>{{ if(nomcont!=null && nomcont!=""){ }} {{= nomcont }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Dirección:</dt>
+        <dd>{{ if(desdire!=null && desdire!=""){ }} {{= desdire }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt><?php echo $this->lblReference; ?>:</dt>
+        <dd>{{ if(refdire!=null && refdire!=""){ }} {{= refdire }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Teléfono:</dt>
+        <dd>{{ if(telefono!=null && telefono!=""){ }} {{= telefono }} {{ }else{ }} &nbsp; {{ } }}</dd>
+    </dl>
+</script>
+<script id="tplAddressBack" type="text/template">
+    <form class="frmChangeAddress">
+        <div class="control-group">
+            <label for="nomcont" class="control-label">Nombre de Contacto:</label><div class="controls"><input type="text" id="nomcont" name="nomcont" value="{{= nomcont }}"><input name="iddire" type="hidden" value="{{= iddire }}" /></div>
+        </div>
+        <div class="control-group">
+            <label for="desdire" class="control-label">Dirección:</label>
+            <div class="controls"><input type="text" id="desdire" name="desdire" value="{{= desdire }}" /></div>
+        </div>
+        <div class="control-group">
+            <label for="refdire" class="control-label"><?php echo $this->lblReference; ?>:</label>
+            <div class="controls"><input type="text" id="refdire" name="refdire" value="{{= refdire }}" /></div>
+        </div>
+        <p class="alg-center mt4">
+            <button class="save-address" type="submit">GUARDAR</button>
+        </p>
+    </form>
+</script>

@@ -1,0 +1,32 @@
+/**
+* Plugin jqCount - jqCount.js
+* @class Plugin jqCount
+* @module helpers.css
+*/
+.inpt-count
+	margin 0 auto
+	position relative
+	width 55px
+.btn-counts
+	background url(routImg+"icon-set.png")
+	border none
+	height 12px
+	padding 0
+	position absolute
+	right 0
+	transition all 0.4s ease
+	width 14px
+	&:hover
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=70)")
+		filter unquote("alpha(opacity=70)")
+		opacity 0.7
+	&.disabled
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=30)")
+		filter unquote("alpha(opacity=30)")
+		opacity 0.3
+.btn-up
+	background-position btnUp
+	top 0
+.btn-down
+	background-position btnDown
+	bottom 0

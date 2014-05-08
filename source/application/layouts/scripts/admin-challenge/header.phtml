@@ -1,0 +1,8 @@
+<header class="header">
+  <div class="box-center">
+    <h1><a href="javascript:;" title="Desafío Fuxion" class="logo-lnk">Desafío Fuxion</a></h1>
+    <?php if (Zend_Auth::getInstance()->hasIdentity()) : ?>
+    <a id="headLogout" href="/logout" title="Salir"></a>
+    <?php endif; ?>
+  </div>
+</header>

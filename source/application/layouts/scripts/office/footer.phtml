@@ -1,0 +1,41 @@
+<?php if(Zend_Auth::getInstance()->hasIdentity()) : ?>
+<footer>
+    <ul class="foot-menu box-center">
+         <?php $menuHtml = "";
+         foreach($this->menu as $index => $value) :
+             $class = ($index==$this->controller) ? ' active ':' ';
+             if (isset($value['additionalViews'])) {
+                 foreach ($value['additionalViews'] as $aditional) 
+                     if($aditional == $this->controller) 
+                         $class = ' active '; 
+             }
+             $menuHtml = '<li class="'.$class.'">
+                            <a href="'.$value['url'].'" title="'.$value['title'].'">'.$value['title'].'</a>
+                          </li>'.$menuHtml;
+        ?>
+        <?php endforeach; 
+        echo $menuHtml;?>
+    </ul>
+</footer>
+<?php endif; ?>
+<script type="text/javascript">
+  var yOSON ={
+      "modulo":"<?php echo $this->module?>",
+      "controller":"<?php echo $this->controller?>",
+      "action":"<?php echo $this->action?>",
+      "baseHost":"<?php echo SITE_URL?>",
+      "statHost":"<?php echo STATIC_URL?>",
+      "statVers":"?<?php echo SITE_VERSION; ?>",
+      <?php foreach ($this->yosonVars as $key => $value) : 
+           echo '"'.$key.'":'.$value.', '; 
+          endforeach; 
+          echo '"min":"","AppCore":{},"AppSandbox":{},"AppSchema":{"modules":{},"requires":{}'
+          ?>  
+      }
+    };
+</script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/libs/framework.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/yoson.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/modules/office.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/schemas/mOffice.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/appLoad.js?v=<?php echo SITE_VERSION; ?>"></script>

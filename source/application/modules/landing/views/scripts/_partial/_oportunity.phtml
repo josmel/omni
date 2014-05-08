@@ -1,0 +1,118 @@
+<div id="oportyCentral" class="oporNav oporMain">
+	<div class="cms-descrp oportunity">
+		<h2>OPORTUNIDAD</h2>
+		<p>FuXion es una empresa multinacional que ofrece la oportundad de tener una franquicia master con baja inversión y un poderoso sistema de trabajo, simple y fácil de replicar. Tienes 15 formas de generar ingresos, bonos y utilidades.</p>
+	</div>
+	<div class="oprty-central">
+		<div class="oprty-map">
+			<img src="/static/img/blank.png" usemap="#oportunityCentral" width="506" height="315" />
+		</div>
+		<div class="typOprty oprty-desarr">
+			<div class="oprty-img"></div>
+			<a class="oporLnk" href="javascript:;" rel="#personalDev" title="Ver Más">Ver Más<span></span></a>
+		</div>
+		<div class="typOprty oprty-liber">
+			<div class="oprty-img"></div>
+			<a class="oporLnk" href="javascript:;" rel="#libertyFinance" title="Ver Más">Ver Más<span></span></a>
+		</div>
+		<div class="typOprty oprty-salud">
+			<div class="oprty-img"></div>
+			<a class="oporLnk" href="javascript:;" rel="#healthTrue" title="Ver Más">Ver Más<span></span></a>
+		</div>
+		<map class="map-typOporty" name="oportunityCentral" id="oportunityCentral">
+			<area shape="poly" coords="48,265,224,3,225,174" title="Salud Verdadera" rel="#healthTrue" href="javascript:;" />
+			<area shape="poly" coords="225,2,402,265,225,174" title="Desarrollo Personal" rel="#personalDev" href="javascript:;" />
+			<area shape="poly" coords="47,265,224,174,402,266" title="Libertad Financiera" rel="#libertyFinance" href="javascript:;" />
+		</map>
+	</div>
+</div>
+<div id="libertyFinance" class="oporNav">
+	<div class="cms-descrp">
+		<h2>OPORTUNIDAD</h2>
+		<h3>Libertad Financiera</h3>
+		<p>Fuxion pone a tu disposición un agresivo y equilibrado Plan de Compensación con 15 formas de ganar, que te brinda las herramientas para gener ingresos adicionales que te permitirán dirigir tu vida hacia el camino de la libertad financiera.</p>
+                <div class="ctn-pdfs"><?php foreach ($this->LFFiles as $file) : ?><div class="lpdf">
+                        <h4><?php echo $file['titulo'] ?></h4>
+                        <a href="<?php echo DINAMIC_URL."/file/".$file['codproy']."/".$file['nombre'] ?>" target="_blank" title="Descargar PDF"></a>
+                    </div><?php endforeach; ?>
+                </div>
+	</div>
+	<div class="cms-img">
+		<span class="oporImg"><img src="/static/img/blank.png" usemap="#libertadFinac" width="356" height="266" /></span>
+		<div class="quotes">
+			<p>
+				<span class="quot-left"></span>
+				Para lograr la seguridad financiera, necesitas atender tu propio negocio. Tu negocio gira alrededor de tu columna de activos y no de tu columna de ingresos.
+				<span class="quot-right"></span>
+			</p>
+			<small>- Robert Kiyosaki</small>
+		</div>
+	</div>
+	<a class="btn-back oporBack" rel="#oportyCentral" href="javascript:;" title="Atrás"></a>
+	<map class="map-typOporty" name="libertadFinac" id="libertadFinac">
+		<area shape="poly" coords="0,208,138,0,138,136" title="Salud Verdadera" rel="#healthTrue" href="javascript:;" />
+    	<area shape="poly" coords="138,0,277,208,138,136" title="Desarrollo Personal" rel="#personalDev" href="javascript:;" />
+	</map>
+</div>
+<div id="personalDev" class="oporNav">
+	<div class="cms-descrp">
+		<h2>OPORTUNIDAD</h2>
+		<h3>Desarrollo Personal</h3>
+		<p>El Multicrecimiento FuXion se enfoca en desarrollar la capacidad de las persona de liderar su propia vida y la capacidad de inspirar a otros a hacerlo también, a través de nuestra Escuela de Líderes FuXion.</p>
+		<ul>
+			<li>Rompe tus límites</li>
+			<li>Libera tu pasado y Construye tu futuro</li>
+			<li>Abundancia</li>
+			<li>Magicamente</li>
+			<li>Círculo de Poder</li>
+		</ul>
+	</div>
+	<div class="cms-img">
+		<span class="oporImg">
+			<img src="/static/img/blank.png" usemap="#desarrolloPer" width="356" height="266" />
+		</span>
+		<div class="quotes">
+			<p>
+				<span class="quot-left"></span>
+				Para lograr la seguridad financiera, necesitas atender tu propio negocio. Tu negocio gira alrededor de tu columna de activos y no de tu columna de ingresos.
+				<span class="quot-right"></span>
+			</p>
+			<small>- Robert Kiyosaki</small>
+		</div>
+	</div>
+	<a class="btn-back oporBack" rel="#oportyCentral" href="javascript:;" title="Atrás"></a>
+	<map class="map-typOporty" name="desarrolloPer" id="desarrolloPer">
+		<area shape="poly" coords="0,208,138,0,138,136" title="Salud Verdadera" rel="#healthTrue" href="javascript:;" />
+  		<area shape="poly" coords="0,208,138,136,277,208" title="Libertad Financiera" rel="#libertyFinance" href="javascript:;" />
+	</map>
+</div>
+<div id="healthTrue" class="oporNav">
+	<div class="cms-descrp">
+		<h2>OPORTUNIDAD</h2>
+		<h3>Salud Verdadera</h3>
+		<p>Avanzando en ciencia y regresando a lo natural FuXion es un amplio concepto que maximiza el poder nutricional de los mejores ingredientes incorporando valiosos recurso naturales junto a nuevas y mejoradas patentes nacionales e internacionales que suman décadas de investigación y cientos de millones de dólares en inversión. Conoce al detalle cada uno de nuestros productos aquí.</p>
+                <div class="ctn-pdfs"><?php foreach ($this->SVFiles as $file) : ?><div class="lpdf">
+                        <h4><?php echo $file['titulo'] ?></h4>
+                        <a href="<?php echo DINAMIC_URL."/file/".$file['codproy']."/".$file['nombre'] ?>" target="_blank" title="Descargar PDF"></a>
+                    </div><?php endforeach; ?>
+                </div>
+	</div>
+	<div class="cms-img">
+		<span class="oporImg">
+			<img src="/static/img/blank.png" usemap="#saludVerd" width="356" height="266" />
+		</span>
+		<div class="quotes">
+			<p>
+				<span class="quot-left"></span>
+				Para lograr la seguridad financiera, necesitas atender tu propio negocio. Tu negocio gira alrededor de tu columna de activos y no de tu columna de ingresos.
+				<span class="quot-right"></span>
+			</p>
+			<small>- Robert Kiyosaki</small>
+		</div>
+	</div>
+	<a class="btn-back oporBack" rel="#oportyCentral" href="javascript:;" title="Atrás"></a>
+	<map class="map-typOporty" name="saludVerd" id="saludVerd">
+		<area shape="poly" coords="138,0,277,208,138,136" title="Desarrollor Personal" rel="#personalDev" href="javascript:;" />
+        <area shape="poly" coords="0,208,138,136,277,208" title="Libertad Financiera" rel="#libertyFinance" href="javascript:;" />
+	</map>
+</div>

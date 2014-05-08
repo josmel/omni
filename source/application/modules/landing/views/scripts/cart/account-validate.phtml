@@ -1,0 +1,70 @@
+<div id="main-slider" class="fix">
+    <div class="slide-main">
+        <?php echo $this->partial('_partial/_cartHeader.phtml', $this);?>
+        <div class="ctn-step3">
+            <?php if (!$this->hasLogin) :  ?>
+            <div class="iopinline step2-opt ">
+                <label class="ioption">
+                    <input class="lnk-tab" <?php echo $this->accountView == 1 ? 'checked="checked"' : '';?> data-id="userLogin" name="radTypeUser" type="radio"/>Ya soy cliente
+                </label>
+                <label class="ioption active">
+                    <input class="lnk-tab"  <?php echo $this->accountView == 2 ? 'checked="checked"' : '';?> data-id="userRegister" name="radTypeUser" type="radio"/>Soy nuevo comprador
+                </label>
+            </div>
+            <div id="userRegister" class="ctn-tab <?php echo $this->accountView == 1 ? 'hide' : '';?>">
+                <?php echo $this->formJoined;?>
+            </div>
+            <div id="userLogin" class="ctn-tab ctn-cuenta <?php echo $this->accountView == 2 ? 'hide' : '';?>">
+                <form id="frmLogin" method="POST">
+                    <div class="control-group">
+                        <input id="txtUsername" name="txtUsername" type="text" placeholder="Email" class="inpt-medium"/>
+                    </div>
+                    <div class="control-group">
+                        <input id="txtPass" name="txtPass" autocomplete="off" type="password" placeholder="Contraseña" class="inpt-medium"/>
+                    </div>
+                    <p class="cuenta-opt">
+                        <a href="<?php echo $this->url(array('controller' => 'account', 'action' => 'forgot-password'), 'basicAction');?>" title="Olvidé mi Password">Olvidé mi Password</a>
+                    </p>
+                    <div class="control">
+                        <button id="submitLogin" name="submitLogin" type="submit" class="btn-lnk">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+
+            <?php else : ?>
+            <form id ="formAddress" method="POST">
+                <div class="row frm-step3">
+                    <div class="step3-left">
+                        <h2>DATOS PERSONALES</h2>
+                        <div class="control-group">
+                            <input type="text" placeholder="NOMBRE" value="<?php echo $this->joined->name; ?>" readonly class="inpt-small"/>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" placeholder="APELLIDO" value="<?php echo $this->joined->lastname; ?>" readonly class="inpt-small"/>
+                        </div>
+                        <div class="control-group">
+                            <input type="text" placeholder="EMAIL" value="<?php echo $this->joined->email; ?>" readonly class="inpt-small"/>
+                        </div>
+                    </div>
+                    <div class="step3-right">
+                        <h2>DATOS DE ENVÍO</h2>
+                        <div class="cgroup-inline last">
+                            <div class="control-group ctrl-address">
+                                <?php echo $this->selectAdresses->renderViewHelper();?>
+                            </div>
+                            <div class="control-group"><a href="javascript:;" class="btn-fuxion btnAddress">Nueva dirección</a></div>
+                        </div>
+                        <input id="newAddress" name="newAddress" type="hidden" value="0" />
+                        <?php echo $this->formAddress;?>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <button id="submitNext" name="submitNext" type="submit" class="btn-lnk btn-cart">Siguiente<span></span></button>
+                </div>
+            </form>
+            <?php endif;?>
+        </div>
+        <a class="btn-back" href="/cart" title="Atrás"></a>
+    </div>
+</div>

@@ -1,0 +1,365 @@
+<div class="white-bg fix">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car">
+        <h2>CARRITO DE COMPRA</h2>
+        <?php /*<p>Tienes <i class="sprites-p cart-big"></i>  <strong id="descQProd"><?php echo count($this->itemList); ?></strong> productos en tu carro de compras </p> */ ?>
+        <p class="descDir">Paso 1: Buscar en la tienda Fuxion y agregar al Carro de compra<span></span></p>
+    </header>
+    <div class="ctn-paysearch">
+        <div class="cgroup-inline">
+            <div class="control-group">
+                <label class="control-label" for="search">Nombre:</label>
+                <div class="controls">
+                    <input type="text" name="search" id="search" />
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="category">Tipo:</label>
+                <div class="controls">
+                    <select name="category" id="category">
+                        <?php foreach ($this->categories as $cat) : ?>
+                        <option label="<?php echo $cat['destpro']; ?>" value="<?php echo $cat['codtpro']; ?>"><?php echo $cat['destpro']; ?></option>
+                        <?php endforeach;?>
+                    </select>
+                </div>
+            </div>
+            <div class="control-group fix">
+                <button id="btnSearch" class="btn-orange" type="button"><i class="sprites-p arrow-boxed"></i>Buscar</button>
+            </div>
+        </div>
+    </div>
+    <p class="qkcart-result hide">Resultado de Búsqueda: <span id="qkcart-cntresult">0</span></p>
+    <div class="ctn-resultqk">
+        <table class="tbl-hdqkcart">
+            <tbody>
+                <tr>
+                    <td class="tdImg">&nbsp;</td>
+                    <td class="tdProduct">Productos</td>
+                    <td class="tdCant">Cantidad</td>
+                    <td class="tdPoints">Puntos</td>
+                    <td class="tdPrice">Precio unitario</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="scrollQkResult">
+            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+            <div class="viewport">
+                <div class="overview">
+                    <table class="tbl-qkresult">
+                        <tbody>
+                            <?php foreach ($this->products as $product) : ?>
+                            <tr>
+                                <td class="tdImg">
+                                    <img width="90" height="80" src="<?php echo $product['picture']; ?>" alt="<?php echo $product['desprod']; ?>" />
+                                </td>
+                                <td class="tdProduct">
+                                    <h2><a href="<?php echo $product['link']; ?>" title="<?php echo $product['desprod']; ?>"><?php echo $product['desprod']; ?></a></h2>
+                                </td>
+                                <td class="tdCant">
+                                    <input type="text" value="1" maxlength="3" name="txtcant[]" class="inptcant" data-price="<?php echo $product['monprec'] ?>" data-points="<?php echo $product['punprod']; ?>" data-discount="<?php echo $product['adeprod']; ?>">
+                                </td>
+                                <td class="tdPoints"><?php echo $product['punprod']; ?></td>
+                                <td class="tdPrice"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format($product['monprec']*(1+$this->iva), 2, '.', ' '); ?></td>
+                                <td>
+                                    <button data-id='<?php echo $product['codprod']; ?>' class="btn-orange btnAddProd" type="button"><i class="sprites-p cart-inv"></i>Agregar</button>
+                                    <a data-id='<?php echo $product['codprod']; ?>' class="sprites-p ic-fvt active" href="javascript:;" title="">Agregar Favoritos</a>
+                                </td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form id="frmQuickCart" method="POST">
+        <p class="descDir mb10">Paso 2: Selecciona la dirección donde quieres recibir tu compra. Si no está, ingresa una nueva dirección<span></span></p>
+        <div class="qkcart-address">
+            <?php $i= 1; foreach($this->addresses as $address) : ?>
+            <label class="ioption"><input type="radio" value="<?php echo $address['iddire']; ?>" name="radAddress" <?php echo $address['iddire'] == $this->selAddress ? 'checked' : ''; ?>><span>Dirección <?php echo $i; ?>:</span> &nbsp;&nbsp;<?php echo $address['largeDesAddress']; ?></label>
+            <?php $i++; endforeach; ?>
+            <label class="ioption"><input type="radio" value="-1" name="radAddress" <?php echo $this->selAddress == '-1' ? 'checked' : ''; ?>><span>Entrega en tienda</span> &nbsp;&nbsp;</label>
+            <div class="pt10">
+                <a id="popAddress" href="javascript:;" title="Nueva dirección de envío" class="btn-orange"><i class="sprites-p arrow-boxed"></i>Nueva dirección de envío</a>
+            </div>
+        </div>
+        <p class="descDir mb10">Paso 3: Selecciona si desea boleta o factura y completa los datos de ser necesario<span></span></p>
+        <div class="row">
+            <div class="qkcart-typay">
+                <?php foreach($this->vTypes as $vType) : ?>
+                <label class="ioption"><input type="radio" value="<?php echo $vType['codtdov']; ?>" <?php echo $vType['codtdov'] == $this->selVType['codtdov'] ? 'checked' : ''; ?> name="voucher"><?php echo $vType['destdov']; ?></label>
+                <?php endforeach; ?>
+            </div>
+            <div class="qkcart-typydet">
+                <dl class="slrChangue FAC row">
+                    <dt>Razón Social:</dt>
+                    <dd><?php echo $this->businessName; ?></dd>
+                    <dt>RUC:</dt>
+                    <dd>
+                        <input type="text" name="txtruc" id="txtruc" value="<?php echo $this->ruc; ?>" />
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <p class="descDir mb10">Paso 4: Resumen de compra rápida<span></span></p>
+        <table border="0" class="tbl-carrito">
+            <thead>
+                <tr>
+                    <th class="tdImg"></th>
+                    <th class="tdProduct">Productos</th>
+                    <th class="tdCant">Cantidad</th>
+                    <th class="tdPoints">Puntos</th>
+                    <?php /*<th class="tdPeso">Peso Neto</th>*/ ?>
+                    <th class="tdPrice">Precio Unitario</th>
+                    <th class="tdSubTotal">Sub Total</th>
+                    <th class="tdAction1"></th>
+                </tr>
+            </thead>
+            <tbody>
+               <?php foreach ($this->itemList as $item) : ?>
+               <tr>
+                   <td class="tdImg"><img alt="<?php echo $item->getProduct()->getName(); ?>" width="90" height="80" src="<?php echo $item->getProduct()->getUrlPicture(); ?>" /></td>
+                   <td class="tdProduct">
+                       <h2>
+                           <a href="<?php echo $this->url(array('slug' =>$item->getProduct()->getSlug()), 'productDetail'); ?>"> 
+                           <?php echo $item->getProduct()->getName(); ?>
+                           </a>
+                       </h2>
+                       <?php $bDescription = $item->getProduct()->getBoxDescription();
+                       if (!empty($bDescription)) : ?>
+                            <p>Caja (<?php echo $bDescription; ?>)</p>
+                       <?php endif; ?>
+                       <h3><?php echo $item->getProduct()->getPoints(); ?> Puntos</h3>
+                       <?php if ($item->getProduct()->getEnableDiscount() == 0) : ?>
+                            <p class="tbl-prodinfo">*Este producto no esta sujeto a descuentos</p>
+                       <?php endif; ?>
+
+                   </td>
+                   <td class="tdCant">
+                        <input data-id="<?php echo $item->getProduct()->getId(); ?>" data-discount="<?php echo $item->getProduct()->getEnableDiscount(); ?>" data-points="<?php echo $item->getProduct()->getPoints(); ?>" data-price="<?php echo $item->getProduct()->getPrice(); ?>" class="inptcant" id="txtcant" name="txtcant[<?php echo $item->getProduct()->getId(); ?>]" type="text" maxlength="3" value="<?php echo $item->getQuantity(); ?>"/>
+                   </td>
+                   <td class="tdPoints"><?php echo $item->getItemPoints(); ?></td>
+                   <?php /* <td class="tdPeso"><?php echo $item->getItemWeight(); ?> KG</td> */ ?>
+                   <td class="tdPrice"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format((1 + $this->iva) * $item->getProduct()->getPrice(), 2, '.', ''); ?></td>
+                   <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format((1 + $this->iva) * $item->getSubTotal(), 2, '.', ''); ?></td>
+                   <td class="tdAction1"> <a href="javascript:;" data-id="<?php echo $item->getProduct()->getId(); ?>" class="sprites-p btn-close-red"></a></td>
+               </tr>
+               <?php endforeach; ?>
+            </tbody>
+        </table>
+        <div class="row mb24">
+            <div class="cart-note">
+                <?php if ($this->pointsToNextDiscount != 0) : ?>
+                <h4>Nota:</h4>
+                    <?php if ($this->hasDiscount) : ?>
+                    <p>Te falta comprar <?php echo $this->pointsToNextDiscount; ?> puntos más para alcanzar un descuento de <?php echo $this->nextDiscount; ?>%.</p>
+                    <?php else : ?>
+                    <p>Te faltan <?php echo $this->pointsToNextDiscount; ?> puntos más para aplicar a los descuentos.</p>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
+            <table class="tbl-payDetail">
+                <tbody>
+                    <tr>
+                        <td class="tdPoints">Pts <span id="totalPts"><?php echo $this->points; ?></span></td>
+                        <td class="tdPrice">Sub Total:</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="subTotal"><?php echo $this->total; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPoints">&nbsp;</td>
+                        <td class="tdPrice">- Descuento(<span id="percentDis"><?php echo $this->discountP; ?></span>%):</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="totalDis"><?php echo $this->discount; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPoints">&nbsp;</td>
+                        <td class="tdPrice">+ Costo de Envío: </td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="totalShip"><?php echo $this->shipPrice; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPoints">&nbsp;</td>
+                        <td class="tdPrice"><strong>SUB TOTAL:</strong></td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="subTotalP"><?php echo $this->subTotalOrder; ?></span></td>
+                    </tr>
+                    <tr>
+                        <td class="tdPoints">&nbsp;</td>
+                        <td class="tdPrice">+ Percepción(<span id="perceptionPercep"><?php echo $this->perceptionP; ?></span>%):</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="totalPercep"><?php echo $this->perception; ?></span></td>
+                    </tr>
+                    <tr class="totalpDetail">
+                        <td class="tdPoints">&nbsp;</td>
+                        <td class="tdPrice">TOTAL:</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <span id="totalCart"><?php echo $this->totalOrder; ?></span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <?php if (!empty($this->discounts)) : ?>
+        <div id="tblDiscount" class="mb24 <?php echo $this->hasDiscount ? '' : 'hide' ?>">
+            <p class="pdiscount">Descuento por puntos de compra en volumen:</p>
+            <table border="0" class="tbl-discount">
+                <tbody>
+                    <tr>
+                        <td>Descuentos por puntos</td>
+                        <?php foreach ($this->discounts as $discount) : ?>
+                        <td><?php echo $discount['pindesc']; ?> - <?php echo $discount['pfidesc']; ?> Pts</td>
+                        <?php endforeach; ?>
+                    </tr>
+                    <tr>
+                        <td>Descuento Total</td>
+                        <?php foreach ($this->discounts as $discount) : ?>
+                            <td><?php echo number_format($discount['pordesc']*100, 2, '.', ''); ?> %</td>
+                        <?php endforeach; ?>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="obs-info">(*) El descuento sera aplicable solo a los productos puntuables (Productos exclusivos a descuento: Merchandising, auxiliares de venta, etc.). Tiene algunas excepciones.</p>
+        </div>
+        <?php endif; ?>
+        <p class="pdiscount mb24">Calculo de currier: <span>&nbsp;&nbsp;Se determina el costo de acuerdo a la dirección de Envío de compra</span></p>
+        
+        <?php if (!empty($this->perceptionData)) : ?>
+        <p class="pdiscount">Calculo de Persepción:</p>
+        <?php foreach($this->perceptionData as $key => $per) : ?>
+        <table class="tbl-discount slrChangue <?php  echo $key; ?>">
+            <tr>
+                <td class="alg-center">Tipo de comprobante</td>
+                <td class="alg-center">Mayor a <?php echo $this->businessman['simbolo']; ?> <?php echo number_format($per['start'], 2, '.', ' '); ?></td>
+            </tr>
+            <tr>
+                <td class="alg-center"><?php echo $per['docdescription']; ?> </td>
+                <td class="alg-center"><?php echo number_format(($per['perception'] * 100), 2, '.', ' '); ?> %</td>
+            </tr>
+        </table>
+        <?php endforeach; ?>
+        <?php endif; ?>
+       
+        <p class="descDir mb4">Paso 5: Selecciona tu método de pago<span></span></p>
+        <p class="pdescr">Elija el método de pago de tu preferencia. Luego haz clic en "Pagar para compra rápida"</p>
+        <?php echo $this->formPayment; ?>
+        
+        <div class="control pt54">
+            <button class="btn-orange" type="submit">PAGAR PARA COMPRA RÁPIDA</button>
+        </div>
+    </form>
+</div>
+<script id="tplOptAddress" type="text/template">
+    <label class="ioption"><input type="radio" name="radAddress" value="{{= idaddress }}"><span>Dirección {{= number }}:</span> &nbsp;&nbsp;{{= description}}</label>
+</script>
+<script id="tplAddress" type="text/template">
+<div class="new-address popAddress">
+    <h2>Agregar Nueva Dirección</h2>
+    <form id="frmNewAddress">
+        <div class="row">
+            <div class="col-address">
+                <div class="control-group">
+                    <label for="nomcont" class="control-label">Nombre de Contacto:</label>
+                    <div class="controls">
+                        <input type="text" value="" id="nomcont" name="nomcont">                
+                        <input type="hidden" id="tokenHash" value="35235860c3c6f99e1abcaedebc8030c1" name="tokenHash">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="country" class="control-label">País:</label>
+                    <div class="controls">
+                        <input type="text" readonly="readonly" class="select-medium" value="<?php echo $this->businessman['nompais']; ?>" id="country" name="country">
+                    </div>
+                </div>
+
+                <?php $level = 1;
+                foreach($this->levelNames as $ubigeoLevelName) :
+                    $id = 'ubigeo_'.$level;    
+                    $defaultName = "-".$ubigeoLevelName."-";
+                    ?>
+                <div class="control-group">
+                    <label for="<?php echo $id; ?>" class="control-label"><?php echo $ubigeoLevelName; ?>:</label>
+                    <div class="controls">
+                        <select id="<?php echo $id; ?>" name="<?php echo $id; ?>">
+                            <option label="<?php echo $defaultName; ?>" value=""><?php echo $defaultName; ?></option>
+                            <?php if($level == 1) : 
+                                foreach ($this->levelOneOptions as $key => $label) :?>
+                            <option label="<?php echo $label; ?>" value="<?php echo $key; ?>"><?php echo $label; ?></option>    
+                            <?php endforeach; 
+                            endif;  ?>
+                        </select>
+                    </div>
+                </div>            
+                <?php $level++;
+                endforeach; ?>
+
+            </div>
+            <div class="col-address">
+                <div class="control-group">
+                    <label for="telefono" class="control-label">Teléfono de Contacto:</label>
+                    <div class="controls">
+                        <input type="text" value="" id="telefono" name="telefono">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="desdire" class="control-label">Dirección:</label>
+                    <div class="controls">
+                        <input type="text" value="" id="desdire" name="desdire">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="refdire" class="control-label">Referencia:</label>
+                    <div class="controls">
+                        <input type="text" value="" id="refdire" name="refdire">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="telefono" class="control-label"><?php echo $this->zipCodeName; ?>:</label>
+                    <div class="controls">
+                        <input type="text" value="" id="zipcode" name="zipcode">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="control pt20">
+            <button class="btn-orange" type="submit">Agregar Dirección</button>
+        </div>
+    </form>
+</div>
+</script>
+<script id="tplProdSearch" type="text/template">
+{{ _.map(products,function(product){ }}
+    <tr>
+        <td class="tdImg">
+            <img width="90" height="80" src="{{= product['picture'] }}" alt="{{= product['desprod'] }}" />
+        </td>
+        <td class="tdProduct">
+            <h2><a href="{{= product['link'] }}" title="{{= product['desprod'] }}">{{= product['desprod'] }}</a></h2>
+        </td>
+        <td class="tdCant">
+            <input data-price="{{= product['monprec'] }}" data-discount="{{= product['adeprod'] }}" data-points="{{= product['punprod'] }}" data-price="{{= product['monprec'] }}" type="text" value="1" maxlength="3" name="txtcant[]" class="inptcant">
+        </td>
+        <td class="tdPoints">{{= product['punprod'] }}</td>
+        <td class="tdPrice">{{= yOSON.currency }} {{= ((1+parseFloat(yOSON.iva))*product['monprec']).toFixed(2) }}</td>
+        <td>
+            <button class="btn-orange btnAddProd" data-id="{{= product['codprod'] }}" type="button"><i class="sprites-p cart-inv"></i>Agregar</button>
+            <a data-id="{{= product['codprod'] }}" class="sprites-p ic-fvt {{ if(product['isfavorite']){ }}active{{ } }}" href="javascript:;" title="Agregar Favorito">Agregar Favorito</a>
+        </td>
+    </tr>
+{{ }); }}
+</script>
+<script id="tplProd" type="text/template">
+<tr>
+    <td class="tdImg"><img alt="{{= name }}" width="90" height="80" src="{{= urlPicture }}" /></td>
+    <td class="tdProduct">
+        <h2>
+            <a href="{{= url }}" title="{{= name }}">{{= name }}</a>
+        </h2>
+        <h3>{{= points }} Puntos</h3>
+        {{ if(discount==0){ }}
+        <p class="tbl-prodinfo">*Este producto no esta sujeto a descuentos</p>
+        {{ } }}
+    </td>
+    <td class="tdCant">
+         <input data-discount="{{= discount }}" data-points="{{= points }}" data-price="{{= realPrice }}" data-id="{{= id }}" class="inptcant" id="txtcant" name="txtcant[{{= id }}]" type="text" maxlength="3" value="{{= quantity }}"/>
+    </td>
+    <td class="tdPoints">{{= quantity*points }}</td>
+    <td class="tdPrice">{{= yOSON.currency }} {{= ((1+parseFloat(yOSON.iva))*realPrice).toFixed(2) }}</td>
+    <td class="tdSubTotal">{{= yOSON.currency }} {{= ((1+parseFloat(yOSON.iva))*realPrice*quantity).toFixed(2) }}</td>
+    <td class="tdAction1"> <a href="javascript:;" data-id="{{= id }}" class="sprites-p btn-close-red"></a></td>
+</tr>
+</script>

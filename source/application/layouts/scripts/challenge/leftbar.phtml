@@ -1,0 +1,26 @@
+<?php
+    $active = 'active';
+?>
+    <ul class="menu-colors">
+      <li><a href="/inscription" title="Como participar" 
+             class="<?php echo ($this->action == 'index')?$active:''; ?>">Como<br>participar<span 
+                  class="people">
+                      
+              </span>
+          </a>
+      </li>
+      <li><a href="/inscription/step-one-a" title="Como participar" 
+             class="skyblue <?php echo (in_array($this->action, 
+                     array('step-one-a', 'step-one-b', 'step-one-c')))?$active:''; ?>">
+            <span  class="numbers"></span>Determina<br>tu estado<br>fisico actual
+          </a>
+      </li>
+      <li><a href="/inscription/step-two-a" title="Como participar" 
+             class="orange <?php echo (in_array($this->action, array('step-two-a', 'step-two-b')))?$active:''; ?>">
+              <span class="numbers two"></span>registrate
+          </a>
+      </li>
+      <li><a href="/inscription/step-three" title="Como participar" 
+             class="green <?php echo ($this->action == 'step-three')?$active:''; ?>">
+              <span class="numbers three"></span>define tu<br>alimentación</a></li>
+    </ul>

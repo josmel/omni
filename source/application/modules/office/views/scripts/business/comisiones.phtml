@@ -1,0 +1,205 @@
+<div class="white-bg">
+	<div class="row ptb30 fees">
+		<div class="topNegocio row">
+			<h1 class="titfx lm10">Mi Negocio</h1>
+			<ul class="navBar">
+				<li><a href="../business">MIS INDICADORES<span></span></a></li>
+				<li><a href="red">MI RED<span></span></a></li>
+				<li><a href="consumo">MI CONSUMO<span></span></a></li>
+				<li><a href="afiliacion">AFILIACIÓN<span></span></a></li>
+				<li><a href="comisiones" class="active">MIS COMISIONES<span></span></a></li>
+			</ul>
+			<!--
+			<div class="calSelect">
+				
+				<div class="calendar">
+					
+				</div>
+				<div class="calSelector">
+					<h4>SEMANA</h4>
+					<select name="semana" id="">
+						<option value="">10 - 2014</option>
+						<option value="">9 - 2014</option>
+						<option value="">8 - 2014</option>
+						<option value="">7 - 2014</option>
+						<option value="">6 - 2014</option>
+					</select>
+				</div>
+
+				<div class="semaforo">
+					
+				</div>
+			-->
+		</div>
+		<div class="paycheck">
+			<h3 class="greetings row">¡FELICITACIONES <span class="name1">JUAN MAURICIO CHAU ARGUELLES</span>!</h3>
+			<div class="bgPaycheck row">
+				<h3 class="name2">JUAN MAURICIO CHAU ARGUELLES</h3>
+				<h3 class="amount">TRES MIL QUINIENTOS con 00/100</h3>
+			</div>
+		</div>
+		<div class="filters row">
+			<ul>
+				<li>Comisión generada en la semana</li>
+				<li><select name="week" id="week">
+					<option value="01-2014"></option>
+				</select></li>
+				<li>Mira tu historial de cobros</li>
+				<li class="btnHistorial">Historial</li>
+			</ul>
+		</div>
+		<div class="report">
+			<div class="charts fl">
+				<div class="widget-cnt border resume">
+					<div class="title">Detalle de comisión</div>
+						<table class="feeTable">
+							<tr>
+								<td>Semana</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>Inicio semana</td>
+								<td>1</td>
+							</tr>
+							<tr>
+								<td>Termino de semana</td>
+								<td>2</td>
+							</tr>
+							<tr>
+								<td>Pagado como rango</td>
+								<td>1</td>
+							</tr>
+						</table>
+					</div>
+				<div class="widget-cnt border feePie">
+					<div class="title">
+						<div class="fl">Detalle de comisión</div>
+						<div class="weekFilter">
+							<label for="weekFilter">Semana</label>
+							<select name="weekFilter" id="filter">
+								<option value="1">48-2014</option>
+							</select>
+						</div>
+					</div>
+					<div class="pie" id="piechart">
+						
+					</div>
+					<div class="submit">
+						DETALLE
+					</div>
+				</div>
+			</div>
+			<div class="details fl">
+				<div class="widget-cnt border tableDetails">
+					<div class="title">Detalle de comisión</div>
+
+					<p class="totalFeesText">TOTAL</p>
+					<table class="feeTable">
+							<tr>
+								<td>Bono Multinivel</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Binario</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono compra Volumen Patrocinado</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Pagado de Liderazgo</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Patrocinio</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Venta de cliente Preferente</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Constructos de Negocio</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Rango Mensual</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Rango Super Bono</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Auto</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Viaje</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Fondo de Liderazgo</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Centro de Negocio</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Bono Reparto de Utilidades</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Retencion</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Reintegro</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Deducción</td>
+								<td></td>
+							</tr>
+						</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+			['item.name1', 'Consumo por Semana'],
+			['item.name2',     11],
+			['item.name3',      2],
+			['item.name4',  2],
+			['item.name5', 2],
+			['item.name6',    7],
+			['item.name7', 2],
+			['item.name8',    7]
+		]);
+
+		var options = {
+			chartArea:{
+				left:20,
+				top:10,
+				width:200,
+				height:200
+			},
+			legend:{
+				position:'bottom',
+				maxlines:'4'
+
+			}
+		};
+
+		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+		chart.draw(data, options);
+	}
+</script>

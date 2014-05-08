@@ -1,0 +1,27 @@
+<h3 class="admin-title">Catálogo</h3> 
+<div class="frm-panel">
+    <div class="frm-head">
+        <h2><span class="icTable"></span>Listado de Productos del catálogo <?php echo $this->selectedCatalog['destpro']; ?></h2>
+        <a href="/catalog/select-product/<?php echo $this->selectedCatalog['slug']; ?>" class="btn-admin btn-file">Agregar Producto</a>
+    </div>
+    <table cellspacing="0" cellpadding="0" border="0" id="datatable" class="display">
+        <thead>
+            <tr>
+                <th>Nro.</th>
+                <th>Código</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $count = 0; foreach($this->products as $product) : $count++;?>
+            <tr>				
+                <td><?php echo $count.'.'; ?></td>
+                <td><?php echo $product['codprod']; ?></td>
+                <td><?php echo $product['title']; ?></td>
+                <td><a href="/catalog/remove-product/<?php echo $this->selectedCatalog['slug'].'/'.$product['codprod']; ?>">Quitar</a></td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

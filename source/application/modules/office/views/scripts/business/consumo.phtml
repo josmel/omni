@@ -1,0 +1,116 @@
+<div class="white-bg">
+	<div class="row pt30">
+		<div class="topNegocio row">
+
+			<h1 class="titfx lm10">Mi Negocio</h1>
+
+			<ul class="navBar">
+				<li><a href="../business">MIS INDICADORES<span></span></a></li>
+				<li><a href="red">MI RED<span></span></a></li>
+				<li><a href="consumo" class="active" >MI CONSUMO<span></span></a></li>
+				<li><a href="afiliacion">AFILIACIÓN<span></span></a></li>
+				<li><a href="comisiones">MIS COMISIONES<span></span></a></li>
+			</ul>
+			<!--
+			<div class="calSelect">
+				
+				<div class="calendar">
+					
+				</div>
+				<div class="calSelector">
+					<h4>SEMANA</h4>
+					<select name="semana" id="">
+						<option value="">10 - 2014</option>
+						<option value="">9 - 2014</option>
+						<option value="">8 - 2014</option>
+						<option value="">7 - 2014</option>
+						<option value="">6 - 2014</option>
+					</select>
+				</div>
+
+				<div class="semaforo">
+					
+				</div>
+			-->
+			</div>
+		</div>
+		<div class="row consRow">
+			<div class="widget-cnt border fl">
+				<div class="titfx h1">Historia de Consumo</div>
+				<table>
+					<thead>
+						<th>NÚMERO DE ORDEN</th>
+						<th>FECHA DE ORDEN</th>
+						<th>ARTICULO(S)</th>
+						<th>CANTIDAD</th>
+						<th>PUNTOS</th>
+					</thead>
+					<tr>
+						<td>5654555</td>
+						<td>22-12-2014</td>
+						<td>BioPro+Sport+Vainilla15x25+Fuxion</td>
+						<td>1</td>
+						<td>21</td>
+					</tr>
+					<tr>
+						<td>25255424</td>
+						<td>28-12-2015</td>
+						<td>Lorem ipsum dolor sit amet, consectetur adipisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, iste, libero, sequi, assumenda iusto ratione necessitatibus nobis impedit sed a labore accusantium similique. Ipsa, excepturi dolore deleniti recusandae rerum labore.</td>
+						<td>2</td>
+						<td>42</td>
+					</tr>
+				</table>
+			</div>
+			<div class="widget-cnt border col2 fl">
+				<div class="row">
+					<div class="h1 titfx">Historia de Consumo</div>
+					<div class="select"> 
+							<h4 class="fl">Consumo por:</h4> 
+							<select name="consumo" id="consumo">
+								<option value="1">Lorem 15222</option>
+								<option value="2">Ipsum</option>
+							</select>
+					</div>
+				</div>
+
+				<div class="pie row" id="piechart">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+			['item.name1', 'Consumo por Semana'],
+			['item.name2',     11],
+			['item.name3',      2],
+			['item.name4',  2],
+			['item.name5', 2],
+			['item.name6',    7],
+			['item.name7', 2],
+			['item.name8',    7]
+		]);
+
+		var options = {
+			chartArea:{
+				left:20,
+				top:10,
+				width:200,
+				height:200
+			},
+			legend:{
+				position:'bottom',
+				maxlines:'4'
+
+			}
+		};
+
+		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+		chart.draw(data, options);
+	}
+</script>

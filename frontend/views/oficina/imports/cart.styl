@@ -1,0 +1,586 @@
+/**
+* Carrito CSS
+* @class Carrito
+* @module office.css
+*/
+/*
+*	Paso 1
+*/
+.head-car
+	margin-bottom 10px
+	padding 4px 0
+	&.fix
+		margin-bottom 6px
+		h2
+			margin 0
+	h2
+		color #656565
+		font-size 14px
+		font-weight 700
+		margin-bottom 2px
+	p
+		font-size 12px
+		line-height 21px
+	.cart-big
+		display inline-block
+		*display inline
+		margin 0 6px 0 2px
+		vertical-align top
+		*zoom 1
+.tbl-carrito
+	margin-bottom 14px
+	tbody
+		tr
+			transition background-color .4s ease
+			&:hover
+				background-color #f5f5f5
+	th,td
+		padding 6px 10px
+		text-align center
+		word-break break-all
+		word-wrap break-word
+	img
+		display block
+		height 80px
+		width 90px
+	th
+		color #656565
+		font-size 12px
+		font-weight 700
+		line-height 14px
+	td
+		font-size 13px
+		position relative
+	h2
+		font-size 14px
+		font-weight 700
+		line-height 15px
+		a
+			color #686868
+	h3
+		color #686868
+		font-size 12px
+		font-weight 700
+		line-height 12px
+		padding-top 10px
+	p
+		color #b2b2b2
+		font-size 12px
+		line-height 15px
+		padding-top 3px
+	td
+		&.tdSubTotal
+			font-weight 700
+		&.tdProduct
+			text-align left
+	.btn-close-red
+		transition opacity .6s ease
+		&:hover
+			opacity 0.7
+.tbl-prodinfo
+	color #EA4242 !important
+	display block
+	font-size 11px
+	font-weight 400
+	line-height 12px
+	padding-top 4px
+.cart-note
+	float left
+	padding 16px 0 0 10px
+	width 212px
+	h4
+		color #858585
+		font-size 12px
+		line-height 14px
+		margin-bottom 3px
+	p
+		color #858585
+		font-size 12px
+		line-height 14px
+.tbl-payDetail
+	float right
+	width 430px
+	td
+		background #f5f5f5
+		border-top 6px solid #FFF
+		font-size 13px
+		padding 6px 10px
+		text-align center
+	.tdSubTotal
+		width 146px
+	.tdPrice
+		text-align right
+	.tdPoints,.tdSubTotal
+		font-weight 700
+.totalpDetail
+	td
+		font-size 16px
+		font-weight 700
+.pdiscount
+	color #858585
+	font-size 12px
+	font-weight 700
+	line-height 14px
+	margin-bottom 12px
+	padding-left 10px
+	span
+		color #8e8e8e
+		font-weight 400
+.tbl-discount
+	margin 0 0 14px 10px
+	width 488px
+	td
+		background #f5f5f5
+		border-left 2px solid #FFF
+		border-top 2px solid #FFF
+		color #858585
+		font-family family1
+		font-size 12px
+		padding 4px 5px
+		text-align left
+		&:first-child
+			border-left none
+.obs-info
+	color #858585
+	font-size 12px
+	padding-left 10px
+.inptcant
+	border 1px solid #B2B2B2
+	font-size 13px
+	height 21px
+	line-height 21px
+	padding 3px
+	width 44px
+.emptyCar
+	p
+		color #5F5B5B
+		font-size 14px
+		line-height 16px
+		text-align center
+/* Paso 2 */
+.descDir
+	color #656565
+	font-size 12px
+	font-weight 700
+	line-height 21px
+	padding-left 12px
+	position relative
+	span
+		background url(routImg+'sprites-productos.png') -327px -7px no-repeat
+		height 8px
+		left 0
+		position absolute
+		top 6px
+		width 7px
+.list-address
+	padding 0 16px
+	.address
+		float left
+		margin-left 36px
+		width 430px
+		&:nth-child(2n+1)
+			margin-left 0
+		&:nth-child(n+3)
+			margin-top 20px
+		&.fix
+			clear both
+			float none
+			margin 0
+			padding-top 20px
+			width 100%
+	.ioption
+		color #2c2c2c
+		font-family family1
+		font-size 13px
+		font-weight 700
+		line-height 17px
+		margin-bottom 10px
+		padding-left 30px
+		input[type="radio"]
+			left 0
+			top 2px
+			*top -5px
+	p
+		line-height 12px
+	.lnk-address
+		font-size 12px
+		hoverLighten(#16a1c1,20%)
+	.save-address
+		background none
+		font-size 12px
+		line-height 13px
+		height 13px
+		text-decoration underline
+		hoverLighten(#db8f1b,20%)
+.desc-address
+	background #f2f2f2
+	border-radius 5px
+	padding 7px 12px 12px
+	dt
+		color #656565
+		font-size 12px
+		font-weight 700
+		line-height 14px
+	dd
+		color #585858
+		font-size 12px
+		line-height 14px
+	.control-label
+		font-size 11px
+		width 136px
+	.controls
+		margin-left 148px
+	.control-group
+		margin-top 4px
+		&:first-child
+			margin 0
+	input[type='text']
+		background #FFF
+		height 14px
+		line-height 14px
+		padding 3px
+	.controls-inline
+		margin-left 148px
+		.controls
+			margin-left 16px
+			*margin-left 8px
+			&.first
+				margin 0
+	.cgroup-inline
+		.control-label
+			width auto
+		.control-group
+			margin 0 0 0 15px
+			&.first
+				margin 0
+		.controls
+			margin-left 12px
+			*margin-left 6px
+	select
+		padding 2px
+.new-address
+	border 1px solid #dadada
+	border-radius 6px
+	clear both
+	display none
+	padding 12px 14px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.col-address
+	float right
+	width 414px
+	&:first-child
+		float left
+/* FlipCar */
+.ctn-flipcar
+	height 161px
+	perspective 4300px
+	position relative
+	width 430px
+	&.flip
+		.flp-front
+			z-index 900
+			transform rotateY(180deg)
+		.flp-back
+			z-index 1000
+			transform rotateX(0deg) rotateY(0deg)
+.flipper
+	backface-visibility hidden
+	left 0
+	overflow hidden
+	position absolute
+	top 0
+	transform-style preserve-3d
+	transition all 0.6s ease-in-out
+.flp-front
+	width 406px
+	height 142px
+	z-index 900
+	transform rotateX(0deg) rotateY(0deg)	
+.flp-back
+	z-index 800
+	width 406px
+	height 142px
+	transform rotateY(-180deg)
+/* Paso 3 */
+.tbl-envio
+	color #2c2c2c
+	font-size 14px
+	margin-bottom 16px
+	th
+		background #eaeaea
+		font-size 14px
+		font-weight 700
+		line-height 16px
+		padding 4px 6px
+	td
+		color #656565
+		font-size 12px
+		font-weight bold
+		height 25px
+		line-height 25px
+		padding 4px 6px
+		text-align center
+		&:first-child
+			text-align left
+			padding-left 10px
+	tr.active
+		td
+			background #fdf5d8
+	input[type="radio"]
+		margin-right 5px
+.methodShip
+	color #656565
+	font-size 12px
+	padding-left 12px
+.infoShip
+	padding-top 30px
+	.descDir
+		margin-bottom 16px
+	.ship-left
+		width 460px
+		float left
+	.ship-right
+		float right
+		padding-top 37px
+		text-align right
+		width 230px
+	li
+		color #b0b0b0
+		font-size 12px
+		list-style disc
+		margin 8px 0 0 24px
+		&:first-child
+			margin-top 0
+/* Paso 4 */
+.column-three
+	border-left 1px solid #bcbcbc
+	float left
+	height 180px
+	padding 2px 12px 0
+	position relative
+	width 285px
+	&:first-child
+		border none
+		width 284px
+.ctn-voucher
+	span
+		color #656565
+		display block
+		font-size 12px
+		line-height 15px
+		padding-top 14px
+		text-align justify
+	fieldset
+		border none
+		color #656565
+		float left
+		font-size 12px
+		padding 15px 0 8px
+		width 80px
+	table
+		clear both
+		margin-top 20px
+		td
+			label
+				display block
+				color #656565
+				font-size 11px
+				float right
+				padding-right 15px
+				text-align right
+				height 23px
+				line-height 25px
+			input
+				font-size 11px
+				height 15px
+				color #656565
+		&.tbl-fact
+			margin 0
+			td
+				color #656565
+				font-size 11px
+		&.percepcion
+			color #656565
+			font-size 11px
+			th
+				background-color #dddddd
+				border-right 1px solid white
+				font-weight 400
+				height 20px
+				padding-left 5px
+				padding-right 5px
+				text-align left
+			td
+				background #f5f5f5
+				border-right 1px solid white
+				height 20px
+				padding-left 5px
+		&.subtotal
+			color #656565
+			font-size 12px
+			th
+				background-color #eeeeee
+				text-align left
+			tr
+				height 20px
+			.plus
+				color #17a3c2
+				font-weight bold
+				font-size 15px
+
+			.subtotal
+				background-color #17a3c2
+				color white
+.vouchPercep
+	display inline !important
+	padding 0 !important
+/* Paso 5 */
+.ctn-consolidation
+	.lnk-consolidation
+		bottom 4px
+		hoverLighten(#16A1C1,20%)
+		font-size 12px
+		position absolute
+		right 12px
+	.separator
+		border-bottom 1px solid #bcbcbc
+		clear both
+		margin-bottom 19px
+		padding-top 25px
+.tbl-summary
+	font-size 12px
+	tr:first-child+tr td
+		padding-top 10px
+	th
+		background-color #dddddd
+		color #656565
+		text-align left
+		padding-left 10px
+		height 18px
+	td 
+		height 18px
+		vertical-align top
+	td:first-child
+		color #222222
+		text-align right
+		width 100px
+	td+td
+		color #727272
+		text-align left
+		padding-left 10px
+.tbl-consolidation
+	margin-bottom 20px
+	td,th
+		font-size 12px
+		line-height 16px
+		padding 4px 6px
+		text-align center
+		word-break break-all
+		word-wrap break-word
+	img
+		width 44px
+		height 38px
+	tr
+		border-bottom 1px solid #D6D6D6
+		&.fix
+			border none
+	td
+		color #585858
+	th
+		background-color #DDD
+		color #656565
+		font-weight 700
+		padding-left 10px
+	td.tdPriceL
+		font-weight 700
+	td.tdSubTotal
+		font-weight 700
+	td.tdName
+		font-weight 700
+		text-align left
+	a:hover
+		text-decoration underline
+.tbl-payConsolidation
+	float right
+	width 304px
+	td
+		color #474747
+		font-size 14px
+		font-weight 700
+		line-height 16px
+		padding 5px 6px
+		text-align center
+		word-break break-all
+		word-wrap break-word
+	.odd
+		td
+			background #f1f1f1
+			color #808080
+	.tdPriceL
+		text-align right
+	.trTotal
+		td
+			color #db8f1b
+/* Paso 6 */
+.ctn-mpaid
+	margin 0 auto 22px
+	padding-top 24px
+	width 262px
+	.control-group
+		margin-top 12px
+		&:first-child
+			margin 0
+	input[type="text"]
+		background #FFF
+		border 1px solid #CACACA
+.tbl-summpaids
+	width 300px
+	margin 0 auto
+	td
+		background #F1F1F1
+		color #DB8F1B
+		font-size 14px
+		font-weight 700
+		line-height 16px
+		padding 4px 6px
+		text-align center
+		word-break break-all
+		word-wrap break-word
+	.tw134
+		text-align right
+/* Pagos del Pedido */
+.statePay
+	.tw146
+		text-align right !important
+	.column-three
+		height 120px
+	.tbl-summary
+		td
+			color #656565
+			text-align center
+	.sPay-msg
+		border 1px solid #ebebeb
+		border-radius 5px
+		color #17a3c2
+		font-size 12px
+		font-weight 700
+		line-height 14px
+		margin 0 auto 30px
+		padding 14px
+		text-align center
+		width 446px
+.sPay-code
+	color #404040
+	font-size 15px
+	font-weight 700
+	line-height 17px
+	margin-bottom 16px
+	padding-left 12px
+	span
+		color #17a1c0

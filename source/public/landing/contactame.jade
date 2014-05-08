@@ -1,0 +1,69 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	.decor-top
+	.decor-bottom
+	header
+		.top-header
+		h1.logo-fuxion
+			a(href="javascript:;",title="Fuxion") Fuxion
+	#wrapper
+		.ctn-bgfx
+			.bgfx1
+			.bgfx2
+		.row-well
+			.fx-profile
+				.prof-img
+					img(src="img/element/perfil.jpg",width="208",height="208")
+				h2.prof-name VICTOR EDUARDO CRUZ MORAN<br>(empresario independiente)
+				p.prof-address 51-992787034<br>
+					a(href="mailto:alfredovi@gmail.com") alfredovi@gmail.com
+				ul.prof-social
+					li
+						a(href="javascript:;",title="Twitter",class="twt")
+						| TWITTER
+					li
+						a(href="javascript:;",title="Facebook",class="fb")
+						| FACEBOOK
+					li
+						a(href="javascript:;",title="Youtube",class="ytb")
+						| YOUTUBE
+					li
+						a(href="javascript:;",title="Blog",class="blg")
+						| BLOG
+			.fx-break
+			.fx-descrp
+				h2 MI TESTIMONIO
+				p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids
+				form(id="frm-contactenos")
+					.control-group
+						input(type="text",name="txtName",id="txtName",placeholder="Nombre")
+					.control-group
+						input(type="text",name="txtLastName",id="txtLastName",placeholder="Apellidos")
+					.control-group
+						input(type="text",name="txtEmail",id="txtEmail",placeholder="Email")
+					.control-group.mb16
+						textarea(name="txaMessage",id="txaMessage",placeholder="Mensaje")
+					.controls
+						button(type="submit",class="btn-fuxion") Enviar
+						a(class="btn-lnk",href="javascript:;") Comprar
+	nav.main-menu
+		ul
+			li
+				a(href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(class="active",href="javascript:;",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

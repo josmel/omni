@@ -1,0 +1,71 @@
+<table style="margin:0 auto;padding:0;font-family:Arial, Helvetica, sans-serif;" width="650" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td bgcolor="#fbfbfb">
+            <table style="margin:0 auto;" width="602" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="height:54px">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td height="52" align="center" valign="top">
+                        <h1 style="font-family:Arial,sans-serif;font-size:28px;font-weight:700;color:#696969;text-align:center;line-height:28px;margin:0">¡Tienes un Nuevo Contacto!</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table style="margin:0 auto;border:1px solid #c7c7c6;" width="600"  align="center" cellpadding="0" cellspacing="0">
+                            <tr style="background:#FFF">
+                                    <td style="padding:0 44px;height:26px">&nbsp;</td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px">
+                                    <h2 style="text-align:center;margin:0;font-size:24px;font-weight:400;font-family:Arial, Helvetica, sans-serif;color:#db8f1b">Hola <?php echo $this->mailData['bm_name'].' '.$this->mailData['bm_lastname']?></h2>
+                                </td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px;height:20px">&nbsp;</td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px">
+                                    <h3 style="text-align:center;margin:0;color:#8a8a8a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400">El Sr(a) <?php echo $this->mailData['name'].' '.$this->mailData['lastname']?> ha solicitado que lo contactes, su mensaje es:</h3>
+                                </td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px;height:40px">&nbsp;</td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px">
+                                    <p style="margin:0;font-size:13px;line-height:24px;color:#b6bbba;text-align:justify"><?php echo $this->mailData['message']?></p>
+                                </td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px;height:40px">&nbsp;</td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px">
+                                    <h3 style="text-align:center;margin:0;color:#8a8a8a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400">Te aconsejamos que los contactes cuanto antes al e-mail: <?php echo $this->mailData['email']?>.</h3>
+                                </td>
+                            </tr>
+                            <tr style="background:#FFF">
+                                <td style="padding:0 44px;height:26px">&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:26px">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" valign="middle">
+                        <a href="javascript:;" target="_blank" title="Fuxion">
+                            <img src="<?php echo $this->mailData['imgFuxion']?>" width="175" border="0" height="69" alt="Fuxion" />
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height:54px">&nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+

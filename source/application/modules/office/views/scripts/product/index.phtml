@@ -1,0 +1,119 @@
+<div class="white-bg fix">
+        <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <aside class="prod-category">
+        <form id="searchProd" method="POST" action="/product">
+            <input type="text" id="search" name="search" />
+            <label for="search"></label>
+            <input type="hidden" id="cat" name="slug" value="<?php echo $this->initParams['cat']; ?>"/>
+            <input type="hidden" id="order" name="order" value="<?php echo $this->initParams['order']; ?>"/>
+        </form>
+        <h3 class="pcateg-title">TIENDA FUXION<span></span></h3>
+        <ul class="pcateg-list">
+            <li class="active" > 
+                <a href="javascript:;"><h4>LINEAS</h4></a>
+                <ul class="pcateg-slist">
+                    <?php foreach ($this->productLines as $type) : ?>
+                    <li class="<?php echo $this->selectedType['codtpro'] == $type['codtpro'] ? 'active' : ''; ?>">
+                        <a href="<?php echo $this->urlNav($this->urlBase, $this->initParams, array('cat' => $type['slug'], 'search' => '', 'page' => 1)); ?>">
+                            <i class="gray" style="color: #<?php echo $type['hexcolor']; ?>"> </i><?php echo $type['destpro']; ?>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </li>
+            <li class="active" > 
+                <a href="javascript:;"><h4>CATALOGO</h4></a>
+                <ul class="pcateg-slist">
+                    <?php foreach ($this->productCategories as $type) : ?>
+                    <li class="<?php echo $this->selectedType['codtpro'] == $type['codtpro'] ? 'active' : ''; ?>">
+                        <a href="<?php echo $this->urlNav($this->urlBase, $this->initParams, array('cat' => $type['slug'], 'search' => '', 'page' => 1)); ?>">
+                             <i class="gray" style="color: #<?php echo $type['hexcolor']; ?>"> </i><?php echo $type['destpro']; ?>            
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
+                    <li class="<?php echo $this->selectedType['codtpro'] == '0' ? 'active' : ''; ?>"> 
+                        <a href="<?php echo $this->urlNav($this->urlBase, $this->initParams, array('cat' => 'todos', 'search' => '', 'page' => 1)); ?>">
+                            <i class="gray" style="color: #5675CB"> </i>
+                              TODOS
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h3 class="pcateg-title fix">HISTORIA DE COMPRAS<span></span></h3>
+        <ul class="pcateg-list">
+          <li class="active"><h4>MIS COMPRAS</h4>
+            <ul class="pcateg-slist">
+              <li><a href="/quick-cart/">Compra rápida</a></li>
+              <li><a href="/favorites">Favoritos</a></li>
+              <?php /*<li> <a href="/product/my-purchases">Últimas Compras</a></li>
+              <li> <a>Historial de pagos</a></li>*/ ?>
+              <li><a href="/product/pending-payments">Pagos pendientes</a></li>
+            </ul>
+          </li>
+          <?php /*<li><h4>SUGERENCIAS</h4></li>
+          <li><h4 class="last">AFILIACIÓN</h4></li>*/?>
+        </ul>  
+    </aside>
+    <section class="store-list">
+        <header class="head-lstore">
+            <h2><?php echo ($this->selectedType['destpro']=='TODOS')? 'TODOS' : $this->selectedType['destpro'] ?>
+                <span>Mostrando <?php echo $this->nItemBegin; ?> - <?php echo $this->nItemEnd; ?> de <?php echo $this->nTotal; ?> Resultados</span></h2>
+            <ul class="typ-lstore">
+                <li>
+                    <a data="grid" class="active" href="javascript:;" title="Imágenes Grandes">Imágenes Grandes<i class="sprites-p icon-grid"></i></a>
+                </li>
+                <li>
+                    <a data="detail" href="javascript:;" title="Detalles">Detalles<i class="sprites-p icon-details"></i></a>
+                </li>
+            </ul>
+            <fieldset>
+                <label>Ordenar por:</label>
+                <select>
+                    <option value="1" <?php echo $this->order == 1 ? 'selected' : ''; ?>>Nombre: A - Z</option>
+                    <option value="2" <?php echo $this->order == 2 ? 'selected' : ''; ?>>Nombre: Z - A</option>
+                    <option value="3" <?php echo $this->order == 3 ? 'selected' : ''; ?>>Precio: Más a Menos</option>
+                    <option value="4" <?php echo $this->order == 4 ? 'selected' : ''; ?>>Precio: Menos a Más</option>
+                </select>
+            </fieldset>
+        </header>
+        <div class="ctn-lstore">
+            <?php foreach ($this->products as $product) : ?>
+            <div class="box prodContent">
+                <a class="ctn-storeImg" href="<?php echo $product['link']; ?>">
+                    <img class="prodImg" alt="<?php echo $product['desprod']; ?>" src="<?php echo $product['picture']; ?>" />
+                </a>
+                <h2><a href="<?php echo $product['link']; ?>"><?php echo $product['desprod']; ?></a></h2>
+                <?php if (!empty($product['desccaja'])) : ?>
+                <h3>
+                    <span>Caja</span> (<?php echo $product['desccaja']; ?>)
+                </h3>
+                <?php endif; ?>
+                <h3 class="precio"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format($product['monprec']*(1+$this->iva), 2, '.', ' '); ?></h3>
+                <h4>Precio de Lista incluido IGV</h4>
+                <div class="q">
+                  Cantidad
+                  <input class="prodCant" type="text" maxlength="2" value="1"/><a class="btnAddProd" data-id="<?php echo $product['codprod']; ?>">Agregar<i class="sprites-p icon-basket block"></i></a>
+                </div>
+                <button data-id="<?php echo $product['codprod']; ?>" class="btn-orange btnAddProd"><i class="sprites-p icon-basket-inv"></i>Agregar Carro de Compra</button>
+                <span class="warning">*Debe ingresar mínimo 1 unidad del Producto.</span>
+                <h4 class="points"> <span>+<?php echo $product['punprod']; ?> </span>Puntos</h4>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php echo $this->partial('_partial/_paginator.phtml', $this)?>
+    </section>
+</div>
+<script id="tplProduct" type="text/template">
+<li data-id="{{= id }}">
+    <img src="{{= urlPicture }}" alt="{{= name}}" >
+    <div class="descPopProd">
+        <h3>{{= name}}</h3>
+        <h4 class='precio'>Precio <span>S/. {{= price }}</span></h4>
+        <h4 class='cantidad'>Cantidad <span>{{= quantity }}</span></h4>
+        <input type='hidden' name='txtcant[{{= id }}]' value="{{= quantity }}" />
+    </div>
+    <button type='button' class='removeProduct'>X</button>
+</li>
+</script>

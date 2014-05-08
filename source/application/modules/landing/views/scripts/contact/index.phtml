@@ -1,0 +1,29 @@
+<div class="row-well">
+    <?php echo $this->partial('_partial/_profile.phtml', $this)?>
+    <div class="fx-break"></div>
+    <?php //var_dump($this->messages); 
+    $this->getMesseger();
+    ?>
+    <div class="fx-descrp">
+        <h2>MI TESTIMONIO</h2>
+        <p><?php echo $this->businessman['testimony']?></p>
+    
+        <form id="frm-contactenos" method="POST" target="/contact/index" >
+            <div class="control-group">
+              <input type="text" name="txtName" id="txtName" placeholder="Nombre"/>
+            </div>
+            <div class="control-group">
+              <input type="text" name="txtLastName" id="txtLastName" placeholder="Apellidos"/>
+            </div>
+            <div class="control-group">
+              <input type="text" name="txtEmail" id="txtEmail" placeholder="Email"/>
+            </div>
+            <div class="control-group mb16">
+              <textarea name="txaMessage" id="txaMessage" placeholder="Mensaje"></textarea>
+            </div>
+            <div class="controls">
+              <button type="submit" class="btn-fuxion">Enviar</button><a href="javascript:;" class="btn-lnk">Comprar</a>
+            </div>
+        </form>
+    </div>
+</div>

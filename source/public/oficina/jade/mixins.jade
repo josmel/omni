@@ -1,0 +1,25 @@
+mixin productos(productos)
+	- each producto in productos
+		.box
+			img
+			h2= producto.nombre
+			h3
+				span Caja 
+				=  producto.descripcion
+			h3.precio=producto.precio		
+			h4 Precio de Lista incluido IGV
+			.q 
+				| Cantidad
+				input(type="text",maxlength="2", value="0")
+				a(href="#") Agregar
+					i.sprites-p.icon-basket.block
+			button.orange
+				i.sprites-p.icon-basket-inv
+				| Agregar Carro de Compra
+			span.warning *Debe ingresar mínimo 1 unidad del Producto.
+
+			h4.points 
+				span +22 
+				| Puntos
+//-variable de prueba
+- productos=[{"nombre":"Producto 1","descripcion":"(30 Stickers de 7.5 gr.)","precio":"S/. 2119.00"},{"nombre":"Producto 2","descripcion":"(25 Stickers de 7.5 gr.)","precio":"S/. 1504.15"},{"nombre":"Producto 3","descripcion":"(3 Stickers de 7.5 gr.)","precio":"S/. 154.15"},{"nombre":"Producto 4","descripcion":"(300 Stickers de 7.5 gr.)","precio":"S/. 1540.15"},{"nombre":"Producto 5","descripcion":"(320 Stickers de 7.5 gr.)","precio":"S/. 1.15"},{"nombre":"Producto 6","descripcion":"(321 Stickers de 12 gr.)","precio":"S/. 150.15"},{"nombre":"Producto 7","descripcion":"(30 Stickers de 7.5 gr.)","precio":"S/. 15.15"},{"nombre":"Producto 8","descripcion":"(32 Stickers de 21 gr.)","precio":"S/. 1254.15"}]

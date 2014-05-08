@@ -1,0 +1,105 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this) ?>
+    <section class="content prodContent">
+        <div class="col-product-info">
+            <img class="prodImg" alt="<?php echo $this->product['desprod']; ?>" src="<?php echo $this->product['picture']; ?>" />
+            <h4><?php
+                if (strlen($this->product['shorttext']) > 130) {
+                    $strnom = trim(substr($this->product['shorttext'], 0, 130));
+                    $strnom.='.';
+                } else {
+                    $strnom = $this->product['shorttext'];
+                }
+                echo htmlspecialchars($strnom, ENT_QUOTES, 'utf-8');
+                ?></h4>
+              <div id="ctn-btnfav">
+                  <h5>¿<?php echo $this->isFavorite ? 'Desea Quitar el producto de favoritos' : 'Desea Agregar el producto a favoritos'; ?>?<span>Presionar en la Estrella</span></h5>
+                  <button id="btnfav" data-id="<?php echo $this->product['codprod'] ?>" class="<?php echo $this->isFavorite ? 'active' : ''; ?>"><i class="sprites-p star-big"></i></button>
+              </div>
+        </div>
+        <div class="col-product-detail">
+            <h2><?php
+                if (strlen($this->product['desprod']) > 80) {
+                    $strnom = trim(substr($this->product['desprod'], 0, 80));
+                    $strnom.='.';
+                } else {
+                    $strnom = $this->product['desprod'];
+                }
+                echo htmlspecialchars($strnom, ENT_QUOTES, 'utf-8');
+                ?></h2>
+            <?php /*
+              <div class="col-two">
+              <h3>Contenido Caja:</h3>
+              <ul>
+              <li><?php echo $this->product['desccaja']; ?> </li>
+              </ul>
+              </div> */ ?>
+            <div class="col-two">
+                <h3>Puntos a Ganar:</h3>
+                <ul> 
+                    <li><i class="sprites-p <?php /* star */ ?>"> </i>Puntos Productos: <?php echo $this->product['punprod']; ?></li>
+                </ul>
+            </div>            
+            <h3 class="cl">Precio de Lista <span>(Incluido I.G.V.)</span></h3><span class="precio"><?php echo $this->businessman['simbolo']; ?> <?php echo $this->product['finalPrice']; ?></span>
+            <div class="pad-wrapper">
+                <table border="0">
+                    <?php if (!empty($this->discounts)) : ?>
+                        <tr>
+                            <th>Normal</th>
+                            <?php
+                            foreach ($this->discounts as $discount) :
+                                if ($discount['pordesc'] > 0) :
+                                    ?>
+                                    <th><?php echo number_format($discount['pordesc'] * 100, 2, '.', ''); ?>%</th>
+                                <?php
+                                endif;
+                            endforeach;
+                            ?>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->businessman['simbolo']; ?> <?php echo $this->product['finalPrice']; ?></td>
+                            <?php
+                            foreach ($this->discounts as $discount) :
+                                if ($discount['pordesc'] > 0) :
+                                    ?>
+                                    <td><?php echo $this->businessman['simbolo']; ?> <?php echo number_format($this->product['finalPrice'] * (1 - $discount['pordesc']), 2, '.', ''); ?></td>
+                            <?php
+                            endif;
+                        endforeach;
+                        ?>
+                        </tr>
+<?php endif; ?>
+                </table>
+                <fieldset>
+                    <label for="quantity">Cantidad</label>
+                    <input id="quantity" class="prodCant" type="text" maxlength="2" value="1"/>
+                    <button class="btn-orange btnAddProd" data-id="<?php echo $this->product['codprod']; ?>"><i class="sprites-p cart-inv"> </i>Agregar Producto</button>
+                </fieldset><span class="warning">* Debe ingresar minimo 1 unid. producto</span>
+                <div class="control">
+                    <a class="btn-orange" title="Ir a carrito de compra" href="/cart/step1"><i class="sprites-p arrow-boxed"> </i>Ir a carrito de compra</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-product-moreDetail">
+            <p><?php
+                if (strlen($this->product['text']) > 550) {
+                    $strnom = trim(substr($this->product['text'], 0, 550));
+                    $strnom.='.';
+                } else {
+                    $strnom = $this->product['text'];
+                }
+                echo $strnom;
+                ?></p>
+        </div>
+    </section>
+</div>
+<script id="tplProduct" type="text/template">
+    <li data-id="{{= id }}">
+    <img src="{{= urlPicture }}" alt="{{= name}}" >
+    <h3>{{= name}}</h3>
+    <h4 class='precio'>Precio <span>S/. {{= price }}</span></h4>
+    <h4 class='cantidad'>Cantidad <span>{{= quantity }}</span></h4>
+    <button type='button' class='removeProduct'>X</button>
+    <input type='hidden' name='txtcant[{{= id }}]' value="{{= quantity }}" />
+    </li>
+</script>

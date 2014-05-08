@@ -1,0 +1,117 @@
+/**
+* Forms CSS
+* @class Forms
+* @module forms.css
+*/
+.ioption
+	display block
+	padding-left 25px
+	position relative
+	input[type="radio"],input[typed="checkbox"]
+		border none
+		left 6px
+		*left 2px
+		position absolute
+		top 2px
+		*top -3px
+.control-group
+	margin-top 6px
+	&:first-child
+		margin 0
+	*zoom 1
+	&.last
+		margin 0
+	&.fix
+		padding-left 30px
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.fix
+		padding-left 30px
+	.control-label
+		color #656565
+		float left
+		font-size 11px
+		font-weight 700
+		line-height 14px
+		padding-top 5px
+		text-align right
+		width 140px
+	.controls
+		margin-left 154px
+		position relative
+	input[type="text"],input[type="password"]
+		background #ededed
+		border 1px solid #ededed
+		border-radius 2px
+		color #989898
+		font-family family1
+		font-size 12px
+		height 15px
+		line-height 15px
+		padding 4px
+		width 250px
+	textarea
+		border 1px solid #ededed
+		border-radius 2px
+		color #4a4a4a
+		font-family family1
+		font-size 12px
+		padding 4px
+	select
+		border 1px solid #cacaca
+		border-radius 2px
+		font-family family1
+		font-size 12px
+		padding 3px
+		width 260px
+.cgroup-inline
+	margin-top 6px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.control-group
+		float left
+		margin 0 0 0 11px
+		&:first-child
+			margin 0
+	.control-label
+		width auto
+	.controls
+		float left
+		margin 0 0 0 14px
+		*margin 0 0 0 7px
+.controls-inline
+	margin-left 154px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.controls
+		float left
+		margin 0 0 0 14px
+		&:first-child
+			margin 0
+/* Forms */
+label.error
+	background #FFF
+	color #EB8D8D
+	cursor default
+	display block
+	font-size 13px
+	line-height 14px
+	padding 4px 0 2px
+input,select,textarea
+	&.error
+		border 1px solid #EB8D8D !important
+		color #EB8D8D !important

@@ -1,0 +1,155 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Producto
+			section.content
+				header
+					h2.title CARRITO DE COMPRA
+						span Tienes
+							i.sprites-p.cart-big
+							span 12
+							| productos en tu carro de compras 
+			
+				table(border=0).carrito
+					tr
+						th.pic
+						th.main Productos
+						th.cantidad Cantidad
+						th.puntos Puntos
+						th Peso Neto
+						th Precio Unitario
+						th Sub Total
+						th.close
+					//-FILA							
+					tr
+						td: img
+						td.nombre
+							h2 Bellas
+								span Caja (30 Stickers de 7.5 gr.)
+							h3 22 Puntos
+						td
+							input(type="text",maxlength="3", value="0")
+							button.up ▲
+							button.down ▼
+						td 44
+						td 0.5 KG
+						td S/. 119.00
+						td.subtotal S/. 238.00
+						td 
+							a(href="#").sprites-p.btn-close-red
+					//-FILA	
+
+					//-FILA							
+					tr
+						td: img
+						td.nombre
+							h2 Bellas
+								span Caja (30 Stickers de 7.5 gr.)
+							h3 22 Puntos
+						td
+							input(type="text",maxlength="3", value="0")
+							button.up ▲
+							button.down ▼
+						td 44
+						td 0.5 KG
+						td S/. 119.00
+						td.subtotal S/. 238.00
+						td 
+							a(href="#").sprites-p.btn-close-red
+					//-FILA
+
+					//-FILA							
+					tr
+						td: img
+						td.nombre
+							h2 Bellas
+								span Caja (30 Stickers de 7.5 gr.)
+							h3 22 Puntos
+						td
+							input(type="text",maxlength="3", value="0")
+							button.up ▲
+							button.down ▼
+						td 44
+						td 0.5 KG
+						td S/. 119.00
+						td.subtotal S/. 238.00
+						td 
+							a(href="#").sprites-p.btn-close-red
+					//-FILA
+
+					//-ULTIMA FILA
+					tr
+						td(colspan="3").nota
+							h4 Nota:
+							p.
+								Te falta comprar 6 puntos más para alcanzar un descuento de 25%.
+						td.bold Pts 54
+						td.bold Peso: 0.725 kg.
+						td Sub Total:
+						td.subtotal S/. 291.00
+					tr
+						td(colspan="5")
+						td - Descuento (20%):
+						td.subtotal S/. 58.20
+					tr
+						td(colspan="3")
+						td(colspan="3").total.right TOTAL:
+						td.total S/. 232.80
+					//-ULTIMA FILA
+				
+				button.orange.float-right Ir a dirección de envío
+				
+				table(border=0).detalles
+					tr
+						th(colspan="5") Descuento por puntos de compra en volumen:
+					tr
+						td Descuentos por puntos
+						td 0 - 59 Pts
+						td 60 - 299 Pts
+						td 60 - 299 Pts
+						td 600 a màs
+					tr
+						td Descuentos adicional
+						td 0 %
+						td 5 %
+						td 7.5 %
+						td 10.5 %
+					tr
+						td Descuento Total
+						td 20 %
+						td 25 %
+						td 27.5 %
+						td 30 %
+				h4.info (*) El descuento sera aplicable solo alos productos puntuables (Productos explusivos  a descuento. Merchandising, auxiliares de venta, etc) 
+				button.orange.margintop Seguir Comprando
+	script.
+		var listaCarrito = $('.cart-popUp ul');
+
+		function mostrarCarrito(){
+			var btnCarrito = $( ".info-cart .cart-cont a" );
+			var carrito = $(".cart-popUp");
+
+			btnCarrito.click(function() {
+				if(carrito.css("opacity")==0){
+					carrito.css("transform","scale(1)");
+					carrito.css("opacity","1");
+					carrito.css('height','240px');
+				}else{
+					carrito.css("transform","scale(0)");
+					carrito.css("opacity","0");
+					carrito.css('height','0');
+				}
+			});	
+		}
+		$(window).load(function(){
+			listaCarrito.mCustomScrollbar();
+		});
+		mostrarCarrito();
+	
+
+

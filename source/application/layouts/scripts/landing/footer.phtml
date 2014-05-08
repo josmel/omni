@@ -1,0 +1,56 @@
+<nav class="main-menu">
+    <ul>
+        <?php foreach($this->menu as $index => $value): 
+                $class = $value['class'];
+                $href = $value['url'];
+                $class .= ($index==$this->controller) ? ' active ':' ';
+                if(!isset($this->noNav) || !$this->noNav) {
+                    if($value['snav']) { 
+                        $class .= ' main-snav ';
+                        $href = "#".$value['hashtag'];
+                    }
+                } else {
+                    if($value['snav']) { 
+                        $href = $href."#".$value['hashtag'];
+                    }
+                }
+                ?>
+	<li class="<?php echo isset($value['li_class']) ? $value['li_class'] : ''; ?>">
+            <a class="<?php echo $class; ?>" href="<?php echo $href; ?>" title="<?php echo $value['title']; ?>"><?php echo strtoupper($value['title']); ?>
+                <span class="decor"></span>
+                <?php if ($index == 'cart') : ?>
+                <span class="count-product <?php echo $this->totalCart <= 0 ? 'hide' : ''; ?>"><?php echo $this->totalCart; ?></span>
+                <?php endif; ?>
+            </a>
+	</li>
+	<?php endforeach; ?>
+    <li class="fix">
+        <a href="/account" class="mPerfil" title="Mi Cuenta"></a>
+    </li>
+    <li class="fix">
+        <a href="http://www.fuxionbiotech.com/oficina2/es/autentificacion" target="_blank" class="mfx" title="iFuXion - Oficina Virtual"></a>
+    </li>
+    </ul>
+    
+</nav>
+<script type="text/javascript">
+    var yOSON ={
+        "modulo":"<?php echo $this->module?>",
+        "controller":"<?php echo $this->controller?>",
+        "action":"<?php echo $this->action?>",
+        "baseHost":"<?php echo SITE_URL?>",
+        "statHost":"<?php echo STATIC_URL?>",
+        "statVers":"?<?php echo SITE_VERSION; ?>",
+        <?php foreach ($this->yosonVars as $key => $value) : 
+             echo '"'.$key.'":'.$value.', '; 
+            endforeach; 
+            echo '"min":"","AppCore":{},"AppSandbox":{},"AppSchema":{"modules":{},"requires":{}'
+            ?>  
+        }
+      };
+</script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/libs/framework.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/yoson.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/modules/landing.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/schemas/modules.js?v=<?php echo SITE_VERSION; ?>"></script>
+<script type="text/javascript" src="<?php echo STATIC_URL?>js/application/appLoad.js?v=<?php echo SITE_VERSION; ?>"></script>

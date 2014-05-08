@@ -1,0 +1,58 @@
+<div class="white-bg ctn-profile">
+    <h2 class="titfx mb26">Mi Web</h2>
+    <?php $this->getMesseger();?>
+    <div class="prfl-img">
+        <img src="<?php echo $this->picture;?>" width="174" height="174" />
+    </div>
+    <div class="fxProfile">
+        <div class="line-vert"></div>
+        <div class="row">
+            <p class="recomWeb">Se recomienda que la imagen sea de 208px de ancho por 208px de alto con una de las extensiones PNG,JPG,JPEG o GIF.</p>
+            <a class="lnk-upload" href="javascript:;" title="Cambiar Foto">Cambiar Foto</a>
+            <form id="frm-perfil" action="<?php echo $this->form->getAction()?>" method="<?php echo $this->form->getMethod()?>" enctype="<?php echo $this->form->getEnctype()?>">
+                <div class="control-group">
+                    <label for="subdomain" class="control-label">Agregar web personal:</label>
+                    <div class="controls">
+                        <?php echo $this->form->subdomain; ?><?php echo $this->form->codempr; ?><span class="help-block">.soyfuxion.net</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="urlfacebook" class="control-label">Agregar Facebook:</label>
+                    <div class="controls">
+                        <?php echo $this->form->urlfacebook;?><i title="<img src='<?php echo STATIC_URL;?>img/oficina/sociales/facebook.jpg' width='334' height='78' >" class="sprites-p icon-help"></i>
+                        <label for="urlfacebook" class="lblmask"><?php echo $this->facebook;?></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="urltwitter" class="control-label">Agregar Twitter:</label>
+                    <div class="controls">
+                         <?php echo $this->form->urltwitter;?><i title="<img src='<?php echo STATIC_URL;?>img/oficina/sociales/twitter.jpg' width='334' height='78' >" class="sprites-p icon-help"></i>
+                         <label for="urltwitter" class="lblmask"><?php echo $this->twitter;?></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="urlyoutube" class="control-label">Agregar Youtube:</label>
+                    <div class="controls">
+                        <?php echo $this->form->urlyoutube;?><i title="<img src='<?php echo STATIC_URL;?>img/oficina/sociales/youtube.jpg' width='334' height='78' >" class="sprites-p icon-help"></i>
+                        <label for="urlyoutube" class="lblmask"><?php echo $this->youtube;?></label>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label for="urlblog" class="control-label">Agregar Blogger:</label>
+                    <div class="controls">
+                        <?php echo $this->form->urlblog;?><i title="<img src='<?php echo STATIC_URL;?>img/oficina/sociales/blogger.jpg' width='334' height='78' >" class="sprites-p icon-help"></i>
+                    </div>
+                </div>
+                <div class="control-group fix">
+                    <label for="testimony" class="control-label">Historia: <span class="nchar">(max. 220 caracteres)</span></label>
+                    <div class="controls">
+                        <?php echo $this->form->testimony; ?>
+                    </div>
+                </div>
+                <div class="control pt28">
+                    <button class="btn-orange" type="submit">Modificar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

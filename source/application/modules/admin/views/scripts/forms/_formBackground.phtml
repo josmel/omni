@@ -1,0 +1,49 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Fondos de Aplicación" href="/background">« Volver al listado de Fondos de Aplicación</a>
+</div>
+<div class="frm-panel">
+
+    <form id="frm-article" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+
+        <div class="control-group">
+            <label class="control-label" for="codtfondo">Tipo:</label>
+            <div class="controls">
+                <?php echo $this->element->codtfondo; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="titulo">Título:</label>
+            <div class="controls">
+                <?php echo $this->element->titulo; ?>
+                <?php echo $this->element->idfondo; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="imagen">Imagen:</label>
+            <div class="controls">
+                <image src="<?php echo $this->element->getView()->urlImage?>" 
+                       width="440px">
+                <?php echo $this->element->imagen; ?>
+            </div>
+	</div>
+       
+        
+        
+        <div class="control-group">
+            <label class="control-label" for="vchestado">Activo:</label>
+            <div class="controls">
+                <?php echo $this->element->vchestado; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

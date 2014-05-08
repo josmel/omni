@@ -1,0 +1,65 @@
+/**
+* Resources CSS
+* @class Resources
+* @module helpers.css
+*/
+.row
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.hide
+	display none
+/* Icons */
+.icActions
+	background url(routImg+"icon-set.png") no-repeat
+	display inline-block
+	*display inline
+	vertical-align middle
+	*zoom 1
+	&:hover
+		opacity 0.8
+	&.delete
+		background-position actionDelete
+		height 14px
+		width 15px
+/* Errors */
+input[type="text"], input[type="password"], textarea,select
+	&.error
+		border-color #EB8D8D
+		box-shadow 1px 1px 2px #EB8D8D
+		color #EB8D8D
+.alert
+	background #FCF8E3
+	border 1px solid #FBEED5
+	border-radius 4px
+	color #C09853
+	font-size 13px
+	line-height 16px
+	margin -16px auto 10px
+	padding 8px
+	width 606px
+	&.error
+		background #F2DEDE
+		border-color #EED3D7
+		color #B94A48
+	&.success
+		background #DFF0D8
+		border-color #D6E9C6
+		color #468847
+	&.info
+		background #D9EDF7
+		border-color #BCE8F1
+		color #3A87AD
+ul.errors
+	li
+		color #EB8D8D
+		padding-top 8px
+/* Positions */
+.mb16
+	margin-bottom 16px !important
+.mb60
+	margin-bottom 60px !important

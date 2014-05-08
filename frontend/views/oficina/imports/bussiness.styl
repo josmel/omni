@@ -1,0 +1,769 @@
+/**
+* Inicio,Fuxion,Negocio CSS
+* @class Negocios
+* @module oficina.css
+*/
+.welcomeMsg
+	margin 0 0 0 6px
+	font-weight bold
+.widget-profile
+	tr:nth-child(even)
+		background #F2F2F2
+	tr:nth-child(odd) 
+		background #FFF
+
+.widget-myNet
+	margin-left 15px
+	margin-top 7px
+
+.contentRange
+	display block
+	float left
+.incomingRank
+	color #EEE
+	float left !important
+	font bold 40px helveticaNeueCondensed
+	margin 150px 0 0 20px
+	position absolute
+	text-align center
+	text-shadow 1px 1px 2px #444
+	width 200px
+	z-index 1
+.textPoints
+	color #159EBE !important
+	font 19px !important
+	font-weight bold !important
+	margin 5px 0 0 10px !important
+
+.progressBar
+	background none
+	background-color #f2f2f2
+	border 0
+	float left
+	height 21px
+	margin 1px 0 0 15px
+	width 160px
+	position relative
+	.activeBar
+		height 21px
+		width 10%
+		max-width 160px
+		position absolute
+		background #f19703
+.roundedProgBars
+	height 99px
+	margin 5px 0 0 15px
+	width 252px
+	color #606060
+	p 
+		font-weight bold
+
+#pointsDesc
+	font-size 14px
+	float left
+	margin 3px 0 0 10px
+.bars
+	height 90px
+	width 124px
+	float left
+	text-align center
+	font-size 14px
+	margin 0
+	
+#left
+	background url(routImg+'barras-borrar.png') no-repeat 8px 20px	
+
+#right
+	background url(routImg+'barras-borrar.png') no-repeat -134px 20px
+
+#titlePoints
+	text-align center
+	width 100%
+#lblPoints
+	width 100%
+	margin: 56px 0 0;
+	.col
+		float left
+		text-align center
+		color #888888
+		font-weight bold
+	#t1
+		width 33px
+
+	#t2
+		width 55px
+		height 30px
+		margin -20px 0 0 0
+		#tPoints
+			font-size 20px
+		#lPoints
+			font-size 10px
+			margin -2px 0 0 0
+	#t3
+		width 30px
+
+
+// Inicio - NavBar 
+
+.ptb30
+	padding 30px 0
+
+.lm10
+	margin-left 10px
+
+.topNegocio
+	
+	.navBar
+		list-style none
+		
+		li
+			float left
+			margin 0 0 0 2px
+			text-align center
+			font-size 12px
+			font-weight bold
+			font-family helveticaNeueCondensed
+		a
+			background #f2f2f2
+			color #159EBE
+			display block
+			line-height 11px
+			padding 8px 15px
+			position relative
+			text-decoration none
+			&:hover,&.active
+				background url(routImg+'bg-menu.png') repeat-x
+				color #FF
+				span
+					display block
+					background url(routImg+'selector-menu.png')
+		
+		span
+			top 100%
+			width 9px
+			height 4px
+			display none
+			position absolute
+			background red
+			left 50%
+			margin-left -5px
+
+	.calSelect
+			float right
+			width 300px
+		.calendar
+			background url(routImg+'sprites-productos.png') no-repeat -358px 0px
+			width 40px
+			height 27px
+			float left
+		.calSelector
+			background #a8cd59
+			float left
+			color #FFF
+			font-weight bold 
+			font-size 12px
+			height 27px
+			border-radius 3px
+			margin 0 0 0 5px
+			width 142px
+			padding 0 0 0 5px
+			h4
+				padding 7px 0 0 0
+				float left
+
+			select
+				height 22px
+				margin 2px 0 0 5px 
+				width 78px
+
+		.semaforo
+			background url(routImg+'sprites-productos.png') no-repeat -401px -1px
+			width 88px
+			height 28px
+			float right
+			margin 0 0 0 5px
+//fin de NavBar
+
+//Inicio - Content -Mis Indicadores
+
+.content
+	margin 18px 0 0 0
+	float left
+.row1
+	float left
+	.widget-cnt
+		width 296px
+
+	.widget-profile
+		margin 5px 5px 25px 5px
+	.indThumb
+		float left
+		margin 0 5px 0 5px
+		width auto
+
+	div.welcomeMsg
+		display table-cell
+		padding  0
+		vertical-align middle
+		width 237px
+		padding  0 5px 0
+	table.data
+		margin 8px 0 0 0
+		tr
+			&:nth-child(even)
+				background #FFF
+			&:nth-child(odd) 
+				background #F2F2F2
+		td
+			&:nth-child(1)
+				padding 0 0 0 15px
+				color #0093B9
+				font-size 14px
+			&:nth-child(2)
+				color #F19200
+				font-weight normal
+.gIcons
+	padding 5px 0
+	background #F2F2F2
+	ul
+		width 205px
+		margin 0 auto
+		list-style none
+		.gButton
+			float left
+			margin 2px  0 2px 5px
+			&:first-child
+				margin-left 0
+			a
+				width 65px
+				height 38px
+				display block
+		.calendar a
+			background url(routImg+"sprites-productos.png") 65px -29px
+		.drive a
+			background url(routImg+"sprites-productos.png") 65px -66px
+		.talk a
+			background url(routImg+"sprites-productos.png") 65px -103px
+
+.row2
+	float left
+	margin 0 0 0 5px
+	.widget-cnt
+		padding 5px 0 8px 0
+		width 623px
+		.widget-myNet
+			margin-top 0
+		.widget-myRange
+			float left
+			width 323px
+			.bar
+				background url(routImg+'bg-range.png') 
+				border-radius 3px
+				height 43px
+				margin 3px auto 0
+				width 280px
+				.needToBe
+					background url(routImg+'sprites-productos.png') no-repeat -436px -140px
+					float left
+					height 37px
+					margin 3px 0 0 10px
+					width 63px
+				.arrow
+					background url(routImg+'sprites-productos.png') no-repeat -413px -140px
+					float left
+					height 34px
+					margin 3px 0 0 42px
+					width 18px
+				.text
+					color #FFF
+					float left
+					font-size 16px
+					font-weight bold
+					text-align center
+					margin 12px 0 0 14px
+					width 130px
+					text-shadow 1px 1px 2px #444
+			.points
+				background url("../img/oficina/bg-widget-nextRankWhite.png") repeat-x scroll center top #DDDCDC
+				border 2px solid #C1C1C1
+				border-radius 5px
+				display block
+				float left
+				height 188px
+				margin 30px 0 0 20px
+				width 281px
+				.roundedProgBars
+					margin 10px 0 0 15px
+
+	.nextRank
+		.top
+			float left
+			width 613px
+			.titulo
+				color #0093B9
+				text-align left
+				margin 5px 0 0 10px
+			.combo
+				float right
+		.table
+			width 600px
+			float left
+			margin 10px 10px 0 10px
+			.rowImage
+				
+				width 132px
+				float left
+				.topImage
+					width 100%
+					border 1px solid #C2C2C2
+				.img
+					width 194px
+					background url(routImg+'bg-nextRank.png') no-repeat 19px 1px
+					border 1px solid #C2C2C2
+					border-top none
+			.required
+				width 180px
+			.current
+				width 85px
+			.needed 
+				width 90px
+			.check
+				width 38px
+			.rowImage
+				width 194px
+				.topImage
+					height 29px
+				.img
+					height 179px
+			table
+				width auto
+				th 
+					border 1px solid #C2C2C2
+					background #FFF !important					 
+				td
+					border 1px solid #C2C2C2
+					font-size 14px
+					.cancel
+						background url(routImg+"sprites-productos.png")  92px -34px
+						width 15px
+						height 15px
+						margin 0 11px
+				.tw157
+					width 157px
+				tr
+					height 30px
+					&:nth-child(even)
+						background #FFF
+					&:nth-child(odd) 
+						background #F2F2F2
+					td
+						&:nth-child(1)
+							padding 0 0 0 3px
+							color #0093B9
+							font-size 14px
+						&:nth-child(2), &:nth-child(3)
+							color #F19200
+							font-weight normal
+							text-align center
+//Fin de Mis Indicadores
+
+
+//**
+//
+//Inicio de Mi Red
+//
+//**
+
+.redRow1
+	margin-top 15px
+	.widget-cnt
+		width 300px
+		.netMulti
+			background url(routImg+'bg-net.png') no-repeat
+			width 284px
+			height 75px
+			margin 5px 8px
+		.netBinary
+			background url(routImg+'bg-net.png') no-repeat 0 -75px
+			width 284px
+			height 75px
+			margin 5px 0 0 8px
+		.netTeam
+			background url(routImg+'bg-netTeam.png') no-repeat
+			width 284px
+			height 154px
+			margin 0 0 0 8px
+
+	.col2
+		padding 10px 0 0 0
+		font-size 14px
+		width 603px
+		margin 0 0 0 10px
+		height 311px
+		h3
+			color #159EBE
+			margin 0 0 0 15px
+		h4
+			font-weight normal
+		select
+			margin 17px 0
+			width 240px
+			height 23px
+
+		.incol1
+			border-radius 3px
+			font-family helvetica
+			margin 5px 0 5px 15px
+			padding 5px 0 5px 10px
+			width 250px
+			.calcBtn
+				background #11cbe1
+				color #fff
+				width 180px
+				height 23px
+				display table-cell
+				text-align center
+				border-radius 5px
+				padding 3px 0 0 0
+		.incol2
+			margin 5px 0 0 35px
+			width 270px
+			table.data
+				border-radius 3px
+				tr
+					td
+						border 1px solid #C2C2C2
+						padding 7px 5px
+					&:nth-child(1)
+						background #c2c2c2
+						color white
+						padding 7px 5px
+						font-weight bold
+			.gIcons
+				background none
+
+.redRow2
+	background #dedede
+	height 40px
+	width 918px
+	margin 5px 0 0 0
+	ul
+		list-style none
+		font-size 12px
+		margin 14px 0 0 10px
+		li
+			float left
+			margin 0 0 0 12px
+			select
+				padding 3px 0 0 0
+				margin-top -4px				
+			#partners
+				width 220px
+				height 23px
+			#week
+				width 75px
+				height 23px
+			&.search
+				background url(routImg+"sprites-productos.png") 92px -54px
+				width 25px
+				height 18px
+				margin-right -10px
+
+.redRow3
+	.row2
+		.widget-cnt
+			width 613px
+			.widget-myRange
+				width 313px
+		.nextRank
+			margin 8px 0 0 0
+			.check
+				width 30px
+			.combo
+				margin-right 10px
+			.cancel
+				margin 0 8px !important
+.pt30
+	padding-top 30px
+.consRow
+	padding 15px 0 0 0
+	.widget-cnt
+		height 420px
+		.h1
+			margin 10px 0 0 10px
+			width 560px
+		table
+			width 560px
+			margin 5px 30px 5px 10px
+			font-size 13px
+			tr
+				td:nth-child(1)
+					width 100px
+				td:nth-child(2)
+					width 100px	
+				td:nth-child(3)
+					width 260px
+				td:nth-child(4)
+					width 70px	
+				td:nth-child(5)
+					width 60px	
+			th
+				border 1px solid #B3B3B3
+				border-bottom none
+				background #f2f2f2
+				text-align center
+				vertical-align middle
+				height 50px
+				color #5E5E5E
+			td
+				word-wrap break-word
+				border 1px solid #B3B3B3
+				color #8F8F8F
+				padding 7px
+	.col2
+		margin 0 0 0 10px
+		width 313px
+		height 420px
+		.h1
+			width 280px
+		.select
+			margin 10px 0 0 10px
+			select
+				float right
+				margin 0 23px 0 0
+				width 160px
+			h4
+				font-family helvetica
+				font-weight normal
+		.pie
+			margin 30px 15px 0 40px
+			//background url(routImg+'borrar-pie.png') no-repeat
+			width 300px
+			height 400px
+
+//**
+//
+//FIN de Mi Red
+//
+//**
+
+//**
+//
+//Inicio de Afiliación
+//
+//**
+
+.stepsMembership
+	font-family 'helveticaNeueCondensed',Arial,sans-serif
+	margin 30px 0 0 106px
+	position relative
+	ul
+		position relative
+		z-index 2
+		li
+			float left
+			height 50px
+			padding 14px 0 0 68px
+			position relative
+			width 70px
+			span
+				background url(routImg+'sprites-productos.png') 68px -177px
+				color #a6a6a6
+				display table-cell
+				font-size 26px
+				height 60px
+				left 0
+				line-height 60px
+				position absolute
+				text-align center
+				top 0
+				width 64px
+	.bgLine
+		background #c2c2c2
+		height 2px
+		left 0
+		margin 34px 37px 0
+		position absolute
+		top 0
+		width 650px
+		z-index 1
+
+.stepsMemberShip-desc
+
+	.slider
+		width 770px
+		height 400px
+		margin 65px 0 0 70px
+		.titHint
+			margin 30px 0 0 0
+			width 490px
+			.titfx
+				text-align right
+				font-weight bold
+			.stepHint
+				color #ffffff
+				padding 5px
+				padding-left 15px
+				background #464646
+				width 660px
+				font-family helvetica
+		.stepSplit
+			height 25px
+			border-bottom 1px solid #c2c2c2
+			.s1
+				width 50%-1px
+				height 25px
+				border-right 1px solid #e5e5e5
+		.description
+			.descSearch
+				.descText
+					margin 30px 0 0 40px
+					color #a7a7a7
+					font-size 15px
+				.socButton
+					margin 100px 0 0 50px
+					background url(routImg+'bg-btnPartnerSearch.png') repeat-x
+					color #FFF
+					background url(routImg+'sprites-productos.png') 68px -177px
+
+//**
+//
+//Fin de Afiliación
+//
+//**
+
+//**
+//
+//Inicio de Mis Comisiones
+//
+//**
+.fees
+	.paycheck
+		margin 15px 0 0
+		text-align center
+		color #909090
+		font-family Verdana
+		h3
+			font-weight normal
+			font-size 18px
+		.greetings
+			.name1
+				font-weight bold
+		.bgPaycheck
+			margin 30px 0 0 115px
+			background url(routImg+"bg-paycheck.jpg") no-repeat
+			width 700px
+			height 260px
+			.name2
+				margin 87px 0 0 0
+			.amount
+				margin 14px 0 0
+	.filters
+		ul
+			list-style none
+			margin 40px 0 0 180px
+			li
+				color #909090
+				float left
+				font-family helveticaNeueCondensed
+				font-size 17px
+				margin 0 0 0 4px 
+			.btnHistorial
+				background url(routImg+'bg-historial.png') repeat-x	
+				border-radius 8px
+				color #FFF
+				height 22px
+				margin-top -4px
+				padding 3px 0 0
+				text-align center
+				width 70px
+			select
+				width 100px
+	.report
+		font-family helveticaNeueCondensed
+		padding 28px 0 0 0 	
+		.charts
+			margin 0 0 0 140px
+			color #b9b9b9
+			.resume
+				height 163px
+				border-radius 5px
+				width 320px
+			.feePie
+				width 320px
+				height 403px
+				margin 25px 0 0 0 
+				.weekFilter
+					margin 0 0 0 65px
+					float left
+					select
+						width 70px
+				.pie
+					//background url(routImg+'borrar-pieFee.png') no-repeat
+					width 280px
+					height 290px
+					margin 15px 0px 0px 42px
+				.submit
+					background url(routImg+'bg-submitFee.png') repeat-x
+					width 75px
+					height 40px
+					font-size 17px
+					line-height 40px
+					padding 0 0 0 23px
+					border-radius 25px
+					margin 7px 0 0 210px
+					color #fff
+
+		.title
+			background #464646
+			color #FFF
+			font-size 12px
+			font-weight bold
+			height 30px
+			line-height 30px
+			margin-top 9px
+			padding 0 0 0 25px
+			width 100%
+		.details
+			margin 0 0 0 17px 
+			.tableDetails
+				float left
+				width 315px
+				.feeTable
+					width 295px
+					tr
+						td
+							&:nth-child(1)
+								width 300px
+				.totalFeesText
+					margin 10px 0 10px 15px
+					color #159EBE
+					font-size 12px
+
+	table.feeTable
+		margin 0 0 0 10px
+		width 300px
+		color #747474
+		font-size 12px
+		border 1px solid #f3f3f3
+		border-bottom none
+		tr
+			border-bottom 1px solid #f3f3f3
+			&:nth-child(odd)
+					background #d6d6d6
+			td
+				height 10px
+				padding 8px
+				&:nth-child(1)
+					width 130px
+					border-right 1px solid #C1C1C1
+				&:nth-child(2)
+					width 170px
+					text-align right
+
+//**		
+//
+//Fin de Mis Comisiones
+//
+//**
+

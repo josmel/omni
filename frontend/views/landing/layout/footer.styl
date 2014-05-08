@@ -1,0 +1,79 @@
+/**
+* Footer CSS
+* @class Footer
+* @module layout.css
+*/
+.main-menu
+	background #4e8acc
+	bottom 0
+	height 54px
+	left 0
+	position absolute
+	width 100%
+	z-index 3
+	ul
+		left 0
+		position absolute
+		top 0
+	li
+		border-right 1px solid #83addb
+		float left
+		&:first-child
+			border-left 1px solid #83addb
+		&.fix
+			border none
+	a
+		color #FFF
+		display block
+		font-family family1
+		font-size 15px
+		height 54px
+		line-height 54px
+		padding 0 18px
+		position relative
+		transition all 0.6s ease
+		&:hover, &.active
+			background #db8f1b
+		&.active
+			.decor
+				display block
+		.decor
+			background url(routImg+"icon-set.png") navAct
+			height 9px
+			left 50%
+			margin-left -9px
+			position absolute
+			top 0
+			width 19px
+			display none
+		.count-product
+			background url(routImg+"icon-set.png") cantCar
+			font 400 12px/25px family2
+			height 25px
+			position absolute
+			right 4px
+			text-align center
+			top -13px
+			width 25px
+	.mfx
+		background url(routImg+"icon-set.png") aquaFx
+		height 40px
+		margin 7px 0 0 16px
+		padding 0
+		width 40px
+		&:hover
+			background url(routImg+"icon-set.png") aquaFx
+			-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=80)")
+			filter unquote("alpha(opacity=80)")
+			opacity 0.8
+	.mPerfil
+		background url(routImg+"icon-set.png") aquaPerfil
+		height 40px
+		margin 7px 0 0 16px
+		padding 0
+		width 40px
+		&:hover
+			background url(routImg+"icon-set.png") aquaPerfil
+			-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=80)")
+			filter unquote("alpha(opacity=80)")
+			opacity 0.8

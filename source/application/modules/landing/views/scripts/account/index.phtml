@@ -1,0 +1,21 @@
+<div id="main-slider" class="fix">
+    <div class="slide-main">
+        <div class="ctn-cuenta">
+            <h2>¡Bienvenido!</h2>
+            <form id="frmLogin" action="/account/login" method="POST">
+                <div class="control-group">
+                    <input id="txtUsername" name="txtUsername" type="text" placeholder="Usuario" class="inpt-medium"/>
+                </div>
+                <div class="control-group">
+                    <input id="txtPass" name="txtPass" type="password" autocomplete="off" placeholder="Contraseña" class="inpt-medium"/>
+                </div>
+                <p class="cuenta-opt">
+                    <a href="<?php echo $this->url(array('controller' => 'account', 'action' => 'forgot-password'), 'basicAction');?>" title="Olvidé mi Password">Olvidé mi Password</a>
+                </p>
+                <div class="control">
+                    <button class="btn-lnk">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

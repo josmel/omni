@@ -1,0 +1,925 @@
+/**
+* Desafio CSS
+* @class Desafio
+* @module Desafio.css
+*/
+//aux
+.block
+	display block
+hover(color)
+	transition background-color .3s;
+	&:hover
+		background-color lighten(color,20%)
+hoverOpacity(o)
+	transition opacity .3s;
+	&:hover
+		opacity o
+//home--------------------------------------
+.baner
+	margin 0 auto 10px
+	width 890px
+.img-baner
+	margin-bottom 2px
+.baner-ln
+	background-color #008fd1
+	border-radius 0 0 10px 10px
+	color #fff
+	display block
+	font 20px/22px family3
+	padding 12px 0
+	text-align center
+	text-transform uppercase
+	&:hover
+		background-color #2ab2f0
+		color #fff
+.box-data
+	background-color #fff
+	border 1px solid #e1e1e1
+	padding 18px
+	font-size 12px
+	h2
+		color #008fd1
+		font 19px/20px family1
+		margin-bottom 10px
+	h3
+		color #008fd1
+		font 17px/18px family1
+		margin-bottom 10px
+	.black
+		color #222
+		font 14px/16px family1
+		margin-bottom 10px
+.row
+	.box-data
+		float left
+		margin-left 20px
+		min-height 208px
+		width 940px
+		&:first-child
+			margin-left 0
+		.black-lnk
+			display block		
+			text-align right
+	.box-data.fix
+		margin 0 0 22px
+		width 712px
+.highinfo
+	margin-bottom 15px
+	p
+		margin-bottom 0
+	.left-cnt
+		margin-top 15px
+	.right-cnt
+		text-align right
+.info-user
+	padding-top 35px
+	h2
+		font 21px/22px family2
+	.left-cnt
+		width 220px
+	.right-cnt
+		margin-left 60px
+		width 590px
+.pic
+	border 8px solid #ccc
+	border-radius 100px
+	height 170px
+	margin 0 auto
+	width 170px
+	img	
+		border-radius 100px
+.user-dl
+	font-size 14px
+	line-height 15px
+	margin-top 25px
+	dd, dt
+		padding-bottom 16px
+	dd
+		font-family family2
+	span
+		font-family family1
+		padding-right 20px
+	a
+		text-decoration underline
+		transition color .4s ease
+.percentage
+	font 17px/18px family2
+	margin-top 17px
+	text-align center
+	.color-green
+		font-size 40px
+		line-height 41px
+.compare
+	margin-top 15px
+	text-align center
+	.left-cnt
+		width 90px
+	.right-cnt
+		margin-left 0
+		width 90px
+.circle-state
+	margin-top 20px
+	text-align center
+	span
+		background-color #b7cd49
+		border-radius 100px
+		display inline-block
+		height 42px
+		margin 0 7px
+		width 42px
+		&.yellow
+			background-color #f1dd81
+		&.rose
+			background-color #ba9494
+.fitness
+	font 17px/18px family2
+	margin-top 20px
+	text-align center
+.info-mentor
+	margin 0 auto
+	padding-top 35px
+	width 700px
+	h2
+		font 21px/22px family2
+	.left-cnt
+		width 260px
+	.right-cnt
+		width 390px
+	.pic
+		border-radius 130px
+		height 240px
+		width 240px
+		img	
+			border-radius 120px
+.content-contact
+	margin 0 auto
+	padding-top 35px
+	width 725px
+.info-contact
+	border-right 2px solid #ccc
+	float left
+	height 200px
+	padding 5px 0 14px
+	width 230px
+	h3
+		margin-bottom 10px
+		padding-top 10px
+	dt
+		width 50px
+	dd
+		margin-left 60px
+.modal-frmData
+	margin 0 auto
+	padding 10px 0
+	position relative
+	width 736px
+	&.fix
+		width 552px
+	.attach-data
+		margin 0 15px
+		width 154px
+	.title-headorange
+		padding 0 10px
+#popConsume
+	.title-headorange
+		text-align center
+.stitle-headorange
+	color #EE8100
+	font-family family2
+	font-size 13px
+	line-height 16px
+	margin-bottom 14px
+	padding 0 10px
+.separator-line
+	border-bottom 1px solid #ddd
+	box-shadow 0 2px 4px #ccc
+	height 1px
+	margin 20px 0
+.circles-colors
+	margin-top 30px
+	li
+		float left
+		font 12px/17px family1
+		width 230px
+	span
+		background-color #5586f5
+		border-radius 50px
+		float left
+		height 17px
+		margin-right 10px
+		width 17px
+		&.bg-yellow
+			background-color #ebc721
+		&.bg-purple
+			background-color #c35df2
+		&.bg-pink
+			background-color #ef257b
+.slide-pics
+	background-color #efefef
+	float left
+	padding 15px 0
+	width 740px
+	li
+		float left
+		margin 0 17px
+	p
+		color #666
+		font 13px/14px family2
+		margin 0
+		padding 0
+		text-align center
+.slide-img
+	margin-bottom 6px
+	img
+		height 137px
+		width auto
+.slides
+	position relative
+	.viewport
+		overflow hidden
+		position relative
+		z-index 1
+	.overview
+		list-style none
+		position absolute
+		li
+			float left
+			margin-right 15px
+			&:last-child
+				margin 0
+	.buttons
+		background url("../img/oficina/sprites-productos.png") no-repeat
+		height 34px
+		margin-top -17px
+		position absolute
+		text-indent -9999px
+		top 50%
+		width 34px
+		z-index 2
+		&.disable
+			display none
+		&.prev
+			background-position -44px -94px
+			left 10px
+		&.next
+			background-position -84px -94px
+			right 10px
+/* clase menu colores */
+.menu-colors
+	float left
+	margin-top -10px
+	position relative
+	width 125px
+	z-index 2
+	a
+		background-color #d4b0eb
+		color #fff
+		cursor default
+		display block
+		font 11px/12px family3
+		height 100px
+		margin-bottom 2px
+		padding-top 10px
+		text-align center
+		text-transform uppercase
+		&.active
+			background-color #ac64d9
+			background-image url(routImg+'arrow-menu.png')
+			background-position right center
+			background-repeat no-repeat
+		&.skyblue
+			background-color #7dc5e6
+			&.active
+				background-color #008fd1
+		&.orange
+			background-color #f6af92
+			&.active
+				background-color #db6d40
+		&.green
+			background-color #c7e2a1
+			&.active
+				background-color #94c947
+.numbers
+	background url(routImg+'icon-desafio.png') colorOne no-repeat
+	display block
+	height 34px
+	margin 5px auto
+	width 23px
+	&.two
+		background-position colorTwo
+		margin-top 15px
+	&.three
+		background-position colorThree
+		margin-top 10px
+.people
+	background url(routImg+'icon-desafio.png') colorPeople no-repeat
+	display block
+	height 60px
+	margin 5px auto
+	width 54px
+/* clase contenido colores */
+.content-desafio
+	box-shadow 0px 2px 4px #ccc
+	float left
+	margin-top -10px
+	padding 15px 25px 30px
+	width 750px
+	position relative
+	&.fix
+		width 730px
+	.frm-data
+		padding-top 5px
+	.frm-group, p
+		padding 0 !important
+.img-step-home
+	box-shadow 0px 2px 4px #ccc
+	height 435px
+	margin 20px auto 25px
+	width 695px
+.img-step
+	margin-bottom 5px
+	text-align center
+.title-steps
+	color #008fd1
+	font 32px/33px family2
+	margin-bottom 25px
+	text-align center
+.list-numbers
+	list-style-type decimal
+	margin-left 20px
+	li
+		margin-bottom 20px
+.bg-green
+	margin-bottom 15px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.fix
+		margin 0
+	span
+		background url(routImg+'icon-desafio.png') bgTriangleGreen no-repeat
+		float left
+		height 25px
+		width 12px
+	h2
+		background-color #CDD520
+		border-bottom 1px solid #E1E579
+		color #fff
+		float left
+		font 18px/24px family3
+		padding-left 15px
+		text-transform uppercase
+		width 723px
+	.subtitle
+		color #fff
+		font 14px/16px family1
+		text-transform none
+.bg-blue
+	position absolute
+	right 0px
+	top -1px
+	z-index 2
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	span
+		background url(routImg+'icon-desafio.png') bgTriangleBlue no-repeat
+		float left
+		height 54px
+		width 44px
+	p
+		background-color #0090D4
+		border-bottom 1px solid #66bce5
+		border-top 1px solid #66bce5
+		color #fff
+		float left
+		font 12px/14px family1
+		height 46px
+		margin 0 !important
+		padding 6px 10px 0 0 !important
+		width 350px
+//diagnostico de obesidad--------------------------------------
+.result-fat
+	background url(routImg+'obesidad.png') center top no-repeat
+	height 295px
+	position relative
+	width 290px
+.img-changeweight
+	position absolute
+	text-align center
+	top 22px
+	width 290px
+	z-index 1
+.weight-case
+	left 109px
+	position absolute
+	text-align center
+	top 82px
+	width 75px
+	z-index 2
+	h3
+		font 12px/13px family2
+		margin-bottom 8px
+	p
+		text-transform uppercase
+	.color-green
+		font 16px/17px family2
+		text-transform none
+	.fz
+		font-size 30px
+.weight-detail
+	position absolute
+	left 18px
+	text-align center
+	top 60px
+	width 95px
+	z-index 3
+	span
+		font 21px/22px family2
+	p
+		font 13px/14px family2
+		margin-bottom 0
+		padding-top 3px
+		&.pl
+			margin-left 10px
+	&.side-top
+		color #5ba4b4
+	&.side-right
+		color #8969a9
+		left 170px
+	&.side-left
+		color #EE8100
+		top 175px
+	&.side-bottom
+		color #abab8f
+		left 166px
+		top 175px
+.fat-box
+	float left
+	margin 20px 0 20px 20px
+	width 440px
+	.color-blue
+		font-size 20px
+		font-weight 700
+		line-height 20px
+	h2
+		color #EE8100
+		font 13px/14px family2
+		padding 15px 0 10px
+// Paso 1
+.titStep
+	color #A1A1A1
+	font-size 13px
+	line-height 14px
+	margin 20px 0 8px
+.descBody
+	font-size 13px !important
+	font-weight 700
+	margin 0 !important
+	&.fix
+		margin-top 20px !important
+.optBody
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.iopinline
+		float none
+		.ioption
+			margin 0
+			padding 0
+			text-align center
+			width 250px
+		input[type="radio"]
+			left auto
+			margin-right 8px
+			position relative
+			top auto
+.ctnOptBody
+	padding 12px 0 2px
+	.optBody
+		float left
+		text-align center
+		width 250px
+		img
+			display block
+			margin 0 auto 4px
+		p
+			color #EE8100
+			font-family family2
+			margin 0 !important
+.ctnPercGrease
+	margin-top 40px !important
+	&.fix
+		margin-top 30px !important
+	.control-label
+		font-size 13px
+		font-weight 700
+		width 168px !important
+//resumen de datos--------------------------------------
+.title-headorange
+	color #EE8100
+	font 15px/16px family2
+	margin-bottom 20px
+	span
+		font-family family1
+	.color-orange
+		font-size 12px
+.data-extra
+	border 1px solid #ccc
+	margin-bottom 10px
+	padding 20px
+	h3
+		color #959595
+		font 15px/16px family2
+		margin-bottom 3px
+.title-step
+	color #fff
+	font 15px/16px family2
+	height 35px
+	margin-bottom 10px
+	position relative
+	p
+		margin 0
+	&.step-two
+		.step-number
+			p
+				background-color #F86D3B
+			span
+				background-position stepNumberTriangleOrange
+		.step-title
+			p
+				background-color #F86D3B
+			span
+				background-position stepTitleTriangleOrange
+				&.triangle-right
+					background-position stepTitleTriangleOrangeRight
+		.step-lnk
+			p
+				background-color #F86D3B
+			span
+				background-position stepLnkTriangleOrange
+			&:hover
+				color #fdceac
+.step-number
+	left 0
+	position absolute
+	top 0
+	z-index 1
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	p
+		background-color #48C6E8
+		border-radius 10px 0 0 10px
+		float left
+		line-height 28px
+		padding 0 5px 0 10px !important
+	span
+		background url(routImg+'icon-desafio.png') stepNumberTriangleBlue no-repeat
+		height 28px
+		float left
+		width 13px
+.step-title
+	left 64px
+	position absolute
+	top 5px
+	z-index 2
+	p
+		background-color #48C6E8
+		float left
+		line-height 23px
+		padding 0 10px 0 5px !important
+		width 570px
+	span
+		background url(routImg+'icon-desafio.png') stepTitleTriangleBlue no-repeat
+		height 23px
+		float left
+		width 12px
+		&.triangle-right
+			background-position stepTitleTriangleBlueRight
+			width 10px
+.step-lnk
+	color #fff
+	left 663px
+	position absolute
+	top 5px
+	z-index 3
+	p
+		background-color #00AED6
+		border-radius 0 10px 10px 0
+		float left
+		line-height 28px
+		padding 0 10px 0 5px !important
+	span
+		background url(routImg+'icon-desafio.png') stepLnkTriangleBlue no-repeat
+		height 28px
+		float left
+		width 13px
+	&:hover
+		color #c0e9fc
+.data-review
+	float left
+	margin 0 0 20px 50px
+	width 310px
+	dt
+		padding 7px 0
+		width 120px
+	dd
+		color #8e8e8e
+		font-family family2
+		margin-left 120px
+		padding 7px 0
+		word-wrap: break-word
+		&.txtline
+			white-space nowrap
+		&.twoline
+			height 30px
+	span
+		font-family family1
+		padding-right 20px
+.pics-beginning
+	margin 20px auto
+	width 610px
+	p
+		font 15px/16px family2
+		margin 5px 0 0
+		text-align center
+	span
+		float left
+.box-pictures
+	background-color #f4f4f4
+	border 1px solid #ccc
+	margin 0 15px
+	text-align center
+	width 165px
+.lessmargin
+	.attach-data
+		margin 0 26px
+.btn-attach
+	.btn-green
+		background-color #CDD520
+		border-radius 5px
+		bottom 6px
+		float none
+		font 13px/16px family2
+		left 9px
+		top auto
+		padding 3px 13px
+		z-index 3
+		&:hover
+			background-color #bec416
+			color #fff
+.btn-inscription
+	position absolute
+	z-index 3
+	top 42px
+	right 36px
+#verifMentor
+	float left
+	height 25px
+	line-height 26px
+	margin-left 13px
+.help-left
+	float left
+	font 12px/14px family1
+	margin 0 !important
+//paso 3 define tu alimentacion--------------------------------------
+.feed-box
+	padding-left 20px
+	position relative
+	h2
+		font-family family2
+		margin-bottom 20px
+		padding-top 15px
+.detail-feed
+	float left
+	margin-left 80px
+	width 310px
+	&:first-child
+		margin-left 0
+	h3
+		font-family family2
+		margin-bottom 10px
+.feed-imgs
+	float left
+	margin-top 20px
+	img
+		border 1px solid #ccc
+		margin 10px 57px
+// Mis Consumos
+.challeng-state
+	margin-bottom 26px
+	li
+		color #656565
+		float left
+		font-family family1
+		font-size 15px
+		line-height 17px
+		margin-left 16px
+		position relative
+		&:first-child
+			margin 0
+		&.fix
+			font-family family2
+			padding-left 22px
+		span
+			border-radius 17px
+			height 17px
+			left 0
+			position absolute
+			top 0
+			width 17px
+	.green
+		background #11ee79
+#calendar
+	font-family family3
+	font-size 12px
+	position relative
+	.fc-header-title
+		h2
+			color #008fd1
+			font-family family2
+			font-size 25px
+			font-weight 400
+			line-height 25px
+			text-transform uppercase
+	.fc-day-header
+		color #626262
+		font-weight 400
+	.fc-day-number
+		color #626262
+	.fc-button
+		background #FFF
+		border 1px solid #DDD
+		border-radius 0
+		font-family family1
+		font-size 13px
+	.fc-button-today
+		color #7e7e7e
+		font-family family1
+		font-size 13px
+		text-transform uppercase
+		transition background .4s ease
+	.fc-state-hover
+		background #F7F7F7
+	.fc-text-arrow
+		color #7e7e7e
+		font-weight 400
+	.fc-border-separate
+		color #7E7E7E
+		font-family family1
+		font-size 14px
+	.fc-event
+		font-family family1
+		font-size 13px
+		text-align center
+		line-height 16px
+		span
+			background url(routImg+'icon-desafio.png') no-repeat
+			display block
+			margin 0 auto 5px
+.evtDesafio
+	span
+		background-position icDesafio !important
+		height 19px
+		width 17px
+.evtActive
+	span
+		background-position icActive !important
+		height 24px
+		width 24px
+.evtMeasure
+	cursor pointer !important
+	span
+		background-position icMeasure !important
+		height 32px
+		width 26px
+.evtProduct
+	cursor pointer !important
+	span
+		background-position icProduct !important
+		height 17px
+		width 24px
+.popupProd
+	padding 5px 10px
+	width 456px
+	h3
+		color #939393
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 8px
+		text-align center
+	h4
+		color #d58001
+		font-family family1
+		font-size 14px
+		line-height 16px
+.popprod-ctn
+	margin-top 14px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.popprod-img
+		float left
+		width 116px
+		img
+			display block
+			height 102px
+			width 116px
+	.popprod-desc
+		float left
+		margin-left 20px
+		padding-top 8px
+		width 320px
+		h2
+			color #686868
+			font-weight 700
+			line-height 15px
+			margin-bottom 3px
+			padding-left 12px
+			position relative
+			span
+				background url(routImg+'icon-desafio.png') icLi no-repeat
+				height 8px
+				left 0
+				position absolute
+				top 3px
+				width 7px
+		p
+			color #9a9a9a
+			font-size 13px
+			line-height 15px
+			margin 0
+			padding-left 12px
+/* Mis Avances */
+.avc-break
+	background url(routImg+'break.png') repeat-x
+	height 7px
+	margin-bottom 25px
+#chartProgress
+	height 420px
+	margin 0 auto
+	width 100%
+.ttip-chart
+	dt,dd
+		color #a1a09f
+		font-size 12px
+	dt
+		font-family family1
+		width 60px
+	dd
+		font-family family2
+		margin-left 60px
+		span
+			padding-right 14px
+
+.icon_check
+	padding-left 40px
+	margin-bottom 13px
+	li
+		background url(routImg+'elements/icon_check.gif') no-repeat
+		padding-left 15px
+.diagnostic-fat 
+	margin-left 48px
+	top 80px
+.dianostic-box 
+	margin-left 60px
+/* Mala tech no queda otra*/
+.tipsy-inner
+	background-color #0090D4 !important
+.slides-advances
+	.viewport
+		width 745px
+		height 170px
+	li
+		ul
+			li
+				width 155px
+				height 157px
+	img
+		background #F9F9F9
+		display block
+		font-size 0
+		height 137px
+		width 155px

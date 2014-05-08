@@ -1,0 +1,238 @@
+    <div class="content-desafio">
+      <div class="bg-green"><span></span>
+        <h2>RESUMEN DE DATOS</h2>
+      </div>
+      <h3 class="title-headorange">DETERMINA TU SITUACIÓN ACTUAL DE PESO</h3>
+      <div class="title-step"><span class="step-number">
+          <p>Paso 1</p><span></span></span><span class="step-title"><span></span>
+          <p>A - Determina tu estado actual </p><span class="triangle-right"></span></span><a href="<?php echo SITE_URL; ?>inscription/step-one-a" title="EDITAR" class="step-lnk"><span></span>
+          <p>EDITAR</p></a></div>
+      <div class="row">
+        <dl class="data-review">
+          <dt>GENERO</dt>
+          <dd> <span>:  </span>
+              <?php echo $this->sexo?>
+          </dd>
+          <dt>MEDIDAS</dt>
+          <dd class="txtline"><span>: </span>Talla <?php echo $this->step->oneA['talla']?> mts.      Peso <?php echo $this->step->oneA['peso']?> Kgs  Indice de grasa  <?php echo $this->step->oneA['indgrasa']?>%</dd>
+          <dt>MASA MUSCULAR </dt>
+          <dd> <span>: </span>Media</dd>
+          <?php if(!empty($this->step->oneA['cintura'])):?>
+          <dt>CINTURA</dt>
+          <dd><span>: </span><?php echo $this->step->oneA['cintura']?> cm</dd>      
+          <?php endif;
+          if(!empty($this->step->oneA['cintura'])):
+          ?>
+          <dt>CADERA</dt>
+          <dd><span>: </span><?php echo $this->step->oneA['cadera']?> cm</dd>        
+          <?php endif;?>
+        </dl>
+      </div>
+      <div class="title-step"><span class="step-number">
+          <p>Paso 1</p><span></span></span><span class="step-title"><span></span>
+          <p>B - ¿Qué quieres lograr?</p><span class="triangle-right"></span></span><a href="<?php echo SITE_URL; ?>inscription/step-one-c" title="EDITAR" class="step-lnk"><span></span>
+          <p>EDITAR</p></a></div>
+      <div class="row">
+        <dl class="data-review">
+<!--          <dt>TIEMPO</dt>
+          <dd> <span>: </span><?php //  echo $this->step->oneC['tiembaja']?> semanas</dd>-->
+          <dt>¿QUE PESO DESEAS LOGRAR ?</dt>
+          <dd class="twoline"><span>: </span><?php echo $this->step->oneC['kilobaja']?> Kg.</dd>               
+        </dl>
+        <dl class="data-review">
+          <dt>MOTIVO PARA<br>BAJAR DE PESO</dt>
+          <dd class="twoline"><span>: </span><?php echo $this->step->oneC['motivo']?></dd>
+          <dt>COMPROMISO</dt>
+          <dd> <span>: </span><?php echo $this->step->oneC['compromiso']?> </dd>
+        </dl>
+      </div>
+      <div class="title-step step-two"><span class="step-number">
+          <p>Paso 2</p><span></span></span><span class="step-title"><span></span>
+          <p>A - Datos iniciales</p><span class="triangle-right"></span></span><a href="<?php echo SITE_URL; ?>inscription/step-two-a" title="EDITAR" class="step-lnk"><span></span>
+          <p>EDITAR</p></a></div>
+      <div class="row">
+        <dl class="data-review">
+          <dt>NOMBRE</dt>
+          <dd> <span>: </span><?php echo $this->step->twoA['nomemp']?></dd>
+          <dt>APELLIDO MATERNO</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['apematerno']?></dd>
+          <dt>CÓDIGO DE EF- CP</dt>
+          <dd> <span>: </span><?php echo $this->step->twoA['codefcp']?></dd>
+          <dt>EMAIL</dt>
+          <dd class="txtline"><span>: </span><?php echo $this->step->twoA['email']?></dd>
+        </dl>
+        <dl class="data-review">
+          <dt>APELLIDO PATERNO</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['apepaterno']?></dd>
+          <dt>SEUDÓNIMO</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['nickemp']?></dd>
+          <dt>RPM</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['rpm']?></dd>
+        </dl>
+      </div>
+      <div class="title-step step-two"><span class="step-number">
+          <p>Paso 2</p><span></span></span><span class="step-title"><span></span>
+          <p>B- Fotos iniciales</p><span class="triangle-right"></span></span><a href="<?php echo SITE_URL; ?>inscription/step-two-a" title="EDITAR" class="step-lnk"><span></span>
+          <p>EDITAR</p></a></div>
+      <div class="row pics-beginning"><span>
+          <div class="box-pictures"><img src="<?php echo $this->step->upload['domain'].$this->step->upload['wincha']?>" alt="Desafío Fuxion" width="89" height="77"/></div>
+          <p>Wincha de peso</p></span><span>
+          <div class="box-pictures"><img src="<?php echo $this->step->upload['domain'].$this->step->upload['frente']?>" alt="Desafío Fuxion" width="89" height="77"/></div>
+          <p>Frente</p></span><span>
+          <div class="box-pictures"><img src="<?php echo $this->step->upload['domain'].$this->step->upload['perfil']?>" alt="Desafío Fuxion" width="89" height="77"/></div>
+          <p>Perfil </p></span></div>
+      <div class="title-step step-two"><span class="step-number">
+          <p>Paso 2</p><span></span></span><span class="step-title"><span></span>
+          <p>C- Mentor</p><span class="triangle-right"></span></span><a href="<?php echo SITE_URL; ?>inscription/step-two-a" title="EDITAR" class="step-lnk"><span></span>
+          <p>EDITAR</p></a></div>
+      <div class="row">
+        <dl class="data-review">
+          <dt>CÓDIGO EF- CP</dt>
+          <dd> <span>: </span><?php echo $this->step->twoA['codmentor']?></dd>
+          <dt>APELLIDO PATERNO</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['dataMentor']['apepaterno']?></dd>
+          <dt>TELÉFONO</dt>
+          <dd> <span>: </span><?php echo $this->step->twoA['dataMentor']['telefono']?></dd>
+          <dt>EMAIL</dt>
+          <dd class="txtline"><span>: </span><?php echo $this->step->twoA['dataMentor']['email']?></dd>
+        </dl>
+        <dl class="data-review">
+          <dt>NOMBRE</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['dataMentor']['nomemp']?></dd>
+          <dt>APELLIDO MATERNO</dt>
+          <dd><span>: </span><?php echo $this->step->twoA['dataMentor']['apematerno']?></dd>
+          <dt>CELULAR</dt>
+          <dd><span>:</span><?php echo $this->step->twoA['dataMentor']['celular']?></dd>
+        </dl>
+      </div>
+      <div class="box-data fix">
+        <h2>TERMINOS Y CONDICIONES</h2>
+        <h3>Reto FUXION 2014 </h3>
+       
+        <p><span class="black">El Reto FuXion 2014 </span>es un concurso a realizarse entre los
+            empresarios FuXion (EF) y Clientes Preferentes (CP) mayores de 18 años y tiene por 
+            objetivo enseñar a los empresarios a documentar sus progresos para lograr 
+            TESTIMONIOS GANADORES que posteriormente les sirvan como herramienta de prospección. 
+        </p>
+        <p>
+            Este concurso premia al mejor TESTIMONIO de reducción de peso logrado mediante el consumo
+            de productos del sistema FuXion para Bajar de Peso y Medidas Saludablemente, como 
+            complemento a una alimentación saludable.  
+        </p>
+        <p><span class="black">Mecánica de participación</span></p>
+        <p>
+            1. Inscribirse en site del Reto FuXion de la Oficina Virtual, junto con un mentor
+                que apoye al concursante.   <br>
+            2. Seguir un plan de alimentación saludable, complementado con productos FuXion
+               del Sistema para Bajar de Peso y Medidas durante 15 semanas (105 días).   <br>
+            3. Actualizar la información personal semanalmente durante las 12 primeras semanas.<br>
+            4. Registrar el progreso con evidencias (winchas de peso, fotos, videos) por lo menos una vez
+               a la semana, durante las 12 semanas de pre-calificación. Las siguientes 3 semanas deberán ser 
+               corroboradas en las oficinas de FuXion, en una entrevista personal.<br>
+            5. Mantenerse activo durante las 15 semanas y comprar productos de la línea Bajar de Peso y 
+               medidas.  <br>
+            6. Con la información y evidencias de las primeras 12 semanas construir un caso/testimonio
+               y presentarlo en un video o flash en las oficinas FuXion para su pre-calificación. <br>
+            7. Mantener el peso alcanzado por las siguientes 3 semanas de pre-calificacíon, 
+               para concursar por el premio. <br>
+            8. De ganar el concurso, el ganador deberá mantener el peso logrado hasta el viaje.            
+        </p>
+        <span class="black">Concurso</span><br />
+        <p>
+            Participan en el Reto FuXion EL CONCURSANTE (Empresario FuXion o Cliente Preferente que se inscribe en el Reto FuXion) y EL MENTOR (Empresario FuXion que apoya y monitorea al concursante).  
+        </p>
+        <p>
+            Cada mes se forma un grupo de CONCURSANTES que competirán entre ellos para obtener el premio al mejor TESTIMONIO. Este grupo estará en concurso durante 3 meses, teniendo cada CONCURSANTE 15 semanas (105 días) para competir. Para ser parte del grupo del mes, el CONCURSANTE deberá inscribirse entre el 1° y el 30 o 31 del mismo mes. A partir del 1° del siguiente mes, EL CONCURSANTE formarán parte de un nuevo grupo. 
+            <br>
+            Las 15 semanas (105 días) de participación en el Reto FuXion son contados a partir del día en que el CONCURSANTE se encuentra apto e ingrese a  registrar sus datos y avances semanales en el sistema. 
+            <br>
+            Para que un grupo de CONCURSANTES se mantenga vigente, éste deberá tener un mínimo de 25 CONCURSANTES por grupo en carrera durante el 2do y 3er. mes. En caso no se llegue a la cifra, se declarará desierto el concurso de ese mes y los CONCURSANTES en carrera formarán parte del grupo del siguiente mes. 
+            <br>
+            Una vez concluidas las primeras 12 semanas de concurso (84 días) del Reto FuXion, cada concursante deberá enviar un video con su Caso de Éxito o Testimonio de Bajar de Peso y Medidas a la oficina FuXion más cercana para su pre-calificación al concurso. El plazo para hacerlo es de 7 días. La fecha de cierre del Reto y entrega de resultados es INAMOVIBLE. 
+            <br>            
+        </p>
+        <p>
+            En el transcurso de las semanas 13 a la 15, los CONCURSANTES que hayan sido pre-calificados serán llamados a las oficinas de FuXion a sustentar sus casos y demostrar las evidencias en una entrevista personal. 
+        </p>
+        <p>
+            <span class="black">Recta Final</span>
+            Cuando concluyen los 3 ½ meses de cada grupo concursante, un jurado analizará los casos presentados y definirá cuál es el Caso de Éxito o Testimonio ganador de ese grupo, tomando en consideración los siguientes aspectos: 
+            
+        </p>
+        <p> 
+            1. Puntualidad en el llenado de información en el site del Desafío, activación y envío de materiales. 
+            <br>
+            2. Reducción de Peso y Medidas porcentual vs. la estatura de la persona. 
+            <br>
+            3. Testimonio presentado (punto más relevante) el cual deberá estar en forma de video o flash con una duración máxima de 5 minutos. Es indispensable que cumpla con los siguientes puntos y que  contenga información e imágenes de: 
+            <br>
+            a. Contener información e imágenes de:
+        </p>
+        <ul class="icon_check">
+            <li>Estado inicial del concursante y objetivos. Es súper importante mostrar la evolución de los resultados de forma visible, es decir empezar a realizar el video desde la primera semana de empezar el reto hasta la última</li>                
+            <li>Estrategia de reducción de peso y medidas seguida. Forma de 
+                consumo de productos FuXion. </li>
+            <li>Resultados. Comparación vs. el inicio. </li>
+            <li>Que presente de manera creíble, creativa y estética el progreso del concursante</li>
+            <li>El envío del video de Caso de Éxito/ Testimonio de cada CONCURSANTE deberá hacerse en un DVD entregado en sobre sellado, con los datos completos del CONCURSANTE y MENTOR a la Oficina FuXion de su localidad</li>
+            <li>El plazo para hacerlo es de 7 días. La fecha de cierre del Reto y entrega de resultados es INAMOVIBLE.</li>            
+        </ul>
+        <p>
+            <span class="black">Ganadores</span><br>
+            Cada mes se premiará un (01) Testimonio ganador dentro de cada grupo de CONCURSANTES del mes.
+            La premiación se realizará la segunda semana de cada mes (a partir de JULIO 2014). De coincidir las fechas,
+            la premiación se realizará en el evento Noche de Éxito de Lima y /o del país del ganador. 
+        </p>
+        <p>
+            <span class="black">Premios:</span>
+            <br>
+            Para el CONCURSANTE que presente el mejor Caso de Éxito/Testimonio: 
+        </p>  
+        <div>
+            <ul class="icon_check">
+                    <li>1 paquete doble a un destino en la Riviera Maya de México que incluye: pasajes aéreos para dos personas, traslados, alojamiento en hotel de 4 o 5 estrellas en habitación doble con el sistema all inclusive (todo incluido) por 5 días y 4 noches.</li>
+            </ul>
+        </div>
+        <p>                             
+            Para su MENTOR:
+        </p>
+        <ul class='icon_check'>
+            <li>1 MiniIpad o equivalente.</li>
+        </ul>                    
+        <p>                              
+             El Testimonio de cada CONCURSANTE será evaluado por un jurado que está ubicado en la ciudad de Lima. Las decisiones del jurado son inapelables e incuestionables, y constituye la última instancia en la calificación de los resultados del concurso; Los participantes al inscribirse y participar, aceptan expresamente que se someten a los fallos del jurado calificador. 
+        </p>
+        <p>
+            <span class="black">Causas de descalificación para la obtención del premio:</span>
+            <br>
+            ⁻	No haber llenado la ficha personal en el site del Reto.
+            <br> 
+            ⁻	No actualizar la información semanal (esto se cuenta desde el día de la inscripción, hasta la pre-calificación del Reto, 12 semanas después). 
+            <br>
+            ⁻	No cargar y enviar constancias de avances en la reducción de peso y medidas mediante winchas y fotos por lo menos una vez a la semana. 
+            <br>
+            ⁻	Desactivarse durante alguna de las semanas del Reto. 
+            <br>
+            ⁻	No comprar productos del Sistema FuXion para Bajar de Peso y Reducir Medidas durante tiempo que estén participando en el Reto. Si el sistema no registra compra de productos de esta línea por lo menos 1 vez por cada mes que participen en el Reto, no podrán participar por ninguno de los premios finales. 
+            <br>
+            ⁻	No presentar en las oficinas de FuXion el Caso de Éxito/Testimonio, hasta 7 días después de culminada la etapa de pre-calificación del Reto. El no entregar el video (de manera física en un DVD o de manera virtual a través de correo electrónico) imposibilitará a los participantes de acceder a ninguno de los premios finales. 
+            <br>
+            ⁻	Incrementar de peso o medidas luego del período de pre-calificación, hasta el momento del viaje. 
+            <br>
+            ⁻	Si se comprueba que hubo algún tipo de alteración o falsedad en la presentación de resultados, fotos, peso, medidas. Los participantes no podrán acceder a ninguno de los premios finales. 
+
+            
+        </p>
+        <p>
+            El video testimonial final y las fotografías entregadas podrán ser utilizados por Prolife Biotech SAC, previa autorización de los participantes, para fines de difusión de testimonios y casos de éxito de la empresa.
+            <br>
+            Después de haber leído todo lo anterior.
+            <br>
+            Yo declaro que todos los datos que ingrese sobre mi peso en mi ficha personal y todas las fotografías y videos que entregue como evidencia de mi testimonio, serán fidedignos, no falseados ni alterados con ningún programa de diseño gráfico ni de ninguna otra forma. Mi mentor también valida al apoyarme la autenticidad de esta información.
+        </p>
+        
+      </div>
+      <form method="post" action="">
+          <div class="row"><button type="submit" href="javascript:;" title="CONFIRMAR" class="btn right-cnt">CONFIRMAR</button></div>
+      </form>
+    </div>

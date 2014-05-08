@@ -1,0 +1,263 @@
+/**
+* Header CSS
+* @class Header
+* @module layout.css
+*/
+.header
+	background url(routImg+'bg-header.png') top center repeat-x
+	height 182px
+	position relative
+	.box-center
+		position relative
+		z-index 2
+	.logo-inv
+		float left
+		margin 25px 0 0 15px
+	&.top
+		top 55px
+	.ctn-infuser
+		background-color #17a3c2
+		border 1px solid #0e73a2
+		border-radius 0 7px
+		box-shadow 0px 1px 12px rgba(50, 50, 50, 0.3)
+		color white
+		float right
+		height 55px
+		margin-top -1px
+		padding-left 52px
+		padding-top 3px
+		width 460px
+	.info-user
+		width 188px
+		height 42px
+		padding-top 4px
+		border-right 1px solid #0e73a2
+		float left
+		.icon-user
+			float left
+		h3
+			font-size 13px
+			line-height 13px
+			margin-left 46px
+			padding-top 4px
+			a
+				color #FFF
+				&:hover
+					text-decoration underline
+		h4
+			font-size 10px
+			font-weight 400
+			margin-left 46px
+			height 14px
+			span
+				float left
+				line-height 11px
+				padding-top 1px
+			img
+				float left
+				margin-left 6px
+	.info-cart
+		order-left 1px solid #8fcdff
+		border-right 1px solid #0e73a2
+		float left
+		height 36px
+		padding-left 19px
+		padding-top 10px
+		width 150px
+		.icon-cart
+			float left
+			margin-right 11px
+		h3
+			font-size 14px
+			line-height 14px
+			font-weight normal
+		.cart-cont
+			border-bottom 1px solid transparent
+			display inline-block
+			*display inline
+			*zoom 1
+			&:hover
+				border-bottom 1px solid white
+			a
+				float left
+				font-size 10px
+				line-height 10px
+				margin-left 2px
+				color white
+		.arrow-down-white
+			margin-top 3px
+			margin-left 25px
+			float left
+	.info-logOut
+		width 90px
+		height 42px
+		float left
+		border-left 1px solid #8fcdff
+		padding-left 8px
+		padding-top 4px
+		.icon-close
+			float left
+			margin-right 6px
+		a
+			font-size 14px
+			line-height 14px
+			color white
+			display block
+			padding-top 4px
+	.cart-popUp
+		height 0
+		opacity 0
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=0)")
+		filter unquote("alpha(opacity=0)")
+		opacity 0
+		*display none
+		position absolute
+		right 96px
+		top 46px
+		transform scale(0)
+		transition all .5s
+		width 270px
+		padding-top 10px
+		z-index 99
+	.triangulo
+		width 0px
+		height 0px
+		border-style solid
+		border-width 0 10px 10px 10px
+		border-color transparent transparent #ffffff transparent
+		position absolute
+		right 27px
+		top 0px
+	.list-scar
+		max-height 240px
+		padding 14px 10px
+		transition all .5s
+		width 250px
+		li
+			margin 0
+			padding-bottom 10px
+			position relative
+			width 240px
+			*zoom 1
+			&:before,&:after
+				display table
+				content ""
+				line-height 0
+			&:after
+				clear both
+			button
+				background-color #EA114E
+				border-radius 15px
+				color white
+				font-size 10px
+				font-family family7
+				line-height 17px
+				text-align center
+				height 17px
+				position absolute
+				right 1px
+				top 2px
+				transition all .5s
+				width 17px
+				&:hover
+					opacity .7
+		img
+			float left
+			height 34px
+			width 38px
+		.descPopProd
+			float left
+			margin-left 10px
+			width 170px
+		h3
+			color #838383
+			font-size 11px
+			line-height 12px
+			margin 0
+		h4
+			color #838383
+			font-size 10px
+			line-height 12px
+			margin 0
+			font-weight 400
+			span
+				color #58b7b2
+				float right
+				display block
+				width 120px
+	.btn-box
+		padding-bottom 10px
+		padding-left 20px
+		border-top 1px solid #e2e2e2
+		padding-top 10px
+		span.total
+			display block
+			font-size 12px
+			font-weight bold
+			text-align right
+			padding-right 21px
+			margin-bottom 10px
+			span
+				font-size 14px
+		input
+			border none
+			background-color #16a1c0
+			color white
+			font-size 12px
+			width 80px
+			height 22px
+			cursor pointer
+			transition all .5s
+			&:hover
+				opacity .7
+		.orange
+			background-color #f39a0c
+			color white
+			cursor pointer
+			display inline-block
+			*display inline
+			font-size 12px
+			height 22px
+			line-height 22px
+			margin-left 65px
+			text-align center
+			transition all .5s
+			vertical-align top
+			width 80px
+			hover(#f39a0c)
+			*zoom 1
+			&:hover
+				opacity .7
+#ctnPopupProd
+	background #FFF
+	box-shadow 0px 5px 18px rgba(50, 50, 50, 0.75)
+.main-menu
+	clear both
+	height 30px
+	padding 38px 0 0 6px
+	ul
+		float left
+		list-style none
+		width 624px
+	li
+		float right
+		margin-right -16px
+		&.active
+			a
+				background-position -125px 0
+				color #0093cf
+	a
+		background url(routImg+'sprites-productos.png') no-repeat
+		color #FFF
+		display block
+		font-family family2
+		font-size 14px
+		font-weight 400
+		height 22px
+		padding 8px 12px 0 0
+		text-align center
+		text-transform uppercase
+		width 108px
+		&:hover
+			background-position -125px 0
+			color #0093cf

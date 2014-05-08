@@ -1,0 +1,48 @@
+<header class="header">
+    <div class="box-center">
+        <a href="/home" class="sprites logo-inv"></a>
+        <?php if(Zend_Auth::getInstance()->hasIdentity()) : 
+            $totalOrder = 0;?>
+        <aside class="ctn-infuser">
+            <div class="info-user">
+                <a class="sprites-p icon-user" href="/web/update-pass"></a>
+                <h3>Hola, <a href="/web/update-pass"><?php echo $this->businessman['nomempr'].' '.$this->businessman['appempr']; ?></a></h3>
+                <h4><span>Codigo Fuxion: <?php echo $this->businessman['codempr']; ?></span>
+                    <img src="<?php echo STATIC_URL; ?>img/element/country/<?php echo $this->businessman['codpais']?>.png" /></h4>
+            </div>
+            <div class="info-cart"><i class="sprites-p icon-cart block"></i>
+                <h3><span id="menuQProd"><?php echo count($this->itemList); ?></span> Producto(s)</h3>
+                <div class="cart-cont"><a href="/cart/step1">Ver Carrito </a><i class="sprites-p arrow-down-white block"></i></div>
+            </div>
+            <div class="info-logOut"><i class="sprites-p icon-close block"></i><a href="/logout">Cerrar Sesión	</a></div>
+        </aside>
+        <div class="cart-popUp">
+            <div class="triangulo"></div>
+            <form id="ctnPopupProd" method="post" action="/cart/step1">
+                <ul class="list-scar">
+                    <?php foreach ($this->itemList as $item) :
+                        $itemPrice = $item->getProduct()->getPrice() * (1 + $this->cartIva) * $item->getQuantity();
+                        $totalOrder += $itemPrice; ?>
+                    <li data-id="<?php echo $item->getProduct()->getId(); ?>">
+                        <img alt="<?php echo $item->getProduct()->getName(); ?>" src="<?php echo $item->getProduct()->getUrlPicture(); ?>" alt="<?php echo $item->getProduct()->getName(); ?>" />
+                        <div class="descPopProd">
+                            <h3><?php echo $item->getProduct()->getName(); ?></h3>
+                            <h4 class="precio">Precio <span ><?php echo $this->businessman['simbolo']; ?> <?php echo number_format($itemPrice, 2, '.', ''); ?></span></h4>
+                            <h4 class="cantidad">Cantidad <span ><?php echo $item->getQuantity(); ?></span></h4>
+                            <input type="hidden" name="txtcant[<?php echo $item->getProduct()->getId(); ?>]" value="<?php echo $item->getQuantity(); ?>"/>
+                        </div>
+                        <button type="button" class="removeProduct">X</button>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+                <div class="btn-box">
+                    <span class="total">Total: <span id="listProdTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format($totalOrder, 2, '.', ''); ?></span></span>
+                    <input type="submit" value="Pagar"/>
+                    <a href="/cart/step1" title="Ver Carrito" class="orange">Ver Carrito</a>
+                </div>
+            </form>
+        </div>
+        <?php echo $this->render("office/menu.phtml"); ?>
+        <?php endif; ?>
+    </div>
+</header>

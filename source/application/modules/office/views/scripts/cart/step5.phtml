@@ -1,0 +1,142 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car">
+        <h2>Consolidación de Pedido</h2>
+        <p class="descDir">Revisa la información ingresada, luego haga click en “ir a forma de pago”<span></span></p>
+    </header>
+    <form method="POST">
+        <section class="ctn-consolidation row">
+            <div class="column-three">
+                <table class="tbl-summary">
+                    <tr>
+                        <th colspan="2">Dirección de envío</th>
+                    </tr>
+                    <?php if ($this->address == 'SHOP') : ?>
+                    <tr>
+                        <td>Entrega en tienda</td>
+                        <td></td>
+                    </tr>
+                    <?php else : ?>
+                    <tr>
+                        <td>Contacto:</td>
+                        <td><?php echo $this->address['nomcont']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Doc Identidad:</td>
+                        <td><?php echo $this->address['destdoc'].' '.$this->address['ndoc']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td><?php echo $this->address['destvia'].' '.$this->address['desdire'].' - '.$this->address['ubigeoName']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>Referencia:</td>
+                        <td><?php echo $this->address['refdire']; ?></td>
+                    </tr>
+                    <?php endif; ?>
+                    
+                </table>
+                <a class="lnk-consolidation" title="Cambiar Dirección de Envío" href="/cart/step2">Cambiar</a>
+            </div>
+            <div class="column-three">
+                <table class="tbl-summary">
+                    <tr>
+                        <th colspan="2">Forma de Envío</th>
+                    </tr>
+                    <tr>
+                        <td>Tipo de envío:</td>
+                        <td>Normal</td>
+                    </tr>
+                    <tr>
+                        <td>Courier:</td>
+                        <td>Urbano Express</td>
+                    </tr>
+                </table>
+                <a class="lnk-consolidation" title="Cambiar Forma de Envío" href="/cart/step3">Cambiar</a>
+            </div>
+            <div class="column-three">
+                <table class="tbl-summary">
+                    <tr>
+                        <th colspan="2">Tipo de Comprobante</th>
+                    </tr>
+                    <tr>
+                        <td>Recibo de Pago:</td>
+                        <td><?php echo $this->vType['destdov']; ?></td>
+                    </tr>
+                    <tr>
+                        <td>A nombre de:</td>
+                        <td><?php echo $this->businessName; ?></td>
+                    </tr>
+                </table>
+                <a class="lnk-consolidation" title="Cambiar Tipo de Comprobante" href="/cart/step4">Cambiar</a>
+            </div>
+            <div class="separator"></div>
+            <p class="descDir mb14">Detalle de los productos de la compra, pendiente de Pago<span></span></p>
+            <table class="tbl-consolidation">
+                <thead>
+                    <tr class="fix">
+                        <th class="tdImgS">Imagen</th>
+                        <th class="tdName tw356">Nombre</th>
+                        <th class="tdPoints">Total Pts</th>
+                        <th class="tdCant">Cantidad</th>
+                        <th class="tdPriceL">Precio Unidad <span>(Inc. IGV)</span></th>
+                        <th class="tdSubTotal">Sub Total </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($this->itemList as $item) : ?>
+                    <tr>
+                        <td class="tdImgS"><img alt="<?php echo $item->getProduct()->getName(); ?>" src="<?php echo $item->getProduct()->getUrlPicture(); ?>" /></td>
+                        <td class="tdName tw356">
+                            <?php echo $item->getProduct()->getName(); ?>
+                        </td>
+                        <?php /*                         <td>
+                    <?php $bDescription = $item->getProduct()->getBoxDescription();
+                        if (!empty($bDescription)) : ?>
+                        Caja (<?php echo $bDescription; ?>)
+                    <?php else : echo '-'; ?> 
+                    <?php endif; ?> 
+                    </td>
+                    <td><?php echo $item->getItemWeight(); ?> Kg.</td> */ ?>
+                        <td class="tdPoints"><?php echo $item->getProduct()->getPoints(); ?></td>
+                        <td class="tdCant"><?php echo $item->getQuantity(); ?></td>
+                        <td class="tdPriceL"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format((1 + $this->iva) * $item->getProduct()->getPrice(), 2, '.', ' '); ?></td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo number_format((1 + $this->iva) * $item->getSubTotal(), 2, '.', ' '); ?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+            <table class="tbl-payConsolidation">
+                <tbody>
+                    <tr>
+                        <td class="tdPriceL">Sub total:</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo $this->total; ?></td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="tdPriceL">-Descuento (<?php echo $this->discountP; ?>%):</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo $this->discount; ?></td>
+                    </tr>
+                    <tr> 
+                        <td class="tdPriceL">Envío por Courier:</td>
+                        <td class="tdSubTotal"><?php echo $this->businessman['simbolo']; ?> <?php echo $this->shipPrice; ?></td>
+                    </tr>
+                    <tr class="odd"> 
+                        <td class="tdPriceL">Sub total:</td>
+                        <td class="tdSubTotal">  <?php echo $this->businessman['simbolo']; ?> <?php echo $this->subTotalOrder; ?></td>
+                    </tr>
+                    <tr> 
+                        <td class="tdPriceL"> Percepción (<?php echo $this->perceptionP; ?>%):</td>
+                        <td class="tdSubTotal"> <?php echo $this->businessman['simbolo']; ?> <?php echo $this->perception; ?></td>
+                    </tr>
+                    <tr class="trTotal odd">
+                        <td class="tdPriceL">TOTAL:</td>
+                        <td class="tdSubTotal"> <?php echo $this->businessman['simbolo']; ?> <?php echo $this->totalOrder; ?></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <div class="alg-right pt28">
+            <button class="btn-orange" type="submit"><i class="sprites-p arrow-boxed"></i>Ir a Forma de Pago</button>
+        </div>
+    </form>
+</div>

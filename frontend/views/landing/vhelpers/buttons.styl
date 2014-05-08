@@ -1,0 +1,77 @@
+/**
+* Button CSS
+* @class Button
+* @module admin.css
+*/
+.btn-fuxion
+	background #db8f1b
+	border none
+	box-shadow -1px 1px 3px rgba(0, 0, 0, 0.44)
+	color #FFF
+	display inline-block
+	font 400 12px/13px family2
+	padding 5px 28px
+	vertical-align top
+	*zoom 1
+	&:hover
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=85)")
+		filter unquote("alpha(opacity=85)")
+		opacity 0.85
+	& + .btn-lnk
+		margin-left 40px
+.btn-lnk
+	background #4e8acc
+	border none
+	box-shadow -1px 1px 3px rgba(0, 0, 0, 0.44)
+	color #FFF
+	display inline-block
+	font 400 12px/13px family2
+	padding 5px 28px
+	position relative
+	vertical-align top
+	*zoom 1
+	&:hover
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=85)")
+		filter unquote("alpha(opacity=85)")
+		opacity 0.85
+.btn-cart
+	span
+		background url(routImg+"icon-set.png") btnsCar no-repeat
+		height 13px
+		position absolute
+		right 10px
+		top 5px
+		width 7px
+.btn-refresh
+	background #c4c4c4
+	display block
+	height 47px
+	position absolute
+	right 0
+	text-indent -9999px
+	top 0
+	width 43px
+	&:hover
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=80)")
+		filter unquote("alpha(opacity=80)")
+		opacity 0.8
+	span
+		background url(routImg+"icon-set.png") btnRefresh no-repeat
+		height 36px
+		left 50%
+		margin -18px 0 0 -12px
+		position absolute
+		top 50%
+		width 25px
+.btn-back
+	background url(routImg+"icon-set.png") btnBack no-repeat
+	height 22px
+	left 24px
+	position absolute
+	top 22px
+	transition all 0.4s ease
+	width 21px
+	&:hover
+		-ms-filter unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=70)")
+		filter unquote("alpha(opacity=70)")
+		opacity 0.7

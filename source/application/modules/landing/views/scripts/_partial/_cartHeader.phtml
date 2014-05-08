@@ -1,0 +1,27 @@
+<div class="ctn-carsteps">
+    <div class="hr-csteps"></div>
+    <ul class="list-csteps">
+        <li class="<?php echo $this->cartStep == 1 ? 'active' : ''; ?>"><span class="cstep">1</span>
+            <p>Productos</p>
+        </li>
+        <li class="<?php echo $this->cartStep == 2 ? 'active' : ''; ?>"><span class="cstep">2</span>
+            <p>Resumen</p>
+        </li>
+        <li class="<?php echo $this->cartStep == 3 ? 'active' : ''; ?>"><span class="cstep">3</span>
+            <p>Envío</p>
+        </li>
+        <li class="fix <?php echo $this->cartStep == 4 ? 'active' : ''; ?>"><span class="cstep">4</span>
+            <p>Pago</p>
+        </li>
+    </ul>
+</div>
+
+<?php //var_dump($this->messages); 
+$this->getMesseger();
+?>
+
+<!--
+<div class="alert">
+    Ocurrió un error en el sistema
+</div>-->
+    <?php //error success ?>

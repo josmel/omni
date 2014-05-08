@@ -1,0 +1,16 @@
+<?php if($this->message != null):?>
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+
+    <?php if ($this->ok) : ?>
+        <?php echo $this->partial('_partial/_orderComplete.phtml', $this)?>
+    <?php else: ?>
+        <h2>La compra no pudo realizarse correctamente</h2>
+        <p><span><?php echo $this->message;?></span></p>
+        <br>
+        <a class="btn-back" href="/cart/payment" >Ir a Método de pago</a>
+    <?php endif;?>
+</div>
+<?php else:?>
+    <iframe frameborder="0" width="800" height="400" scrolling="no" src="/cart/alignet"></iframe>
+<?php endif; ?>

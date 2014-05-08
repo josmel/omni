@@ -1,0 +1,99 @@
+/**
+* Header CSS
+* @class Header
+* @module layout.css
+*/
+.header
+	background-color #C4D600
+	box-shadow 0px 3px 7px #b2b2b1
+	margin-bottom 10px
+.logo-lnk
+	//background url(routImg+'logo-desafiobak.png') no-repeat
+	background url(routImg+'bgHeader.jpg') no-repeat
+	color transparent
+	display block
+	font-size 0
+	height 125px
+	margin 0 auto
+	width 950px
+.main-menu
+	clear both
+	margin 0 auto 20px
+	width 890px
+	ul
+		list-style none
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+	li
+		border-left 2px solid #ccc
+		float left
+		margin 0 3px
+		padding 13px 20px
+		&:first-child
+			border-left 0
+		&:hover, &.active
+			> a
+				color #6b6761
+				> span
+					background-position menuIcon1Hover
+					&.mitem2
+						background-position menuIcon2Hover
+					&.mitem3
+						background-position menuIcon3Hover
+					&.mitem4
+						background-position menuIcon4Hover
+					&.mitem5
+						background-position menuIcon5Hover
+	a
+		color #EE8100
+		display block
+		font-size 18px
+		font-weight 400
+		line-height 21px
+		text-transform uppercase
+		&:hover
+			color #6b6761
+	span
+		background url(routImg+'icon-desafio.png') menuIcon1 no-repeat
+		float left
+		height 22px
+		margin-right 4px
+		width 34px
+		z-index 3
+		&:hover
+			background-position menuIcon1Hover
+		&.mitem2
+			background-position menuIcon2
+			width 21px
+			&:hover
+				background-position menuIcon2Hover
+		&.mitem3
+			background-position menuIcon3
+			width 22px
+			&:hover
+				background-position menuIcon3Hover
+		&.mitem4
+			background-position menuIcon4
+			width 20px
+			&:hover
+				background-position menuIcon4Hover
+		&.mitem5
+			background-position menuIcon5
+			width 23px
+			&:hover
+				background-position menuIcon5Hover
+#headLogout
+	background url(routImg+'icon-desafio.png') icCSession no-repeat
+	display block
+	height 61px
+	position absolute
+	right 0
+	top 18px
+	width 58px
+	&:hover
+		opacity .8

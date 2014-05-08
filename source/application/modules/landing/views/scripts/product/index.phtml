@@ -1,0 +1,43 @@
+<div id="main-slider">
+    <div id="home" class="slide-main fix">
+        <?php echo $this->partial('_partial/_businessman.phtml', $this)?>
+    </div>
+    <div id="product" class="slide-main fix">
+        <div class="prod-lcateg">
+            <ul class="lcateg-list">
+                <?php foreach($this->types as $type) : ?>
+                <li>
+                    <h3 style="color: #<?php echo $type['hexcolor']; ?>"><?php echo $type['destpro']; ?></h3>
+                    <a data-id="<?php echo $type['codtpro']; ?>" href="javascript:;" title="<?php echo $type['destpro']?>" style="background: none;">
+                        <img src="<?php echo STATIC_LANDING_IMG.$type['picture']?>" width="55" height="55"/>
+                    </a>
+                </li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+        <div class="prod-list">
+            <div class="slid-product">
+                <?php foreach($this->products as $product) : ?>
+                <div class="product">
+                    <h2><?php echo $product['desprod']?></h2>
+                    <a href="<?php echo $product['link']?>" title="<?php echo $product['desprod']?>">
+                        <img src="<?php echo $product['picture']?>" width="136" height="120" alt="<?php echo $product['desprod']?>"/>
+                        <span class="prod-decor">Comprar<span>                
+                        </span></span>
+                    </a>
+                </div>
+                <?php endforeach;?>
+            </div>
+            <div class="slid-nav"><a href="javascript:;" title="Anterior" class="btnav prev">Anterior</a><a href="javascript:;" title="Siguiente" class="btnav next">Siguiente</a></div>
+        </div>
+    </div>
+</div>
+<script id="tplProduct" type="text/template">
+<div class="product">
+    <h2>{{=title}}</h2>
+    <a title="{{=title}}" href="{{=link}}">
+        <img width="136" height="120" alt="{{=title}}" src="{{=img}}">
+        <span class="prod-decor">Comprar<span></span></span>
+    </a>
+</div>
+</script>

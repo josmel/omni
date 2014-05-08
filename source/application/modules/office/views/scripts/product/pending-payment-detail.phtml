@@ -1,0 +1,151 @@
+<div class="white-bg ctn-pendingpay">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car">
+        <h2>Detalle Pago Pendiente</h2>
+        <p class="descDir">Datos de la Compra, pendiente de Pago<span></span></p>
+     </header>
+    <section class="ctn-consolidation row">
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tbody>
+                    <tr>
+                        <th colspan="2">Detalle de Pedido</th>
+                    </tr>
+                    <tr>
+                        <td>Código de Pedido:</td>
+                        <td>1748459</td>
+                    </tr>
+                    <tr>
+                        <td>Fecha de Pedido:</td>
+                        <td>13/09/2013</td>
+                    </tr>
+                    <tr>
+                        <td>Hora de Pedido:</td>
+                        <td>10:32</td>
+                    </tr>
+                    <tr>
+                        <td>Método de Pago:</td>
+                        <td>Recojo en Tienda</td>
+                    </tr>
+                    <tr>
+                        <td>Monto a Pagar:</td>
+                        <td>S/. 242.56</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tbody>
+                    <tr>
+                        <th colspan="2">Dirección de Envío</th>
+                    </tr>
+                    <tr>
+                        <td>Contacto:</td>
+                        <td>José Perez</td>
+                    </tr>
+                    <tr>
+                        <td>Doc Identidad:</td>
+                        <td>47753661</td>
+                    </tr>
+                    <tr>
+                        <td>Dirección:</td>
+                        <td>JIRON Republica de Perú - LIMA</td>
+                    </tr>
+                    <tr>
+                        <td>Referencia:</td>
+                        <td>Correo Seporst</td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono:</td>
+                        <td>5251253</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tbody>
+                    <tr>
+                        <th colspan="2">Detalle del Comprobante</th>
+                    </tr>
+                    <tr>
+                        <td>Recibo de Pago:</td>
+                        <td>Factura</td>
+                    </tr>
+                    <tr>
+                        <td>A nombre de:</td>
+                        <td>Boutique Perez</td>
+                    </tr>
+                    <tr>
+                        <td>RUC:</td>
+                        <td>1234567891</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="separator"></div>
+        <p class="descDir mb14">Detalle de los productos de la compra, pendiente de Pago<span></span></p>
+        <table class="tbl-consolidation">
+            <thead>
+                <tr class="fix">
+                    <th class="tdImgS">Imagen</th>
+                    <th class="tdName tw356">Nombre</th>
+                    <th class="tdPoints">Total Pts</th>
+                    <th class="tdCant">Cantidad</th>
+                    <th class="tdPriceL">Precio Unidad <span>(Inc. IGV)</span></th>
+                    <th class="tdSubTotal">Sub Total </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tdImgS"><a href="javascript:;"><img src="http://ov.fuxionbiotech.com/dinamic/product/catalog/12236.jpg" alt="BioPro Tec (20x25gr.) -  FUXION"></a></td>
+                    <td class="tdName tw356"><a href="javascript:;">BioPro Tec (20x25gr.) -  FUXION</a></td>
+                    <td class="tdPoints">25</td>
+                    <td class="tdCant">1</td>
+                    <td class="tdPriceL">S/. 133.00</td>
+                    <td class="tdSubTotal">S/. 133.00</td>
+                </tr>
+                <tr>
+                    <td class="tdImgS"><a href="javascript:;"><img src="http://ov.fuxionbiotech.com/dinamic/product/catalog/12236.jpg" alt="BioPro Tec (20x25gr.) -  FUXION"></a></td>
+                    <td class="tdName tw356"><a href="javascript:;">BioPro Tec (20x25gr.) -  FUXION</a></td>
+                    <td class="tdPoints">25</td>
+                    <td class="tdCant">1</td>
+                    <td class="tdPriceL">S/. 133.00</td>
+                    <td class="tdSubTotal">S/. 133.00</td>
+                </tr>
+            </tbody>
+            <table class="tbl-payConsolidation">
+                <tbody>
+                    <tr>
+                        <td class="tdPriceL">Sub total:</td>
+                        <td class="tdSubTotal">S/. 133.00</td>
+                    </tr>
+                    <tr class="odd">
+                        <td class="tdPriceL">-Descuento (20.00%):</td>
+                        <td class="tdSubTotal">S/. 26.60</td>
+                    </tr>
+                    <tr> 
+                        <td class="tdPriceL">Envío por Courier:</td>
+                        <td class="tdSubTotal">S/. 5.00</td>
+                    </tr>
+                    <tr class="odd"> 
+                        <td class="tdPriceL">Sub total:</td>
+                        <td class="tdSubTotal">  S/. 111.40</td>
+                    </tr>
+                    <tr> 
+                        <td class="tdPriceL"> Percepción (0.00%):</td>
+                        <td class="tdSubTotal"> S/. 0.00</td>
+                    </tr>
+                    <tr class="trTotal odd">
+                        <td class="tdPriceL">TOTAL:</td>
+                        <td class="tdSubTotal"> S/. 111.40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </table>
+    </section>
+    <div class="alg-left pt28">
+        <a href="/product/pending-payments" title="Volver" class="btn-back">&laquo; Volver</a>
+    </div>
+</div>

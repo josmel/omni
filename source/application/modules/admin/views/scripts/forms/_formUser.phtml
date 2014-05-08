@@ -1,0 +1,74 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Usuarios" href="/user">« Volver al listado de Usuarios</a>
+</div>
+<div class="frm-panel">
+
+    <form id="frmUser" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+
+        
+        <div class="control-group">
+            <label class="control-label" for="login">Login:</label>
+            <div class="controls">
+                <?php echo $this->element->login; ?>
+                <?php echo $this->element->iduser; ?> 
+            </div>
+	</div>
+        
+	<div class="control-group">
+            <label class="control-label" for="password">Password:</label>
+            <div class="controls">
+                <?php echo $this->element->password; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="name">Nombre:</label>
+            <div class="controls">
+                <?php echo $this->element->name; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="apepat">Apellido Paterno:</label>
+            <div class="controls">
+                <?php echo $this->element->apepat; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="apemat">Apellido Materno:</label>
+            <div class="controls">
+                <?php echo $this->element->apemat; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="email">E-Mail:</label>
+            <div class="controls">
+                <?php echo $this->element->email; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="roles">Roles:</label>
+            <div class="controls">
+                <?php echo $this->element->roles; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="state">Activo:</label>
+            <div class="controls">
+                <?php echo $this->element->state; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

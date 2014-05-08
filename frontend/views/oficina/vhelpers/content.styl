@@ -1,0 +1,56 @@
+/**
+* Contents CSS
+* @class Contents Helper
+* @module oficina.css
+*/
+#wrapper
+	background url(routImg+"bg-wrapper.png") 0 26px repeat-x
+	margin -26px auto 0
+	position relative
+	z-index 1
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.row
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.box-center
+	margin 0 auto
+	position relative
+	width 960px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+.white-bg
+	background-color white
+	margin 0 auto
+	min-height 412px
+	height auto !important
+	height 412px
+	padding 0 16px 34px
+	position relative
+	width 928px
+	z-index 1
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.fix
+		padding 0 8px 34px
+		width 944px

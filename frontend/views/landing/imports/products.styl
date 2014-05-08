@@ -1,0 +1,423 @@
+/**
+* Productos CSS
+* @class Productos
+* @module landing.css
+*/
+.prod-lcateg
+	background url(routImg+"bg-shadow.png") right top repeat-y
+	float left
+	height 394px
+	padding 20px 41px 0 24px
+	width 466px
+	h2
+		color #008fd1
+		font-size 14px
+		line-height 16px
+		margin-bottom 8px
+		text-align center
+	p
+		color #b6bbba
+		font-size 12px
+		line-height 20px
+		margin-bottom 10px
+		text-align justify
+.listCircleLine
+	height 280px
+	overflow hidden
+	position relative
+.decorCircle
+	background url(routImg+"circleFx.gif") no-repeat
+	height 219px
+	left 50%
+	margin -92px 0 0 -110px
+	position absolute
+	top 50%
+	width 220px
+	z-index 1
+.crclLine
+	position absolute
+	width 78px
+	z-index 2
+	h3
+		font-family family3
+		font-size 12px
+		height 24px
+		line-height 12px
+		margin-bottom 1px
+		overflow hidden
+		position relative
+		text-align center
+		text-transform uppercase
+	a
+		margin 0 auto
+	a,img
+		display block
+		height 50px
+		width 50px
+	&.cline1
+		left 50%
+		margin -43px 0 0 -35px
+		top 50%
+		width 70px
+		a,img
+			height 87px
+			width 70px
+	&.cline2
+		left 50%
+		margin-left -39px
+	&.cline3
+		right 116px
+		top 32px
+	&.cline4
+		right 90px
+		top 115px
+	&.cline5
+		bottom 10px
+		right 136px
+	&.cline6
+		bottom 10px
+		left 136px
+	&.cline7
+		left 90px
+		top 115px
+	&.cline8
+		left 116px
+		top 32px
+.prod-catal
+	float left
+	height 382px
+	padding 20px 22px 12px
+	width 265px
+	.tit-catal
+		font-size 14px
+		margin-bottom 10px
+		text-align center
+		a
+			display inline-block
+			*display inline
+			line-height 16px
+			padding 2px 0 2px 30px
+			position relative
+			*zoom 1
+			hoverLighten(#008fd1,20%)
+		span
+			background url(routImg+"icon-set.png") catalogo no-repeat
+			height 20px
+			left 0
+			position absolute
+			top 0
+			width 23px
+	.prod-price
+		padding-top 12px
+		p span
+			font-size 18px
+.catal-img
+	display block
+	height 250px
+	margin 0 auto
+	width 182px
+	img
+		display block
+		height 250px
+		width 182px
+#slid-catal
+	height 352px
+	overflow hidden
+	position relative
+	width 265px
+	.viewport
+		height 328px
+		width 265px
+	.overview
+		li
+			float left
+			margin-right 16px
+			width 265px
+			&:last-child
+				margin 0
+	h2
+		font-size 13px
+		height 28px
+		line-height 14px
+		margin-bottom 6px
+		overflow hidden
+		position relative
+		text-transform uppercase
+		a
+			hoverLighten(#DB8F1B,20%)
+	.pager
+		padding-top 10px
+		text-align center
+		li
+			display inline-block
+			*display inline
+			margin-left 2px
+			vertical-align top
+			width 14px
+			*zoom 1
+			&:first-child
+				margin 0
+	.pagenum
+		background #c8c8c8
+		border-radius 18px
+		display block
+		height 14px
+		text-indent -9999px
+		transition background .4s ease
+		width 14px
+		&:hover, &.active
+			background #DB8F1B
+/* Slider de Productos de 8 */
+.prod-list
+	float left
+	padding 18px 14px 0 4px
+	width 679px
+.slid-product
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.ctn-product
+		float left
+		height 171px
+		margin-left 7px
+		overflow hidden
+		position relative
+		width 164px
+		&:nth-child(4n+1)
+			margin 0
+		&:nth-child(n+5)
+			margin-top 18px
+	.product
+		background #FFF
+		height 171px
+		left 0
+		padding-right 4px
+		position absolute
+		top 0
+		width 160px
+		h2
+			color #58b7b2
+			font-family family3
+			font-size 14px
+			height 28px
+			line-height 14px
+			margin-bottom 3px
+			overflow hidden
+			position relative
+			text-align center
+			text-indent 0
+		a
+			display block
+			height 140px
+			position relative
+			text-indent 0
+			width 160px
+		img
+			display block
+			height 140px
+			width 160px
+	.prod-decor
+		background #4e8acc
+		bottom 10px
+		box-shadow -1px 2px 2px rgba(0, 0, 0, 0.43)
+		color #FFF
+		font-family family2
+		font-size 12px
+		height 22px
+		line-height 22px
+		position absolute
+		right -4px
+		text-align center
+		width 100px
+		span
+			background url(routImg+"icon-set.png") bgProduct
+			height 6px
+			position absolute
+			right 0
+			top -6px
+			width 4px
+.slid-nav
+	height 20px
+	padding-top 7px
+	position relative
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.btnav
+		background url(routImg+"icon-set.png")
+		bottom 0
+		height 22px
+		position absolute
+		text-indent -9999px
+		transition hover 0.4s ease
+		width 21px
+		&:hover
+			opacity 0.8
+		&.disabled:hover
+			opacity 1
+	.prev
+		background-position btnPrev
+		right 34px
+		&.disabled
+			background-position btnPrevDis
+	.next
+		background-position btnNext
+		right 0
+		&.disabled
+			background-position btnNextDis
+/*
+*	Detalle de Producto
+*/
+#scrollCat
+	height 378px
+	overflow hidden
+	position relative
+	width 142px
+	&.nscroll
+		.scrollbar
+			display none
+		.viewport
+			width 142px
+		.scateg-list
+			a
+				padding 8px 4px 8px 38px
+			span
+				left 3px
+	.scrollbar
+		border 1px solid #F0F0F0
+		width 5px
+	.track, .scrollbar
+		height 376px !important
+	.viewport
+		height 378px
+		width 135px
+	.scrollbar.disable
+		display none
+	.track, .thumb
+		width 5px
+	.track
+		box-shadow none
+		padding 0
+	.thumb
+		border-radius 0
+		left 0
+.prod-scateg
+	background url(routImg+"bg-shadow.png") right top repeat-y
+	float left
+	font-family family3
+	height 414px
+	overflow hidden
+	padding-right 17px
+	position relative
+	width 142px
+.scateg-tit
+	background #000
+	color #FFF
+	font-family family2
+	font-size 14px
+	font-weight 400
+	height 36px
+	line-height 36px
+	text-align center
+.scateg-list
+	li
+		border-top 1px solid #f0f0f0
+		&:first-child
+			border none
+	a
+		color #a0a0a0
+		display block
+		font-size 13px
+		height 30px
+		line-height 15px
+		overflow hidden
+		padding 8px 1px 8px 36px
+		position relative
+		&:hover, &.active
+			span
+				background-position right top
+	span
+		height 32px
+		left 1px
+		position absolute
+		top 7px
+		width 32px
+.prod-det
+	float left
+	height 364px
+	margin-left 30px
+	padding-top 50px
+	position relative
+	width 358px
+	h2
+		color #db8f1b
+		font-family family2
+		font-size 20px
+		line-height 22px
+		margin-bottom 6px
+		text-align center
+	h3
+		color #8a8a8a
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 22px
+		text-align center
+	p
+		line-height 20px
+		text-align justify
+	.btn-back
+		left -21px
+		top 26px
+.prod-img
+	float left
+	height 368px
+	margin-left 30px
+	padding-top 46px
+	width 252px
+	img
+		display block
+		height 274px
+		margin 0 auto
+		width 182px
+.prod-price
+	padding-top 30px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	p
+		color #db8f1b
+		float left
+		font-size 14px
+		text-align right
+		width 128px
+		word-wrap break-word
+		span
+			display block
+			font-size 15px
+			font-weight 700
+			word-break break-all
+	.btn-lnk
+		float right
+		line-height 14px
+		padding 8px 18px 8px 38px
+		position relative
+		span
+			background url(routImg+"icon-set.png") btnCar no-repeat
+			height 20px
+			left 7px
+			position absolute
+			top 6px
+			width 24px

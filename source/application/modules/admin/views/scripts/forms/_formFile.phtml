@@ -1,0 +1,52 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Archivos" href="/file">« Volver al listado de Archivos</a>
+</div>
+<div class="frm-panel">
+    <form id="frm-article" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+
+        <div class="control-group">
+            <label class="control-label" for="codtfile">Tipo:</label>
+            <div class="controls">
+                <?php echo $this->element->codtfile; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="titulo">Título:</label>
+            <div class="controls">
+                <?php echo $this->element->titulo; ?>
+                <?php echo $this->element->idfile; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="titulo">Descripción:</label>
+            <div class="controls">
+                <?php echo $this->element->descripcion; ?>
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="nombre">Archivo:</label>
+            <div class="controls">
+                <?php echo $this->element->nombre; ?>
+                <span>Sólo se podrán adjuntar archivos con extensión: doc, xls, pdf, zip, jpg, png, jpeg o gif.</span>
+            </div>
+	</div>
+        
+        <div id="ctnActive" class="control-group">
+            <label class="control-label" for="vchestado">Activo:</label>
+            <div class="controls">
+                <?php echo $this->element->vchestado; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

@@ -1,0 +1,41 @@
+<?php 
+$businessman = $this->element->getBusinessman();
+//var_dump($businessman); exit?>
+<form id="frmPayment" method="POST" action="/cart/pay">
+    <div class="ctn-mpaid">
+       <div class="control-group">
+           <?php echo $this->element->paymethod->renderViewHelper();?>
+           <?php echo $this->element->tokenHash->renderViewHelper();?>
+       </div>
+        <div id="TP011" class="control-group last selChangue">
+            <?php echo $this->element->cardcode->renderViewHelper();?>
+        </div>
+    </div>
+    <table class="tbl-summpaids">
+        <tbody>
+            <tr>
+                <td class="tdSummEsp">Subtotal</td>
+                <td class="tdSummPrice"><?php echo $businessman['simbolo'];?>  
+                    <?php echo $this->element->getSubTotal(); ?></td>
+            </tr>
+            <tr>
+                <td class="tdSummEsp">Flete</td>
+                <td class="tdSummPrice"><?php echo $businessman['simbolo'];?>  
+                    <?php echo $this->element->getShipPrice(); ?></td>
+            </tr>
+            <tr>
+                <td class="tdSummEsp">Impuesto (<?php echo $this->element->getIva();?> %)</td>
+                <td class="tdSummPrice"><?php echo $businessman['simbolo'];?>  
+                    <?php echo $this->element->getIgvTotal(); ?></td>
+            </tr>
+            <tr class="trSumm">
+                <td class="tdSummEsp">TOTAL</td>
+                <td class="tdSummPrice"><?php echo $businessman['simbolo'];?>  
+                    <?php echo $this->element->getTotal(); ?></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="control">
+        <button type="submit" class="btn-lnk">Procesar Pedido</button>
+    </div>                    
+</form>

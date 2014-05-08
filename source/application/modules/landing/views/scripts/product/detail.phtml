@@ -1,0 +1,59 @@
+<div id="main-slider" class="fix">
+    <div class="slide-main fix2">
+        <div class="prod-scateg">
+            <h3 class="scateg-tit"><?php echo $this->titleReturn; ?></h3>
+            <div id="scrollCat">
+                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview">
+                        <ul class="scateg-list">
+                            <?php foreach ($this->types as $line): ?>
+                                <li> 
+                                    <a data-id="<?php echo $line['codtpro']; ?>" data-color="#<?php echo $line['hexcolor']; ?>" title="<?php echo $line['abrtpro'] ?>" href="javascript:;"><?php echo $line['abrtpro'] ?><span style="background-image:url('<?php echo STATIC_LANDING_IMG . $line['picture2']; ?>');"></span></a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prod-det">
+            <h2><?php
+                if (strlen($this->product['desprod']) > 80) {
+                    $strnom = trim(substr($this->product['desprod'], 0, 80));
+                    $strnom.='.';
+                } else {
+                    $strnom = $this->product['desprod'];
+                }
+                echo htmlspecialchars($strnom, ENT_QUOTES, 'utf-8');
+                ?></h2>
+            <h3><?php
+                if (strlen($this->product['shorttext']) > 130) {
+                    $strnom1 = trim(substr($this->product['shorttext'], 0, 130));
+                    $strnom1.='.';
+                } else {
+                    $strnom1 = $this->product['shorttext'];
+                }
+                echo htmlspecialchars($strnom1, ENT_QUOTES, 'utf-8');
+                ?></h3>
+            <p><?php
+                if (strlen($this->product['text']) > 550) {
+                    $strnom3 = trim(substr($this->product['text'], 0, 550));
+                    $strnom3.='.';
+                } else {
+                    $strnom3 = $this->product['text'];
+                }
+                echo $strnom3;
+                ?></p>
+            <a class="btn-back" href="<?php echo $this->urlReturn ?>" title="Atrás"></a>
+        </div>
+        <?php if (!empty($this->product)) : ?>
+            <div class="prod-img"><img src="<?php echo $this->product['picture'] ?>" width="182" height="274"/>
+                <div class="prod-price">
+                    <p>PRECIO<span><?php echo $this->businessman['simbolo'] ?> <?php echo $this->product['monprec'] ?></span></p>
+                    <button class="btn-lnk bntAddCar">Agregar<span></span></button>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>

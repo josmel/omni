@@ -1,0 +1,92 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+			a(href='javascript:;', class="btn-home", title="Home")
+				span
+				| Home
+	#wrapper.row
+		ul.menu-colors
+			li
+				a(href='javascript:;', class="", title="Como participar")
+					| Como<br>participar
+					span.people
+			li
+				a(href='javascript:;', class="skyblue", title="Como participar")
+					span.numbers
+					| Determina<br>tu estado<br>fisico actual
+			li
+				a(href='javascript:;', class="orange", title="Como participar")
+					span.numbers.two
+					| registrate
+			li
+				a(href='javascript:;', class="green", title="Como participar")
+					span.numbers.three
+					| define tu<br>alimentación
+		.content-desafio
+			.img-step
+				img(src="http://local.desafio/static/img/desafio/elements/paso1-c.png", alt="Desafío Fuxion",width="750",height="240")
+			.bg-green
+				span
+				h2 ¿ QUE QUIERES LOGRAR ?
+			form(id="frmData", name="frmData", method="post", action="" , class="frm-data")
+				.bg-blue
+					span
+					p Define tus objetivos en peso y medidas en un plazo<br>determinado
+				.frm-group
+					label.control-label TIEMPO
+					.frm-control
+						input(type="text", id="txtTime", name="txtTime", class="input-medium")
+					span.help-required *
+				.frm-group
+					label.control-label.lh14 ¿CUANTOS KILOS<br>QUIERES BAJAR?
+					.frm-control
+						input(type="text", id="txtKilo", name="txtKilo", class="input-medium")
+					span.help-required Peso en Kgs *
+				.frm-group
+					label.control-label INDICES DE GRASA
+					.frm-control
+						input(type="text", id="txtFat", name="txtFat", class="input-medium")
+				.cgroup-inline
+					.frm-group
+						label.control-label CINTURA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label CADERA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label ESPALDA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+				.frm-group
+					label.control-label.dblock
+						| MOTIVO PARA BAJAR DE PESO 
+						span.color-orange (Esta es uso confidencial, sólo para ti) 
+					.frm-control
+						input(type="text", id="txtAbout", name="txtAbout", class="input-large")
+					span.help-required *
+				.frm-group
+					label.control-label.dblock COMPROMISO
+					.frm-control
+						textarea(type="textarea", id="txtMessage", name="txtMessage", class="txt-large")
+					span.help-required *
+				p.color-orange.mt20 (*) Campos obligatorios
+				.frm-group.row
+					button(type="submit", id="sbmSend", class="btn", title="Siguiente") Siguiente

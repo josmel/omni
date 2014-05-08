@@ -1,0 +1,32 @@
+<div class="white-bg">
+    <section class="content faq">  
+        <h2 class="titfx">Ayuda</h2>
+        <aside><img src="<?php echo STATIC_URL?>/img/oficina/bgAyuda2.png"/>
+            <p>Para mayor información comunicate a:</p>
+            <p><b>Perú</b><br/>Av. Javier Prado Oeste 1856<br/>San Isidro, Lima<br/><b>Tel.:</b>(511) 513 9100<br/><b>E-Mail:</b>soportealempresario@prolife.com.pe</p>
+            <p><b>Bolivia</b><br/>Av. Adrian Patiño N° 8317 de la zona San Miguel<br/>Calacoto, La Paz<br/><b>Tel.:</b>(591) 2212 4091<br/><b>E-Mail:</b>mcuenca@prolife.com.pe</p>
+            <p><b>Chile</b><br/>Orompello 104 Dpto. 1<br/>Concepción - Región de Bio Bio<br/><b>Tel.:</b>(56) 4131 82267<br/><b>E-Mail:</b>apoblete@prolife.com.pe</p>
+            <p><b>Colombia</b><br/>Bogota: Cra. 51 N° 97a-49 - Bogota<br/><b>Tel.:</b>(571) 257 0880<br/><b>E-Mail:</b>ssanabria@prolife.com.pe<br/><br/>Barranq: Cra. 53 N° 82-86 Mezzanine Of 2-13<br/><b>Tel.:</b>(571) 304 9783<br/><b>E-Mail:</b>cmartinez@prolife.com.pe</p>
+            <p><b>Costa Rica</b><br/>150 mtros al norte de Quiznos Paseo Colón<br/>San Jose<br/><b>Tel.:</b>(506) 2256 5498 - 2256 5493<br/><b>E-Mail:</b>jporras@prolife.com.pe</p>
+            <p><b>Ecuador</b><br/>Av. Portugal 442 - Edificio Villa Portugal<br/>PB, Of. 101 - Quito<br/><b>Tel.:</b>(593) 2333 2555 - 2333 2556<br/><b>E-Mail:</b>mandrade@prolife.com.pe</p>
+            <p><b>Mexico</b><br/>Av. Prolongación Americas 1600 Piso 1 Col.<br/>Country Club C.P. 44610 - Guadalajara, Jalisco<br/><b>Tel.:</b>(523) 3678 9201<br/><b>E-Mail:</b>mdeandamx@prolife.com.pe</p>
+            <p><b>Panamá</b><br/>Via Ricardo J. Alfaro (Tumba Muerto)<br/>Edificio Sun Tower, 1er Piso (Of. 33)<br/>Ciudad de Panamá<br/><b>Tel.:</b>(507) 209 0315 - 659502 78<br/><b>E-Mail:</b>yquintero@prolife.com.pe</p>
+            <p><b>USA</b><br/><b>E-Mail:</b>grequena@prolife.com.pe</p>
+            <p><b>Venezuela</b><br/>Prolongación Av. Los Leones, CC Parque Real<br/>Planta Baja, Local 16 - Barquisimeto<br/><b>E-Mail:</b>mflores@prolife.com.pe</p>
+        </aside>
+        <div class="right-cnt">
+            <h2 class="title-faq">Preguntas Frecuentes</h2>
+            <ul class="questions">
+                <?php if ($this->Help !== '') { ?>
+                    <?php foreach ($this->Help as $value): ?>
+                        <li><a><?php echo $value["pregunta"]; ?></a>
+                            <ul class="answer">
+                                <li><?php echo $value["respuesta"]; ?></li>
+                            </ul>
+                        </li>
+                    <?php endforeach;
+                } ?>
+            </ul>
+        </div>
+    </section>
+</div>

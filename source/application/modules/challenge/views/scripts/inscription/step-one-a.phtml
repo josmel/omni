@@ -1,0 +1,104 @@
+    <div class="content-desafio">
+      <div class="img-step"><img src="<?php echo STATIC_URL ;?>img/desafio/elements/paso1-a.jpg" alt="Desafío Fuxion" width="750" height="240"/></div>
+      <div class="bg-green fix"><span></span>
+        <h2><?php echo $this->name ?>
+            <small class="subtitle">
+            Bienvenida(o) al Reto Fuxion!!!  A continuación llena tus datos y determina 
+            Tu estado físico Actual
+            </small>
+        </h2>
+          
+      </div>
+      <form id="frmStep1a" name="frmData" method="post" action="" class="frm-data pt66">            
+        <div class="bg-blue"><span></span>
+          <p>Antes de iniciar el reto te debes pesar y medir en una farmacia o 
+              gimnasio (con una cinta métrica) para conseguir tu estatura, peso, cintura, cadera y cuello.</p>
+        </div>
+        <div class="frm-group">
+          <label class="control-label" for="idtipmusc">Genero</label>
+          <div class="iopinline">
+            <?php echo $this->form->sexempr; ?>              
+          </div>
+        </div>
+       
+        <div class="frm-group">
+          <label class="control-label" for="deporte">¿HACES DEPORTE?</label>
+          <div class="frm-control">
+            <?php echo $this->form->deporte; ?>
+          </div>
+        </div>
+        <h3 class="titStep">CONTEXTURA</h3>
+        <p class="descBody">Con la mano izquierda rodea a la muñeca de la mano derecha como se indica en el gráfico y define tu contextura</p>
+        <div class="ctnOptBody row">
+            <div class="optBody">
+                <img src="<?php echo STATIC_URL ;?>img/desafio/mano3.png" width="76" height="76" />
+                <p>El dedo pulgar no toca el dedo medio</p>
+            </div>
+            <div class="optBody">
+                <img src="<?php echo STATIC_URL ;?>img/desafio/mano2.png" width="76" height="76" />
+                <p>El dedo pulgar toca el dedo medio</p>
+            </div>
+            <div class="optBody">
+                <img src="<?php echo STATIC_URL ;?>img/desafio/mano1.png" width="76" height="76" />
+                <p>El dedo pulgar sobrepasa el dedo medio</p>
+            </div>
+        </div>
+        <div class="iopinline optBody">
+          <?php echo $this->form->idtipmusc; ?>
+        </div>
+        <div class="cgroup-inline">
+            <div class="frm-group">
+                <label class="control-label">TALLA (cm) Ej.150</label>
+                <div class="frm-control">
+                    <?php echo $this->form->talla; ?>
+                </div>
+                <span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+                <label class="control-label">PESO (KG)</label>
+                <div class="frm-control">
+                    <?php echo $this->form->peso; ?>
+                </div>
+                <span class="help-required">*</span>
+            </div>
+        </div>
+        <p class="descBody fix">Con la medida de tu cintura, cadera y circunferencia de cuello, determinamos TU % de grasa automáticamente</p>
+        <div class="cgroup-inline fix">
+          <div class="frm-group">
+            <label class="control-label" for="cintura">CINTURA</label>
+            <div class="frm-control">
+              <?php echo $this->form->cintura; ?>   
+            </div><span class="help-desc">cm</span><span class="help-required">**</span>
+          </div>
+          <div class="frm-group">
+            <label class="control-label" for="cadera">CADERA</label>
+            <div class="frm-control">
+              <?php echo $this->form->cadera; ?>   
+            </div><span class="help-desc">cm</span><span class="help-required">**</span>
+          </div>
+          <div class="frm-group">
+            <label class="control-label fix" for="cintura">CIRCUNFERENCIA CUELLO</label>
+            <div class="frm-control">
+              <?php echo $this->form->cuello; ?>   
+            </div><span class="help-desc">cm</span><span class="help-required">**</span>
+          </div>
+        </div>
+        <div class="frm-group ctnPercGrease">
+          <label class="control-label">Tu porcentaje de grasa es</label>
+          <div class="controls-inline">
+            <div class="controls">
+              <div class="frm-control">
+                  <?php echo $this->form->indgrasa; ?>                 
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="color-orange mt60">(*) Campos obligatorios</p>
+        <p class="color-orange mt20">(**) NO TE OLVIDES ….Tienes la primera semana 
+            desde que te inscribiste para completar los datos de Cintura, Cadera y 
+            circunferencia de Cuello. De no completarlos NO podrás participar del RETO </p>
+        <div class="frm-group row">
+          <button type="submit" id="sbmSend" title="Siguiente" class="btn">Siguiente</button>
+        </div>
+      </form>
+    </div>

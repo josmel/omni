@@ -1,0 +1,21 @@
+<div class="decor-ctn">
+    <div class="decor-top" 
+        <?php if (!empty($this->bg1)) : ?> 
+         style="background-image:url('<?php echo DINAMIC_URL.'background/'.$this->bg1['carpeta'].'/'.$this->bg1['imagen'];?>')" 
+        <?php endif; ?>
+         ></div>
+    <div class="decor-bottom" 
+        <?php if (!empty($this->bg2)) : ?> 
+         style="background-image:url('<?php echo DINAMIC_URL.'background/'.$this->bg2['carpeta'].'/'.$this->bg2['imagen'];?>')"
+        <?php endif; ?>
+         ></div>
+    <div class="ctn-bgfx" 
+        <?php if (!empty($this->bgM)) : ?> 
+            style="background-image:url('<?php echo DINAMIC_URL.'background/'.$this->bgM['carpeta'].'/'.$this->bgM['imagen'];?>')"
+        <?php endif; ?>
+         ></div>
+</div>
+<header>
+  <div class="top-header"></div>
+  <h1 class="logo-fuxion"><a href="/" title="Fuxion">Fuxion</a></h1>
+</header>

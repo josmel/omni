@@ -1,0 +1,73 @@
+<div class="new-address">
+    <?php $ubigeoTree = $this->element->getUbigeoTree(); $level = 1; ?>
+    <div class="col-address">
+        <div class="control-group">
+            <label class="control-label" for="nomcont">Nombre de Contacto:</label>
+            <div class="controls">
+                <?php echo $this->element->nomcont->renderViewHelper(); ?>
+                <?php echo $this->element->tokenHash->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="country">País:</label>
+            <div class="controls">
+                <?php echo $this->element->country->renderViewHelper(); ?>
+            </div>
+        </div>
+        <?php foreach($ubigeoTree as $ubigeoName) : $ubigeoElement = 'ubigeo_'.$level; ?>
+        <div class="control-group">
+            <label class="control-label" for="<?php echo $ubigeoElement; ?>"><?php echo $ubigeoName; ?>:</label>
+            <div class="controls">
+                <?php echo $this->element->$ubigeoElement->renderViewHelper(); ?>
+            </div>
+        </div>
+        <?php $level++; 
+            endforeach; ?>
+        <div class="control-group">
+            <label class="control-label" for="telefono">Código Postal:</label>
+            <div class="controls">
+                <?php echo $this->element->zipcode->renderViewHelper(); ?>
+            </div>
+        </div>
+    </div>
+    <div class="col-address">
+        <div class="control-group">
+            <label class="control-label" for="telefono">Teléfono de Contacto:</label>
+            <div class="controls">
+                <?php echo $this->element->telefono->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="codtvia">Tipo de Dirección:</label>
+            <div class="controls">
+                <?php echo $this->element->codtvia->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="desdire">Dirección:</label>
+            <div class="controls">
+                <?php echo $this->element->desdire->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="cgroup-inline">
+            <div class="control-group">
+                <label class="control-label w140" for="numdire">Número:</label>
+                <div class="controls">
+                    <?php echo $this->element->numdire->renderViewHelper(); ?>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="intdire">Número Interior:</label>
+                <div class="controls">
+                    <?php echo $this->element->intdire->renderViewHelper(); ?>
+                </div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="refdire">Referencia:</label>
+            <div class="controls">
+                <?php echo $this->element->refdire->renderViewHelper(); ?>
+            </div>
+        </div>
+    </div>
+</div>

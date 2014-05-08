@@ -1,0 +1,53 @@
+<div class="new-address">
+    <?php $ubigeoTree = $this->element->getUbigeoTree(); $level = 1; ?>
+    <div class="col-address">
+        <div class="control-group">
+            <label class="control-label" for="nomcont">Full Name:</label>
+            <div class="controls">
+                <?php echo $this->element->nomcont->renderViewHelper(); ?>
+                <?php echo $this->element->tokenHash->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="desdire">Address Line1:</label>
+            <div class="controls">
+                <?php echo $this->element->desdire->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="refdire">Address Line2:</label>
+            <div class="controls">
+                <?php echo $this->element->refdire->renderViewHelper(); ?>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="telefono">Phone Number:</label>
+            <div class="controls">
+                <?php echo $this->element->telefono->renderViewHelper(); ?>
+            </div>
+        </div>
+    </div>
+    <div class="col-address">
+        <div class="control-group">
+            <label class="control-label" for="country">Country:</label>
+            <div class="controls">
+                <?php echo $this->element->country->renderViewHelper(); ?>
+            </div>
+        </div>
+        <?php foreach($ubigeoTree as $ubigeoName) : $ubigeoElement = 'ubigeo_'.$level; ?>
+        <div class="control-group">
+            <label class="control-label" for="<?php echo $ubigeoElement; ?>"><?php echo $ubigeoName; ?>:</label>
+            <div class="controls">
+                <?php echo $this->element->$ubigeoElement->renderViewHelper(); ?>
+            </div>
+        </div>
+        <?php $level++; 
+            endforeach; ?>
+        <div class="control-group">
+            <label class="control-label" for="telefono">Zip:</label>
+            <div class="controls">
+                <?php echo $this->element->zipcode->renderViewHelper(); ?>
+            </div>
+        </div>
+    </div>
+</div>

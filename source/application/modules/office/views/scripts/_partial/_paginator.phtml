@@ -1,0 +1,47 @@
+<?php  
+$pages = array();
+$pages[1] = array('label' => '1', 'url' => $this->urlNav($this->urlBase, $this->initParams, array('page' => 1))); 
+$prev = $this->page > 1 ? $this->page - 1 : 0;
+$urlPrev = $this->urlNav($this->urlBase, $this->initParams, array('page' => $prev)); 
+
+$next = $this->page >= $this->totalPages ? 0 : $this->page + 1;
+$urlNext = $this->urlNav($this->urlBase, $this->initParams, array('page' => $next)); 
+
+if ($this->totalPages > 1) {
+    $initPage = $this->page <= 4 ? 2 : $this->page - 2;
+    if ($initPage > 2) {
+        $pages[$this->page - 3] = array('label' => '...', 'url' => $this->urlNav($this->urlBase, $this->initParams, array('page' => $this->page - 3))); 
+    }
+    for($i = $initPage; $i <= $this->totalPages; $i++) {
+        if($i == $this->totalPages) {
+            $pages['de'] = array();
+        }
+        $pages[$i] = array('label' => $i, 'url' => $this->urlNav($this->urlBase, $this->initParams, array('page' => $i)));
+        
+        if($i == ($this->page + 2) && $i < $this->totalPages) {
+            $pages['de'] = array();
+            $pages[$this->totalPages] = array('label' => $this->totalPages, 'url' => $this->urlNav($this->urlBase, $this->initParams, array('page' => $this->totalPages))); 
+            $i = $this->totalPages + 1;
+        }
+    }
+}
+?>
+<?php if (count($pages) > 1) : ?>
+<div class="pager">
+    <div class="wrapper">
+        <?php if ($prev != 0) : ?>
+        <a href="<?php echo $urlPrev; ?>" class="sprites-p arrow-left"></a>
+        <?php endif; ?>
+        <?php foreach ($pages as $key => $page) : 
+            if ($key == 'de') : ?>
+            <span>de</span>
+            <?php else : ?>
+            <a href="<?php echo $page['url']; ?>" class="<?php echo $key == $this->page ? 'active' : ''; ?>"><?php echo $page['label']; ?></a>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        <?php if ($next != 0) : ?>
+        <a href="<?php echo $urlNext; ?>" class="sprites-p arrow-right"></a>
+        <?php endif; ?>
+    </div>
+</div>
+<?php endif; ?>

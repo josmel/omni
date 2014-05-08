@@ -1,0 +1,79 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Producto
+			section.content
+				.col-product-info
+					img
+					h4 Tu salud gana más con 
+					.btn-fav-cnt
+						h3 ¿Desea Agregar el producto a favoritos?
+							span Presionar en la Estrella
+						button
+							i.sprites-p.star-big
+				//------------------------------------------------
+				.col-product-detail
+					h2 Café Capucchino Gonomas 
+					.col-two
+						h3 Contenido Caja:
+						ul 
+							li 30 Stickers de 7.5 gr. 
+					.col-two
+						h3 Puntos a Ganar:
+						ul 
+							li
+								i.sprites-p.star 
+								| Puntos Productos: 10
+								
+					h3 Precio de Lista 
+						span (Incluid I.G.V.)
+					span.precio S/. 53.00
+					.pad-wrapper
+						table(border=0)
+							tr
+								th Normal
+								th 20%
+								th 25%
+								th 27.5%
+								th 30%
+							tr
+								td S/. 53.00
+								td S/. 42.40
+								td S/. 39.75
+								td S/. 38.43
+								td S/. 37.10
+						fieldset
+							label Cantidad
+							input(type="text", maxlength="2", value="12")
+							button.orange
+								i.sprites-p.cart-inv 
+								| Agregar Producto
+						span.warning * Debe ingresar minimo 1 unid. producto
+						button.orange.center
+							i.sprites-p.arrow-boxed 
+							| Ir a carrito de compra
+				//------------------------------------------------
+				.col-product-moreDetail
+					h3 Fusión Nutracéutica
+					ul 
+						li Estracto de Ganoderma licidum + Café
+
+					h3 Caracteristicas Principales
+					ul 
+						li Lorem ipsum super limpsum mega lorem
+
+					h3 Principales propiedades de su consumo
+					ul 
+						li Lorem ipsum super limpsum mega lorem
+						li Lorem ipsum super limpsum mega lorem
+						li Lorem ipsum super limpsum mega lorem
+						li Lorem ipsum super limpsum mega lorem
+					button.orange.center
+							i.sprites-p.arrow-boxed 
+							| Ir a carrito de compra
+				

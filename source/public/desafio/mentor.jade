@@ -1,0 +1,73 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+	nav.main-menu
+		ul
+			li
+				a(href="estado.html",title="Estado") 
+					span
+					| estado
+			li
+				a(href="consumos.html",title="Mis consumos") 
+					span.mitem2
+					| mis consumos
+			li
+				a(href="avances.html",title="Avances") 
+					span.mitem3
+					| avances
+			li.active
+				a(href="mentor.html",title="Mentor") 
+					span.mitem4
+					| mentor
+			li
+				a(href="contactenos.html",title="contáctenos") 
+					span.mitem5
+					| contáctenos
+	#wrapper
+		.row.info-mentor
+			.left-cnt
+				.pic
+					img(src="http://local.desafio/static/img/desafio/elements/mentor.jpg", alt="name user",width="240",height="240")
+			.right-cnt
+				dl.user-dl
+					dt CÓDIGO EF- CP
+					dd 
+						span : 
+						| 1244322
+					dt APELLIDO PATERNO
+					dd 
+						span : 
+						| Curay
+					dt TELÉFONO
+					dd 
+						span : 
+						| 234-232
+					dt EMAIL
+					dd 
+						span : 
+						| fuxionkeny123@gmail.com
+					dt NOMBRE
+					dd 
+						span : 
+						| MAYRO
+					dt APELLIDO MATERNO
+					dd 
+						span : 
+						| Guido
+					dt CELULAR
+					dd 
+						span : 
+						| 
+	footer
+		.box-center
+			nav.foot-menu
+				a(href="estado.html",title="Estado") estado
+				a(href="consumos.html",title="Mis consumos") mis consumos
+				a(href="avances.html",title="Avances") avances
+				a(href="mentor.html",title="Mentor") mentor
+				a(href="contactenos.html",title="contáctenos") contáctenos
+			p Copyrigth © 2013 Prolife Biotech. Todos los derechos reservados

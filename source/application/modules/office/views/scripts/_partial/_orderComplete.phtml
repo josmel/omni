@@ -1,0 +1,58 @@
+<header class="head-car">
+    <h2>Pago del Pedido</h2>
+</header>
+<section class="statePay">
+    <div class="sPay-msg">
+        Estimado <?php echo $this->businessman['nomempr'].' '.$this->businessman['appempr'].' '.$this->businessman['apmempr']; ?>, tu pedido ha sido realizado  con éxito.
+    </div>
+    <?php /*
+     * <button class="btn-orange"><i class="sprites-p follow"></i>Seguimiento del Envio</button>
+     */ ?>
+    <p class="descDir mb12">
+        <?php 
+        if ($this->idAddress == -1) echo "Gracias por tu compra, puedes acercarte a tienda con tu N° de orden ".$this->idOrder." para recoger tu pedido."; 
+        else echo "Gracias por tu compra, el Pedido se enviará  a la dirección indicada."; 
+            ?>
+        <span></span></p>
+    <h3 class="sPay-code">Código de Orden: &nbsp;&nbsp;<span><?php echo $this->idOrder;?></span></h3>
+    <div class="row">
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tr>
+                    <th colspan="2">Forma de Pago:</th>
+                </tr>
+                <tr>
+                    <td colspan="2"><?php echo $this->payMessage; ?></td>
+                </tr>
+            </table>
+        </div>
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tr>
+                    <th colspan="2">Monto a pagar:</th>
+                </tr>
+                <tr>
+                    <td colspan="2">Total: <?php echo $this->businessman['simbolo']; ?> <?php echo $this->totalOrder; ?></td>
+                </tr>
+            </table>
+        </div>
+        <div class="column-three">
+            <table class="tbl-summary">
+                <tr>
+                    <th colspan="2">Datos adicionales:</th>
+                </tr>
+                <tr>
+                    <td class="tw146">Fecha de pago compra:</td>
+                    <td><?php echo $this->dateOrder; ?></td>
+                </tr>
+                <tr>
+                    <td class="tw146"s>Fecha de pago registrado:</td>
+                    <td><?php echo $this->datePayment; ?></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="alg-center pt24">
+        <a class="btn-orange" href="/product"><i class="sprites-p back"></i>Seguir Comprando</a>
+    </div>
+</section>

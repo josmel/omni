@@ -1,0 +1,17 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="es"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="es"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="es"> <![endif]-->
+<!--[if gt IE 8]> <html lang="es"> <![endif]-->
+<?php echo $this->render("landing/head.phtml"); ?>
+<body
+    <?php if (!empty($this->backgroundColor)) : ?> 
+        style="background-color:<?php echo $this->backgroundColor; ?>"
+    <?php endif; ?>
+    >
+    <?php echo $this->render("landing/header.phtml"); ?>
+    <div id="wrapper">
+        <?php echo $this->layout()->content; ?>
+    </div>
+    <?php echo $this->render("landing/footer.phtml"); ?>
+</body>

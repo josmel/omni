@@ -1,0 +1,90 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car fix">
+        <h2>TIPO DE COMPROBANTES</h2>
+    </header>
+    <section class="ctn-voucher">
+        <form id="frmVoucher" method="POST">
+            <div class="column-three">
+                <p class="descDir">Selecciona el tipo de comprobante<span></span></p>
+                <span>¿Desea boleta o factura?</span>
+                <?php foreach($this->vTypes as $vType) : ?>
+                <fieldset>
+                  <input id="rbn<?php echo $vType['codtdov']; ?>" type="radio" name="voucher" class="radio" value="<?php echo $vType['codtdov']; ?>" <?php echo $vType['codtdov'] == $this->selVType['codtdov'] ? 'checked' : ''; ?>/>
+                  <label for="rbn<?php echo $vType['codtdov']; ?>" ><?php echo $vType['destdov']; ?></label>
+                </fieldset>
+                <?php endforeach; ?>
+                <div class="selChangue FAC" >
+                    <table class="tbl-fact">
+                      <tr>
+                        <td>
+                          <label>Razón Social:</label>
+                        </td>
+                        <td>
+                            <?php echo !empty($this->businessName) ? $this->businessName : $this->businessman['nomempr'].' '.$this->businessman['appempr'].' '.$this->businessman['apmempr']; ?>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <label>RUC: </label>
+                        </td>
+                        <td>
+                          <input name="ruc" type="text" value="<?php echo !empty($this->ruc) ? $this->ruc : $this->businessman['rucempr']; ?>"/>
+                        </td>
+                      </tr>
+                    </table>
+                </div>
+            </div>
+            <?php if (!empty($this->perceptionData)) : ?>
+            <div class="column-three">
+                <p class="descDir">Cálculo de la percepción<span></span></p>
+                <span>La percepción será cobrada de acuerdo a lo siguiente:</span>
+                <?php foreach($this->perceptionData as $key => $per) : ?>
+                <table class="percepcion selChangue <?php echo $key; ?>">
+                    <tr>
+                        <th>Tipo de comprobante</th>
+                        <th>Mayor a <?php echo $this->businessman['simbolo']; ?> <?php echo number_format($per['start'], 2, '.', ' '); ?></th>
+                    </tr>
+                    <tr>
+                        <td><?php echo $per['docdescription']; ?> </td>
+                        <td><?php echo number_format(($per['perception'] * 100), 2, '.', ' '); ?> %</td>
+                    </tr>
+                </table>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            <div class="column-three">
+                <p class="descDir">Resumen de compra<span></span></p>
+                <span>El recibo de Pago es <?php echo $this->selVType['destdov']; ?> el cual será generado y enviado con tu compra.</span>
+                <table class="subtotal">
+                    <tr>
+                        <th>Sub-Total:</th>
+                        <th><?php echo $this->businessman['simbolo']; ?></th>
+                        <th><?php echo $this->totalItems; ?></th>
+                        <th class="plus">+</th>
+                    </tr>
+                    <tr>
+                        <td>Costo de envio</td>
+                        <td><?php echo $this->businessman['simbolo']; ?></td>
+                        <td><?php echo $this->shipPrice; ?></td>
+                        <td class="plus">+</td>
+                    </tr>
+                    <tr>
+                        <td>Percep (<span class="vouchPercep"><?php echo $this->perceptionP; ?></span>%)</td>
+                        <td><?php echo $this->businessman['simbolo']; ?></td>
+                        <td class="vouchTotalPercep"><?php echo $this->perception; ?></td>
+                        <td> </td>
+                    </tr>
+                    <tr class="subtotal">
+                        <td><b>Sub-total</b></td>
+                        <td><?php echo $this->businessman['simbolo']; ?></td>
+                        <td colspan="2" class="vouchTotal"><?php echo $this->total; ?></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="alg-right pt38">
+                <button class="btn-orange" type="submit"><i class="sprites-p arrow-boxed"></i>Ir a consolidación de Pedido</button>
+            </div>
+        </form>
+    </section>
+</div>

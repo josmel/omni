@@ -1,0 +1,24 @@
+<?php echo $this->partial('_partial/_profile.phtml', $this)?>
+<div class="fx-break"></div>
+<div class="fx-descrp">
+    <div id="slid-profile" class="slides"><a href="javascript:;" class="buttons prev">left</a>
+        <div class="viewport">
+            <ul class="overview">
+                <?php foreach ($this->banners as $banner) :?>
+                    <li>
+                    <?php if($banner["url"]!=""){ ?>
+                        <a href="<?php echo $banner["url"]; ?>" 
+                           title="<?php echo $banner['titulo']; ?>" 
+                           target="_blank">
+                    <?php } ?>
+                            <img width="486" height="272" alt="<?php echo $banner['titulo']; ?>" 
+                                 src="<?php echo DINAMIC_URL.'banner/'.$banner['carpeta'].'/'.$banner['imagen'];?>"/>
+                    <?php if($banner["url"]!=""){ ?>
+                        </a>
+                    <?php } ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div><a href="javascript:;" class="buttons next">right</a>
+    </div>
+</div>

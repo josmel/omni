@@ -1,0 +1,6 @@
+2014-02-14T18:01:13-05:00 INFO (6): ------------ Inicio cron --------------
+2014-02-14T18:01:13-05:00 INFO (6): 
+2014-02-14T18:01:13-05:00 INFO (6): desactivo evento del  title: Casa del CHa idEvent: 97
+2014-02-14T18:01:13-05:00 INFO (6): Error de Base de datos Mysqli prepare error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+2014-02-14T18:01:13-05:00 INFO (6): 
+2014-02-14T18:01:13-05:00 INFO (6): ---------- FIN DE CRON --------

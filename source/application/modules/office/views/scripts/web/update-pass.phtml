@@ -1,0 +1,30 @@
+<div class="white-bg ctn-profile">
+    <h2 class="titfx mb42">Editar Perfil</h2>
+    <div class="fxProfile fix">
+        <div class="row">
+            <form id="frm-article" action="<?php echo $this->form->getAction()?>" method="<?php echo $this->form->getMethod()?>" Enctype="<?php echo $this->form->getEnctype()?>">
+                <div class="control-group cwhite">
+                    <label class="control-label" for="claempr">Contraseña Actual:</label>
+                    <div class="controls">
+                        <?php echo $this->form->claempr; ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="confirmone">Nueva Contraseña:</label>
+                    <div class="controls">
+                        <?php echo $this->form->confirmone; ?>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="confirmtwo">Repetir Nueva Contraseña:</label>
+                    <div class="controls">
+                        <?php echo $this->form->confirmtwo; ?>
+                    </div>
+                </div>
+                <div class="control pt22">
+                    <button type="submit" class="btn-orange">Modificar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

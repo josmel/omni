@@ -1,0 +1,613 @@
+/**
+* Oficina CSS
+* @class Oficina
+* @module oficina.css
+*/
+hover(color)
+	transition background-color .3s;
+	&:hover
+		background-color lighten(color,20%)
+hoverOpacity(o)
+	transition opacity .3s;
+	&:hover
+		opacity o
+//LOGIN--------------------------------------
+.login-cnt
+	background-image url(routImg+'bg-login2.jpg')
+	height 404px
+	margin -35px auto 0 auto
+	padding-top 60px
+	width 906px 
+	h2
+		color #159EBE
+		font-family family3
+		font-size 18px
+		font-weight 400
+		margin-bottom 12px
+		padding-top 14px
+		text-align center
+		&.fix
+			padding-top 58px
+	p
+		color #747474
+		font-size 14px
+		line-height 18px
+		padding 0 6px 16px
+		text-align justify
+	h3
+		color #444
+		font-family family7
+		font-size 14px
+		font-weight normal
+		margin-bottom 22px
+		text-align center
+	.logo
+		margin 0 auto 13px
+	.helpers-cnt
+		text-align center
+		margin-top 14px
+		a
+			color #b1b1b1
+			font-size 12px
+			font-family family7
+			&:hover
+				text-decoration underline
+	.btn-entrar
+		background #008fd1
+		border-bottom 1px solid #77c3e6
+		color #fff
+		font-family Arial
+		height 35px
+		text-align center
+		width 174px
+		hover(#008fd1)
+.ctn-ilogin
+	background #FFF
+	box-shadow -4px 5px 11px rgba(1,0,1,0.58)
+	height 300px
+	margin 0 auto
+	padding 12px
+	width 340px
+	.alert
+		font-size 12px
+		line-height 14px
+		margin-bottom 12px
+		padding 6px 10px
+.frmLogin
+	width 218px
+	margin 0 auto
+	.control-group
+		margin-top 12px
+		&.last
+			margin 0
+		.control-label
+			background #CDD522
+			padding 0
+			width 32px
+			height 26px
+		.controls
+			margin-left 32px
+		input[type="text"],input[type="password"]
+			border-radius 0
+			height 16px
+			line-height 16px
+			width 176px
+	.icon-key
+		margin 9px 0 0 6px
+	.icon-user, .icon-email
+		margin 5px 0 0 7px
+	.icon-refresh
+		margin 5px 0 0 7px
+.ctn-captcha
+	img
+		border 1px solid #E2E2E2
+		margin-bottom 12px
+	.btn-refresh
+		background #CDD522
+		float right
+		height 26px
+		width 32px
+//Perfil--------------------------------------
+.ctn-profile
+	padding 20px 16px 34px !important
+	position relative
+	.fxProfile
+		margin 0 auto
+		padding-top 20px
+		position relative
+		width 574px
+		&.fix
+			padding 0
+			width 290px
+			.control-group
+				margin-top 22px
+				padding-left 0
+				&:first-child
+					margin 0
+	.row
+		position relative
+		z-index 2
+	.line-vert
+		background #DDD
+		height 100%
+		left 50%
+		margin-left -1px
+		position absolute
+		top 0
+		width 2px
+		z-index 1
+	.prfl-img
+		background url(routImg+"profile.gif") no-repeat
+		border 5px solid #f39a0c
+		border-radius 174px
+		height 174px
+		margin 0 auto
+		width 174px
+		img
+			border-radius 174px
+			display block
+			height 174px
+			width 174px
+	.lnk-upload
+		background #FFF
+		display block
+		font-size 14px
+		height 16px
+		line-height 16px
+		margin 0 auto
+		padding 6px 0
+		text-align center
+		width 100px
+		hoverLighten(#159EBE,20%)
+	.control-group
+		margin-top 28px
+		padding-left 96px
+		&:first-child
+			margin 0
+		&.last
+			padding 0 0 0 52px
+		input[type="text"],input[type="password"]
+			background #FFF
+			color #4a4a4a
+			font-size 14px
+			height 17px
+			line-height 17px
+			width 280px
+		.control-label
+			color #8f8f8f
+			display block
+			float none
+			font-size 13px
+			font-weight 400
+			line-height 15px
+			padding 0 0 6px
+			text-align left
+			width 100%
+		.controls
+			margin 0
+	.help-block
+		color #17a3c2
+	.icon-help
+		display inline-block
+		*display inline
+		margin-left 10px
+		vertical-align middle
+		*zoom 1
+	.lblmask
+		color #17A3C2
+		font-size 14px
+		left 5px
+		line-height 17px
+		position absolute
+		top 6px
+	textarea
+		height 148px
+		resize none
+		width 412px
+	.btn-orange
+		padding 0 30px
+	.fixFb
+		padding-left 168px !important
+		width 116px !important
+	.fixTwt
+		padding-left 146px !important
+		width 138px !important
+	.fixYtb
+		padding-left 160px !important
+		width 124px !important
+	.icon-help
+		cursor pointer
+.recomWeb
+	background #FFF
+	color #8F8F8F
+	font-size 12px
+	margin 0 auto
+	padding 5px 0 3px
+	text-align center
+	width 400px
+#frm-perfil
+	margin-top 20px
+
+//PRODUCTOS--------------------------------------
+#wrapper
+	section.content
+		float left
+		padding-bottom 20px
+		.home-cnt
+			width 610px
+			margin-right 25px
+			float left
+			padding-top 25px
+			font-family family3
+		aside.home
+			float right
+			width 290px
+			padding-top 25px
+		.main-format, .col-product-info, .col-product-detail, .col-product-moreDetail	
+			border-right 1px solid #bcbcbc
+			overflow hidden
+			float left
+			padding-top 20px
+			h2 
+				color #2c2c2c
+				font-size 14px
+				margin-top 0
+				margin-bottom 15px
+			h3 
+				color #656565
+				font-size 12px
+				margin 0
+				&:before
+					content "► "
+					color #db8f1b
+			.col-two
+				width 50%
+				float left
+			ul
+				margin 0 0 30px 0
+				padding 0
+				li 
+					font-size 11px
+					color #2c2c2c
+					margin-top 5px
+					&:before
+						content "·   "
+						padding-right 10px
+					i
+						float right
+						margin-top -4px
+			span.warning
+				color #ff0000
+				font-size 11px
+				text-align center
+				display block
+				margin-bottom 30px
+				padding-top 15px
+			button 
+				font-size 12px
+				margin-top -5px !important
+				float right
+		.col-product-info
+			width 279px
+			margin-left 15px
+			padding-right 18px
+			img 
+				width 279px
+				height 243px
+			h4
+				text-align center
+				font-size 11px
+				margin-top 16px
+				line-height 11px
+		.col-product-detail
+			width 297px 
+			margin-left 27px
+			padding-right 10px
+			span.precio
+				display block
+				font-size 18px
+				color #2c2c2c
+				background-color #eaeaea
+				margin-top 18px
+				margin-bottom 20px
+				height 21px
+				padding-left 10px
+				line-height 21px
+			table
+				font-size 11px
+				color #2c2c2c
+				text-align center
+				margin-bottom 15px
+				th 
+					background-color #eaeaea
+					height 20px
+					border-left 1px solid #bababa
+					&:first-child
+						border-left none
+				td
+					color #9e9e9e
+					padding-top 5px
+					border-left 1px solid #bababa
+					&:first-child
+						border-left none
+					
+			fieldset
+				border none
+				position relative
+				label
+					font-weight bold
+					color #2c2c2c
+					font-size 12px
+				input
+					border none
+					width 30px
+					height 19px
+					font-size 12px
+					font-weight bold
+					background-color #e9e9e9
+					border-top 1px solid #bababa
+					border-right 1px solid #bababa
+					text-align center
+				button.orange
+					position absolute
+					top 5px
+					*top 0
+					right 0
+		.col-product-moreDetail
+			border-right none
+			color #2c2c2c
+			font-size 12px
+			margin-left 10px
+			text-align justify
+			width 244px 
+			button.center
+				margin-left 30px
+				margin-top 20px !important
+			h3
+				margin-bottom 4px
+#ctn-btnfav
+	margin-top 47px
+	overflow hidden
+	text-align right
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	h5
+		color #db8f1b
+		float left
+		font-size 12px
+		font-weight normal
+		margin 0
+		padding-top 3px
+		width 230px
+		span
+			color #9e9e9e
+			display block
+			padding-top 1px
+	#btnfav
+		background none
+		border none
+		float right
+		height 36px
+		margin 0 !important
+		width 37px
+		hoverOpacity(.7)
+		&.active
+			.star-big
+				background-position -283px -77px
+		i
+			margin-left 0
+		.star-big
+			background-position -150px -407px
+.widget-cnt
+	font-family family3
+	overflow hidden
+	&.border
+		border 1px #c1c1c1 solid
+		border-radius 8px
+		padding-bottom 8px
+
+.widget-myNet
+	width 285px
+	float left
+	margin-top 5px
+	margin-left 20px
+	h3.center-title
+		display block
+		width 160px
+		height 22px
+		padding 8px 5px 0px 5px
+		margin-left auto
+		margin-right auto
+		margin-bottom 5px
+		margin-top 3px
+		background url(routImg+'bg-widget-profile.gif') top repeat-x
+		color #FFF
+		font-weight bold
+		font-size 15px
+		text-align center
+		border-radius 5px
+		-moz-border-radius 5px
+		-webkit-border-radius 5px
+		-khtml-border-radius 5px
+		-ms-border-radius 5px
+	div.speedometer-cnt
+		margin auto
+		padding-top 1px
+		.bg-widget-speedometer
+			margin auto
+			margin-top 40px
+	table
+		border-spacing 2px
+		border-color gray
+		margin-top 5px
+		tr
+			height 18px
+			color #888
+			border-top 1px #cccccc solid
+			font-size 15px
+			&.big
+				font-size 17px
+			&.boxed
+				border 1px #cccccc solid
+				td
+					padding 5px 10px 5px 
+			td
+				font-weight bold
+				text-align center
+				background #f2f2f2
+				padding-left 10px
+				padding-right 10px
+				&.highlight
+					background: #e7e7e7;
+				&.cyan
+					color #0093b9
+					text-align left
+				span
+					color #da9200
+			td+td
+				font-weight normal
+				background-color white
+				color #888
+			td+td+td
+				font-weight bold
+				background #f2f2f2
+
+.widget-nextRank
+	background url(routImg+'bg-widget-nextRank.gif') top repeat-x
+	border-radius 8px
+	height 225px
+	padding 10px 0px 0px 5px
+	width 601px
+	.nextRank
+		float left
+		margin-left 51px
+		margin-right 25px
+	.points
+		background url(routImg+"bg-widget-nextRankWhite.png") #dddcdc top repeat-x
+		border 2px #c1c1c1 solid
+		border-radius 5px
+		display block
+		float left
+		height 176px
+		margin 0
+		width 281px
+	.detalles
+		float left
+		height 35px
+		margin-top 4px
+		width 283px
+		i
+			float left
+			margin-right 4px
+		span
+			color #FFF
+			display block
+			font-size 14px
+			font-weight normal
+.widget-profile
+	width 285px
+	margin 5px 0 0 10px
+	float left
+	.welcomeMsg
+		width 225px
+		height 40px
+		padding 8px 5px 0px 5px
+		color #FFF
+		font-weight bold
+		font-size 15px
+		line-height 15px
+		text-align left
+		border-radius 5px
+		background url(routImg+'bg-widget-profile.gif') top repeat-x
+
+	img.profile-pic
+		border 2px #0e73a2 solid
+		width 36px
+		height 36px
+		border-radius 5px
+
+	td
+		padding-bottom 5px
+		i
+			margin auto	
+	td+td
+		text-align left
+		color #0093b9
+		//font-weight bold
+		font-size: 14px;
+	td+td+td
+		color #f19200
+		font-size: 14px;
+		font-weight normal
+		text-align center
+
+.faq
+	padding-top 20px
+	aside
+		float left
+		img
+			width 267px
+			height 400px
+			border 8px #e5e5e5 solid
+			margin 0px 0px 20px 0px
+			border-radius 8px
+		p
+			font-family "TrebuchetMSRegular",Arial,sans-serif
+			font-size 11px
+			color #777
+			margin-bottom 15px
+	.right-cnt
+		float left
+		width 627px
+		margin-left 18px
+	ul.questions
+		border: 1px #e5e5e5 solid;
+		padding-top 20px
+		padding-left 20px
+		padding-bottom 20px
+		>li
+			a
+				cursor pointer
+				font-family "TrebuchetMSRegular",Arial,sans-serif
+				font-size 15px
+				background-position 0px 5px
+				padding-left 10px
+				color #0093b9
+			ul.answer
+				color #777
+				display none
+				font-family "TrebuchetMSRegular",Arial,sans-serif
+				font-size 13px
+				line-height 20px
+				margin 3px 0px 0px 0px
+				overflow hidden
+				padding 0px
+				padding-left 22px
+	.title-faq
+		height 30px
+		background url(routImg+"bgSubtitle.gif") repeat-x
+		font-size 17px
+		font-weight normal
+		font-family family5
+		color #FFF
+		margin 0px
+		padding 3px 0px 0px 20px
+
+
+.color-button
+	height: 26px
+	width: 50px
+	background: none repeat scroll 0 0 orange
+	margin-left: 6px
+	border-radius: 3px 3px 3px 3px
+	color:#FFFFFF
+	font-size: 14px
+
+
+#form-sem
+	width: 200px

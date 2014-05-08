@@ -1,0 +1,190 @@
+    <div class="content-desafio">
+      <div class="img-step"><img src="<?php echo STATIC_URL ;?>img/desafio/elements/paso2.jpg" alt="Desafío Fuxion" width="750" height="240"/></div>
+      <div class="bg-green"><span></span>
+        <h2>TUS DATOS  INICIALES</h2>
+      </div>
+      <form id="frmStep2a" name="frmData" method="post" action="" class="frm-data">
+        <h3 class="title-headorange">DATOS</h3>
+        <div class="row">
+          <div class="left-cnt">
+            <div class="frm-group">
+              <label class="control-label" for="nomemp">NOMBRE</label>
+              <div class="frm-control">
+                <?php echo $this->form->nomemp; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="apepaterno">APELLIDO PATERNO</label>
+              <div class="frm-control">
+                <?php echo $this->form->apepaterno; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label">CÓDIGO EF - CP </label>
+              <div class="frm-control">
+                <?php echo $this->form->codefcp; ?> 
+              </div>
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="telefono">TELF. - CEL</label>
+              <div class="frm-control">
+                <?php echo $this->form->telefono; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="email">EMAIL</label>
+              <div class="frm-control">
+                <?php echo $this->form->email; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+          </div>
+          <div class="left-cnt ml60">
+            <div class="frm-group">
+              <label class="control-label" for="nickemp">SEUDÓNIMO</label>
+              <div class="frm-control">
+                <?php echo $this->form->nickemp; ?> 
+              </div><span class="help-required">*</span>
+              
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="apematerno">APELLIDO MATERNO</label>
+              <div class="frm-control">
+                <?php echo $this->form->apematerno; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="edad">EDAD </label>
+              <div class="frm-control">
+                <?php echo $this->form->edad; ?> 
+              </div><span class="help-required">*</span>
+            </div>
+            <div class="frm-group">
+              <label class="control-label" for="rpm">RPM / RPC</label>
+              <div class="frm-control">
+                <?php echo $this->form->rpm; ?> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="color-orange mt20">(*) Campos obligatorios</p>
+        <div class="separator-line"></div>
+        <h3 class="title-headorange">
+          COLOCA TUS FOTOS INICIALES<br><span class="color-red">El archivo debe tener una extensión (PNG, JPEG, GIF)</span>
+        </h3>
+        <div class="row lessmargin">
+          <div class="attach-data">
+            <p>Adjuntar SCAN wincha de<br>peso y medidas o foto balanza</p>
+            <div class="btn-attach">
+                <?php 
+                $dataValid = 0;
+                if (isset($this->upload) && !empty($this->upload['wincha'])) : $dataValid = 1;?>
+                <img src="<?php echo $this->upload['domain'].$this->upload['wincha']?>" width="122" height="125" /><span class="help-required">*</span>
+                <?php else : ?>
+                <img src="<?php echo STATIC_URL; ?>img/desafio/elements/default-wincha.gif" width="122" height="125" /><span class="help-required">*</span><?php /*<a href="javascript:;" class="help-circle">?</a>*/?>
+                <?php endif; ?>
+                <a href="javascript:;" id="btnWincha" data-valid="<?php echo $dataValid; ?>" data-file="wincha" title="Subir Imagen" class="btn-green">Subir Imagen</a>
+            </div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar foto de FRENTE</p>
+            <div class="btn-attach">
+                <?php 
+                $dataValid = 0;
+                if (isset($this->upload) && !empty($this->upload['frente'])) : $dataValid = 1;?>
+                <img src="<?php echo $this->upload['domain'].$this->upload['frente']?>" width="122" height="125" /><span class="help-required">*</span>
+                <?php else : ?>
+                <img src="<?php echo STATIC_URL; ?>img/desafio/elements/default-frente.gif" width="122" height="125" /><span class="help-required">*</span>
+                <?php endif; ?>
+                <a href="javascript:;" id="btnFrente" data-valid="<?php echo $dataValid; ?>" data-file="frente" title="Subir Imagen" class="btn-green">Subir Imagen</a>
+            </div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar foto de PERFIL</p>
+            <div class="btn-attach">
+                <?php 
+                $dataValid = 0;
+                if (isset($this->upload) && !empty($this->upload['perfil'])) : $dataValid = 1;?>
+                <img src="<?php echo $this->upload['domain'].$this->upload['perfil']?>" width="122" height="125" /><span class="help-required">*</span>
+                <?php else : ?>
+                <img src="<?php echo STATIC_URL; ?>img/desafio/elements/default-perfil.gif" width="122" height="125" /><span class="help-required">*</span>
+                <?php endif; ?>
+                <a href="javascript:;" id="btnPerfil" data-valid="<?php echo $dataValid; ?>" data-file="perfil" title="Subir Imagen" class="btn-green">Subir Imagen</a>
+            </div>
+          </div>
+          <div class="attach-data">
+            <p>Adjuntar otras fotos</p>
+            <div class="btn-attach">
+                <?php 
+                $dataValid = 0;
+                if (isset($this->upload) && !empty($this->upload['otro'])) : $dataValid = 1;?>
+                <img src="<?php echo $this->upload['domain'].$this->upload['otro']?>" width="122" height="125" /><span class="help-required">*</span>
+                <?php else : ?>
+                <img src="<?php echo STATIC_URL; ?>img/desafio/elements/default-otros.gif" width="122" height="125" />
+                <?php endif; ?>
+                <a href="javascript:;" id="btnOtro" data-file="otro" title="Subir Imagen" class="btn-green">Subir Imagen</a>
+            </div>
+          </div>
+        </div>
+        <div class="frm-group row">
+          <p class="help-left"><span class="color-orange">(*) Campos obligatorios<br></span>Empieza con estos datos y fotos iniciales. <a href="javascript:;" title="Ver video ejemplo" class="color-orange">Ver video ejemplo</a></p>
+        </div>
+        <div class="separator-line"></div>
+        <h3 class="title-headorange">DESIGNA A TU MENTOR (La persona que te dará seguimiento)</h3>
+        <div id="ctnSearchMentor" class="frm-group">
+          <label class="control-label" for="codmentor">INGRESA CÓDIGO</label>
+          <div class="frm-control">
+            <?php echo $this->form->codmentor; ?> 
+          </div><span class="help-required">*</span>
+          <button type="button" id="verifMentor" title="VERIFICAR DATOS" class="btn">VERIFICAR DATOS</button>
+        </div>
+        <div id="dataMentor" class="hide mt20"></div>
+        <div class="pt20 row">
+            <button type="submit" id="sbmSend" title="SIGUIENTE" class="btn">SIGUIENTE</button>
+        </div>
+      </form>
+    </div>
+<script id="tplMentor" type="text/template">
+<h3 class="title-headorange">EMPRESARIO</h3>
+<div class="row">
+  <div class="left-cnt">
+    <div class="frm-group">
+      <label class="control-label">NOMBRE</label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= nombre}}" />
+      </div>
+    </div>
+    <div class="frm-group">
+      <label class="control-label">CELULAR</label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= celular}}" />
+      </div>
+    </div>
+    <div class="frm-group">
+      <label class="control-label">EMAIL</label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= email}}" />
+      </div>
+    </div>
+  </div>
+  <div class="left-cnt ml60">
+    <div class="frm-group">
+      <label class="control-label">APELLIDO PATERNO</label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= apepaterno}}" />
+      </div>
+    </div>
+    <div class="frm-group">
+      <label class="control-label">APELLIDO MATERNO </label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= apematerno}}" />
+      </div>
+    </div>
+    <div class="frm-group">
+      <label class="control-label">TELÉFONO</label>
+      <div class="frm-control">
+        <input type="text" readonly="readonly" class="input-xmedium" value="{{= telefono}}" />
+      </div>
+    </div>
+  </div>
+</div>
+</script>

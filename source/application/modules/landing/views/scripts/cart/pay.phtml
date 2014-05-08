@@ -1,0 +1,25 @@
+<?php if(!empty($this->message)):?>
+<div id="main-slider" class="fix">
+    <div class="slide-main">
+        <?php echo $this->partial('_partial/_cartHeader.phtml', $this);?>
+        <div class="ctn-step4">
+            <?php if ($this->ok) : ?>
+            <h2>¡Gracias por realizar tu compra!</h2>
+            <p><?php echo $this->message;?></p>
+            <p>Tu número de pedido es: <span><?php echo $this->idOrder;?></span></p>
+            <p class="mb60">Puedes visualizar tu pedido en <a href="/account/order-list" title="Mis Pedidos">MIS PEDIDOS</a></p>
+            <div class="control">
+                <a href="/#product" title="Seguir Comprando" class="btn-lnk">Seguir Comprando</a>
+            </div>
+            <?php else: ?>
+            <h2>La compra no pudo realizarse correctamente</h2>
+            <p><span><?php echo $this->message;?></span></p>
+            <a class="btn-back" href="/cart/account-validate" title="Atrás"></a>
+
+            <?php endif;?>
+        </div>
+    </div>
+</div>
+<?php else:?>
+<iframe frameborder="0" width="800" height="400" scrolling="no" src="/cart/alignet"></iframe>
+<?php endif; ?>

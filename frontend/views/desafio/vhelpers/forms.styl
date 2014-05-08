@@ -1,0 +1,211 @@
+/**
+* Forms CSS
+* @class Forms
+* @module forms.css
+*/
+.ioption
+	height 25px
+	line-height 25px
+	padding-left 20px
+	position relative
+	input[type="radio"],input[typed="checkbox"]
+		border none
+		left 0
+		margin 0
+		position absolute
+		top 6px
+.frm-group
+	margin-top 20px
+	position relative
+	&:first-child
+		margin 0
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	input[type="text"],input[type="password"]
+		background-color #fff
+		border 1px solid #ededed
+		border-radius 2px
+		color #666
+		font-family family1
+		font-size 13px
+		height 15px
+		line-height 15px
+		padding 4px 10px
+	textarea
+		background-color #fff
+		border 1px solid #ededed
+		border-radius 2px
+		color #666
+		font-family family1
+		font-size 13px
+		height 70px
+		line-height 15px
+		padding 4px 10px
+		resize vertical
+	select
+		background-color #fff
+		border 1px solid #ededed
+		border-radius 2px
+		color #666
+		font-family family1
+		font-size 13px
+		padding 3px
+		width 170px
+.control-label
+	color #a1a1a1
+	display block
+	font-size 13px
+	font-weight 400
+	line-height 14px
+	padding-bottom 3px
+	&.dblock
+		display block
+		float none !important
+		width auto !important
+.frm-control
+	position relative
+.iopinline
+	float left
+	.ioption
+		float left
+		margin-right 79px
+.cgroup-inline
+	margin-top 20px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.frm-group
+		float left
+		margin 0 0 0 28px
+		&:first-child
+			margin 0
+	.control-label
+		width auto
+	.controls
+		float left
+		margin 0 0 0 14px
+	&.fix
+		.control-label
+			width 84px
+			&.fix
+				line-height 16px
+				width 106px
+		.frm-group + .frm-group
+			margin-left 20px !important
+.controls-inline
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.controls
+		float left
+		margin 0 0 0 14px
+		&:first-child
+			margin 0
+/* Forms */
+input,select,textarea
+	&.error
+		border 1px solid #EB8D8D !important
+.slc-small
+	width 84px !important
+.slc-medium, .input-medium
+	width 129px !important
+.txt-large, .input-large
+	width 400px !important
+.input-xmedium
+	width 170px
+.help-required
+	color #EE8100
+	float left
+	font-family family2
+	padding 3px 0 0 5px
+.help-desc
+	color #A1A1A1
+	float left
+	font-family family1
+	padding 4px 0 0 5px
+.help-circle
+	border-radius 20px
+	color white
+	float right
+	font 400 15px/20px family2
+	margin 3px 0 0 5px
+	text-align center
+	width 20px
+	backgroundLighten(#EE8100,80%)
+	&:hover
+		color white
+/* clase Forms */
+.frm-contact
+	float left
+	margin-left 70px
+	width 420px
+	input[type="text"], textarea
+		width 390px
+	.btn
+		float right
+		margin 0 8px 0 10px
+.frm-data
+	position relative
+	p
+		margin-bottom 20px
+		padding 0 30px
+		&.color-orange
+			font-size 12px
+	.frm-group
+		padding 0 30px
+	.control-label
+		float left
+		line-height 25px
+		padding-bottom 0
+		width 120px
+	.frm-ctext
+		color #A1A1A1
+		float left
+		font-family family2
+		font-size 13px
+		height 25px
+		line-height 25px
+		width 82px
+	.frm-control
+		float left
+	.btn
+		float right
+.attach-data
+	float left
+	margin 0 40px
+	p
+		font-size 12px
+		height 30px
+		margin-bottom 5px
+		padding 0
+		text-align center
+.btn-attach
+	background-color #f3f3f3
+	border-radius 5px
+	height 125px
+	margin 0 auto
+	position relative
+	width 122px
+	.help-required
+		position absolute
+		right -8px
+		top 0
+		z-index 2
+	.help-circle
+		position absolute
+		right 4px
+		top 0
+		z-index 2

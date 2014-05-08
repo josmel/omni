@@ -1,0 +1,478 @@
+/**
+* Inicio,Fuxion,Preguntas CSS
+* @class Productos
+* @module oficina.css
+*/
+.desc-static
+	float left
+	width 604px
+	p
+		color #626262
+		font-family family4
+		font-size 13px
+		line-height 18px
+		margin-bottom 16px
+		text-align justify
+.side-static
+	float right
+	width 300px
+.lowerfooter
+	background url(routImg+"bg-lwfoot.gif")
+	border-radius 8px
+	padding 15px
+	.row
+		background #FFF
+		border-radius 5px
+		padding 20px 15px
+	h3
+		color #dd921d
+		font 400 30px/30px family5
+		margin-bottom 12px
+		padding-top 2px
+.foot-blog, .foot-dinamic, .foot-social
+	float left
+	height 240px
+	padding-bottom 10px
+.foot-blog
+	border-right 1px solid #ffd28b
+	padding-right 15px
+	width 250px
+.foot-dinamic
+	padding 0 15px
+	width 340px
+.foot-social
+	border-left 1px solid #ffd28b
+	padding-left 15px
+	width 206px
+	ul
+		padding-top 91px
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+	a
+		height 48px
+		width 48px
+	li
+		float left
+		margin 3px 0 3px 4px
+		&:first-child,&.fix
+			margin-left 0
+#ctn-blog
+	height 196px
+	overflow hidden
+	position relative
+	.post
+		height 196px
+		overflow hidden
+	.pst-title
+		color #5f5f5f
+		font 700 14px/14px family3
+		margin-bottom 6px
+	.pst-descrip
+		color #5f5f5f
+		font-family family3
+		font-size 13px
+		line-height 17px
+		margin-bottom 4px
+		text-align justify
+	.pst-lnk
+		hoverLighten(#0093b9,10%)
+		font-family family3
+		font-size 13px
+		line-height 14px
+.ctn-quiz
+	background #e5e5e5
+	border-radius 5px
+	height 180px
+	padding 8px
+	.quiz-well
+		background #FFF
+		height 156px
+		overflow hidden
+		padding 12px
+		position relative
+	h4
+		border-bottom 1px solid #d6d6d6
+		color #5f5f5f
+		font 400 14px/15px family3
+		margin-bottom 8px
+		padding 0 3px 3px
+.quiz-lst
+	padding-bottom 6px
+	li
+		background #ededed
+		border-radius 4px
+		color #5f5f5f
+		font-family family3
+		font-size 13px
+		line-height 15px
+		margin-top 6px
+		padding 3px 0
+		&:first-child
+			margin 0
+	.rquiz
+		padding-left 50px
+		strong
+			font-weight 700
+			left 6px
+			position absolute
+			top 0
+/* Inicio */
+#slider-prom
+	height 300px
+	overflow hidden
+	position relative
+	.viewport
+		height 300px
+	li
+		a, img
+			display block
+			height 300px
+			width 604px
+#fadeHall
+	height 570px
+	position relative
+	overflow hidden
+	a, img
+		display block
+		height 570px
+		width 300px
+#calendar
+	font-family family3
+	font-size 12px
+	height 300px
+	overflow auto
+	position relative
+	.fc-day-header
+		color #626262
+		font-weight 400
+	.fc-day-number
+		color #626262
+	.fc-header-title
+		h2
+			color #525252
+			font-size 16px
+			font-weight 400
+			padding-top 4px
+	.fc-button
+		background #FFF
+		border 1px solid #DDD
+		border-radius 0
+	.fc-button-today
+		color #7e7e7e
+		font-size 12px
+		text-transform uppercase
+		transition background .4s ease
+	.fc-state-hover
+		background #F7F7F7
+	.fc-text-arrow
+		color #7e7e7e
+		font-weight 400
+	.fc-event-hori
+		.fc-event-inner
+			height 13px
+			overflow hidden
+			position relative
+.popupEvent
+	margin 0 auto
+	padding 6px
+	width 446px
+	h2
+		color #d58001
+		font-family family3
+		font-size 16px
+		font-weight 400
+		line-height 18px
+		margin-bottom 10px
+		text-align center
+	dl
+		font-size 12px
+		line-height 18px
+	dt
+		color #626262
+	dd
+		color #a3a3a3
+/* Fuxion */
+.video-static
+	background #e6e6e6
+	border-radius 3px
+	height 315px
+	margin 0 auto
+	padding 4px
+	width 560px
+#cat-fuxion
+	height 412px
+	overflow hidden
+	position relative
+	.fx-ctnslide
+		height 412px
+		left 0
+		position relative
+		top 0
+		width 1876px
+	.fx-slide
+		float left
+		height 412px
+		margin-left 20px
+		position relative
+		width 928px
+		&:first-child
+			margin 0
+.fx-lcat
+	background url(routImg+"sprites-fuxion.png") no-repeat
+	height 390px
+	left 50%
+	margin-left -194px
+	position absolute
+	top 12px
+	width 389px
+.fx-policies
+	float right
+.cat-fx
+	background url(routImg+"sprites-fuxion.png") catFxCtn no-repeat
+	height 43px
+	padding 4px 32px 0 56px
+	position absolute
+	transition opacity .4s ease
+	width 113px
+	&:hover
+		opacity 0.8
+	h3
+		color #FFF
+		font 400 22px/22px family6
+	p
+		color #3b3b3b
+		font-family family5
+		font-size 12px
+		line-height 12px
+		padding-top 1px
+	.catsignal
+		background url(routImg+"sprites-fuxion.png") catFxRight no-repeat
+		height 20px
+		position absolute
+		right 10px
+		top 7px
+		width 22px
+	.catimg
+		background url(routImg+"sprites-fuxion.png") no-repeat
+		position absolute
+	.catLogo
+		background-position catFxLogo
+		height 36px
+		left 12px
+		top 4px
+		width 36px
+	.catBanner
+		background-position catFxBanner
+		height 33px
+		left 8px
+		top 7px
+		width 41px
+	.catManual
+		background-position catFxManual
+		height 36px
+		left 13px
+		top 6px
+		width 32px
+	.catProd
+		background-position catFxProd
+		height 30px
+		left 14px
+		top 8px
+		width 32px
+	.catAfi
+		background-position catFxAfi
+		height 37px
+		left 11px
+		top 5px
+		width 38px
+.fxcat5
+	.cfx1
+		left 94px
+		top -8px
+	.cfx2
+		right -128px
+		top 148px
+	.cfx3
+		right -46px
+		top 308px
+	.cfx4
+		left -46px
+		top 308px
+	.cfx5
+		left -128px
+		top 148px
+.bx-catfx
+	.row
+		border-color #bdbdbd
+		border-radius 0 0 5px 5px
+		border-style solid
+		border-width 0 1px 1px
+		height 376px
+.tit-bxcat
+	background #464646
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ2NDY0NiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMzMzMzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+	background -moz-linear-gradient(top,  #464646 0%, #333333 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#464646), color-stop(100%,#333333))
+	background -webkit-linear-gradient(top,  #464646 0%,#333333 100%)
+	background -o-linear-gradient(top,  #464646 0%,#333333 100%)
+	background -ms-linear-gradient(top,  #464646 0%,#333333 100%)
+	background linear-gradient(to bottom,  #464646 0%,#333333 100%)
+	color #FFF
+	font-family family3
+	font-size 20px
+	font-weight 400
+	line-height 22px
+	padding 6px 20px
+	position relative
+	.fx-ncat
+		font-family family5
+.fx-back
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYxNjE2MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM0NzQ3NDciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+	background -moz-linear-gradient(top,  #616161 0%, #474747 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#616161), color-stop(100%,#474747))
+	background -webkit-linear-gradient(top,  #616161 0%,#474747 100%)
+	background -o-linear-gradient(top,  #616161 0%,#474747 100%)
+	background -ms-linear-gradient(top,  #616161 0%,#474747 100%)
+	background linear-gradient(to bottom,  #616161 0%,#474747 100%)
+	border-radius 3px
+	box-shadow 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05)
+	color #FFF
+	display block
+	font-family family5
+	font-size 16px
+	line-height 18px
+	padding 5px 5px 5px 32px
+	position absolute
+	right 16px
+	top 3px
+	&:hover
+		background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQ3NDc0NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MTYxNjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+		background -moz-linear-gradient(top,  #474747 0%, #616161 100%)
+		background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#474747), color-stop(100%,#616161))
+		background -webkit-linear-gradient(top,  #474747 0%,#616161 100%)
+		background -o-linear-gradient(top,  #474747 0%,#616161 100%)
+		background -ms-linear-gradient(top,  #474747 0%,#616161 100%)
+		background linear-gradient(to bottom,  #474747 0%,#616161 100%)
+	span
+		background url(routImg+"sprites-productos.png") -334px 0 no-repeat
+		display block
+		height 21px
+		left 5px
+		position absolute
+		top 3px
+		width 21px
+#scrollFx
+	height 354px
+	overflow hidden
+	padding-top 12px
+	position relative
+	&.nscroll
+		.scrollbar
+			display none
+		.viewport
+			width 926px
+		.list-fxcat
+			li
+				margin 6px 10px 6px 22px
+				&:nth-child(2n)
+					margin 6px 22px 6px 10px
+	.viewport
+		height 354px
+		width 912px
+	.scrollbar
+		border none
+		margin-right 8px
+		width 6px
+		&.disable
+			display none
+	.track, .thumb
+		width 6px
+	.track
+		box-shadow none
+		padding 0
+	.thumb
+		border-radius 4px
+		left 0
+.list-fxcat
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	li
+		border 2px solid #C1C1C1
+		border-radius 6px
+		float left
+		margin 6px 10px 6px 18px
+		padding 6px
+		position relative
+		width 412px
+		&:nth-child(2n)
+			margin 6px 18px 6px 10px
+		&:nth-child(1),&:nth-child(2)
+			margin-top 0
+	h4
+		background url(routImg+'sprites-productos.png') -417px -453px no-repeat
+		color #666
+		font-family family3
+		font-size 16px
+		font-weight 400
+		line-height 18px
+		margin-bottom 1px
+		padding-left 9px
+		width 373px
+		word-wrap break-word
+	p
+		color #888
+		font-family family3
+		font-size 12px
+		line-height 14px
+		padding-left 9px
+		width 373px
+		word-wrap break-word
+	.ic-pdf, .ic-img
+		position absolute
+		right 6px
+		top 4px
+.fx-policies
+	border 1px solid #ababab
+	float right
+	margin-top 8px
+	width 190px
+	li
+		border-top 1px solid #ABABAB
+		&:first-child
+			border none
+	a
+		background #d0d0d0
+		color #676767
+		display block
+		font-family family6
+		font-size 15px
+		height 21px
+		padding 4px 18px 4px 28px
+		position relative
+		transition opacity .4s ease
+		&:hover
+			opacity 0.8
+	.book
+		background url(routImg+"sprites-fuxion.png") catFxBook no-repeat
+		height 22px
+		left 3px
+		position absolute
+		top 3px
+		width 19px
+	.signal
+		background url(routImg+"sprites-fuxion.png") catFxPoli no-repeat
+		height 16px
+		position absolute
+		right 4px
+		top 6px
+		width 12px

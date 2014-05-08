@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    var paymentState = <?php echo $this->ok ? '1' : '0'; ?>;
+</script>
+<div class="white-bg">
+    <?php if ($this->ok) : ?>
+    <?php echo $this->partial('_partial/_orderComplete.phtml', $this)?>
+    <?php else: ?>
+    <h2>La compra no pudo realizarse correctamente</h2>
+    <p><span><?php echo $this->message;?></span></p>
+    
+    <br>
+    <a class="btn-back" href="/cart/payment" >Ir a Método de pago</a>
+    <?php endif;?>
+</div>

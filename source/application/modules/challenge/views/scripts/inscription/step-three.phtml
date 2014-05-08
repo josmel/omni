@@ -1,0 +1,80 @@
+  <div class="content-desafio">
+      <div class="bg-green"><span></span>
+        <h2>DEFINE TU ALIMENTACIÓN</h2>
+      </div>
+      <div class="feed-box">
+        <h2 class="color-blue">Hola <?php echo $this->name ?> tu plan de nutrición es de <?php echo $this->kcal ?> Kcal.</h2>
+        <a href="<?php echo SITE_URL; ?>" title="Ir al reto" class="btn-reto">¡ IR AL RETO !</a>
+        <div class="row">
+          <div class="feed-imgs">
+            <div class="modalFeed">
+              <div class="topText fix1">Haz clic y encuentra tu Plan Nutricional, almuerzo, cenas y lista de compras</div>
+              <img id="dieta" src="<?php echo STATIC_URL ; ?>img/desafio/elements/feed1.jpg" alt="Desafío Fuxion" width="218" height="218"/>
+              <a href="<?php echo STATIC_URL ; ?>alimentacion/btn_1/<?php echo $this->kcal ?>/<?php echo $this->kcal ?>.pdf" target="_blank" class="downFeed btn-download"></a>
+              <a href="#mailModal" id="mailTrigger" data-info="dieta" class="mailFeed btn-mail" data-title="dieta de acuerdo a tu diagnóstico"></a>
+            </div>
+            <div class="modalFeed">
+              <div class="topText">Si prefieres puedes animarte al plan 514</div>
+              <img id="plan514" src="<?php echo STATIC_URL ; ?>img/desafio/elements/feed2.jpg" alt="Desafío Fuxion" width="218" height="218"/>
+              <?php /* ?><a href="javascript:;" class="downFeed btn-download"></a>
+              <a href="#mailModal" id="mailTrigger" class="mailFeed btn-mail" data-title="plan 5 14"></a><?php */ ?>
+            </div>
+            <div class="modalFeed">
+              <div class="topText">Te damos ideas de refrigerios rapidos</div>
+              <img id="launch" src="<?php echo STATIC_URL ; ?>img/desafio/elements/feed3.jpg" alt="Desafío Fuxion"  width="218" height="218"/>
+               <a href="/static/alimentacion/refrigerio/refrigerios.pdf" 
+                 target="_blank" class="downFeed btn-download"></a>              
+              <a href="#mailModal" id="mailTrigger" data-info="refrigerio" class="mailFeed btn-mail" 
+                 data-title="ideas de refrigerios rápidos"></a>
+            </div>
+            <div class="modalFeed">
+              <div class="topText">Algunos consejos interesantes</div>
+              <img id="tips" src="<?php echo STATIC_URL ; ?>img/desafio/elements/feed4.jpg" alt="Desafío Fuxion" width="218" height="218"/>
+              <a href="/static/alimentacion/consejos/tips.pdf" target="_blank" 
+                 accesskey=""class="downFeed btn-download"></a>
+               <a href="#mailModal" id="mailTrigger" data-info="tips" class="mailFeed btn-mail" 
+                  data-title="tips saludables"></a>
+            </div>
+            
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+         <em style="margin-left: 75px">Información desarrollada por una nutricionista especializada </em>
+      </div>
+    </div>
+
+<div id="modalDieta" style="display:none;">
+    <?php foreach ($this->imgKcal as $key => $value) { ?>
+       <a class="lnlFancy" href="<?php echo $value ?>" rel="group"></a>
+    <?php } ?>
+</div>
+<div id="modalTips" style="display:none;">
+  <a class="tipsFancy" href="<?php echo SITE_URL; ?>static/alimentacion/tipsAlimentacion/1.jpg" rel="groupTips"></a>
+  <a class="tipsFancy" href="<?php echo SITE_URL; ?>static/alimentacion/tipsAlimentacion/2.jpg" rel="groupTips"></a>
+  <a class="tipsFancy" href="<?php echo SITE_URL; ?>static/alimentacion/tipsAlimentacion/3.jpg" rel="groupTips"></a>
+  <a class="tipsFancy" href="<?php echo SITE_URL; ?>static/alimentacion/tipsAlimentacion/4.jpg" rel="groupTips"></a>
+</div>
+<div id="lastGroup" style="display:none;">
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/1.png" class="lastGroups" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/2.png" class="lastGroups" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/3.png" class="lastGroups" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/4.png" class="lastGroups" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/5.png" class="lastGroups" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta/6.png" class="lastGroups" rel="lastTips"></a>
+</div>
+<div id="reto514" style="display:none;">
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta514/1.jpg" class="reto514Group" rel="lastTips"></a>
+  <a href="<?php echo SITE_URL; ?>static/alimentacion/dieta514/2.jpg" class="reto514Group" rel="lastTips"></a>
+</div>
+<div id="mailModal" style="display:none;">
+  <form action="/index/send-email" method="POST">
+    <div class="title">Enviar a correo:</div>
+    <div class="control-input">
+      <input type="text" name="email" id="email">
+      <input type="hidden" name="kcal" id="kcal" value="<?php echo $this->kcal ?>">
+      <button class="btn blue" type="submit" >Enviar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,192 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+	nav.main-menu
+		ul
+			li
+				a(href="estado.html",title="Estado") 
+					span
+					| estado
+			li
+				a(href="consumos.html",title="Mis consumos") 
+					span.mitem2
+					| mis consumos
+			li.active
+				a(href="avances.html",title="Avances") 
+					span.mitem3
+					| avances
+			li
+				a(href="mentor.html",title="Mentor") 
+					span.mitem4
+					| mentor
+			li
+				a(href="contactenos.html",title="contáctenos") 
+					span.mitem5
+					| contáctenos
+	#wrapper
+		.row
+			ul.slide-pics
+				li
+					.slide-img
+						img(src="http://local.desafio/static/img/desafio/elements/p1.jpg", alt="Desafío Fuxion",height="148")
+					p Wincha
+				li
+					.slide-img
+						img(src="http://local.desafio/static/img/desafio/elements/p2.jpg", alt="Desafío Fuxion",height="148")
+					p Frontal
+				li
+					.slide-img
+						img(src="http://local.desafio/static/img/desafio/elements/p3.jpg", alt="Desafío Fuxion",height="148")
+					p Perfil
+				li
+					.slide-img
+						img(src="http://local.desafio/static/img/desafio/elements/p4.jpg", alt="Desafío Fuxion",height="148")
+					p Otros
+			a(href="javascript:;",title="Actualizar tus datos", class="btn-blue") 
+				span
+				| ACTUALIZAR<br>TUS DATOS<br>(CLIC AQUÍ)
+		.modal-frmData
+			form(id="frmData", name="frmData", method="post", action="" , class="frm-data")
+				p Actualizar tus datos 1 vez por semana
+				.frm-group
+					label.control-label GENERO
+					.frm-control
+						select
+							option Seleccione
+							option Seleccione 1
+							option Seleccione 2
+					span.help-required *
+				.frm-group
+					label.control-label ¿HACES DEPORTE?
+					.frm-control
+						select
+							option Seleccione
+							option Seleccione 1
+							option Seleccione 2
+				.frm-group
+					label.control-label MEDIDAS
+					.controls-inline
+						.controls
+							.frm-control
+								select.slc-small
+									option Talla
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+						.controls
+							.frm-control
+								select.slc-small
+									option Peso
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+						.controls
+							.frm-control
+								select.slc-small
+									option Muñeca
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+						.controls
+							.frm-control
+								select.slc-medium
+									option Indice de grasa
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+				.frm-group
+					label.control-label MASA MUSCULAR
+					.iopinline
+						.ioption
+							label
+								| Alta
+								input(type="radio", id="txtMasa", name="txtMasa")
+						.ioption
+							label
+								| Media
+								input(type="radio", id="txtMasa", name="txtMasa")
+						.ioption
+							label
+								| Baja
+								input(type="radio", id="txtMasa", name="txtMasa")
+				.cgroup-inline
+					.frm-group
+						label.control-label CINTURA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label CADERA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+				.cgroup-inline
+					.frm-group
+						label.control-label ESPALDA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label PECHO
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+				.separator-line
+				p Actualizar tus fotos 1 vez por semana<br>
+					span.color-red El archivo debe tener una extensión (PNG, JPEG, GIF)
+				p.color-orange (*) Campos obligatorios
+				.row
+					.attach-data
+						p Adjuntar SCAN wincha de<br>peso y medidas o foto balanza
+						.btn-attach
+							span.ico-attach
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen 
+					.attach-data
+						p Adjuntar foto de FRENTE
+						.btn-attach
+							span.ico-attach.pic2
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen 
+					.attach-data
+						p Adjuntar foto de PERFIL
+						.btn-attach
+							span.ico-attach.pic3
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen 
+					.attach-data
+						p Adjuntar otras fotos
+						.btn-attach
+							span.ico-attach.pic4
+							span.help-required *
+							a(href="javascript:;", id="fileAttach", name="fileAttach", class="btn-green", title="Subir Imagen") Subir Imagen 
+				.frm-group.row
+					button(type="submit", id="sbmSend", class="btn", title="Enviar") Enviar
+	footer
+		.box-center
+			nav.foot-menu
+				a(href="estado.html",title="Estado") estado
+				a(href="consumos.html",title="Mis consumos") mis consumos
+				a(href="avances.html",title="Avances") avances
+				a(href="mentor.html",title="Mentor") mentor
+				a(href="contactenos.html",title="contáctenos") contáctenos
+			p Copyrigth © 2013 Prolife Biotech. Todos los derechos reservados

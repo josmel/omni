@@ -1,0 +1,8 @@
+<div class="breadcrumbs"> 
+    <?php foreach($this->breadcums as $breadcum) : ?>
+    <a <?php if(!empty($breadcum['url'])) echo "href='".$breadcum['url']."'"; ?>><?php echo $breadcum['label']; ?></a>
+    <?php endforeach; ?>
+</div>
+<?php 
+$this->getMesseger();
+?>

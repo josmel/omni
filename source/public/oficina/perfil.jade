@@ -1,0 +1,43 @@
+include jade/vars.jade
+include jade/head.jade
+include jade/mixins.jade
+body
+	include jade/header.jade
+	#wrapper
+		.white-bg
+			section.content.profile
+				.bg
+				h1 Editar Perfil
+				img(src="http://www.placecage.com/c/170/180")
+				button Cambiar Foto
+
+				fieldset
+					label Agregar Web Personal
+					input(type="text") 
+					span .soyfuxion.net
+
+				fieldset
+					label Agregar Facebook
+					input(type="text")
+					i.sprites-p.icon-help
+
+				fieldset
+					label Agregar Twitter
+					input(type="text")
+					i.sprites-p.icon-help
+
+				fieldset
+					label Agregar Youtube
+					input(type="text")
+					i.sprites-p.icon-help
+
+				fieldset
+					label Agregar Blogger
+					input(type="text")
+					i.sprites-p.icon-help
+
+				fieldset.center
+					label Historia
+					textarea
+
+				button.orange Modificar

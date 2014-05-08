@@ -1,0 +1,18 @@
+<?php 
+$businessman = $this->element->getBusinessman();
+//var_dump($businessman); exit?>
+
+<div class="ctnMtPay cgroup-inline">
+    <div class="control-group">
+        <label class="control-label">Método de Pago:</label>
+        <div class="controls">
+            <?php echo $this->element->paymethod->renderViewHelper();?>
+        </div>
+    </div>
+    <div id="TP011" class="control-group selChangue">
+        <?php echo $this->element->cardcode->renderViewHelper();?>
+    </div>
+    <div id="TP006" class="control-group selChangue">
+        <?php echo $this->element->transcode->renderViewHelper();?>
+    </div>
+</div>

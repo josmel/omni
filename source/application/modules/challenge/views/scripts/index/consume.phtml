@@ -1,0 +1,107 @@
+<div class="row">
+    <ul class="challeng-state row">
+        <li>Estas en estado:</li>
+        <li class="fix">
+            <?php if($this->estadoParticipante == 1):?>
+            <span class="green"></span>Activo
+            <?php elseif($this->estadoParticipante == 2):?>
+            <span class="yellow"></span>Riesgo
+            <?php else:?>
+            <span class="red"></span>Desactivado
+            <?php endif;?>
+        </li>
+        <li>Estado empresario:</li>
+        <li class="fix">
+            <?php if($this->empActivo):?>
+            <span class="green"></span>Activo
+            <?php else:?>
+            <span class="red"></span>Desactivado
+            <?php endif;?>
+        </li>        
+    </ul>
+    <div id="calendar"></div>
+</div>
+<ul class="circles-colors row">
+  <li><span></span>Inicio - Fin</li>
+  <li><span class="bg-yellow"></span>Días de compra</li>
+  <li><span class="bg-purple"></span>Avances</li>
+  <li><span class="bg-pink"></span>Fecha limite de activación</li>
+</ul>
+<script id="tplProduct" type="text/template">
+<div class="popupProd">
+    <h3>PRODUCTOS COMPRADOS</h2>
+    <h4>Fecha: {{= fDate }}</h3>
+    {{ for(var i=0;i<products.length;i++){ }}
+        <div class="popprod-ctn">
+            <div class="popprod-img">
+                <img alt="{{= products[i]['name'] }}" src="{{= products[i]['img'] }}" width="116" height="102" />
+            </div>
+            <div class="popprod-desc">
+                <h2>{{= products[i]['name'] }}<span></span></h2>
+                <p>Cantidad: {{= products[i]['quantity'] }}</p>
+            </div>
+        </div>
+    {{ } }}
+</div>
+</script>
+<script id="tplConsume" type="text/template">
+<div class="modal-frmData {{ if(typeof fotootros=="undefined"){ }}fix{{ } }}" id="popConsume">
+    <form class="frm-data" action="" method="post" name="frmData" id="frmData">
+      <h3 class="title-headorange">TUS AVANCES (enviado el {{= fDate }})</h3>
+      <div class="frm-group">
+        <label for="peso" class="control-label">PESO</label>
+        <div class="frm-ctext">{{= peso}} KG</div>
+      </div>
+      <div class="cgroup-inline">
+        <div class="frm-group">
+          <label for="cintura" class="control-label">CINTURA</label>
+          <div class="frm-ctext">{{= cintura}} cm</div>
+        </div>
+        <div class="frm-group">
+          <label for="cadera" class="control-label">CADERA</label>
+          <div class="frm-ctext">{{= cadera}} cm</div>
+        </div>
+      </div>
+      <div class="cgroup-inline">
+        <div class="frm-group">
+          <label for="espalda" class="control-label">ESPALDA</label>
+          <div class="frm-ctext">{{= espalda}} cm</div>
+        </div>
+        <div class="frm-group">
+          <label for="pecho" class="control-label">PECHO</label>
+          <div class="frm-ctext">{{= pecho}} cm</div>
+        </div>
+      </div>
+      <div class="separator-line"></div>
+      <h3 class="stitle-headorange">FOTOS</h3>
+      <div class="row">
+        <div class="attach-data">
+          <p>Foto SCAN wincha de<br>peso y medidas o foto balanza</p>
+          <div class="btn-attach">
+              <img width="122" height="125" src="{{= fotowincha}}">
+          </div>
+        </div>
+        <div class="attach-data">
+          <p>Foto de FRENTE</p>
+          <div class="btn-attach">
+              <img width="122" height="125" src="{{= fotofrente}}">
+          </div>
+        </div>
+        <div class="attach-data">
+          <p>Foto de PERFIL</p>
+          <div class="btn-attach">
+              <img width="122" height="125" src="{{= fotoperfil}}">
+          </div>
+        </div>
+        {{ if(typeof fotootros!="undefined"){ }}
+        <div class="attach-data">
+          <p>Otras fotos</p>
+          <div class="btn-attach">
+              <img width="122" height="125" src="{{= fotootros}}">
+          </div>
+        </div>
+        {{ } }}
+      </div>
+    </form>
+  </div>
+</script>

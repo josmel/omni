@@ -1,0 +1,47 @@
+/**
+* Footer CSS
+* @class Footer
+* @module layout.css
+*/
+.main-menu
+	background #4e8acc
+	position relative
+	z-index 2
+	ul
+		margin 0 auto
+		width 803px
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+	li
+		border-right 1px solid #83addb
+		float left
+		&:first-child
+			border-left 1px solid #83addb
+	a
+		color #FFF
+		display block
+		font-family family1
+		font-size 17px
+		height 54px
+		line-height 54px
+		padding 0 26px
+		position relative
+		&:hover, &.active
+			background #db8f1b
+		&.active
+			span
+				display block
+		span
+			background url(routImg+"icon-set.png") navAct
+			height 9px
+			left 50%
+			margin-left -9px
+			position absolute
+			top 0
+			width 19px
+			display none

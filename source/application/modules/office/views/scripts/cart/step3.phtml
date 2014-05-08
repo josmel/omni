@@ -1,0 +1,43 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <form method="POST">
+        <header class="head-car">
+            <h2>FORMA DE ENVÍO</h2>
+            <p class="descDir">Selecciona la forma de envío para la dirección ingresada<span></span></p>
+        </header>
+        <table class="tbl-envio">
+            <thead>
+                <tr>
+                    <th>Forma de envio</th>
+                    <th>Costo de envio</th>
+                    <th>Peso</th>
+                    <th>Destino</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td> 
+                        <input type="radio" name="envio" class="radio" checked="checked"/>Normal
+                    </td>
+                    <td><?php echo $this->businessman['simbolo']; ?> <?php echo $this->shipPrice ?></td>
+                    <td><?php echo $this->weight ?> kg</td>
+                    <td><?php echo $this->ubigeoName ?></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="methodShip">Has seleccionado la forma de envío: NORMAL</p>
+        <div class="infoShip row">
+            <div class="ship-left">
+                <p class="descDir">Información Adicional<span></span></p>
+                <ul>
+                    <li>Fecha de entrega estimada incluye el tiempo de manipulación del vendedor y la prontitud del pago realizado</li>
+                    <li>Para conciderar la fecha estimada el pago debe ser realizado hoy</li>
+                    <li>Los plazos de entrega puede variar, especialmente sobre los preríodos pico</li>
+                </ul>
+            </div>
+            <div class="ship-right">
+                <button class="btn-orange" type="submit"> <i class="sprites-p arrow-boxed"> </i>Ir a tipo de comprobante</button>
+            </div>
+        </div>
+    </form>
+</div>

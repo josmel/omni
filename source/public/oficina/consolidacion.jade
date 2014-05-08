@@ -1,0 +1,127 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper	
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Carrito de Compra
+				a(href="#") Dirección de envío
+				a(href="#") Forma de envío
+				a(href="#") Tipo de Comprobante
+				a(href="#") Consolidación de Pedido
+			section.content
+				header
+					h2.title Consolidación de Pedido
+					h4 Revise la información ingresada. Una vez que hayas hecho clic en “Proceder co  el pago” se habrá registrado el pedido de compra
+
+					section.consolidacion 
+						.column-three
+							.wrap
+								table
+									tr
+										th(colspan="2") Dirección de envío
+									tr
+										td Contacto:
+										td Jose Perez
+									tr
+										td Doc Identidad:
+										td DNI 4454898466
+									tr
+										td Dirección:
+										td Av. Paseo de la republicad 1487 dpto 108 - Lima, Lima San Borja
+									tr
+										td Referencia:
+										td Al frente del Grifo Primax
+								a(href="#") Cambiar
+
+						.column-three
+							.wrap
+								table
+									tr
+										th(colspan="2") Forma de Envío
+									tr
+										td Tipo de envío:
+										td Normal
+									tr
+										td Courier:
+										td Urbano Express
+								a(href="#") Cambiar
+
+						.column-three
+							.wrap
+								table
+									tr
+										th(colspan="2") Tipo de Comprobante
+									tr
+										td Recibo de Pago:
+										td Factura
+									tr
+										td A nombre de:
+										td Boutique Perez
+								a(href="#") Cambiar
+
+						.separator
+
+						h3.indicate Detalle de los productos de la compra, pendiente de Pago
+
+						table.pendiente
+							tr
+								th Imagen
+								th Nombre
+								th Contenido
+								th Peso Total
+								th Total Pts
+								th Cantidad
+								th Precio Unidad 
+									span (Inc. IGV)
+								th Sub Total 
+							tr.border
+								td: img
+								td.high Bellas
+								td Caja (30 Sticks de 7.5 gr.)
+								td 0.225 Kg.
+								td 44
+								td 2
+								td.high S/. 119.00
+								td.high S/. 238.00
+							tr.border
+								td: img
+								td.high Cafe Capuccino
+								td Caja (30 Sticks de 7.5 gr.)
+								td 0.225 Kg.
+								td 44
+								td 1
+								td.high S/. 53.00
+								td.high S/. 53.00
+							tr
+								td(colspan="7").high.right Sub total:
+								td.high S/. 291.00
+							tr
+								td(colspan="7").high.gray.right -Descuento (20%):
+								td.high.gray S/. 58.20
+							tr
+								td(colspan="7").high.right  Sub total:
+								td.high  S/. 291.00
+							tr 
+								td(colspan="7").high.gray.right   -Descuento (20%):
+								td.high.gray   S/. 232.80
+							tr 
+								td(colspan="7").high.right  Envío por Courier:
+								td.high  S/. 8.00
+							tr 
+								td(colspan="7").high.gray.right   Sub total:
+								td.high.gray   S/. 237.80
+							tr 
+								td(colspan="7").high.right  Percepción (2%):
+								td.high  S/. 20.80
+							tr.total
+								td(colspan="7").high.right  Total:
+								td.high  S/. 242.56
+
+						.btn-cnt
+							button.orange.float-right
+								i.sprites-p.arrow-boxed
+								| Ir a Forma de Pago
+							span.btn-helper Podras revisar tu compra antes

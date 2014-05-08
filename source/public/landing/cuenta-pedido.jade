@@ -1,0 +1,64 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		#main-slider
+			.slide-main.fix2
+				.ctn-cuentanav
+					ul.cuenta-nav
+						li
+							a(href="javascript:;",title="Mis Datos") MIS DATOS
+						li.active
+							a(href="javascript:;",title="Mis Pedidos") MIS PEDIDOS
+				.cuenta-det
+					ul.head-cardetail
+						li.tdOrder Nro de Pedido
+						li.tdDate Fecha
+						li.tdCant Cantidad
+						li.tdTotal Total
+						li.tdState Estado
+					.scroll-detail
+						table.tbl-detail
+							tbody
+								tr
+									td.tdOrder
+										a(href="javascript:;") 1507
+									td.tdDate 15/10/2013
+									td.tdCant 123
+									td.tdTotal S/. 230.00
+									td.tdState Pediente de Pago
+								tr
+									td.tdOrder
+										a(href="javascript:;") 1507
+									td.tdDate 15/10/2013
+									td.tdCant 123
+									td.tdTotal S/. 230.00
+									td.tdState Pediente de Pago
+								tr
+									td.tdOrder
+										a(href="javascript:;") 1507
+									td.tdDate 15/10/2013
+									td.tdCant 123
+									td.tdTotal S/. 230.00
+									td.tdState Pediente de Pago
+nav.main-menu
+		ul
+			li
+				a(class="active",href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(href="contactame.html",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

@@ -1,0 +1,50 @@
+<div class="prod-lcateg">
+    <h2>FUXION TE OFRECE 7 LÍNEAS DE PRODUCTOS</h2>
+    <p>FuXion, ha sido capaz de extraer alrededor de 1500 principios activos de alimentos naturales y ha desarrollado y patentado una poderosa bioproteína exclusiva de Fuxion y la ha conjugado con otras innovadoras patentes creando 7 líneas.</p>
+    <div class="listCircleLine">
+        <div class="decorCircle"></div>
+        <?php $count = 0;
+        foreach($this->productTypes as $type) : 
+            $count ++; ?>
+        <div class="crclLine cline<?php echo $count; ?>">
+            <h3 style="color: #<?php echo $type['hexcolor']; ?>"><?php echo $type['abrtpro']; ?></h3>
+            <a data-id="<?php echo $type['codtpro']; ?>" data-href="/product/line" href="javascript:;" title="<?php echo $type['destpro']?>">
+                <img src="<?php echo STATIC_LANDING_IMG.$type['picture'];?>" />
+            </a>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+<div class="prod-catal">
+    <h3 class="tit-catal">
+        <a href="/product/catalog" title="Ver Catálogo Completo"><span></span>VER CATÁLOGO COMPLETO</a>
+    </h3>
+    <div id="slid-catal">
+        <div class="viewport">
+            <ul class="overview">
+                <?php 
+                    foreach($this->salientProducts as $salient) : ?>
+                <li>
+                    <h2>
+                        <a href="<?php echo $salient['link']; ?>"><?php echo $salient['title']; ?></a>
+                    </h2>
+                    <a class="catal-img" href="<?php echo $salient['link']; ?>" title="<?php echo $salient['title']; ?>">
+                        <img width="182" height="274" src="<?php echo $salient['img']; ?>">
+                    </a>
+                    <div class="prod-price">
+                        <p>PRECIO<span><?php echo $this->businessman['simbolo']; ?> <?php echo $salient['price']; ?></span></p>
+                        <button data-id="<?php echo $salient['code']; ?>" class="btn-lnk bntAddCar">Agregar<span></span></button>
+                    </div>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <ul class="pager">
+            <?php $count = 0;
+                    foreach($this->salientProducts as $salient) : ?>
+               <li><a rel="<?php echo $count; ?>" class="pagenum" href="#"><?php echo ($count + 1); ?></a></li>
+                <?php $count++; 
+                endforeach; ?>
+        </ul>
+    </div>
+</div>

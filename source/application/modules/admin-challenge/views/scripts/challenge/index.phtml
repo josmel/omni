@@ -1,0 +1,73 @@
+<div class="content-desafio fix ctnAdminDesaf">
+   <h3 class="admin-title">Listado de Participantes</h3>
+    <div class="frm-panel">
+        <div class="cgroup-inline filAdmDesaf">
+            <div class="frm-group">
+                <label class="control-label" for="cycle">Ciclo:</label>
+                <div class="frm-control">
+                    <select id="cycle" name="cycle">
+                    <?php foreach($this->cycles as $cycle) : ?>
+                    <option value="<?php echo $cycle['idciclo'] ?>" <?php echo $this->selectedCycle == $cycle['idciclo'] ? 'selected' : ''; ?>><?php echo $cycle['idciclo'] ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+            <div class="frm-group">
+                <label class="control-label" for="week">Semana:</label>
+                <div class="frm-control">
+                    <select id="week" name="week">
+                    <?php foreach($this->weeks as $week) : ?>
+                    <option value="<?php echo $week ?>" <?php echo $this->selectedWeek == $week ? 'selected' : ''; ?>><?php echo $week ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <table cellspacing="0" cellpadding="0" border="0" id="datatable" class="display">
+            <thead>
+                <tr>
+                    <th></th>				
+                    <th>Nombre</th>				
+                    <th>Kilos Bajados</th>
+                    <th>Kilos %</th>
+                    <th>IMC Bajados</th>
+                    <th>IMC %</th>
+                    <th>Cintura Reducida</th>
+                    <th>Cintura %</th>
+                    <th>Cadera Reducida</th>
+                    <th>Cadera %</th>
+                    <th>Estado</th>
+                    <th>Actividad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div> 
+</div>
+<script id="tplMessage" type="text/template">
+    <div class="popSendMessage">
+        <h2>Enviar Mensaje</h2>
+        <form id="frmSendMessage">
+            <div class="frm-group">
+                <label class="control-label" for="subject">Asunto:</label>
+                <div class="frm-control">
+                    <input type="text" id="subject" name="subject">
+                    <input type="hidden" id="ids" name="ids" value="{{= ids }}">
+                </div>
+            </div>
+            <div class="frm-group">
+                <label class="control-label" for="message">Mensaje:</label>
+                <div class="frm-control">
+                    <textarea type="text" id="message" name="message"></textarea>
+                </div>
+            </div>
+            <div class="frm-group">
+                <div class="control">
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>

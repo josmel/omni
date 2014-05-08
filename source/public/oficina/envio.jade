@@ -1,0 +1,54 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper	
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Carrito de Compra
+				a(href="#") Dirección de envío
+				a(href="#") Forma de envío
+			section.content
+				header
+					h2.title Forma de Envío
+					h4 Seleccionar la forma de envío para la dirección ingresada
+
+				table.envio
+					tr
+						th Forma de envio
+						th Costo de envio
+						th Peso
+						th Destino
+						th Entrega Estimada
+					tr.active
+						td 
+							input(type="radio" name="envio").radio 
+							| Normal
+						td S/. 5.00
+						td 0.275 kg
+						td Lima, Lima, San Borja
+						td 18 Sep 2013 a 22 Sep, 2013
+					tr
+						td
+							input(type="radio" name="envio").radio 
+							| Inmediato
+						td S/. 5.00
+						td 0.275 kg
+						td Lima, Lima, San Borja
+						td 18 Sep 2013 a 22 Sep, 2013
+
+				span.alert Haz seleccionado la forma de envío: Normal
+
+				.info-box
+					h3 Información Adicional
+					ul
+						li Fecha de entrega estimada incluye el tiempo de manipulación del vendedor y la prontitud del pago realizado
+						li Para conciderar la fecha estimada el pago debe ser realizado hoy
+						li Los plazos de entrega puede variar, especialmente sobre los preríodos pico
+
+					.btn-cnt
+						span.btn-helper Podrás realizar tu compra antes
+						button.orange.float-right 
+							i.sprites-p.arrow-boxed 
+							| Ir a tipo de comprobante

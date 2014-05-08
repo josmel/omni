@@ -1,0 +1,53 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+	nav.main-menu
+		ul
+			li
+				a(href="javascript:;",title="Estado") 
+					span
+					| estado
+			li.active
+				a(href="javascript:;",title="Mis consumos") 
+					span.mitem2
+					| mis consumos
+			li
+				a(href="javascript:;",title="Avances") 
+					span.mitem3
+					| avances
+			li
+				a(href="javascript:;",title="Mentor") 
+					span.mitem4
+					| mentor
+			li
+				a(href="javascript:;",title="contáctenos") 
+					span.mitem5
+					| contáctenos
+	#wrapper
+		.row aplicacion calendario
+		ul.circles-colors.row
+			li
+				span
+				| Inicio - Fin
+			li
+				span.bg-yellow
+				| Días de compra
+			li
+				span.bg-purple
+				| Avances
+			li
+				span.bg-pink
+				| Fecha limite
+	footer
+		.box-center
+			nav.foot-menu
+				a(href="estado.html",title="Estado") estado
+				a(href="consumos.html",title="Mis consumos") mis consumos
+				a(href="avances.html",title="Avances") avances
+				a(href="mentor.html",title="Mentor") mentor
+				a(href="contactenos.html",title="contáctenos") contáctenos
+			p Copyrigth © 2013 Prolife Biotech. Todos los derechos reservados

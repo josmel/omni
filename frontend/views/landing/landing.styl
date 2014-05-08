@@ -1,0 +1,764 @@
+/**
+* Landing CSS
+* @class Landing
+* @module landing.css
+*/
+.decor-ctn
+	height 100%
+	left 0
+	overflow hidden
+	position absolute
+	top 0
+	width 100%
+	z-index 1
+.decor-top, .decor-bottom
+	background-image url(routImg+"bg-body.gif")
+	background-position repeat-x
+	height 170px
+	left 0
+	position absolute
+	width 100%
+.decor-top
+	background-position 0 -16px
+	top 0
+.decor-bottom
+	bottom 0
+.ctn-bgfx
+	background url(routImg+"bg-fuxion.gif") center center repeat-x
+	height 253px
+	left 0
+	margin-top -126px
+	position absolute
+	top 50%
+	width 100%
+	/*.bgfx1
+		background #f7f7f7
+		border-bottom 2px solid #008fd1
+		border-top 2px solid #008fd1
+		height 249px
+	.bgfx2
+		background url(routImg+"bg-fuxion.gif") center center repeat-x
+		height 225px
+		left 0
+		position absolute
+		top 14px
+		width 100%*/
+#main-slider
+	height 446px
+	overflow hidden
+	position relative
+	width 100%
+	&.fix
+		height 414px
+		padding 16px 0
+.slide-main
+	background #FFF
+	box-shadow 0 0 16px rgba(142, 142, 142, 0.13)
+	height 378px
+	margin 0 auto
+	padding 18px 26px
+	position relative
+	width 804px
+	&.fix
+		height 414px
+		padding 0 8px
+		width 840px
+	&.fix2
+		height 414px
+		padding 0 26px 0 0
+		width 830px
+	&.fix3
+		height 414px
+		padding 0
+		width 856px
+/**
+* Inicio, Testimonio, Contactame CSS
+*/
+.fx-profile
+	float left
+	padding 0 8px 0 16px
+	text-align center
+	width 244px
+	.prof-img
+		height 208px
+		margin 0 auto 12px
+		width 208px
+		img
+			border-radius 208px
+			display block
+	.prof-name
+		color #4e8acc
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 14px
+	.prof-address
+		color #d79129
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 18px
+		a
+			color #d79129
+			&:hover
+				text-decoration underline
+	.prof-social
+		*zoom 1
+		&:before,&:after
+			display table
+			content ""
+			line-height 0
+		&:after
+			clear both
+		li			
+			color #7c8389
+			display inline-block
+			*display inline
+			font-family family2
+			font-size 10px
+			margin-left 8px
+			vertical-align top
+			width 55px
+			*zoom 1
+			&:first-child
+				margin 0
+		a
+			background url(routImg+"icon-set.png") no-repeat
+			display block
+			height 37px
+			margin 0 auto 5px
+			transition all 0.4s ease
+			width 38px
+			&:hover
+				opacity 0.8
+		.twt
+			background-position twitter
+		.fb
+			background-position facebook
+		.ytb
+			background-position youtube
+		.blg
+			background-position blogger
+.fx-break
+	background #b0b5b8
+	float left
+	height 340px
+	margin 19px 24px 0
+	width 1px
+.fx-descrp
+	float left
+	width 486px
+	h2
+		color #db8f1b
+		font 400 14px family2
+		margin-bottom 14px
+		text-align center
+	p
+		line-height 18px
+		margin-bottom 14px
+		text-align justify
+	.alert
+		font-size 12px
+		margin -12px 0 4px
+		padding 4px 8px
+		width auto
+#slid-profile
+	padding 53px 0
+	.viewport
+		height 272px
+		width 486px
+		li img
+			display block
+			height 272px
+			width 486px
+	.buttons
+		bottom 8px
+		&.prev
+			right 34px
+		&.next
+			right 0
+		&:hover
+			opacity 0.8
+#frm-contactenos
+	margin 0 auto
+	width 386px
+	input[type="text"],textarea
+		width 360px
+	textarea
+		height 76px
+/**
+* Oportunidad, compañia
+*/
+.cms-img
+	float right
+	text-align center
+.cms-descrp
+	float left
+	height 384px
+	padding 30px 0 0 32px
+	position relative
+	width 452px
+	h2
+		color #008fd1
+		font-family family2
+		font-size 14px
+		line-height 16px
+		margin-bottom 12px
+	h3
+		color #008fd1
+		font-family family2
+		font-size 12px
+		margin-bottom 8px
+	p
+		line-height 18px
+		margin-bottom 16px
+		text-align justify
+	ul
+		margin-bottom 16px
+	li
+		background url(routImg+"icon-set.png") cmsLi no-repeat
+		font-size 12px
+		line-height 16px
+		margin-top 6px
+		padding-left 12px
+		&:first-child
+			margin 0
+#oportunity
+	.cms-descrp
+		height 370px
+		padding-top 44px
+		width 392px
+		p
+			line-height 22px
+		h3
+			color #919191
+			font-weight 700
+		&.oportunity
+			height 144px
+			padding-top 30px
+			position relative
+			width 342px
+			z-index 2
+	.cms-img
+		padding-top 40px
+		width 380px
+	.btn-back
+		left 12px
+		top 14px
+.nav-social
+	margin 0 auto
+	padding-top 24px
+	width 222px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	a
+		background url(routImg+"icon-set.png") no-repeat
+		float left
+		height 37px
+		margin-left 8px
+		text-indent -9999px
+		width 38px
+		&:first-child
+			margin 0
+		&.fb
+			background-position facebook
+		&.twt
+			background-position twitter
+		&.ytb
+			background-position youtube
+		&.blg
+			background-position blogger
+		&.eml
+			background-position email
+.oporNav
+	background #FFF
+	height 100%
+	left 8px
+	position absolute
+	top 0
+	width 840px
+	z-index 1
+.oporMain
+	z-index 10
+.oporImg
+	background url(routImg+"oportunity.jpg") pyramidDesarrollo no-repeat
+	display block
+	height 208px
+	margin 0 auto
+	width 277px
+.oprty-central
+	height 100%
+	left 0
+	position absolute
+	top 0
+	width 100%
+	z-index 1
+.oprty-map
+	background url(routImg+"oportunity.jpg") no-repeat
+	height 315px
+	left 195px
+	position absolute
+	top 74px
+	width 506px
+.typOprty
+	position absolute
+	width 151px
+	.oprty-img
+		background url(routImg+"oportunity.jpg") no-repeat
+		height 101px
+	a
+		color #FFF
+		display block
+		font-size 12px
+		height 21px
+		line-height 21px
+		padding-right 6px
+		position relative
+		text-align right
+		transition all 0.4s ease
+		&:hover
+			opacity 0.8
+		span
+			background url(routImg+"oportunity.jpg") no-repeat
+			height 7px
+			left 24px
+			position absolute
+			top 21px
+			width 14px
+.oprty-desarr
+	right 113px
+	top 22px
+	.oprty-img
+		background-position oportunidadDesarrollo
+	a
+		background #e6c31d
+		span
+			background-position iconOpoDesarrollo
+.oprty-liber
+	bottom 58px
+	right 20px
+	.oprty-img
+		background-position oportunidadLibertad
+	a
+		background #db8f1b
+		span
+			background-position iconOpoLibertad
+.oprty-salud
+	left 48px
+	top 191px
+	.oprty-img
+		background-position oportunidadSalud
+	a
+		background #cdd522
+		span
+			background-position iconOpoSalud
+			height 14px
+			left auto
+			right -7px
+			top 4px
+			width 7px
+#personalDev
+	.quot-left
+		background-position quoteRightYellow
+	.quot-right
+		background-position quoteLeftYellow
+#libertyFinance
+	.oporImg
+		background-position pyramidLibertad
+#healthTrue
+	.oporImg
+		background-position pyramidSalud
+	.quot-left
+		background-position quoteRightGreen
+	.quot-right
+		background-position quoteLeftGreen
+.quotes
+	margin 0 auto
+	padding-top 36px
+	text-align center
+	width 328px
+	p
+		margin-bottom 6px
+		text-align center
+	small
+		color #919191
+		display block
+		font-size 12px
+		font-weight 700
+	.quot-left,.quot-right
+		background url(routImg+"oportunity.jpg") quoteLeft no-repeat
+		display inline-block
+		*display inline
+		height 25px
+		vertical-align top
+		width 26px
+		*zoom 1
+	.quot-left
+		margin-right 4px
+	.quot-right
+		background-position quoteRight
+		margin-left 4px
+.ctn-pdfs
+	background #FFF
+	bottom 16px
+	left 32px
+	position absolute
+	text-align center
+	width 392px
+	.lpdf
+		//float left
+		display inline-block
+		*display inline
+		margin-left 6px
+		vertical-align top
+		width 126px
+		*zoom 1
+		&:first-child
+			margin-left 1px
+	h4
+		color #919191
+		font-family family2
+		font-size 12px
+		font-weight 700
+		line-height 13px
+		margin 0 0 10px
+		height 26px
+		text-align center
+	a
+		background url(routImg+"icon-set.png") iconPdf no-repeat
+		display block
+		height 53px
+		margin 0 auto
+		width 53px
+/*  Carrito */
+.ctn-carsteps
+	height 39px
+	margin 0 auto
+	margin-bottom 24px
+	position relative
+	width 412px
+.list-csteps
+	height 39px
+	position relative
+	width 388px
+	z-index 2
+	li
+		float left
+		font-family family2
+		width 103px
+		&.active
+			.cstep
+				background-position stepCarHover
+			p
+				color #db8f1b
+		&.fix
+			width 78px
+			p
+				padding-left 10px
+				text-align left
+				width auto
+	.cstep
+		background url(routImg+"icon-set.png") stepCar no-repeat
+		color #FFF
+		float left
+		font-size 16px
+		height 39px
+		line-height 39px
+		text-align center
+		width 39px
+	p
+		color #d9d9d9
+		float left
+		font-size 12px
+		padding-top 3px
+		text-align center
+		width 64px
+.hr-csteps
+	background #d9d9d9
+	height 1px
+	left 0
+	position absolute
+	top 19px
+	width 310px
+	z-index 1
+.emptyCar
+	color #9C9C9C
+	font-size 13px
+	padding-top 20px
+	text-align center
+	a
+		color #DB8F1B
+		&:hover
+			text-decoration underline
+/* Paso 1 - Carrito */
+.ctn-step1
+	margin 0 auto
+	width 624px
+input[type="text"].inptcant
+	color #8a8a8a
+	height 13px
+	line-height 13px
+	padding 5px 8px
+	width 38px
+.head-cardetail
+	background #c4c4c4
+	height 28px
+	width 100%
+	li
+		border-left 1px solid #b1b1b1
+		color #FFF
+		float left
+		font 700 14px/28px family2
+		padding 0 10px
+		text-align center
+		&:first-child
+			border none
+.scroll-detail
+	background #F6F6F6
+	height 197px
+	margin-bottom 8px
+	overflow hidden
+	position relative
+	.viewport
+		height 197px
+		width 612px
+	.track, .scrollbar
+		height 195px !important
+	.tbl-detail
+		width 612px
+	.scrollbar.disable
+		border none
+		.thumb
+			display none
+.tbl-detail
+	tr
+		background #f6f6f6
+		border-top 1px solid #FFF
+		&:first-child
+			border none
+	td
+		color #8a8a8a
+		font-family family2
+		padding 4px 10px
+		text-align center
+		word-break break-all
+		word-wrap break-word
+		font-size 12px
+	a
+		color #db8f1b
+.ctn-summpaids
+	.btn-cart
+		float right
+		margin-top 46px
+.tbl-summpaids
+	float left
+	width 198px
+	tr
+		background #f6f6f6
+	td
+		color #8a8a8a
+		font-family family2
+		font-size 12px
+		padding 5px 10px
+		text-align center
+.trSumm
+	background #db8f1b !important
+	td
+		color #FFF
+/* Paso 2 */
+#userRegister
+	margin 0 auto
+	width 660px
+	.control-group
+		margin-bottom 10px
+	.control
+		padding-top 4px
+		text-align right
+#userLogin
+	&.ctn-cuenta
+		padding-top 50px
+		.cuenta-opt
+			padding 12px 0 36px
+.step2-left
+	float left
+	width 290px
+.step2-right
+	float right
+	width 290px
+.step2-opt
+	margin 0 auto 14px
+	width 252px
+/* Paso 3 */
+.ctn-step3
+	margin 0 auto
+	width 758px
+	h2
+		color #db8f1b
+		font-size 13px
+		line-height 14px
+		margin-bottom 10px
+	.frm-step3
+		height 224px
+	.control
+		padding-top 28px
+		text-align right
+	.btn-fuxion
+		line-height 14px
+		padding 7px 16px
+	.btnAddress
+		padding 7px
+		transition all 0.4s ease
+.ctn-address
+	display none
+	height 148px
+	padding-top 24px
+.step3-left
+	float left
+	width 258px
+.step3-right
+	float right
+	margin-left 68px
+	width 432px
+/* Paso 4 */
+.ctn-step4
+	margin 0 auto
+	padding-top 12px
+	width 340px
+	.tbl-summpaids
+		float none
+		margin 0 auto 34px
+	h2
+		color #db8f1b
+		font-size 24px
+		margin-bottom 36px
+		text-align center
+	p
+		color #8a8a8a
+		font-size 13px
+		margin-bottom 32px
+		text-align center
+		span
+			display block
+			font-size 20px
+			font-weight 700
+			padding-top 5px
+		a
+			color #DB8F1B
+			font-weight 700
+			&:hover
+				text-decoration underline
+.ctn-mpaid
+	margin-bottom 26px
+	padding 0 10px
+/* Cuenta */
+.ctn-cuenta
+	margin 0 auto
+	width 304px
+	h2
+		color #DB8F1B
+		font-family family2
+		font-size 20px
+		margin-bottom 50px
+		padding-top 42px
+		text-align center
+	.inpt-medium
+		height 14px
+		padding 8px 12px
+		width 280px
+	.control
+		text-align center
+.cuenta-opt
+	padding 12px 0 60px
+	text-align right
+	a
+		color #DB8F1B
+		text-decoration underline
+		&:hover
+			opacity 0.8
+.ctn-cuentanav
+	background url(routImg+"bg-shadow.png") repeat-y right top
+	float left
+	font-family family3
+	height 414px
+	padding-right 17px
+	width 122px
+.cuenta-nav
+	li
+		border-bottom 1px solid #f0f0f0
+		text-align center
+		&:last-child
+			border none
+		&.active
+			border-bottom 2px solid #008fd1
+			a
+				color #58b7b2
+	a
+		color #a0a0a0
+		display block
+		font-size 14px
+		line-height 16px
+		padding 16px 4px
+		&:hover
+			color #58b7b2
+.cuenta-det
+	float left
+	padding 60px 0 0 20px
+	width 654px
+	h2
+		color #DB8F1B
+		font-family family2
+		font-size 14px
+		margin-bottom 16px
+	.control
+		padding-top 24px
+	.tbl-detail
+		td
+			font-size 13px
+			line-height 15px
+			padding 6px 10px
+	.tdTotal
+		width 130px
+		color #8A8A8A !important
+	li.tdState
+		width 130px
+		color #FFF !important
+	li.tdTotal
+		color #FFF !important
+/* Olvido Contraseña */
+.ctn-forgetPass
+	margin 0 auto
+	width 430px
+	padding-top 18px
+	h2
+		color #DB8F1B
+		font-family family2
+		font-size 20px
+		margin-bottom 12px
+		text-align center
+	p
+		font-size 13px
+		margin-bottom 32px
+		text-align justify
+.frm-forgetPass
+	margin 0 auto
+	width 290px
+	.control-group
+		margin-bottom 26px
+.ctn-confForget
+	margin 0 auto
+	width 430px
+	padding-top 80px
+	text-align center
+	h2
+		color #DB8F1B
+		font-family family2
+		font-size 20px
+		margin-bottom 46px
+	p
+		font-size 13px
+		margin-bottom 50px

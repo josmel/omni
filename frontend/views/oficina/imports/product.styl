@@ -1,0 +1,366 @@
+/**
+* Inicio,Fuxion,Preguntas CSS
+* @class Productos
+* @module landing.css
+*/
+/*
+*	Listado de Categorías
+*/
+.pcateg-title
+	border-radius 5px 5px 0 0
+	background #868686
+	background unquote("url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzllOWU5ZSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM4Njg2ODYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)")
+	background -moz-linear-gradient(top,  #9e9e9e 0%, #868686 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#9e9e9e), color-stop(100%,#868686))
+	background -webkit-linear-gradient(top,  #9e9e9e 0%,#868686 100%)
+	background -o-linear-gradient(top,  #9e9e9e 0%,#868686 100%)
+	background -ms-linear-gradient(top,  #9e9e9e 0%,#868686 100%)
+	background linear-gradient(to bottom,  #9e9e9e 0%,#868686 100%)
+	color #FFF
+	font-size 14px
+	font-weight 700
+	height 27px
+	line-height 15px
+	padding 13px 0 0 34px
+	position relative
+	&.fix
+		height 35px
+		padding-top 5px
+	span
+		background url(routImg+"sprites-productos.png") -245px 0
+		height 23px
+		left 6px
+		position absolute
+		top 8px
+		width 24px
+.prod-category
+	width 172px
+	float left
+	a
+		cursor pointer
+	li:hover, li.active
+		h4
+			color #383838
+		>ul
+			max-height 500px
+		>a
+			color #383838
+.pcateg-list
+	border-color #e7e7e7
+	border-radius 0 0 5px 5px
+	border-style solid
+	border-width 0 1px 1px 1px
+	margin-bottom 6px
+	padding 0 1px
+	h4
+		border-bottom 1px solid #e7e7e7
+		color #868686
+		cursor pointer
+		font-size 12px
+		font-weight 400
+		line-height 14px
+		padding 6px
+		&.last
+			border none
+	a 
+		color #8d8d8d
+	i
+		margin-left -10px
+		&:before
+			content "● "
+.pcateg-slist
+	font-weight normal
+	transition max-height .5s
+	max-height 0
+	padding-left 16px
+	overflow hidden
+	>li
+		color #8d8d8d
+		font-size 12px
+		line-height 13px
+		padding 5px 0
+		&:first-child
+			padding-top 7px
+		ul
+			padding-left 11px
+			padding-right 5px
+			max-height 0
+			overflow hidden
+			transition max-height .5s
+			li
+				margin-top 11px
+				line-height 12px
+				padding-left 7px
+				a 
+					color #8d8d8d
+				i
+					margin-left -10px
+					&:before
+						content "● "
+#searchProd
+	margin-bottom 8px
+	position relative
+	label
+		background url(routImg+"sprites-productos.png") -91px -443px
+		height 12px
+		left 5px
+		position absolute
+		top 6px
+		width 11px
+	input
+		background #FFF
+		border 1px solid #DDD
+		border-radius 4px
+		color #797979
+		font-size 12px
+		height 17px
+		line-height 17px
+		padding 3px 3px 3px 20px
+		width 147px
+/* Listado de Productos */
+.store-list
+	float right
+	width 760px
+.typ-lstore
+	float left
+	padding 10px 0 0 6px
+	li
+		float left
+		margin-left 20px
+		&:first-child
+			margin 0
+	a
+		color #b2b2b2
+		display block
+		font-size 12px
+		line-height 14px
+		padding 1px 0
+		padding-left 19px
+		position relative
+		&.active, &:hover
+			color #6b6b6b
+			.icon-grid
+				background-position -121px -42px
+			.icon-details
+				background-position -269px 0
+	i
+		left 0
+		position absolute
+		top 1px
+.ctn-lstore
+	border 1px solid #e8e8e8
+	margin auto
+	width 758px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.box
+		width 25%
+		*width 24%
+		height 315px
+		float left
+		border-bottom 1px solid #e8e8e8
+		border-left 1px solid #e8e8e8
+		margin-left -1px
+		margin-top -1px
+		color #686868
+		position relative
+		.btn-orange, span.warning
+			display none
+		&.lista
+			width 748px
+			height 150px
+			padding-left 10px
+			span.warning
+				color red
+				font-size 10px
+				position absolute
+				right 15px
+				top 103px
+				display block
+				font-weight normal
+			.ctn-storeImg
+				float left
+				margin-right 25px			
+			h2,h3, h4
+				text-align left
+				float left
+				width 550px
+			h2
+				margin-left -15px
+				padding 10px 0 0
+				width 598px
+				&:before
+					content "► "
+					color #db8f1b
+			h3.precio
+				font-weight bold
+				width auto
+				margin-right 10px
+			h4
+				width auto
+				clear right
+				padding-top 2px
+			h4.points
+				width 550px
+			div.q
+				float left
+				position absolute
+				top 60px
+				right 224px
+				font-weight bold
+				a
+					display none
+			.btn-orange
+				display block
+				padding 0 4px
+				position absolute
+				right 16px
+				top 43px
+		h2
+			font-size 12px
+			line-height 12px
+			margin-top 14px
+			padding 0 4px
+			text-align center
+			a
+				color #686868
+		h3
+			font-size 11px
+			font-weight normal
+			text-align center
+			margin-top 11px
+			span
+				font-weight bold
+			&.precio
+				font-size 15px
+				color #383838
+		h4
+			font-size 11px
+			color #9a9a9a
+			text-align center
+			font-weight normal
+			margin 11px 0 0 0
+		.q
+			font-size 11px
+			color #9a9a9a
+			line-height 21px
+			text-align left
+			padding-left 5px
+			height 21px
+			margin-top 10px
+			position relative
+			input
+				background-color #e9e9e9
+				border none
+				border-right 1px solid #bababa
+				border-top 1px solid #bababa
+				color #9a9a9a
+				font-size 13px
+				height 18px
+				line-height 21px
+				margin 0 0 0 5px
+				text-align center
+				width 29px
+			a
+				width 62px
+				display block
+				position absolute
+				right 0
+				top 0
+				text-align left 
+				margin-right 20px
+				height 21px
+				line-height 21px
+				transition opacity .3s
+				color #9a9a9a
+				cursor pointer
+				i
+					position absolute
+					right 0
+					top 0
+					margin-top 2px
+				&:hover
+					text-decoration underline
+					i
+						opacity .7
+		h4.points
+			font-size 13px
+	.ctn-storeImg
+		display block
+		width 138px
+		height 122px
+		margin 11px auto 0
+		position relative
+		z-index 1
+		img
+			width 138px
+			height 122px
+			display block
+.head-lstore
+	background #f4f4f4
+	border-radius 5px 5px 0 0
+	height 32px
+	margin-bottom 1px
+	padding 8px 12px 0
+	h2
+		color #383838
+		float left
+		font-size 13px
+		font-weight 700
+		line-height 13px
+		width 276px
+		span
+			color #b2b2b2
+			display block
+			font-size 12px
+			font-weight normal
+			line-height 12px
+			padding-top 1px
+	fieldset
+		float right
+		padding-top 8px
+		width 228px
+		label
+			color #6b6b6b
+			float left
+			font-size 12px
+			line-height 15px
+			padding-top 2px
+		select
+			border 1px solid #6b6b6b
+			color #6b6b6b
+			float left
+			font-size 12px
+			margin-left 8px
+.pager
+	width 100%
+	clear both
+	padding-top 20px
+	padding-bottom 20px
+	height 20px
+	.wrapper
+		float right
+		height 20px
+		a, span
+			color #7d7d7d
+			display block
+			float left
+			font-size 11px
+			line-height 20px
+			margin-left 5px
+			transition color .4s ease
+		a
+			&:hover, &.active
+				color #db8f1b
+			&.active
+				font-weight bold
+.imgCart
+	position absolute
+	width 138px
+	height 122px
+	z-index 9999

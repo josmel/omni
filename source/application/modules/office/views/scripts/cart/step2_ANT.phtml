@@ -1,0 +1,99 @@
+<div class="white-bg">
+    <?php echo $this->partial('_partial/_siteBar.phtml', $this)?>
+    <header class="head-car">
+        <h2>DIRECCIÓN DE ENVÍO</h2>
+        <p class="descDir">Seleccione la dirección donde quieres recibir tu compra. Si no está, ingrese una nueva dirección<span></span></p>
+    </header>
+    <div class="row list-address">
+        <?php foreach($this->addresses as $address) : ?>
+        <div class="address">
+            <label class="ioption"><input type="radio" name="radAddress" value="<?php echo $address['iddire']; ?>" <?php echo (!empty($this->selAddress) && $address['iddire'] == $this->selAddress['iddire']) ? 'checked' : ''; ?> />Usar esta dirección</label>
+            <div class="ctn-flipcar">
+                <div class="desc-address flipper flp-front">
+                    <div class="ctnAddress">
+                        <dl>
+                            <dt>Contacto:</dt>
+                            <dd><?php echo ($address['nomcont']!="")?$address['nomcont']:"&nbsp;"; ?></dd>
+                            <dt>Ubigeo:</dt>
+                            <dd><?php echo ($address['ubigeoName']!="")?$address['ubigeoName']:"&nbsp;"; ?></dd>
+                            <dt>Dirección:</dt>
+                            <dd><?php echo ($address['destvia']!=""||$address['desdire']!="")?$address['abbrtvia'].' '.$address['desdire'].' '.$address['numdire'].' Int. '.$address['intdire']:"&nbsp;"; ?></dd>
+                            <dt>Referencia:</dt>
+                            <dd><?php echo ($address['refdire']!="")?$address['refdire']:"&nbsp;"; ?></dd>
+                            <dt>Teléfono:</dt>
+                            <dd><?php echo ($address['telefono']!="")?$address['telefono']:"&nbsp;"; ?></dd>
+                        </dl>
+                    </div>
+                    <p class="alg-right">
+                        <a href="javascript:;" class="lnk-address">Editar Dirección</a>
+                    </p>
+                </div>
+                <div class="desc-address flipper flp-back">
+                    <p class="alg-right mb4"><a href="javascript:;" class="lnk-address">Cancelar</a></p>
+                    <div class="ctnChangeAddress"></div>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+        <div class="address">
+            <label class="ioption"><input type="radio" name="radAddress" value="-1" />Entrega en Tienda</label>
+        </div>
+        <div class="address fix">
+            <label class="ioption"><input type="radio" name="radAddress" value="new" <?php echo empty($this->selAddress) ? 'checked' : ''; ?>/>Usar nueva dirección de envío</label>
+            <form method="POST" id="frmAddress">
+                <?php echo $this->formAddress; ?>
+                <input id="hidAddress" type="hidden" name="address" />
+                <div class="alg-right pt24">
+                    <button class="btn-orange" type="submit"><i class="sprites-p arrow-boxed"></i>Ir a forma de envío</button><?php /*<span class="btn-helper">Podrás revisar tu compra antes.</span> */?>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script id="tplAddressFront" type="text/template">
+    <dl>
+        <dt>Contacto:</dt>
+        <dd>{{ if(nomcont!=null && nomcont!=""){ }} {{= nomcont }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Ubigeo:</dt>
+        <dd>{{ if(ubigeoName!=null && ubigeoName!=""){ }} {{= ubigeoName }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Dirección:</dt>
+        <dd>{{ if((destvia!=null && destvia!="")||(desdire!=null && desdire!="")){ }} {{= abbrtvia+" "+desdire+" "+numdire+' Int. '+intdire }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Referencia:</dt>
+        <dd>{{ if(refdire!=null && refdire!=""){ }} {{= refdire }} {{ }else{ }} &nbsp; {{ } }}</dd>
+        <dt>Teléfono:</dt>
+        <dd>{{ if(telefono!=null && telefono!=""){ }} {{= telefono }} {{ }else{ }} &nbsp; {{ } }}</dd>
+    </dl>
+</script>
+<script id="tplAddressBack" type="text/template">
+    <form class="frmChangeAddress">
+        <div class="control-group">
+            <label for="nomcont" class="control-label">Nombre de Contacto:</label><div class="controls"><input type="text" id="nomcont" name="nomcont" value="{{= nomcont }}"><input name="iddire" type="hidden" value="{{= iddire }}" /></div>
+        </div>
+        <div class="control-group">
+            <label for="desdire" class="control-label w136">Tipo de Dirección:</label>
+            <div class="controls-inline">
+                <div class="controls first"><select class="slcSmall" id="codtvia" name="codtvia">
+                        {{ _.map(yOSON.streetType,function(value,key){ }}
+                        <option value="{{= key }}" {{ if(key==codtvia){ }}selected="selected"{{ } }} >{{= value }}</option>
+                        {{ }); }}
+                    </select>
+                </div>
+                <div class="controls w172"><input class="txtMedium" type="text" id="desdire" name="desdire" value="{{= desdire }}" /></div>
+            </div>
+        </div>
+        <div class="cgroup-inline">
+            <div class="control-group first"><label for="numdire" class="control-label w136">Número:</label><div class="controls"><input type="text" class="txtSmall inptcant" id="numdire" name="numdire" value="{{= numdire }}" /></div></div>
+            <div class="control-group">
+            <label for="intdire" class="control-label">Número Interior:</label>
+            <div class="controls"><input type="text" class="txtSmall inptcant" id="intdire" name="intdire" value="{{= intdire }}" /></div>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="refdire" class="control-label">Referencia:</label>
+            <div class="controls"><input type="text" id="refdire" name="refdire" value="{{= refdire }}" /></div>
+        </div>
+        <p class="alg-center mt4">
+            <button class="save-address" type="submit">GUARDAR</button>
+        </p>
+    </form>
+</script>

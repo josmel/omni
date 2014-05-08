@@ -1,0 +1,138 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+			a(href='javascript:;', class="btn-home", title="Home")
+				span
+				| Home
+	#wrapper.row
+		ul.menu-colors
+			li
+				a(href='javascript:;', class="", title="Como participar")
+					| Como<br>participar
+					span.people
+			li
+				a(href='javascript:;', class="skyblue", title="Como participar")
+					span.numbers
+					| Determina<br>tu estado<br>fisico actual
+			li
+				a(href='javascript:;', class="orange", title="Como participar")
+					span.numbers.two
+					| registrate
+			li
+				a(href='javascript:;', class="green", title="Como participar")
+					span.numbers.three
+					| define tu<br>alimentación
+		.content-desafio
+			.img-step
+				img(src="http://local.desafio/static/img/desafio/elements/paso1-a.jpg", alt="Desafío Fuxion",width="750",height="240")
+			.bg-green
+				span
+				h2 medidas
+			form(id="frmData", name="frmData", method="post", action="" , class="frm-data")
+				.bg-blue
+					span
+					p Te debes pesar  y medir en una farmacia o gimnasio (Con wincha de<br>comprobación que consigue estatura, peso y % de grasa corporal)<br>antes de iniciar reto
+				.frm-group
+					label.control-label GENERO
+					.frm-control
+						select
+							option Seleccione
+							option Seleccione 1
+							option Seleccione 2
+					span.help-required *
+				.frm-group
+					label.control-label ¿HACES DEPORTE?
+					.frm-control
+						select
+							option Seleccione
+							option Seleccione 1
+							option Seleccione 2
+				.frm-group
+					label.control-label MEDIDAS
+					.controls-inline
+						.controls
+							.frm-control
+								select.slc-small
+									option Talla
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+						.controls
+							.frm-control
+								select.slc-small
+									option Peso
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+						.controls
+							.frm-control
+								select.slc-small
+									option Muñeca
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+						.controls
+							.frm-control
+								select.slc-medium
+									option Indice de grasa
+									option Seleccione 1
+									option Seleccione 2
+							span.help-required *
+							a(href="javascript:;", class="help-circle") ?
+				.frm-group
+					label.control-label MASA MUSCULAR
+					.iopinline
+						.ioption
+							label
+								| Alta
+								input(type="radio", id="txtMasa", name="txtMasa")
+						.ioption
+							label
+								| Media
+								input(type="radio", id="txtMasa", name="txtMasa")
+						.ioption
+							label
+								| Baja
+								input(type="radio", id="txtMasa", name="txtMasa")
+				.cgroup-inline
+					.frm-group
+						label.control-label CINTURA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label CADERA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+				.cgroup-inline
+					.frm-group
+						label.control-label ESPALDA
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+					.frm-group
+						label.control-label PECHO
+						.frm-control
+							select.slc-small
+								option 90 CM
+								option Seleccione 1
+								option Seleccione 2
+						span.help-required *
+				p.color-orange.mt20 (*) Campos obligatorios
+				.frm-group.row
+					button(type="submit", id="sbmSend", class="btn", title="Siguiente") Siguiente

@@ -1,0 +1,98 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		#main-slider
+			.slide-main
+				.ctn-carsteps
+					.hr-csteps
+					ul.list-csteps
+						li
+							span.cstep 1
+							p Productos
+						li
+							span.cstep 2
+							p Resumen
+						li.active
+							span.cstep 3
+							p Envío
+						li.fix
+							span.cstep 4
+							p Pago
+				.ctn-step2
+					form
+						.iopinline.step2-opt
+							label(class="ioption active")
+								input(type="radio")
+								| Soy nuevo comprador
+							label(class="ioption")
+								input(type="radio")
+								| Ya soy cliente
+						.row
+							h2 DATOS PERSONALES
+							.step2-left
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Nombres")
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Apellidos")
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Email")
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Contraseña")
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Confirmar Contraseña")
+								.control-group.last
+									label.control-label.fix Género:
+									.controls.iopinline
+										label(class="ioption")
+											input(type="radio")
+											| Masculino
+										label(class="ioption")
+											input(type="radio")
+											| Femenino
+							.step2-right
+								.control-group
+									label.control-label.fix Estado Civil:
+									.controls.iopinline
+										label(class="ioption")
+											input(type="radio")
+											| Soltero
+										label(class="ioption")
+											input(type="radio")
+											| Casado
+								.control-group
+									input(type="text",class="inpt-medium",placeholder="Documento de Identidad")
+								.control-group
+									input(class="inpt-medium datepicker",type="text",placeholder="Fecha de Nacimiento")
+								.control-group.last
+									.ctn-captcha
+										img(src="img/element/catpcha.jpg",width="215",height="46")
+										a(class="btn-refresh",href="javascript:;") Actualizar
+											span
+									.ctn-inptcaptcha
+										span
+										input(type="text",placeholder="Ingrese el código de la imagen")
+					.control
+						button(type="submit",class="btn-lnk btn-cart") Siguiente
+							span
+	nav.main-menu
+		ul
+			li
+				a(class="active",href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(href="contactame.html",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

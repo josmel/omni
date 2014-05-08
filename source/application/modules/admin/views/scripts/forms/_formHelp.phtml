@@ -1,0 +1,40 @@
+<h3 class="admin-title"><?php echo $this->element->getView()->titulo?></h3>
+<div class="ctn-back">
+    <a title="Volver al listado de Ayuda" href="/help">« Volver al listado de Ayuda</a>
+</div>
+<div class="frm-panel">
+
+    <form id="frm-article" action="<?php echo $this->element->getView()->action?>" 
+          method="post" Enctype="multipart/form-data">
+
+        
+        <div class="control-group">
+            <label class="control-label" for="pregunta">Pregunta:</label>
+            <div class="controls">
+                <?php echo $this->element->pregunta; ?>
+                <?php echo $this->element->idayuda; ?> 
+            </div>
+	</div>
+        
+        <div class="control-group">
+            <label class="control-label" for="respuesta">Respuesta:</label>
+            <div class="controls">
+                <?php echo $this->element->respuesta; ?>
+            </div>
+        </div>
+        
+        
+        <div class="control-group">
+            <label class="control-label" for="vchestado">Activo:</label>
+            <div class="controls">
+                <?php echo $this->element->vchestado; ?>
+            </div>
+	</div>
+        
+	<div class="control-group last">
+            <div class="control">
+                <button class="btn-admin" type="submit"><?php echo $this->element->getView()->submit?></button>
+            </div>
+	</div>
+   </form>
+</div>

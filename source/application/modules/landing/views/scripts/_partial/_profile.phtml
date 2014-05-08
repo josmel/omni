@@ -1,0 +1,12 @@
+<div class="fx-profile">    
+    <div class="prof-img"><img src="<?php echo DINAMIC_URL.'businessman/208x208/'.$this->businessman['picture']?>" width="208" height="208"/></div>
+    <h2 class="prof-name">
+        <?php echo $this->businessman['nomempr']." ".$this->businessman['appempr']." ".$this->businessman['apmempr'] ?>
+        <br>(empresario independiente)
+       <?php  echo $this->urlface; ?>
+    </h2>
+    <p class="prof-address"><?php echo  isset($this->businessman['cell']) ? empty($this->businessman['cell']) ? $this->businessman['phone'] : $this->businessman['cell'] : ''?> <br><a href="mailto:<?php echo $this->businessman['emaempr']?>"><?php echo $this->businessman['emaempr']?></a></p>
+    <ul class="prof-social">
+        <?php if(!empty($this->businessman['urltwitter'])) : ?><li><a href="<?php echo $this->urltwitter.''.$this->businessman['urltwitter']?>" title="Twitter" target="_blank" class="twt"></a>TWITTER</li><?php endif; ?><?php if(!empty($this->businessman['urlfacebook'])) : ?><li><a href="<?php echo $this->urlfacebook.''.$this->businessman['urlfacebook']?>"  target="_blank" title="Facebook" class="fb"></a>FACEBOOK</li><?php endif; ?><?php if(!empty($this->businessman['urlyoutube'])) : ?><li><a href="<?php echo $this->urlyoutube.''.$this->businessman['urlyoutube']?>"  target="_blank" title="Youtube" class="ytb"></a>YOUTUBE</li><?php endif; ?><?php if(!empty($this->businessman['urlblog'])) : ?><li><a href="<?php echo $this->businessman['urlblog']?>" title="Blog"  target="_blank" class="blg"></a>BLOG</li><?php endif; ?>
+    </ul>
+</div>

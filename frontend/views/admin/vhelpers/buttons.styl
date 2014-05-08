@@ -1,0 +1,41 @@
+/**
+* Button Section
+* @class Button
+* @module base.css
+*/
+.btn-admin
+	color #fff
+	border 1px solid borderBtn
+	background gradientInit
+	background -moz-linear-gradient(top,  gradientInit 0%, gradientFinish 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,gradientInit), color-stop(100%,gradientFinish))
+	background -webkit-linear-gradient(top,  gradientInit 0%,gradientFinish 100%)
+	background -o-linear-gradient(top,  gradientInit 0%,gradientFinish 100%)
+	background -ms-linear-gradient(top,  gradientInit 0%,gradientFinish 100%)
+	background linear-gradient(top,  gradientInit 0%,gradientFinish 100%)
+	box-shadow 0 1px 0 rgba(255, 255, 255, 0.2) inset
+	font-size 11px
+	font-weight 700
+	line-height 12px
+	padding 7px 14px
+	position relative
+	filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='"+gradientInit+"', endColorstr='"+gradientFinish+"',GradientType=0 )")
+	&:hover
+		background gradientFinish
+		background -moz-linear-gradient(top,  gradientFinish 0%, gradientInit 100%)
+		background -webkit-gradient(linear, left top, left bottom, color-stop(0%,gradientFinish), color-stop(100%,gradientInit))
+		background -webkit-linear-gradient(top,  gradientFinsh 0%,gradientInit 100%)
+		background -o-linear-gradient(top,  gradientFinish 0%,gradientInit 100%)
+		background -ms-linear-gradient(top,  gradientFinish 0%,gradientInit 100%)
+		background linear-gradient(top,  gradientFinish 0%,gradientInit 100%)
+		text-decoration none
+		filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='"+gradientFinish+"', endColorstr='"+gradientInit+"',GradientType=0 )")
+.btn-file
+	padding-left 18px
+	span
+		background url(routImg+"icon-set.png") icFile
+		height 7px
+		left 5px
+		position absolute
+		top 10px
+		width 7px

@@ -1,0 +1,282 @@
+<div class="white-bg">
+    <div class="row ptb20">
+        <div class="desc-static">
+            <div class="mb20">
+                <h2 class="titfx">Promociones</h2>
+                <section id="slider-prom" class="slides">
+                    <a class="buttons prev" href="javascript:;">left</a>
+                    <div class="viewport">
+                        <ul class="overview">
+                            <?php foreach ($this->bannersHome as $value): ?>
+                            <li>
+                                <a href="<?php echo $value["url"]; ?>" title="<?php echo $value['titulo']; ?>" target="_blank">
+                                    <img width="604" height="300" alt="<?php echo $value['titulo']; ?>" src="<?php echo DINAMIC_URL . 'banner/' . $value['carpeta'] . '/' . $value['imagen']; ?>"/>
+                                </a>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                    <a class="buttons next" href="javascript:;">right</a>
+                </section>
+            </div>
+            <!--
+            <iframe width="604" height="600" scrolling="no" class="ifr-inicio" name="ifrInicio" frameborder="0" ></iframe>
+            -->
+            <h2 class="titfx">Como Estoy</h2>
+                <div class="widget-cnt border">
+                    <div class="widget-profile">
+                            <table border="0">
+                                <tr>
+                                    <td><img src="<?php echo $this->picture ?>" class="profile-pic"/></td>
+                                    <td colspan="2">
+                                        <div class="welcomeMsg">
+                                            <b>Hola:  <?php echo $this->data['empresario']['nomempr'] . ' ' . $this->data['empresario']['appempr'] . ' ' . $this->data['empresario']['apmempr'] ?></b>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-qr"></i></td>
+                                    <td>Código:</td>
+                                    <td><?php echo $this->data['empresario']['codempr'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-check-green"></i></td>
+                                    <td>Activo:</td>
+                                    <td><?php
+                                        if ($this->data['activo'] == false) {
+                                            echo 'NO';
+                                        } elseif ($this->data['activo'] == true) {
+                                            echo 'SI';
+                                        }
+                                        ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-cycle"></i></td>
+                                    <td>Puntos de Ciclo:</td>
+                                    <td><?php echo $this->data['puntosCiclo'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-pie"></i></td>
+                                    <td>Puntos de Semana:</td>
+                                    <td><?php echo $this->data['puntosSemana'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-reload"></i></td>
+                                    <td>Ciclo:</td>
+                                    <td><?php echo $this->data['ciclo'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-hat"></i></td>
+                                    <td>Calificado:</td>
+                                    <td><?php
+                                        if ($this->dataQualifiedBusinessman == false) {
+                                            echo 'NO';
+                                        } elseif ($this->dataQualifiedBusinessman == true) {
+                                            echo 'SI';
+                                        }
+                                        ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-calendar"></i></td>
+                                    <td>Semana Actual:</td>
+                                    <td><?php echo $this->data['semanaActual'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="sprites-p icon-medal"></i></td>
+                                    <td>Rango al que postulas:</td>
+                                    <td><?php
+                                        if (isset($this->dataBusinessmanRange['siguiente']['desrang'])) {
+                                            echo $this->dataBusinessmanRange['siguiente']['desrang'];
+                                        }
+                                        ?></td>
+                                </tr>
+                            </table>
+                        </div>
+                     <div class="widget-myNet">
+                            <h3 class="center-title">MI RED BINARIA</h3>
+                            <div class="speedometer-cnt sprites-p bg-widget-red">
+                                <div class="sprites-p bg-widget-speedometer"></div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td><?php echo $this->data['saldoInicialIzquierda'] ?></td>
+                                    <td>Saldo Inicial</td>
+                                    <td><?php echo $this->data['saldoInicialDerecha'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td><?php
+                                        if (isset($this->dataBusinessmanRange['binarioIzquierdo'])) {
+                                            echo $this->dataBusinessmanRange['binarioIzquierdo'];
+                                        }
+                                        ?></td>
+                                    <td>Puntos Facturados</td>
+                                    <td><?php
+                                        if (isset($this->dataBusinessmanRange['binarioDerecho'])) {
+                                            echo $this->dataBusinessmanRange['binarioDerecho'];
+                                        }
+                                        ?></td>
+                                </tr>
+                                <tr> 
+                                    <td><?php echo $this->SubtotalIzquierdo ?></td>
+                                    <td>Subtotal</td>
+                                    <td><?php echo $this->SubtotalDerecho ?></td>
+                                </tr>
+                                <tr>
+                                    <td><?php echo $this->data['excedenteSemanal'] ?></td>
+                                    <td>Excedente</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr class="big">
+                                    <td class="highlight"><?php echo $this->totalIzquierdo ?> <span>pt</span></td>
+                                    <td><b>Total</b></td>
+                                    <td class="highlight"><?php echo $this->totalDerecho ?> <span>pt</span></td>
+                                </tr>
+                                <tr class="big boxed">
+                                    <td colspan="2" class="cyan">RED MULTINIVEL HOY</td>
+                                    <td><b><?php
+                                            if (isset($this->dataBusinessmanRange['puntosMultinivel'])) {
+                                                echo $this->dataBusinessmanRange['puntosMultinivel'];
+                                            }
+                                            ?> <span>pt</span></b></td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
+                <div class="contentRange">
+                    <h2 class="titfx">Mi próximo rango</h2>
+                    <div class="widget-cnt">
+                        <div class="widget-nextRank">
+                            <div class="nextRank sprites-p bg-widget-nextRange">
+                            </div>
+                            <div class="incomingRank">
+                                    EJECUTIVO
+                            </div>
+                             <div class="points">
+                            <div class="binary">
+                                <p class="textPoints">PUNTOS BINARIOS</p>
+                                <div class="roundedProgBars">
+                                    <div class="bars" id="left">
+                                        <div id="titlePoints">Izquierda</div>
+                                        <div id="lblPoints">
+                                            <div class="col" id="t1">0</div>
+                                            <div class="col" id="t2">
+                                                <div id="tPoints"><?php
+                                    if (isset($this->dataBusinessmanRange['binarioIzquierdo'])) {
+                                        echo $this->dataBusinessmanRange['binarioIzquierdo'];
+                                    }
+                                    ?></div>
+                                                <div id="lPoints">Puntos</div>
+                                            </div>
+                                            <div class="col" id="t3">180</div>
+                                        </div>
+                                    </div>
+                                    <div class="bars" id="right">
+                                        <div id="titlePoints">Derecha</div>
+                                        <div id="lblPoints">
+                                            <div class="col" id="t1">0</div>
+                                            <div class="col" id="t2">
+                                                <div id="tPoints"><?php
+                                                    if (isset($this->dataBusinessmanRange['binarioDerecho'])) {
+                                                        echo $this->dataBusinessmanRange['binarioDerecho'];
+                                                    }
+                                    ?></div>
+                                                <div id="lPoints">Puntos</div>
+                                            </div>
+                                            <div class="col" id="t3">180</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="multilevel">
+                                <p class="textPoints">PUNTOS MULTINIVEL</p>
+                                <div class="multibar">
+                                    <div class="progressBar">
+                                        <div class="activeBar"></div>
+                                    </div> 
+                                    <p id="pointsDesc"><?php
+                                        if (isset($this->dataBusinessmanRange['puntosMultinivel'])) {
+                                            echo $this->dataBusinessmanRange['puntosMultinivel'];
+                                        }
+                                    ?> puntos</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="detalles"><i class="sprites-p arrow-left-silver"></i><span>0 linea de ejecutivo</span><span>1 semana(s) en posición</span></div>
+                        </div>
+                    </div>            
+                </div>  
+            </div>
+            
+        <aside class="side-static">
+            <div class="mb20">
+                <h2 class="titfx">Calendarios de eventos</h2>
+                <div id="calendar"></div>
+            </div>
+            <h2 class="titfx">Hall de la fama</h2>
+            <section id="fadeHall">  
+                <?php foreach ($this->bannersHallFame as $value): ?>
+                    <a href="<?php echo $value["url"]; ?>" title="<?php echo $value['titulo']; ?>" target="_blank">
+                        <img width="300" height="570" alt="<?php echo $value['titulo']; ?>" src="<?php echo DINAMIC_URL . 'banner/' . $value['carpeta'] . '/' . $value['imagen']; ?>"/>
+                    </a>
+                <?php endforeach; ?>
+            </section>
+        </aside>
+    </div>
+    <div class="lowerfooter">
+      <div class="row">
+        <div class="foot-blog">
+          <h3>Blog</h3>
+          <div id="ctn-blog">
+              <?php foreach ($this->blogs as $value): ?>
+              <div class="post">
+                   <h4 class="pst-title"><?php echo $value['titulo']; ?></h4>
+                   <p class="pst-descrip"><?php echo $value['descripcion']; ?></p>
+                   <a class="pst-lnk" href="<?php echo $value['url']; ?>" title="Leer más">Leer más</a>
+              </div>
+              <?php endforeach; ?>
+              <div class="post">
+                   <h4 class="pst-title"><?php echo $value['titulo']; ?></h4>
+                   <p class="pst-descrip"><?php echo $value['descripcion']; ?></p>
+                   <a class="pst-lnk" href="<?php echo $value['url']; ?>" title="Leer más">Leer más</a>
+              </div>
+          </div>
+        </div>
+        <div class="foot-dinamic">
+          <h3>Video</h3>
+          <?php foreach ($this->video as $value): ?>
+            <iframe frameborder="0" width="340" height="206" src="<?php echo $value['url']; ?>"></iframe>
+          <?php endforeach; ?>
+        </div>
+        <div class="foot-social">
+          <h3>Redes Sociales</h3>
+          <ul>
+           <?php /*<!--  <li><a href="javascript:;" title="RSS" class="sprites-p rss"></a></li>
+                 <li class="fix"><a href="javascript:;" title="Foursquare" class="sprites-p foursquare"></a></li>
+            <li><a href="javascript:;" title="Google+" class="sprites-p gplus"></a></li>
+            <li><a href="javascript:;" title="LinkeIn" class="sprites-p linkedin"></a></li>
+           -->*/ ?>
+            <li><a href="https://www.youtube.com/prolifebiotech" title="Youtube" 
+                   class="sprites-p youtube"></a></li>
+            <li><a href="https://www.facebook.com/fuxion" title="Facebook"
+                   class="sprites-p facebook"></a></li>
+            <li><a href="https://twitter.com/fuxionoficial" title="Twitter" class="sprites-p twitter"></a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+<?php echo $this->iframe?>
+<script id="tplEvent" type="text/template">
+<div class="popupEvent">
+    <h2>{{= title}}</h2>
+    <dl>
+        <dt>Fecha:</dt>
+        <dd>{{= fullDate}}</dd>
+        <dt>Lugar:</dt>
+        <dd>{{ if(location!=""){ }} {{= location}} {{ }else{ }} - {{ } }}</dd>
+        <dt>Descripción:</dt>
+        <dd>{{ if(description!=""){ }} {{= _.unescape(description)}} {{ }else{ }} - {{ } }}</dd>
+    </dl>
+</div>
+</script>

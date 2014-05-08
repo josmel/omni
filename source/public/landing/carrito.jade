@@ -1,0 +1,120 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper
+		#main-slider
+			.slide-main
+				.ctn-carsteps
+					.hr-csteps
+					ul.list-csteps
+						li
+							span.cstep 1
+							p Productos
+						li.active
+							span.cstep 2
+							p Resumen
+						li
+							span.cstep 3
+							p Envío
+						li.fix
+							span.cstep 4
+							p Pago
+				.ctn-step1
+					.ctn-cardetail
+						ul.head-cardetail
+							li.tdItem Artículo
+							li.tdPrice Precio
+							li.tdCant Cantidad
+							li.tw120 Total
+						.scroll-detail
+							table.tbl-detail
+								tbody
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Biopro+Sport") Biopro+Sport
+										td.tdPrice S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Vita Energía Chicha") Vita Energía Chicha
+										td.tdPrice S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Vita Energía Chicha") Vita Energía Chicha
+										td.tdPrice S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Vita Energía Chicha") Vita Energía Chicha
+										td.tdPrice S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Biopro+Sport") Biopro+Sport
+										td.tdPrice S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+									tr
+										td.tdItem
+											a(href="javascript:;",title="Biopro+Sport") Biopro+Sport
+										td S/. 115.00
+										td.tdCant
+											input(type="text",name="txtcant[]",class="inptcant")
+										td.tdTotal S/. 230.00
+										td.tdAction
+											a(href="javascript:;",title="Borrar Producto",class="icActions delete")
+					.row.ctn-summpaids
+						table.tbl-summpaids
+							tbody
+								tr
+									td.tdSummEsp Subtotal
+									td.tdSummPrice S/. 460.00
+								tr
+									td.tdSummEsp Impuesto
+									td.tdSummPrice S/. 42.00
+								tr.trSumm
+									td.tdSummEsp TOTAL
+									td.tdSummPrice S/. 502.00
+						button(type="submit",class="btn-lnk btn-cart") Siguiente
+							span
+	nav.main-menu
+		ul
+			li
+				a(class="active",href="javascript:;",title="Inicio") INICIO
+					span
+			li
+				a(href="javascript:;",title="Productos") PRODUCTOS
+					span
+			li
+				a(href="oportunidad.html",title="Oportunidad") OPORTUNIDAD
+					span
+			li
+				a(href="compania.html",title="Compañía") COMPANIA
+					span
+			li
+				a(href="contactame.html",title="Contáctame") CONTACTAME
+					span
+			li
+				a(href="javascript:;",title="Carrito") CARRITO
+					span

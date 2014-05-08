@@ -1,0 +1,112 @@
+/**
+* Forms CSS
+* @class Forms
+* @module forms.css
+*/
+.cgroup-inline
+	margin-bottom 12px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.last
+		margin-bottom 0
+	.control-group
+		float left
+		margin 0
+		& + .control-group
+			margin-left 12px
+.control-group
+	margin-bottom 12px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	&.last
+		margin-bottom 0 !important
+.control
+	text-align center
+.control-label
+	float left
+	padding-top 8px
+	width 86px
+	&.fix
+		padding-top 3px
+.controls
+	margin-left 86px
+.iopinline
+	padding-top 3px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	.ioption
+		float left
+		& + .ioption
+			margin-left 16px
+.ioption
+	display block
+	line-height 15px
+	padding-left 20px
+	position relative
+	input[type="radio"]
+		left 0
+		position absolute
+		top 1px
+.ctn-captcha
+	margin-left 16px
+	position relative
+	width 258px
+	*zoom 1
+	&:before,&:after
+		display table
+		content ""
+		line-height 0
+	&:after
+		clear both
+	img
+		border-color #e2e2e2
+		border-style solid
+		border-width 1px 0 0 1px
+		float left
+	.btn-refresh
+		float left
+	.captcha
+		margin 8px 0 0 18px
+		width 215px
+	.decorCaptcha
+		background url(routImg+"icon-set.png") selCaptcha no-repeat
+		height 29px
+		left 0
+		position absolute
+		top 47px
+		width 18px
+	ul.errors
+		padding-left 20px
+/* Input Widths */
+.inpt-large
+	width 407px
+.inpt-xmedium
+	width 295px
+.inpt-medium
+	width 265px
+.inpt-xsmall
+	width 250px
+.inpt-small
+	width 233px
+/* Select Widths */
+.select-large
+	width 316px
+.select-medium
+	width 210px
+.select-small
+	width 144px

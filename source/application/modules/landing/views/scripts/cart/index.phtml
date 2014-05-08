@@ -1,0 +1,71 @@
+<div id="main-slider" class="fix">
+    <div class="slide-main">
+        <?php echo $this->partial(
+                '_partial/_cartHeader.phtml', 
+                array('cartStep' => 2)
+            );?>
+        
+        <div class="ctn-step1">
+            <?php if (count($this->itemList) > 0) : ?>
+            <form method="POST">
+                <div class="ctn-cardetail">
+                    <ul class="head-cardetail">
+                        <li class="tdItem">Artículo</li>
+                        <li class="tdPrice">Precio</li>
+                        <li class="tdCant">Cantidad</li>
+                        <li class="tw120">Total</li>
+                    </ul>
+                    <div id="scrollCart" class="scroll-detail">
+                        <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                        <div class="viewport">
+                            <div class="overview">
+                                <table class="tbl-detail">
+                                    <tbody>
+                                        <?php foreach ($this->itemList as $item) : ?>
+                                        <tr>
+                                            <td class="tdItem">
+                                                <a href="<?php echo $this->url(array('slug' =>$item->getProduct()->getSlug()), 'productDetail'); ?>" 
+                                                   title="<?php echo $item->getProduct()->getName(); ?>">
+                                                    <?php echo $item->getProduct()->getName(); ?>
+                                                </a>
+                                            </td>
+                                            <td class="tdPrice"><?php echo $this->businessman['simbolo']?>  <?php echo number_format($item->getPrice(), 2, '.', ' '); ?></td>
+                                            <td class="tdCant">
+                                                <input data-price="<?php echo number_format($item->getPrice(), 2, '.', ' '); ?>" type="text" name="txtcant[<?php echo $item->getProduct()->getId(); ?>]" class="inptcant" value="<?php echo $item->getQuantity(); ?>"/>
+                                            </td>
+                                            <td class="tdTotal"><?php echo $this->businessman['simbolo']?>  <?php echo number_format($item->getSubtotal(), 2, '.', ' '); ?></td>
+                                            <td class="tdAction"><a data-id="<?php echo $item->getProduct()->getId(); ?>" href="javascript:;" title="Borrar Producto" class="icActions delete"></a></td>
+                                        </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ctn-summpaids">
+                    <table class="tbl-summpaids">
+                        <tbody>
+                            <tr>
+                                <td class="tdSummEsp">Subtotal</td>
+                                <td class="tdSummPrice tdsubTotal"><?php echo $this->businessman['simbolo']?>  <?php echo $this->subTotal; ?></td>
+                            </tr>
+                            <tr>
+                                <td class="tdSummEsp">Impuesto</td>
+                                <td class="tdSummPrice tdIgv"><?php echo $this->businessman['simbolo']?>  <?php echo $this->igvTotal; ?></td>
+                            </tr>
+                            <tr class="trSumm">
+                                <td class="tdSummEsp">TOTAL</td>
+                                <td class="tdSummPrice tdITotal"><?php echo $this->businessman['simbolo']?>  <?php echo $this->total; ?></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="submit" class="btn-lnk btn-cart">Siguiente<span></span></button>
+                </div>
+            </form>
+            <?php else : ?>
+            <p class="emptyCar">El carrito esta vacío, <a href="/#product">haga click aquí</a> para iniciar su compra. Buena Suerte!</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

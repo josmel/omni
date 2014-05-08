@@ -1,0 +1,125 @@
+<div id="wrapper">
+<div class="row">
+    <div class="left-cnt result-fat diagnostic-fat ">
+        <?php
+        $imgPeso = STATIC_URL . "img/desafio/elements/pesos/";
+        switch ($this->bodyFrameData['state']) {
+            case "Bajo peso": $imgPeso.="bajo.png";
+                break;
+            case "Peso normal": $imgPeso.="normal.png";
+                break;
+            case "Sobrepeso": $imgPeso.="sobrepeso.png";
+                break;
+            case "Obesidad grado1": $imgPeso.="obesidad.png";
+                break;
+            case "Obesidad grado2": $imgPeso.="severa.png";
+                break;
+            case "Obesidad grado3": $imgPeso.="extremo.png";
+                break;
+        }
+        ?>
+        <div class="img-changeweight"><img src="<?php echo $imgPeso; ?>" alt="<?php echo $this->imcData['name']; ?>" width="135" height="250"/></div>
+        <div class="weight-detail side-top">
+            <span><?php echo number_format($this->imcData['imc'], 1, '.', ''); ?> </span>
+            <p>Kg/m2<br>IMC</p>
+        </div>
+        <div class="weight-detail side-right"><span><?php echo $this->bodyFrameData['bfName']; ?></span>
+            <p class="pl">Contextura</p>
+        </div>
+        <div class="weight-detail side-left">  
+                <?php if ($this->pgc): ?>
+                <span><?php echo $this->igcData ?></span>
+                <p>Grasa corporal</p>
+<?php endif; ?>
+        </div>
+        <div class="weight-detail side-bottom">&nbsp<span>
+<?php echo $this->bodyFrameData['minWeight']; ?>Kg - 
+<?php echo $this->bodyFrameData['maxWeight']; ?> Kg</span>
+            <p>Peso ideal<br>Contextura</p>
+        </div>
+        <div class="weight-case">
+            <h3>PESO ACTUAL</h3>
+            <p class="color-green"> <span class="fz"><?php echo $this->weight; ?> </span><br>Kg</p>
+            <p><?php echo mb_strtoupper($this->imcData['name']); ?></p>
+        </div>
+    </div>
+    <div class="fat-box dianostic-box">
+        <p>
+            <strong style="font-size:18px">Tu DIAGNOSTICO es:</strong>
+            <!--              Diagnostico: 
+                          <span class="color-orange">-->
+<?php //echo mb_strtoupper($this->imcData['name']);  ?>
+            <!--              </span>-->
+                <?php //echo $this->imcData['message'];  ?>
+        </p>
+        <h2>POR INDICE DE MASA CORPORAL (IMC)*</h2>
+        <p>Tu IMC es  <span class="color-blue">
+<?php echo number_format($this->imcData['imc'], 2, '.', ''); ?> Kg/mt2
+            </span>
+            Estas
+            <span class="color-blue">
+<?php
+$weightDiagnotic = ucfirst($this->imcData['name']);
+echo ($weightDiagnotic) != 'Normal' ?
+        'con ' . $weightDiagnotic : $weightDiagnotic;
+?>
+            </span>
+        </p>     
+        <?php if ($weightDiagnotic != 'Normal'): ?>
+            <p>
+                Para estar saludable, tu IMC debe estar entre 18.5 y 24.9Kg/m2, 
+                por lo tanto te correspondería estar con un peso que va desde 
+                <span class="color-blue"><?php echo $this->bodyFrameData['minWeight'] ?> Kg</span>
+                hasta 
+                <span class="color-blue"><?php echo $this->bodyFrameData['maxWeight'] ?> Kg</span>
+            <?php endif; ?>
+        </p>
+        <h2>POR PORCENTAJE DE GRASA CORPORAL</h2>
+        <?php if ($this->pgc): ?>
+            <p>Tienes <?php echo $this->pgc ?> % de grasa corporal </p>
+            <p>
+    <?php echo $this->igcData ?>
+            </p>
+            <p>
+                Tu masa libre de Grasa es 
+    <?php echo number_format((((100 - $this->pgc) * $this->weight) / 100), 1, '.', ''); ?>
+                Kg
+            </p>
+                <?php else: ?>
+            <p>Ud no ha completado el valor de sus medidas: cintura, cadera o 
+                circunferencia de cuello;
+            </p>
+                <?php endif; ?>
+        <h2>TU CONTEXTURA ES</h2>
+        <p><span class="color-blue"><?php echo $this->bodyFrameData['bfName']; ?></span></p>
+        <p>Su rango de peso por contextura está entre:
+            <span class="color-blue">
+        <?php echo $this->bodyFrameData['minWeight']; ?> Kg
+            </span>
+            Hasta
+            <span class="color-blue">
+        <?php echo $this->bodyFrameData['maxWeight']; ?> Kg
+            </span>
+        </p>
+        <?php if ($this->bodyFrameData['state'] == 'lose-weight') : ?>
+            <p>Tendría que bajar entre <span class="color-blue"> <?php echo $this->bodyFrameData['minChangeWeight']; ?> - <?php echo $this->bodyFrameData['maxChangeWeight']; ?> Kgms </span>para lograrlo</p>
+<?php elseif ($this->bodyFrameData['state'] == 'gain-weight') : ?>
+            <p>Tendría que subir entre <span class="color-blue"> <?php echo $this->bodyFrameData['minChangeWeight']; ?> - <?php echo $this->bodyFrameData['maxChangeWeight']; ?> Kgms </span>para lograrlo</p>
+<?php else : ?>
+            <!--<p>Su peso es óptimo</p>-->
+<?php endif; ?>
+        <!--          <h2>INDICE DE GRASA CORPORAL</h2>
+                  <p>Tu grasa corporal es: 
+                      <span class="color-blue">-->
+<?php //echo $this->igcData.', '.$this->bodyFrameData['indGrasa'] ?> 
+        <!--              </span>
+                  </p>-->
+        <p class="color-orange mt20">
+            (*) El  Índice de Masa Corporal (IMC)  nos indica si tu peso guarda una 
+            relación saludable con tu talla, no tiene en cuenta la cantidad de músculo.
+            Lo ideal es tener un peso dentro del rango saludable para prevenir enfermedades 
+            crónicas como la diabetes.
+        </p>
+    </div>
+</div>
+</div>

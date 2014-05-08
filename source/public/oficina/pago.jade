@@ -1,0 +1,64 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	include jade/header.jade
+	#wrapper	
+		.white-bg
+			.breadcrumbs 
+				a(href="#") Tienda
+				a(href="#") Pago del pedido
+
+			section.content
+				header
+					h2.title Pago del Pedido
+
+				section.pago
+					.success
+						p.
+							Estimado José Perez, tu pedido ha sido realizado 
+							si quieres saber mas sobre tu pedido. Haz Clic en el siguiente
+
+						button.orange
+							i.sprites-p.follow
+							| Seguimiento del Envio
+
+
+					h3.indicate Gracias por realizar el pago de tu pedido en la oficina virtual
+
+					h2.codigo Código de Pago:
+						span 1748984
+
+					.column-four.first
+						.wrap
+							table
+								tr
+									th Forma de Pago:
+								tr: td Pago con tarjeta de credito
+								tr: td Visa	
+
+					.column-four
+						.wrap
+							table
+									tr
+										th Monto a Pagar:
+									tr: td S/. 242.56
+									tr: td Fecha de compra: 13 Sep, 2013 - 10:22:32
+
+					.column-four
+						.wrap
+							table
+								tr
+									th Datos adicionales:
+								tr: td Fecha de pago Registrado:
+								tr: td 16 Sep, 2013	
+
+					.column-four
+						button.orange
+							i.sprites-p.download
+							| Descargar Resumen
+
+					.btn-cnt
+						button.orange
+							i.sprites-p.back
+							| Volver al menu
+

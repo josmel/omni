@@ -1,0 +1,209 @@
+{
+	"compile":{
+		"ext":".styl",
+		"cmd":"stylus -c",
+		"cmdr":"-o",
+		"route":"../source/public/static/css/"
+	},
+	"layouts":{
+		"active":false
+	},
+	"views":{
+		"path":"./views",
+		"pathCompile":"./views",
+		"compile":{
+			"landing.styl":{
+				"helpers":{
+					"reset":"[@pp]reset.styl",
+					"plugins":["[@ult]jqCount.styl","[@ult]jqTinyScroll.styl","[@ult]jqUI.styl","[@ult]jqDatepicker.styl","[@ult]uLoader.styl","[@ult]uTipsy.styl","[@ult]jqPlaceholder.styl"]
+				},
+				"includes":{
+					"layout":["[@pp]header.styl","[@pp]general.styl","[@pp]footer.styl"],
+					"vhelpers":["fonts.styl","content.styl","buttons.styl","forms.styl","table.styl","resources.styl","plugins.styl"],
+					"imports":["products.styl"]
+				}
+			},
+			"admin.styl":{
+				"helpers":{
+					"reset":"[@pp]reset.styl",
+					"plugins":["[@ult]uTipsy.styl","[@ult]uLoader.styl"]
+				},
+				"includes":{
+					"layout":["[@pp]header.styl","[@pp]general.styl","[@pp]footer.styl"],
+					"vhelpers":["content.styl","buttons.styl","forms.styl","resources.styl"],
+					"imports":["login.styl"]
+				}
+			},
+			"oficina.styl":{
+				"helpers":{
+					"reset":"[@pp]reset.styl",
+					"plugins":["[@ult]jqFullCalendar.styl","[@ult]jqCustomScrollBar.styl","[@ult]jqTinyScroll.styl","[@ult]uLoader.styl","[@ult]uTipsy.styl","[@ult]jqFancybox.styl"]
+				},
+				"includes":{
+					"layout":["[@pp]header.styl","[@pp]general.styl","[@pp]footer.styl"],
+					"vhelpers":["[@pp]fonts.styl","content.styl","forms.styl","buttons.styl","resources.styl","icons.styl","hacks.styl"],
+					"imports":["cms.styl","product.styl","cart.styl","quickcart.styl","bussiness.styl"]
+				}
+			},
+			"desafio.styl":{
+				"helpers":{
+					"reset":"[@pp]reset.styl",
+					"plugins":["[@ult]jqFullCalendar.styl","[@ult]uLoader.styl","[@ult]uTipsy.styl","[@ult]jqDataTable.styl","[@ult]jqFancybox.styl"]
+				},
+				"includes":{
+					"layout":["[@pp]header.styl","[@pp]general.styl","[@pp]footer.styl"],
+					"vhelpers":["[@pp]fonts.styl","content.styl","forms.styl","buttons.styl","resources.styl","hacks.styl"],
+					"imports":["admin.styl"]
+				}
+			}
+		}
+	},
+	"vars":{
+		"global":{
+			"styfluxFonts":"[@url]fonts/",
+			"routImgFancybox":"[@url]../img/fancybox/",
+			"routImgTipsy":"[@url]../img/",
+			"routImgLoader":"[@url]../img/"
+		},
+		"landing.styl":{
+			"routImg":"[@url]../img/",
+			"family1":"'helveticaLight',Arial,sans-serif",
+			"family2":"'helvetica',Arial,sans-serif",
+			"family3":"'avenir',Arial,sans-serif",
+			"decorLogo":"0 0",
+			"logoFuxion":"-304px 0",
+			"twitter":"-212px -107px",
+			"facebook":"-304px -60px",
+			"youtube":"-342px -60px",
+			"blogger":"-250px -107px",
+			"email":"-174px -107px",
+			"btnNext":"-54px -107px",
+			"btnPrev":"-75px -107px",
+			"btnPrevDis":"-380px -60px",
+			"btnNextDis":"-401px -60px",
+			"navAct":"-399px -82px",
+			"btnCar":"-288px -109px",
+			"bgProduct":"-380px -82px",
+			"stepCar":"-54px -131px",
+			"stepCarHover":"-93px -132px",
+			"actionDelete":"-384px -82px",
+			"btnsCar":"-399px -91px",
+			"btnRefresh":"-312px -97px",
+			"selCaptcha":"-337px -96px",
+			"cantCar":"-96px -107px",
+			"btnUp":"-139px -107px",
+			"btnDown":"-139px -119px",
+			"btnBack":"-153px -107px",
+			"cmsLi":"-383px -112px",
+			"oportunidadDesarrollo":"-428px -416px",
+			"oportunidadLibertad":"-277px -315px",
+			"oportunidadSalud":"-277px -416px",
+			"iconOpoDesarrollo":"-449px -315px",
+			"iconOpoLibertad":"-428px -315px",
+			"iconOpoSalud":"-442px -315px",
+			"pyramidDesarrollo":"-506px 0",
+			"pyramidSalud":"-506px -208px",
+			"pyramidLibertad":"0 -315px",
+			"quoteLeft":"-428px -329px",
+			"quoteRight":"-463px -315px",
+			"quoteLeftGreen":"-463px -340px",
+			"quoteRightGreen":"-428px -353px",
+			"quoteLeftYellow":"-463px -365px",
+			"quoteRightYellow":"-428px -377px",
+			"aquaFx":"0 -114px",
+			"aquaPerfil":"0 -159px",
+			"catalogo":"0 -94px",
+			"ctnPdf":"-579px -416px",
+			"iconPdf":"-132px -144px"
+		},
+		"admin.styl":{
+			"routImg":"[@url]../img/admin/",
+			"family1":"Arial,sans-serif",
+			"family2":"'Cuprum',Arial,sans-serif",
+			"gradientInit":"#C57979",
+			"gradientFinish":"#A34C4C",
+			"borderBtn":"#A95151",
+			"icLogin":"-14px 0",
+			"icLogout":"-36px 0",
+			"alistOption":"-394px 0",
+			"icDashboard":"-47px 0",
+			"icProduct":"-61px 0",
+			"icPromotion":"-75px 0",
+			"icTable":"-89px 0",
+			"icEdit":"-103px 0",
+			"icDelete":"-119px 0",
+			"icPerfil":"-151px 0",
+			"icYoutube":"-162px 0",
+			"aicClose":"-176px 0",
+			"icFile":"-198px 0"
+		},
+		"oficina.styl":{
+			"routImg":"[@url]../img/oficina/",
+			"family1":"'Helvetica',Arial,sans-serif",
+			"family2":"'myriadproBold',Arial,sans-serif",
+			"family3":"'helveticaNeueCondensed',Arial,sans-serif",
+			"family4":"'helveticaNeueMCondensed',Arial,sans-serif",
+			"family5":"'helveticaCLight',Arial,sans-serif",
+			"family6":"'franklinGMCond',Arial,sans-serif",
+			"family7":"Arial,sans-serif",
+			"logoMain":"-227px -4px",
+			"catFxCtn":"0 -390px",
+			"catFxRight":"-389px 0",
+			"catFxLogo":"-201px -390px",
+			"catFxBanner":"-237px -390px",
+			"catFxManual":"-278px -390px",
+			"catFxProd":"-310px -390px",
+			"catFxAfi":"-342px -390px",
+			"catFxPoli":"-389px -20px",
+			"catFxBook":"-389px -36px"
+		},
+		"desafio.styl":{
+			"routImg":"[@url]../img/desafio/",
+			"family1":"'myriadpro',Arial,sans-serif",
+			"family2":"'myriadproBold',Arial,sans-serif",
+			"family3":"'motorOil',Arial,sans-serif",
+			"logoMain":"0 0",
+			"menuIcon1":"0 -90px",
+			"menuIcon2":"-34px -90px",
+			"menuIcon3":"-55px -90px",
+			"menuIcon4":"0 -133px",
+			"menuIcon5":"-41px -133px",
+			"menuIcon1Hover":"0 -112px",
+			"menuIcon2Hover":"-34px -112px",
+			"menuIcon3Hover":"-55px -112px",
+			"menuIcon4Hover":"-20px -133px",
+			"menuIcon5Hover":"-58px -133px",
+			"iconAttach1":"-86px -90px",
+			"iconAttach2":"-219px -66px",
+			"iconAttach3":"-244px -66px",
+			"iconAttach4":"-180px 0",
+			"iconHome":"-180px -66px",
+			"iconParticipe":"-165px -90px",
+			"bgTriangleGreen":"-261px -66px",
+			"bgTriangleBlue":"-261px -91px",
+			"stepNumberTriangleBlue":"-281px 0",
+			"stepTitleTriangleBlue":"-281px -28px",
+			"stepTitleTriangleBlueRight":"-294px -28px",
+			"stepLnkTriangleBlue":"-281px -51px",
+			"stepNumberTriangleOrange":"-294px 0",
+			"stepTitleTriangleOrange":"-305px -28px",
+			"stepTitleTriangleOrangeRight":"-306px -91px",
+			"stepLnkTriangleOrange":"-294px -51px",
+			"btnHome":"-180px -66px",
+			"colorOne":"-317px 0",
+			"colorTwo":"-317px -34px",
+			"colorThree":"-317px -68px",
+			"colorPeople":"-165px -90px",
+			"icDesafio":"-317px -102px",
+			"icActive":"-86px -122px",
+			"icMeasure":"-86px -90px",
+			"icProduct":"-316px -121px",
+			"icLi":"-317px -138px",
+			"icCSession":"-180px 0"
+		}
+	},
+	"ignore":{
+		"layouts":["render"],
+		"views":["admin/vhelpers","admin/layout","admin/imports","landing/vhelpers","landing/layout","landing/imports","oficina/layout","oficina/vhelpers","oficina/imports","desafio/layout","desafio/vhelpers","desafio/imports"]
+	}
+}

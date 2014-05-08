@@ -1,0 +1,46 @@
+<div id="main-slider" class="fix">
+    <div class="slide-main fix2">
+        <div class="ctn-cuentanav">
+            <ul class="cuenta-nav">
+                <li><a href="/account/my-account" title="Mis Datos">MIS DATOS</a></li>
+                <li class="active"><a href="/account/order-list" title="Mis Pedidos">MIS PEDIDOS</a></li>
+                <li><a href="/account/logout" title="Desconectarse">DESCONECTARSE</a></li>
+            </ul>
+        </div>
+        <div class="cuenta-det">
+            <ul class="head-cardetail">
+                <li class="tdOrder">Nro de Pedido</li>
+                <li class="tdDate">Fecha</li>
+                <li class="tdCant">Cantidad</li>
+                <li class="tdTotal">Total</li>
+                <li class="tdState">Estado</li>
+            </ul>
+            <div class="scroll-detail">
+                <table class="tbl-detail">
+                    <tbody>
+
+                        <?php 
+                        if(count($this->orderList) > 0) :
+                            foreach($this->orderList as $order) : ?>
+                        <tr>
+                            <td class="tdOrder"><a href="javascript:;"><?php echo $order['idpedi']; ?></a></td>
+                            <td class="tdDate"><?php echo $order['fecpedi']; ?></td>
+                            <td class="tdCant"><?php echo $order['cantidad']; ?></td>
+                            <td class="tdTotal"><?php echo $this->businessman['simbolo'];?> 
+                                <?php echo number_format($order['precio'] + ($order['precio']*$order['ivaubig']), 2, '.', ' '); ?></td>
+                            <td class="tdState"><?php echo $order['estpedi']; ?></td>
+                        </tr>
+                        <?php endforeach; 
+                        else : ?>
+                        <tr>
+                            <td colspan="5">
+                                <h3>No ha realizado ningún pedido.</h3>
+                            </td>
+                        </tr>
+                        <?php endif; ?> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

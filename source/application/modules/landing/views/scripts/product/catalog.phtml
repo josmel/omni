@@ -1,0 +1,43 @@
+<div class="fix" id="main-slider">
+    <div class="slide-main fix3">
+        <div class="prod-scateg">
+            <h3 class="scateg-tit">CATEGORÍAS</h3>
+            <div id="scrollCat">
+                <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+                <div class="viewport">
+                    <div class="overview">
+                        <ul class="scateg-list">
+                            <?php foreach($this->productTypes as $line): ?>
+                            <li> 
+                                <a data-id="<?php echo $line['codtpro']; ?>" data-color="#<?php echo $line['hexcolor']; ?>" title="<?php echo $line['abrtpro']?>" href="javascript:;"><?php echo $line['abrtpro']?><span style="background-image:url('<?php echo STATIC_LANDING_IMG.$line['picture2']; ?>');"></span></a>
+                            </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prod-list">
+            <div class="slid-product">
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+                <div class="ctn-product"></div>
+            </div>
+            <div class="slid-nav"><a href="javascript:;" title="Anterior" class="btnav prev">Anterior</a><a href="javascript:;" title="Siguiente" class="btnav next">Siguiente</a></div>
+        </div>
+    </div>
+</div>
+<script id="tplProduct" type="text/template">
+<div class="product">
+    <h2>{{= title}}</h2>
+    <a title="{{= title}}" href="{{= link}}">
+        <img width="160" height="140" alt="{{= title}}" src="{{= img}}">
+        <span class="prod-decor">Ver más<span></span></span>
+    </a>
+</div>
+</script>

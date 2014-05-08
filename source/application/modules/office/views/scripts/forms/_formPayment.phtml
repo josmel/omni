@@ -1,0 +1,28 @@
+<?php 
+$businessman = $this->element->getBusinessman();
+//var_dump($businessman); exit?>
+<form id="frmPayment" method="POST" action="/cart/pay">
+    <div class="ctn-mpaid">
+        <div class="control-group">
+            <?php echo $this->element->paymethod->renderViewHelper();?>
+            <?php //echo $this->element->tokenHash->renderViewHelper();?>
+        </div>
+        <div id="TP011" class="control-group selChangue">
+            <?php echo $this->element->cardcode->renderViewHelper();?>
+        </div>
+        <div id="TP006" class="control-group selChangue">
+            <?php echo $this->element->transcode->renderViewHelper();?>
+        </div>
+    </div>
+    <table class="tbl-summpaids">
+        <tbody>
+            <tr>
+                <td class="tw134">Total a pagar:</td>
+                <td><?php echo $businessman['simbolo']." ".$this->element->getTotal(); ?></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="alg-right pt38">
+        <button class="btn-orange" type="submit"><i class="sprites-p arrow-boxed"></i>Ir a Forma de Pago</button>
+    </div>
+</form>

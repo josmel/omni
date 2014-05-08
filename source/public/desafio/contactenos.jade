@@ -1,0 +1,70 @@
+include jade/vars.jade
+include jade/head.jade
+body
+	header.header
+		.box-center
+			h1
+				a(href='javascript:;', class="logo-lnk", title="Desafío Fuxion") Desafío Fuxion
+	nav.main-menu
+		ul
+			li
+				a(href="estado.html",title="Estado") 
+					span
+					| estado
+			li
+				a(href="consumos.html",title="Mis consumos") 
+					span.mitem2
+					| mis consumos
+			li
+				a(href="avances.html",title="Avances") 
+					span.mitem3
+					| avances
+			li
+				a(href="mentor.html",title="Mentor") 
+					span.mitem4
+					| mentor
+			li.active
+				a(href="contactenos.html",title="contáctenos") 
+					span.mitem5
+					| contáctenos
+	#wrapper
+		.row.content-contact
+			.info-contact
+				h3 CONTÁCTENOS
+				p 1234 Lorem Ipsun <br>av.sui the man
+				h3 TELÉFONO
+				dl
+					dt Fijo
+					dd 423-292
+					dt Celular
+					dd 984728392 - RPC
+					dt FAX
+					dd +2342231
+					dt Email
+					dd 
+						a(href="mailto:fuxion@prolife.com",title="Enviar mensaje") fuxion@prolife.com
+			form(id="frmContact", name="frmContact", method="post", action="" , class="frm-contact")
+				.frm-group
+					label(for="txtName", class="control-label") NOMBRE
+					.frm-control
+						input(type="text", id="txtName", name="txtName", placeholder="Nombres y Apellidos")
+				.frm-group
+					label(for="txtEmail", class="control-label") EMAIL
+					.frm-control
+						input(type="text", id="txtEmail", name="txtEmail", placeholder="Correo Electrónico")
+				.frm-group
+					label(for="txtMessage", class="control-label") CONSULTA
+					.frm-control
+						textarea(type="textarea", id="txtMessage", name="txtMessage", placeholder="Escriba aquí su consulta")
+				.frm-group.row
+					button(type="submit", id="sbmSend", class="btn", title="Enviar") Enviar
+					a(href="javascript:;", class="btn", title="Limpiar") Limpiar
+	footer
+		.box-center
+			nav.foot-menu
+				a(href="estado.html",title="Estado") estado
+				a(href="consumos.html",title="Mis consumos") mis consumos
+				a(href="avances.html",title="Avances") avances
+				a(href="mentor.html",title="Mentor") mentor
+				a(href="contactenos.html",title="contáctenos") contáctenos
+			p Copyrigth © 2013 Prolife Biotech. Todos los derechos reservados

@@ -1,0 +1,44 @@
+  <div id="wrapper">
+    <div class="row info-user">
+      <div class="left-cnt">
+        <div class="pic">
+            <img src="<?php echo DINAMIC_URL.'businessman/208x208/'.$this->identity['picture']?>" 
+                 alt="<?php echo $this->identity['name']." ".$this->identity['lastName'] ?>" width="170" height="170"/>
+        </div>
+        <div class="percentage"><span class="color-green"><?php echo $this->percentageCompetitor; ?>%<br></span>Porcentaje de avance</div>
+        <div class="row compare">
+          <div class="left-cnt">INICIAL<br><span class="color-orange"><?php echo $this->detalleiniciclo['peso']?> Kgs Sem.</span></div>
+          <div class="right-cnt">ACTUAL<br><span class="color-orange"><?php echo $this->detallefinciclo['peso']?> Kgs Sem.</span></div>
+        </div>
+        <div class="fitness">Estas en estado 
+            <?php if($this->estadoParticipante == 1):?>
+            <span class="color-green">ACTIVO</span>
+            <?php elseif($this->estadoParticipante == 2):?>
+            <span class="color-yellow">RIESGO</span>
+            <?php else:?>
+            <span class="color-red">DESACTIVADO</span>
+            <?php endif;?>
+        </div>
+        <div class="circle-state"><span></span><span class="yellow"></span><span class="rose"></span></div>
+      </div>
+      <div class="right-cnt">
+        <h2><?php echo $this->identity['name'].' '.$this->identity['lastName']?></h2>
+        <dl class="user-dl">
+          <dt>CÓDIGO DE EF- CP</dt>
+          <dd> <span>: </span><?php echo $this->participante['codemp']?></dd>
+          <dt>EMAIL</dt>
+          <dd> <span>: </span><a href="<?php echo $this->identity['email']?>"><?php echo $this->identity['email']?></a></dd>
+          <dt>APELLIDO PATERNO</dt>
+          <dd> <span>: </span><?php echo $this->identity['appemp']?></dd>
+          <dt>SEUDÓNIMO</dt>
+          <dd> <span>: </span><?php echo $this->participante['seudonimo']?></dd>
+          <dt>RPM</dt>
+          <dd> <span>: </span><?php echo $this->identity['celular']?></dd>
+          <dt>GÉNERO</dt>
+          <dd> <span>: </span><?php echo $this->identity['sexemp'] = 'F' ? 'Femenino' : 'Masculino'?></dd>
+          <dt>MEDIDAS</dt>
+          <dd> <span>: </span>Talla <?php echo $this->detallefinciclo['talla']?> mts.      Peso <?php echo $this->detallefinciclo['peso']?> Kgs       Muñeca <?php echo $this->detallefinciclo['muneca']?> cm      Indice de grasa  <?php echo $this->detallefinciclo['indgrasa']?>%</dd>
+        </dl>
+      </div>
+    </div>
+  </div>

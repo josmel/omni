@@ -1,0 +1,172 @@
+/*
+*	jqDatable
+*/
+.dataTables_wrapper
+	*zoom 1
+	clear both
+	position relative
+.dataTables_length
+	display block
+	float right
+	padding 12px 10px
+	& > label > span
+		float left
+		margin-right 6px
+		margin-top 4px
+	select
+		border 1px solid #D7D7D7
+		padding 3px
+.dataTable
+	thead
+		th
+			background #fafafa
+			background -moz-linear-gradient(top, #fafafa 0%, #efefef 100%)
+			background -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fafafa), color-stop(100%, #efefef))
+			background -webkit-linear-gradient(top, #fafafa 0%, #efefef 100%)
+			background -o-linear-gradient(top, #fafafa 0%, #efefef 100%)
+			background -ms-linear-gradient(top, #fafafa 0%, #efefef 100%)
+			background linear-gradient(top, #fafafa 0%, #efefef 100%)
+			border-bottom 1px solid #D5D5D5
+			border-left 1px solid #D5D5D5
+			color #878787
+			cursor pointer
+			font-size 11px
+			font-weight normal
+			line-height 20px
+			padding 3px 0 2px 0
+			text-align center
+			filter unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#efefef',GradientType=0 )")
+			&:first-child
+				border-left 0
+.dataTables_filter
+	display block
+	float left
+	padding 14px 12px
+	position relative
+	input[type="text"]
+		background #F9F9F9
+		border 1px solid #D7D7D7
+		box-shadow 0 1px 0 white
+		height auto
+		margin-left 15px
+		padding 5px 7px
+		width 180px
+.dataTables_filter > label, .dataTables_length > label
+	margin 0
+.dataTables_info
+	display block
+	float left
+	padding 12px
+.dataTables_paginate
+	float right
+	margin 12px
+.datatable-header
+	background #fafafa
+	border-bottom 1px solid #ddd
+.datatable-footer
+	background #fcfcfc
+	background -moz-linear-gradient(top,  #fcfcfc 0%, #f5f5f5 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f5f5f5))
+	background -webkit-linear-gradient(top,  #fcfcfc 0%,#f5f5f5 100%)
+	background -o-linear-gradient(top,  #fcfcfc 0%,#f5f5f5 100%)
+	background -ms-linear-gradient(top,  #fcfcfc 0%,#f5f5f5 100%)
+	background linear-gradient(top,  #fcfcfc 0%,#f5f5f5 100%)
+	border-top 1px solid #ddd
+	padding 1px 0
+.datatable-header:after, .datatable-footer:after
+	clear both
+	content ""
+	display block
+.paging_full_numbers
+	height 22px
+	line-height 22px
+.paging_full_numbers .next:active, .paging_full_numbers .first:active, .paging_full_numbers .previous:active, .paging_full_numbers .last:active
+	font-weight normal !important
+.paging_full_numbers a:active
+	outline none
+.paging_full_numbers a:hover
+	text-decoration none
+.paging_full_numbers a.paginate_button, .paging_full_numbers a.paginate_active
+	border 1px solid #d3d3d3
+	border-radius 2px
+	box-shadow 0 1px 0 #fff inset, 0 1px 0px #eaeaea
+	color #919191
+	cursor pointer
+	*cursor hand
+	font-size 11px
+	margin 0 3px
+	padding 5px 8px
+.paging_full_numbers a.paginate_button
+	background #ffffff
+	background -moz-linear-gradient(top,  #ffffff 0%, #f5f5f5 100%)
+	background -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f5f5f5))
+	background -webkit-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%)
+	background -o-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%)
+	background -ms-linear-gradient(top,  #ffffff 0%,#f5f5f5 100%)
+	background linear-gradient(top,  #ffffff 0%,#f5f5f5 100%)
+.paging_full_numbers a.paginate_button:hover
+	background #fcfcfc
+	color #327394
+.paging_full_numbers a.paginate_active, .paging_full_numbers a.paginate_button:active
+	background #6f6f6f
+	border-color #646464
+	box-shadow 0 1px 2px #545454 inset, 0 1px 0 #fff
+	color #fff
+	font-weight bold
+.paginate_button_disabled, .paginate_button_disabled:active
+	background #F9F9F9!important
+	border 1px solid #E5E5E5!important
+	box-shadow none!important
+	color #CCC!important
+	font-weight normal!important
+.paginate_button_disabled:active
+	border-color #d3d3d3!important
+.dataTables_processing
+	background-color white
+	border 1px solid #ddd
+	color #999
+	font-size 14px
+	height 30px
+	left 50%
+	margin-left -125px
+	margin-top -15px
+	padding 14px 0 2px 0
+	position absolute
+	text-align center
+	top 50%
+	width 250px
+table.dataTable th:active
+	outline none
+.dataTables_scrollBody
+	*margin-top -1px
+	-webkit-overflow-scrolling touch
+table.display
+	border-collapse collapse
+	clear both
+	margin 0 auto
+	width 100%
+table.display tfoot th
+	font-weight bold
+	font-weight normal
+	padding 3px 0px 3px 10px
+table.display tr.heading2 td
+	border-bottom 1px solid #aaa
+table.display td
+	padding 8px 10px
+table.display td.center
+	text-align center
+table.display tr
+	border-top 1px solid #e7e7e7
+table.display tr:first-child
+	border-top 0
+table.display td
+	border-left 1px solid #e7e7e7
+table.display td:first-child
+	border-left none
+tr.odd
+	background-color #E2E4FF
+tr.even
+	background-color white
+table.display tr.even.row_selected td, table.display tr.odd.row_selected td
+	background-color #9FAFD1
+	color #FFF
